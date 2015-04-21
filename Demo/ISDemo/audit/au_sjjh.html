@@ -14,6 +14,7 @@
 		<link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
 		<script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
 		<script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+		<script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
 		<style type="text/css">
 			div.tableContainer {
 				clear: both;
@@ -38,20 +39,12 @@
 				line-height: 30px;
 				height: 30px;
 				margin: 10px 10px;
-				width: 400px;
-				float: left;
+				width: 100%;
+				text-align: center;
 			}
 			.yearspan {
 				margin-left: 10px;
 				margin-right: 10px;
-			}
-			.remark {
-				float: left;
-				width: 600px;
-				text-align: right;
-				margin-top: 15px;
-				line-height: 20px;
-				height: 20px;
 			}
 			.plantdon {
 				background-image: url('../images/20150417030425697_easyicon_net_48.png') !important;
@@ -61,7 +54,7 @@
 		</style>
 		<script>
 			$(document).ready(function() {
-				var winH = $(window).height() - 130;
+				var winH = $(window).height() - 160;
 				$("#tableContainerList").css('height', winH + 'px');
 			});
 
@@ -71,18 +64,43 @@
 			}
 			$(".plantd").live('dblclick',
 				function() {
-					if (!$(this).hasClass("plantdon")) {
-						//$(this).html('<img width="30" src="../images/20150417030425697_easyicon_net_48.png" alt="" />');
-						$(this).addClass("plantdon");
-						$.jBox.tip('创建计划成功！');
-					} else {
-						//$(this).html('');
-						$(this).removeClass("plantdon");
-						$.jBox.tip('取消计划成功！');
-					}
+					//if (!$(this).hasClass("plantdon")) {
+					//$(this).html('<img width="30" src="../images/20150417030425697_easyicon_net_48.png" alt="" />');
+					//$(this).addClass("plantdon");
+					//$.jBox.tip('创建计划成功！');
+					//} else {
+					//$(this).html('');
+					//$(this).removeClass("plantdon");
+					//$.jBox.tip('取消计划成功！');
+					//}
+					var currentid = $(this);
+					$(this).dialog({
+						id: $(this).attr("id"),
+						content: 'url:audit/au_sjjh_add.html',
+						width: 520,
+						height: 200,
+						title: '新增/修改审计计划',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('计划保存成功！');
+								currentid.addClass("plantdon");
+							},
+							focus: true
+						}, {
+							name: '删除',
+							callback: function() {
+								$.jBox.tip('计划删除成功！');
+								currentid.removeClass("plantdon");
+							}
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
 				}
 			);
-			$(".plantd").live('click mouseover',
+			$(".plantd").live('mouseover',
 				function() {
 					$(this).css('background-color', '#F2F2F2');
 				}
@@ -95,21 +113,17 @@
 		</script>
 	</head>
 
-	<body class="yControlBody">
+	<body class="yBodyBg">
 		<div class="yContentBox">
-			<div style="width:100%; min-width: 1024px;;">
-				<div class="year">
-					<a href="#112" onclick="addyear(-1);">
-						<img src="../images/20150417032611750_easyicon_net_64.png" width="12" />
-					</a>
-					<span id="yearspan" class="yearspan">2015</span>
-					<a onclick="addyear(1);" href="#112">
-						<img src="../images/20150417032611750_easyicon_net_64-2.png" width="12" />
-					</a>
-				</div>
-				<div class="remark">
-					<img src="../images/2015041703431237_easyicon_net_32.png" width="16" /> 在空白单元格里双击添加计划，在已添加计划的单元格里双击取消计划。
-				</div>
+			<div class="yTip">在空白单元格里双击添加计划，在已添加计划的单元格里双击取消计划。</div>
+			<div class="year">
+				<a href="#112" onclick="addyear(-1);">
+					<img src="../images/20150417032611750_easyicon_net_64.png" width="12" />
+				</a>
+				<span id="yearspan" class="yearspan">2015</span>
+				<a onclick="addyear(1);" href="#112">
+					<img src="../images/20150417032611750_easyicon_net_64-2.png" width="12" />
+				</a>
 			</div>
 			<div class="tableContainer">
 				<table class="yTable">
@@ -349,7 +363,7 @@
 
 							</td>
 							<td class="plantd plantdon">
-								
+
 							</td>
 							<td class="plantd">
 

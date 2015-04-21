@@ -121,7 +121,7 @@ a:active {
 	background:url('../images/input.png') repeat-x;
 }
 .yTextInputSL{
-	width:202px;
+	width:160px;
 	border:1px solid #BECCDB;
 	background:url('../images/input.png') repeat-x;
 }
@@ -206,7 +206,7 @@ a:active {
 /**横向标签组**/
 .yTabContainer{
 	height:30px;
-	padding-left:30px;
+
 	background:url('../images/tabBorder.gif') repeat-x;
 }
 .yTabH{

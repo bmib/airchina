@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>国航投资企业航空安全监管平台-系统构型</title>
+<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+<script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+<script>
+	$(function(){
+		$('#createButton').dialog({ id:'createButton', content:'url:system/personMaintain.html',width:420, height:400, title:'新增人员',max: false,min: false,button: [
+        {
+            name: '保存',
+            callback: function () {
+                return false;
+            },
+            focus: true
+        },
+        {
+            name: '关闭',
+            callback: function () {
+                
+            }
+        }
+    	]
+		});
+		
+		$('#updateButton').dialog({ id:'updateButton', content:'url:system/rightMaintain.html',width:320, height:420, title:'分配权限',max: false,min: false,button: [
+        {
+            name: '保存',
+            callback: function () {
+                return false;
+            },
+            focus: true
+        },
+        {
+            name: '关闭',
+            callback: function () {
+                
+            }
+        }
+    	]
+		});
+		iniCheckBox("checkAllButton","checkAll");
+	});
+	
+	//判断iframe的高度
+	$(document).ready(function() {
+				var winH = $(window).height() - 250;
+				$("#tableContainerList").css('height', winH + 'px');
+			});
+			
+</script>
+</head>
+<body>
+<div class="yContentBox" style="width:100%">
+<div class="ySearchArea">
+  <table border="0" cellpadding="0" cellspacing="0" class="ySearchTable">
+    <tr>
+      <td class="yLeftTipTD">企业名称</td>
+      <td><input name="Input2" class="yTextInput"/></td>
+      <td> 　
+        <input type="button" class="yButton" value="查询"/></td>
+    </tr>
+  </table>
+  <table cellpadding="0" cellspacing="0" border="0" class="yTable" width="100%">
+
+    <thead>
+      <tr>
+        <th>企业</th>
+        <th>2015年4月</th>
+        <th>2015年5月</th>
+        <th>2015年6月</th>
+      </tr>
+    </thead>
+
+    <tbody style="overflow:auto;" id="tableContainerList">
+      <tr>
+        <td>山东航空公司</td>
+        <td><a href="#2013">刘勇</a></td>
+        <td>男</td>
+        <td>liuyong</td>
+      </tr>
+      <tr>
+        <td>深圳航空公司</td>
+        <td><a href="#2013">刘勇</a></td>
+        <td>男</td>
+        <td>liuyong</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkAll"/></td>
+        <td><a href="#2013">刘勇</a></td>
+        <td>男</td>
+        <td>liuyong</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkAll"/></td>
+        <td><a href="#2013">刘勇</a></td>
+        <td>男</td>
+        <td>liuyong</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkAll"/></td>
+        <td><a href="#2013">刘勇</a></td>
+        <td>男</td>
+        <td>liuyong</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkAll"/></td>
+        <td><a href="#2013">刘勇</a></td>
+        <td>男</td>
+        <td>liuyong</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkAll"/></td>
+        <td><a href="#2013">刘勇</a></td>
+        <td>男</td>
+        <td>liuyong</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkAll"/></td>
+        <td><a href="#2013">刘勇</a></td>
+        <td>男</td>
+        <td>liuyong</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkAll"/></td>
+        <td><a href="#2013">刘勇</a></td>
+        <td>男</td>
+        <td>liuyong</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkAll"/></td>
+        <td><a href="#2013">刘勇</a></td>
+        <td>男</td>
+        <td>liuyong</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="yListBottomArea">
+    <div class="yListBottomAreaLeft"></div>
+    <div class="yListBottomAreaRight">首页 上一页 下一页 末页 第 1/124 页 共1236条</div>
+  </div>
+</div>
+</body>
+</html>

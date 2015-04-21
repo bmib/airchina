@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>信息系统开发基础框架.Mr.liuyong</title>
+<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+<script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+<script>
+	$(function(){
+		$('#createButton').dialog({ id:'createButton', content:'url:system/personMaintain.html',width:420, height:400, title:'新增人员',max: false,min: false,button: [
+        {
+            name: '保存',
+            callback: function () {
+                return false;
+            },
+            focus: true
+        },
+        {
+            name: '关闭',
+            callback: function () {
+                
+            }
+        }
+    	]
+		});
+		
+		$('#updateButton').dialog({ id:'updateButton', content:'url:system/rightMaintain.html',width:320, height:420, title:'分配权限',max: false,min: false,button: [
+        {
+            name: '保存',
+            callback: function () {
+                return false;
+            },
+            focus: true
+        },
+        {
+            name: '关闭',
+            callback: function () {
+                
+            }
+        }
+    	]
+		});
+		iniCheckBox("checkAllButton","checkAll");
+	});
+</script>
+</head>
+<body>
+<div class="yContentBox" style="width:100%">
+	<div class="yInfoBar">人员查询</div>
+    <div class="ySearchArea">	
+    <table border="0" cellpadding="0" cellspacing="0" class="ySearchTable">
+    <tr>
+      <td class="yLeftTipTD">姓名/代码/账号</td>
+      <td><input name="Input2" class="yTextInput"/></td>
+      <td>
+      	　<input type="button" class="yButton" value="查询"/>
+      </td>
+    </tr>
+    </table>
+	</div>
+    <div class="yListButtonArea">
+        <input type="button" class="yButton" value="分配"/>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="yTable" width="100%">
+        <thead>
+            <tr>
+                <th width="25" style="text-align:left;"><input type="checkbox" name="checkAllButton" id="checkAllButton"/></th><th width="120">人员姓名</th><th width="40">性别</th><th width="120">账号</th><th width="120">人员代码</th><th width="200">所在组织</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2013">刘勇</a></td><td>男</td><td>liuyong</td><td>ICSS.LIUYONG</td><td>综合司</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2013">刘勇</a></td><td>男</td><td>liuyong</td><td>ICSS.LIUYONG</td><td>综合司</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2013">刘勇</a></td><td>男</td><td>liuyong</td><td>ICSS.LIUYONG</td><td>综合司</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2013">刘勇</a></td><td>男</td><td>liuyong</td><td>ICSS.LIUYONG</td><td>综合司</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2013">刘勇</a></td><td>男</td><td>liuyong</td><td>ICSS.LIUYONG</td><td>综合司</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2013">刘勇</a></td><td>男</td><td>liuyong</td><td>ICSS.LIUYONG</td><td>综合司</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2013">刘勇</a></td><td>男</td><td>liuyong</td><td>ICSS.LIUYONG</td><td>综合司</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2013">刘勇</a></td><td>男</td><td>liuyong</td><td>ICSS.LIUYONG</td><td>综合司</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2013">刘勇</a></td><td>男</td><td>liuyong</td><td>ICSS.LIUYONG</td><td>综合司</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2013">刘勇</a></td><td>男</td><td>liuyong</td><td>ICSS.LIUYONG</td><td>综合司</td>
+            </tr>
+       </tbody>
+    </table>
+    <div class="yListBottomArea">
+        <div class="yListBottomAreaLeft"></div>
+        <div class="yListBottomAreaRight">首页 上一页 下一页 末页 第 1/124 页 共1236条</div>
+    </div>
+</div>
+ </body>
+</html>

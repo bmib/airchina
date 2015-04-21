@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>信息系统开发基础框架.Mr.liuyong</title>
+<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+<link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css" type="text/css"/>
+<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+<script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.js"></script>
+<script>
+	var setting = {};
+	var zNodes =[
+			{ name:"中国民用航空局", open:true,
+				children: [
+					{ name:"综合司",
+						children: [
+							{ name:"子级机构"},
+							{ name:"子级机构"},
+							{ name:"子级机构"},
+							{ name:"子级机构"}
+						]},
+					{ name:"航空安全办公室",open:true,
+						children: [
+							{ name:"子级机构"},
+							{ name:"子级机构"},
+							{ name:"子级机构"},
+							{ name:"子级机构"}
+						]},
+					{ name:"发展计划司", isParent:true},
+					{ name:"财务司", isParent:true},
+					{ name:"人事科教司", isParent:true},
+					{ name:"国际司", isParent:true},
+					{ name:"运输司", isParent:true},
+					{ name:"飞行标准司", isParent:true},
+					{ name:"航空器适航审定司", isParent:true},
+					{ name:"机场司", isParent:true},
+					{ name:"空管行业管理办公室", isParent:true},
+					{ name:"公安局", isParent:true},
+					{ name:"全国民航工会", isParent:true},
+					{ name:"...", isParent:true}
+				]}
+			];
+	$(document).ready(function(){
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+	});
+</script>
+</head>
+<body class="yBodyBg">
+<div class="yContentBox">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" class="yInfoBorderTable">
+    <tr>
+    <td width="180" valign="top" class="yTreeBox">
+    	<div class="yTreeBoxTitle">组织导航</div>
+        <div id="treeDemo" class="ztree"></div>
+    </td>
+    <td valign="top" style="height:100%">
+        <iframe src="personList.html" frameborder="0" name="iframeObj" id="iframeObj" scrolling="no" width="100%" allowtransparency="true" onload="this.height=iframeObj.document.body.scrollHeight"></iframe>
+    </td>
+    </tr>
+    </table>
+</div>
+</body>
+</html>

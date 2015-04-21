@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>弹出菜单例子</title>
+<link rel="stylesheet" href="popDiv.css"></link>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="popDiv.js"></script>
+</head>
+<body>
+<div id="box">
+<input type="button" value="弹出层DEMO" id="xx" onclick="test(event);"/>
+<input type="button" value="又一个弹出层" id="yy" onclick="test2(event);"/>
+<input type="button" value="弹出层DEMO" id="xx" onclick="test(event);"/>
+<input type="button" value="又一个弹出层" id="yy" onclick="test2(event);"/>
+<input type="button" value="弹出层DEMO" id="xx" onclick="test(event);"/>
+<input type="button" value="又一个弹出层" id="yy" onclick="test2(event);"/>
+<input type="button" value="弹出层DEMO" id="xx" onclick="test(event);"/>
+<input type="button" value="又一个弹出层" id="yy" onclick="test2(event);"/>
+<input type="button" value="弹出层DEMO" id="xx" onclick="test(event);"/>
+<input type="button" value="又一个弹出层" id="yy" onclick="test2(event);"/>
+<input type="button" value="弹出层DEMO" id="xx" onclick="test(event);"/>
+<input type="button" value="又一个弹出层" id="yy" onclick="test2(event);"/>
+</div>
+</body>
+<script>
+function test(event){	
+	var popDiv=new PopDiv();
+	popDiv.int(event,{"width":300,'id':'newPopDiv1','cache':true,'parentID':'box','buildNewButtonArea':buildButtonArea});
+	popDiv.pop();
+	//popDiv.rePop("精彩内容马上开始");
+}
+function test2(event){	
+	var popDiv=new PopDiv();
+	popDiv.int(event,{"width":300,'id':'newPopDiv2','cache':true});
+	popDiv.pop();
+	popDiv.rePop("精彩内容马上开始");
+}
+//构建新的按钮区域
+function buildButtonArea(id){
+	return "<span onclick='' style='cursor:pointer;'>[清空]</span>　<span style='cursor:pointer;' onclick='PopDiv.closeMe(\""+id+"\")'>[关闭]</span>"
+}
+//弹出层显示方法，在页面覆盖此方法用户自定义弹出层显示方式
+PopDiv.show=function(popDivId){
+	$("#"+popDivId).slideDown();
+}
+</script>
+</html>

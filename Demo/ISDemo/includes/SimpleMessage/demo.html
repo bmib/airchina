@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>消息框</title>
+<script type="text/javascript" src="simpleMessage.js"></script>
+<link rel="stylesheet" type="text/css" href="simpleMessage.css"/>
+<style>
+	body{
+		margin:0px;
+		padding:0px;
+	}
+
+
+</style>
+</head>
+<body>
+<bgsound id="SimpleMessageSound" loop="0" src="">
+<div style="height:10%;width:100%">
+	<input type="button" value="弹出信息" onclick="pop();"/>
+	<input type="button" value="弹出信息2" onclick="pop2();"/>
+	<input type="button" value="弹出信息3" onclick="pop3();"/>
+</div>
+<div style="height:90%;width:100%">
+<iframe src="inner.html" style="width:100%;height:60%;"></iframe>
+</div>
+</body>
+<script type="text/javascript">
+
+var simpleMessage=new tocas.SimpleMessage();
+
+
+function pop(){
+	var message=new tocas.Message();
+	message.title="今日预警";
+	message.type="1";
+	message.link="http://www.qq.com";
+	message.content="今天我收到了一封邮件，我很高兴,今天我收到了一封邮件，我很高兴";
+	message.pop();
+}
+
+function pop2(){
+	var message=new tocas.Message();
+	message.title="今日预警2";
+	message.content="今天我收到了一封邮件，我很高兴,今天我收到了一封邮件，我很高兴2";
+	message.pop();
+}
+
+function pop3(){
+	var message=new tocas.Message();
+	message.title="今日预警3";
+	message.content="今天我收到了一封邮件，我很高兴,今天我收到了一封邮件，我很高兴3";
+	tocas.SimpleMessage.getInstance().popMessage(message);
+}
+
+
+</script>
+</html>

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>信息系统开发基础框架.Mr.liuyong</title>
+<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+<style>
+	.rightItem{
+		height:24px;
+		line-height:24px;
+		background:#F5FAFE;
+		margin-top:2px;
+		cursor:pointer;
+	}
+</style>
+<script>
+	$(function(){
+		$(".rightItem").bind("click",function(){
+			var chkStr=$(this).find("input").attr("checked");
+			if(chkStr=="checked" || chkStr==true){
+				$(this).find("input").removeAttr("checked");
+			}else{
+				$(this).find("input").attr("checked","checked");
+			}
+		});
+		
+		$(".rightItem input").bind("click",function(){
+			var chkStr=$(this).attr("checked");
+			if(chkStr=="checked" || chkStr==true){
+				$(this).removeAttr("checked");
+			}else{
+				$(this).attr("checked","checked");
+			}
+		});
+	});
+</script>
+</head>
+<body class="yBodyBg">
+<div class="yContentBox">
+  <table border="0" cellpadding="0" cellspacing="0" class="yInfoTable" style="margin:auto;">
+    <tr>
+      <td>
+      	<select class="yTextInputSL" style="font-weight:bold;width:282px;color:#0172A8;background:#EBF5FD;">
+        	<option>按角色分配权限</option>
+            <option>按用户组分配权限</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+    	<td height="5"></td>
+    </tr>
+    <tr>
+      <td valign="top">
+      	<div style="height:340px;overflow-y:auto;border:1px solid #BECCDB;">
+            <div class="rightItem"><input type="checkbox" checked="checked"/>超级管理员</div>
+            <div class="rightItem"><input type="checkbox"/>管理员</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+            <div class="rightItem"><input type="checkbox"/>其他角色</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+    	<td height="5"></td>
+    </tr>
+    <tr>
+      <td>
+      	<input type="text" class="yTextInputL" style="width:280px;" value="关键字快速定位"/>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

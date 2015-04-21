@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>信息系统开发基础框架.Mr.liuyong</title>
+<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+<script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+<script>		
+	$(function(){
+    	$('#btn1').dialog({ id:'btn1', content:'<h3>我是jQuery方式调用的窗口</h3>'});
+		$('#btn2').dialog({ id:'btn2', lock:true , content:'我不能对页面进行操作了'});
+		$('#btn3').dialog({ id:'btn3', content:'url:http://www.baidu.com',width:800, height:400, title:'标题' });
+		$('#btn4').dialog({ id:'btn4', content:'url:demo/弹出窗口列表示例.html',width:800, height:360, title:'弹出窗口列表示例' });
+		$('#btn5').dialog({ id:'btn5', content:'url:demo/弹出信息填报页示例.html',width:520, height:260, title:'弹出信息填报页示例',button: [
+			{
+				name: '保存',
+				callback: function () {
+					return false;
+				},
+				focus: true
+			},
+			{
+				name: '关闭',
+				callback: function () {
+					
+				}
+			}
+    	]});
+		$('#btn6').dialog({ id:'btn6', content:'url:demo/弹出树示例.html',width:260, height:380, title:'弹出树示例' });
+		$('#btn8').dialog({ id:'btn8', content:'url:demo/弹出信息分组展现示例.html',width:860, height:360, title:'弹出信息分组展现示例' });
+	});
+</script>
+</head>
+<body class="yBodyBg">
+<div class="yContentBox">
+  <input type="button" class="yImageButton" value="HTML内容" id="btn1"/>
+  <input type="button" class="yImageButton" value="背景遮罩" id="btn2"/>
+  <input type="button" class="yImageButton" value="HTML页面" id="btn3"/>
+  <input type="button" class="yImageButton" value="弹出列表查询" id="btn4"/>
+  <input type="button" class="yImageButton" value="弹出新增页示例" id="btn5"/>
+  <input type="button" class="yImageButton" value="弹出树" id="btn6"/>
+  <input type="button" class="yImageButton" value="弹出信息分组展现示例" id="btn8"/>
+  <br/>
+  <br/>
+  <div>更多弹出窗口示例及窗口控制参数，参见弹出组件官网：<a href="http://lhgcore.com" target="_blank">http://lhgcore.com</a></div>
+  <div>更多树示例，参见ZTREE官网：<a href="http://www.ztree.me" target="_blank">http://www.ztree.me</a></div>
+</div>
+</body>
+</html>

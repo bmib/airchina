@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>信息系统开发基础框架.Mr.liuyong</title>
+<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+<script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+<script>
+	$(function(){
+		$('#createButton').dialog({ id:'createButton', content:'url:system/orgMaintain.html',width:420, height:180, title:'新增组织',max: false,min: false,button: [
+        {
+            name: '保存',
+            callback: function () {
+                return false;
+            },
+            focus: true
+        },
+        {
+            name: '关闭',
+            callback: function () {
+                
+            }
+        }
+    	]
+		});
+		iniCheckBox("checkAllButton","checkAll");
+	});
+</script>
+</head>
+<body>
+<div class="yContentBox" style="width:99%">
+	<div class="yInfoBar">组织查询</div>
+    <div class="ySearchArea">	
+    <table border="0" cellpadding="0" cellspacing="0" class="ySearchTable">
+    <tr>
+      <td class="yLeftTipTD">组织名称/代码</td>
+      <td><input name="Input2" class="yTextInput"/></td>
+      <td>
+      	　<input type="button" class="yButton" value="查询"/>
+      </td>
+    </tr>
+    </table>
+	</div>
+    <div class="yListButtonArea">
+        <input type="button" class="yButton" value="新增组织" id="createButton"/>
+        <input type="button" class="yButton" value="删除"/>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="yTable" width="100%">
+        <thead>
+            <tr>
+                <th width="25" style="text-align:left;"><input type="checkbox" name="checkAllButton" id="checkAllButton"/></th><th>组织名称</th><th width="150">组织代码</th><th width="150">更新时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2010">综合司</a></td><td>ZHS</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2010">航空安全办公室</a></td><td>HKAQBGS</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>发展计划司</td><td>FZJHS</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>财务司</td><td>CWS</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>人事科教司</td><td>RSJKS</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>国际司</td><td>GJS</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>运输司</td><td>YSS</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>飞行标准司</td><td>FBS</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>航空器适航审定司</td><td>HKQSHSDS</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>机场司</td><td>JCS</td><td>2013-01-09 09:43</td>
+            </tr>
+       </tbody>
+    </table>
+    <div class="yListBottomArea">
+        <div class="yListBottomAreaLeft"></div>
+        <div class="yListBottomAreaRight">首页 上一页 下一页 末页 第 1/124 页 每页<select><option>10</option><option>20</option></select>条 共1236条</div>
+    </div>
+</div>
+ </body>
+</html>

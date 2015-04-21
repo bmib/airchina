@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>信息系统开发基础框架.Mr.liuyong</title>
+<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+<script>
+	$(function(){
+		iniCheckBox("checkAllButton","checkAll");
+	});
+</script>
+</head>
+<body class="yBodyBg">
+<div class="yContentBox">
+	<div class="yInfoBar">航空器查询</div>
+    <div class="ySearchArea">	
+      <table border="0" cellpadding="0" cellspacing="0" class="ySearchTable">
+        <tr>
+          <td class="yLeftTipTD">系统章节</td>
+          <td><input name="Input2" class="yTextInput"/></td>
+          <td class="yLeftTipTD">航空器型号</td>
+          <td>
+            <input  class="yTextInput" />
+            <img src="../includes/styleBase/images/select.gif"/>
+          </td>
+          <td class="yLeftTipTD">时间范围</td>
+          <td>
+          <input name="Input" class="yTextInput" value="2010-10-01"  maxlength="19"/>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="yLeftTipTD">发生地区</td>
+          <td >
+            <select class="yTextInputS">
+                <option value="1">全部地区</option>
+                <option value="2">东北地区</option>
+                <option value="3">华北地区</option>
+                <option value="4">华东地区</option>
+                <option value="5">中南地区</option>
+                <option value="6">西南地区</option>
+                <option value="7">西北地区</option>
+                <option value="8">新疆地区</option>
+            </select>
+          </td>
+          <td class="yLeftTipTD">运营人</td>
+          <td>
+            <input name="yunyingren" class="yTextInput" />
+            <img src="../includes/styleBase/images/select.gif"/>
+          </td>
+          <td class="yLeftTipTD">报告状态</td>
+          <td>
+                <select class="yTextInputS">
+                  <option value="1">全部</option>
+                  <option value="1">调查中</option>
+                  <option value="1">已关闭</option>
+                </select>
+          </td>
+          <td>
+          &nbsp;&nbsp;<input type="button" class="yButton" value="开始查询"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="yListButtonArea">
+        <input type="button" class="yButton" value="调整到其他菜单" onclick="window.top.loadMyResource('B1','C4','E6');"/>
+        <input type="button" class="yButton" value="修改"/>
+        <input type="button" class="yButton" value="删除"/>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="yTable" width="100%">
+        <thead>
+            <tr>
+                <th width="25" style="text-align:left;"><input type="checkbox" name="checkAllButton" id="checkAllButton"/></th><th>表头1</th><th>表头1</th><th>表头1</th><th>表头1</th><th>表头1</th><th>表头1</th><th>表头1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#">测试</a></td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"  class="checkAll"/></td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"  class="checkAll"/></td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"  class="checkAll"/></td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"  class="checkAll"/></td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"  class="checkAll"/></td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"  class="checkAll"/></td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"  class="checkAll"/></td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"  class="checkAll"/></td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td><td>测试</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="yListBottomArea">
+        <div class="yListBottomAreaLeft"></div>
+        <div class="yListBottomAreaRight">首页 上一页 下一页 末页 第 1/124 页 每页<select><option>10</option><option>20</option></select>条 共1236条</div>
+    </div>
+</div>
+</body>
+</html>

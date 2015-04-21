@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>信息系统开发基础框架.Mr.liuyong</title>
+<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+<script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+<script>
+	$(function(){
+		$('#createButton').dialog({ id:'createButton', content:'url:system/resourceMaintain.html',width:420, height:240, title:'新增资源',max: false,min: false,button: [
+        {
+            name: '保存',
+            callback: function () {
+                return false;
+            },
+            focus: true
+        },
+        {
+            name: '关闭',
+            callback: function () {
+                
+            }
+        }
+			]
+		});
+		iniCheckBox("checkAllButton","checkAll");
+	});
+</script>
+</head>
+<body>
+<div class="yContentBox" style="width:99%">
+	<div class="yInfoBar">资源查询</div>
+    <div class="ySearchArea">	
+    <table border="0" cellpadding="0" cellspacing="0" class="ySearchTable">
+    <tr>
+      <td class="yLeftTipTD">资源名称/代码</td>
+      <td><input name="Input2" class="yTextInput"/></td>
+      <td>
+      	　<input type="button" class="yButton" value="查询"/>
+      </td>
+    </tr>
+    </table>
+	</div>
+    <div class="yListButtonArea">
+        <input type="button" class="yButton" value="新增资源" id="createButton"/>
+        <input type="button" class="yButton" value="删除"/>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="yTable" width="100%">
+        <thead>
+            <tr>
+                <th width="25" style="text-align:left;"><input type="checkbox" name="checkAllButton" id="checkAllButton"/></th><th width="120">资源名称</th><th width="120">资源代码</th><th>URL</th><th width="120">更新时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2010">性能纠错</a></td><td>ZHS</td><td>/kkx/servlet/***Servlet</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td><a href="#2010">报警纠错</a></td><td>HKAQBGS</td><td>/kkx/servlet/***Servlet</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>数据分析</td><td>FZJHS</td><td>/kkx/servlet/***Servlet</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>其他功能</td><td>CWS</td><td>/kkx/servlet/***Servlet</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>其他功能</td><td>RSJKS</td><td>/kkx/servlet/***Servlet</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>其他功能</td><td>GJS</td><td>/kkx/servlet/***Servlet</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>其他功能</td><td>YSS</td><td>/kkx/servlet/***Servlet</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>其他功能</td><td>FBS</td><td>/kkx/servlet/***Servlet</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>其他功能</td><td>HKQSHSDS</td><td>/kkx/servlet/***Servlet</td><td>2013-01-09 09:43</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="checkAll"/></td><td>其他功能</td><td>JCS</td><td>/kkx/servlet/***Servlet</td><td>2013-01-09 09:43</td>
+            </tr>
+       </tbody>
+    </table>
+    <div class="yListBottomArea">
+        <div class="yListBottomAreaLeft"></div>
+        <div class="yListBottomAreaRight">首页 上一页 下一页 末页 第 1/124 页 每页<select><option>10</option><option>20</option></select>条 共1236条</div>
+    </div>
+</div>
+</body>
+</html>

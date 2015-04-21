@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>审计计划</title>
+		<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+		<link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css" type="text/css" />
+		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+		<script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.js"></script>
+		<link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
+		<script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
+		<script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+		<style type="text/css">
+			div.tableContainer {
+				clear: both;
+				border-collapse: collapse;
+				overflow-y: scroll;
+				width: 100%;
+				min-width: 1024px;
+				padding: 0;
+				margin: 0;
+			}
+			.yTable {
+				width: 100%;
+			}
+			.yTable tr td {
+				line-height: 50px;
+				height: 50px;
+				vertical-align: middle;
+				text-align: center;
+				background-color: #FFFFFF;
+			}
+			.year {
+				line-height: 30px;
+				height: 30px;
+				margin: 10px 10px;
+				width: 400px;
+				float: left;
+			}
+			.yearspan {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			.remark {
+				float: left;
+				width: 600px;
+				text-align: right;
+				margin-top: 15px;
+				line-height: 20px;
+				height: 20px;
+			}
+			.plantdon {
+				background-image: url('../images/20150417030425697_easyicon_net_48.png') !important;
+				background-position: center center !important;
+				background-repeat: no-repeat !important;
+			}
+		</style>
+		<script>
+			$(document).ready(function() {
+				var winH = $(window).height() - 130;
+				$("#tableContainerList").css('height', winH + 'px');
+			});
+
+			function addyear(num) {
+				$("#yearspan").html(parseInt($("#yearspan").text()) + num);
+				return false;
+			}
+			$(".plantd").live('dblclick',
+				function() {
+					if (!$(this).hasClass("plantdon")) {
+						//$(this).html('<img width="30" src="../images/20150417030425697_easyicon_net_48.png" alt="" />');
+						$(this).addClass("plantdon");
+						$.jBox.tip('创建计划成功！');
+					} else {
+						//$(this).html('');
+						$(this).removeClass("plantdon");
+						$.jBox.tip('取消计划成功！');
+					}
+				}
+			);
+			$(".plantd").live('click mouseover',
+				function() {
+					$(this).css('background-color', '#F2F2F2');
+				}
+			);
+			$(".plantd").live('mouseout',
+				function() {
+					$(this).css('background-color', '#FFFFFF');
+				}
+			);
+		</script>
+	</head>
+
+	<body class="yControlBody">
+		<div class="yContentBox">
+			<div style="width:100%; min-width: 1024px;;">
+				<div class="year">
+					<a href="#112" onclick="addyear(-1);">
+						<img src="../images/20150417032611750_easyicon_net_64.png" width="12" />
+					</a>
+					<span id="yearspan" class="yearspan">2015</span>
+					<a onclick="addyear(1);" href="#112">
+						<img src="../images/20150417032611750_easyicon_net_64-2.png" width="12" />
+					</a>
+				</div>
+				<div class="remark">
+					<img src="../images/2015041703431237_easyicon_net_32.png" width="16" /> 在空白单元格里双击添加计划，在已添加计划的单元格里双击取消计划。
+				</div>
+			</div>
+			<div class="tableContainer">
+				<table class="yTable">
+					<thead>
+						<tr>
+							<th width="10%" class="title">
+								&nbsp;&nbsp;&nbsp;&nbsp;
+							</th>
+							<th width="6%">&nbsp;&nbsp;</th>
+							<th width="7%">
+								1月
+							</th>
+							<th width="7%">
+								2月
+							</th>
+							<th width="7%">
+								3月
+							</th>
+							<th width="7%">
+								4月
+							</th>
+							<th width="7%">
+								5月
+							</th>
+							<th width="7%">
+								6月
+							</th>
+							<th width="7%">
+								7月
+							</th>
+							<th width="7%">
+								8月</th>
+
+							<th width="7%">
+								9月
+							</th>
+							<th width="7%">
+								10月
+							</th>
+							<th width="7%">
+								11月
+							</th>
+							<th width="7%">
+								12月
+							</th>
+						</tr>
+						<tr class="stat">
+							<th class="title">
+
+							</th>
+							<th>合计</th>
+							<th>
+								0
+							</th>
+							<th>
+								0
+							</th>
+							<th>
+								1
+							</th>
+							<th>
+								0
+							</th>
+							<th>
+								0
+							</th>
+							<th>
+								0
+							</th>
+							<th>
+								0
+							</th>
+							<th>
+								0
+							</th>
+							<th>
+								0
+							</th>
+							<th>
+								0
+							</th>
+							<th>
+								0
+							</th>
+							<th>
+								0
+							</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div id="tableContainerList" class="tableContainer">
+				<table class="yTable">
+
+					<tbody>
+						<tr>
+							<td width="10%">
+								国货航
+							</td>
+							<td width="6%">0</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+							<td width="7%" class="plantd">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								深圳航空
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								山东航空
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								北京航空
+							</td>
+							<td>
+								1
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd plantdon">
+								
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								大连航空
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								澳门航空
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								内蒙航空
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								...
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								...
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								...
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								...
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td>
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+							<td class="plantd">
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+
+</html>

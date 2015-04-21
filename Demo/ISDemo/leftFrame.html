@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>信息系统开发基础框架.Mr.liuyong</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="includes/styleBase/css/yStyle.css" rel="stylesheet"></link>
+<script type="text/javascript" src="includes/styleBase/js/jquery.js"></script>
+<script type="text/javascript" src="includes/styleBase/js/yStyle.js"></script>
+<script>
+	//当前作为的菜单
+	var currentNavObjectId=window.parent.menuFrame.currentNavObjectId;
+	var leftMenuBarJson=window.parent.menuFrame.leftMenuBarJson;
+	var leftMenuJson=window.parent.menuFrame.leftMenuJson;
+	var mainFrameSrc=window.parent.$("#mainFrame").attr("src");
+	
+	//左侧导航跳转
+	function yReLocation(url){
+		if(url!=null && url !="undefined" && url !="null"){
+			window.parent.$("#mainFrame").attr("src",url);
+		}
+	}
+	//初始化左侧菜单数据
+	function iniLeftFrameMenuData(){
+		var hasRightIniSrcFlag=null;
+		for(var i=0;i<leftMenuBarJson.length;i++){
+			if(leftMenuBarJson[i].PID==currentNavObjectId){
+				$("<div class='yLeftMenuType'>"+leftMenuBarJson[i].NAME+"</div>").appendTo($("#yLeftNavBox"));
+				for(var j=0;j<leftMenuJson.length;j++){
+					if(leftMenuJson[j].PID==leftMenuBarJson[i].UUID){
+						var tem="";
+						if(mainFrameSrc==leftMenuJson[j].PAGEURL){
+							tem="yleftMenuOn";
+							hasRightIniSrcFlag=true;
+						}
+						$("<div class='yleftMenu "+tem+"' id='"+leftMenuJson[j].UUID+"' onClick='yReLocation(\""+leftMenuJson[j].PAGEURL+"\");'>"+leftMenuJson[j].NAME+"</div>").appendTo($("#yLeftNavBox"));
+					}
+				}
+			}
+		}
+		//如果页面中操作事件指定了默认的三级菜单
+		if($("#"+window.top.object3Id).length>0){
+			$("#"+window.top.object3Id).click();
+			$("#"+window.top.object3Id).addClass("yleftMenuOn");
+			window.top.object3Id=null;
+			return;
+		}
+		//如果上层菜单没有默认右侧src，那么默认选中第一个菜单
+		if(!hasRightIniSrcFlag){
+			$(".yleftMenu").each(function(i){
+				if(i==0){
+					$(this).click();
+					$(this).addClass("yleftMenuOn");
+				}
+			});
+		}
+		
+	}
+	//初始化左侧的菜单效果
+	function iniLeftMenu(){
+		$(".yleftMenu").bind("mouseover",function(){
+			$(this).addClass("yleftMenuOver");
+		});
+		$(".yleftMenu").bind("mouseout",function(){
+			$(this).removeClass("yleftMenuOver");
+		});
+		$(".yleftMenu").bind("click",function(){
+			$(".yleftMenuOn").removeClass("yleftMenuOn");
+			$(this).addClass("yleftMenuOn");
+		});	
+	}
+	$(function(){
+		iniLeftFrameMenuData();
+		iniLeftMenu();
+	});
+</script>
+</head>
+<body class="yLeftbodyBg">
+<div class="yLeftNavBox" id="yLeftNavBox">
+</div>
+</body>
+</html>

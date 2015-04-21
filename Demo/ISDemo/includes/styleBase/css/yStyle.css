@@ -165,15 +165,15 @@ a:active {
 .yTable > thead > tr > th{
 	padding:4px;
 	color:#015fa6;
-	font-size:12px;
-	font-weight:bold;
+	font-size:14px;
+	font-weight:100;
 	text-align:center;
 	border-right:1px solid #beccdb;
 	border-bottom:1px solid #beccdb;
 	background:#E2F1FD url('../images/bg_header.jpg') repeat-x;
 }
 .yTable > tbody > tr > td{
-	padding:3px;
+	/*padding:3px;*/
 	font-size:12px;
 	border-right:1px solid #beccdb;
 	border-bottom:1px solid #beccdb;

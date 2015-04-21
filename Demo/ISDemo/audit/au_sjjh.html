@@ -42,7 +42,7 @@
 				height: 30px;
 				margin: 10px 10px;
 				width: 100%;
-				text-align: center;
+				text-align: left;
 			}
 			.yearspan {
 				margin-left: 10px;
@@ -56,7 +56,7 @@
 		</style>
 		<script>
 			$(document).ready(function() {
-				var winH = $(window).height() - 190;
+				var winH = $(window).height() - 120;
 				$("#tableContainerList").css('height', winH + 'px');
 				$(".plantd").each(function() {
 					var currentid = $(this);
@@ -106,7 +106,7 @@
 
 	<body class="yBodyBg">
 		<div class="yContentBox">
-			<div class="alert alert-warning">
+			<div class="yTip" style="float: right;">
 				在空白单元格里单击添加计划，在已添加计划的单元格里单击修改或者删除计划。
 			</div>
 			<div class="year">

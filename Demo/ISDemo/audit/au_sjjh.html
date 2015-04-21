@@ -56,26 +56,11 @@
 			$(document).ready(function() {
 				var winH = $(window).height() - 160;
 				$("#tableContainerList").css('height', winH + 'px');
-			});
-
-			function addyear(num) {
-				$("#yearspan").html(parseInt($("#yearspan").text()) + num);
-				return false;
-			}
-			$(".plantd").live('dblclick',
-				function() {
-					//if (!$(this).hasClass("plantdon")) {
-					//$(this).html('<img width="30" src="../images/20150417030425697_easyicon_net_48.png" alt="" />');
-					//$(this).addClass("plantdon");
-					//$.jBox.tip('创建计划成功！');
-					//} else {
-					//$(this).html('');
-					//$(this).removeClass("plantdon");
-					//$.jBox.tip('取消计划成功！');
-					//}
+				
+				$(".plantd").each(function(){
 					var currentid = $(this);
 					$(this).dialog({
-						id: $(this).attr("id"),
+						id: currentid.attr("id"),
 						content: 'url:audit/au_sjjh_add.html',
 						width: 520,
 						height: 200,
@@ -98,8 +83,14 @@
 							callback: function() {}
 						}]
 					});
-				}
-			);
+				});
+			});
+
+			function addyear(num) {
+				$("#yearspan").html(parseInt($("#yearspan").text()) + num);
+				return false;
+			}
+			
 			$(".plantd").live('mouseover',
 				function() {
 					$(this).css('background-color', '#F2F2F2');
@@ -217,47 +208,46 @@
 			</div>
 			<div id="tableContainerList" class="tableContainer">
 				<table class="yTable">
-
 					<tbody>
 						<tr>
 							<td width="10%">
 								国货航
 							</td>
 							<td width="6%">0</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td1">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td2">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td3">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td4">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td5">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td6">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td7">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td8">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td9">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td10">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td11">
 
 							</td>
-							<td width="7%" class="plantd">
+							<td width="7%" class="plantd" id="td12">
 
 							</td>
 						</tr>
@@ -268,40 +258,40 @@
 							<td>
 								0
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td13">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td14">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td15">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td16">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td17">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td18">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td19">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td20">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td21">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td22">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td23">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td24">
 
 							</td>
 						</tr>
@@ -312,40 +302,40 @@
 							<td>
 								0
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td25">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td26">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td27">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td28">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td29">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td30">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td31">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td32">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td33">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td34">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td35">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td36">
 
 							</td>
 						</tr>
@@ -356,40 +346,40 @@
 							<td>
 								1
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td37">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td38">
 
 							</td>
-							<td class="plantd plantdon">
+							<td class="plantd plantdon" id="td39">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td40">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td41">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td42">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td43">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td44">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td45">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td46">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td47">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td48">
 
 							</td>
 						</tr>
@@ -400,40 +390,40 @@
 							<td>
 								0
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td49">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td50">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td51">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td52">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td53">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td54">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td55">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td56">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td57">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td58">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td59">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td60">
 
 							</td>
 						</tr>
@@ -444,40 +434,40 @@
 							<td>
 								0
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td61">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td62">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td63">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td64">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td65">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td66">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td67">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td68">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td69">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td70">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td71">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td72">
 
 							</td>
 						</tr>
@@ -488,84 +478,40 @@
 							<td>
 								0
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td73">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td74">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td75">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td76">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td77">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td78">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td79">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td80">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td81">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td82">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td83">
 
 							</td>
-							<td class="plantd">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								...
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
+							<td class="plantd" id="td84">
 
 							</td>
 						</tr>
@@ -576,84 +522,40 @@
 							<td>
 								0
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td85">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td86">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td87">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td88">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td89">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td90">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td91">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td92">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td93">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td94">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td95">
 
 							</td>
-							<td class="plantd">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								...
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
-
-							</td>
-							<td class="plantd">
+							<td class="plantd" id="td96">
 
 							</td>
 						</tr>
@@ -664,40 +566,128 @@
 							<td>
 								0
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td97">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td98">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td99">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td100">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td101">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td102">
+
+							</td>
+							<td class="plantd" id="td103">
+
+							</td>
+							<td class="plantd" id="td104">
+
+							</td>
+							<td class="plantd" id="td105">
+
+							</td>
+							<td class="plantd" id="td106">
+
+							</td>
+							<td class="plantd" id="td107">
+
+							</td>
+							<td class="plantd" id="td108">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								...
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd" id="td109">
+
+							</td>
+							<td class="plantd" id="td110">
+
+							</td>
+							<td class="plantd" id="td111">
+
+							</td>
+							<td class="plantd" id="td112">
+
+							</td>
+							<td class="plantd" id="td113">
+
+							</td>
+							<td class="plantd" id="td114">
+
+							</td>
+							<td class="plantd" id="td115">
+
+							</td>
+							<td class="plantd" id="td116">
+
+							</td>
+							<td class="plantd" id="td117">
+
+							</td>
+							<td class="plantd" id="td118">
+
+							</td>
+							<td class="plantd" id="td119">
+
+							</td>
+							<td class="plantd" id="td120">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								...
+							</td>
+							<td>
+								0
+							</td>
+							<td class="plantd" id="td121">
+
+							</td>
+							<td class="plantd" id="td122">
+
+							</td>
+							<td class="plantd" id="td123">
+
+							</td>
+							<td class="plantd" id="td124">
+
+							</td>
+							<td class="plantd" id="td125">
+
+							</td>
+							<td class="plantd" id="td126">
 
 							</td>
 							<td>
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td127">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td128">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td129">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td130">
 
 							</td>
-							<td class="plantd">
+							<td class="plantd" id="td131">
 
 							</td>
 						</tr>
@@ -706,5 +696,4 @@
 			</div>
 		</div>
 	</body>
-
 </html>

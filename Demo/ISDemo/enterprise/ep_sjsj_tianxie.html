@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>预填</title>
+		<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+		<link rel="stylesheet" href="../includes/styleBase/css/bootstrap.css" />
+		<link rel="stylesheet" href="../includes/styleBase/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css" type="text/css" />
+		<link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
+		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+		<script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.js"></script>
+		<script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
+		<script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+		<script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+		<style>
+			.yContentBox {
+				min-width: 1024px;
+			}
+			.problemlist {
+				border: 1px solid #d2d2d2;
+				border-collapse: collapse;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				min-height: 70px;
+			}
+		</style>
+	</head>
+
+	<body class="yBodyBg">
+		<div class="yContentBox">
+			<div class="yInfoBar"><strong>第一部分 程序属性</strong> <a>显示全部</a> <a>显示未回答问题</a> 问题数量：25，未回答8，已回答17（是：10，否：2，不适用：3，无法视察：2）</div>
+			<table cellpadding="0" cellspacing="0" border="0" class="yInfoBorderTable" width="100%">
+				<tr>
+					<td>
+						<div class="yTip">目标: 确定合格证持有人的书面程序可以确保何人、何事、何时、何地和如何完成这些程序。这些程序必须确保所有人员以较高的安全水平履行其职责</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<div class="problemlist">
+							1.1 合格证持有人的货物运输流程是否符合特定规章和CAAC政策的要求：
+						</div>
+						<div class="problemlist">
+							1.1.1 合格证持有人货物运输流程是否有关于将货物放置在经批准的货箱内且货箱满足下列要求,货物可以装在客舱内任一位置的详细说明： ACT 规章要求 任务指南
+						</div>
+						<div class="problemlist">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td style="width:110px;" valign="top">
+										<img src="../images/dc_notfilled.png" />
+									</td>
+									<td style="width:400px;" valign="top">
+										1.1.1.1 货箱能够承受适用于装有该货箱的飞机的旅客座椅载荷系数和应急着陆条件1.15倍的过载？计算时要用货箱重量和货箱中可以装载货物的最大重量的总重量
+										<br />
+										<br />
+										<br />
+										<input type="button" class="yButton" value="规章要求" />
+										<input type="button" class="yButton" value="任务指南" />
+									</td>
+									<td style="width:100px; padding-left: 20px;" valign="top" align="left">
+										<input type="checkbox" /> 是
+										<br />
+										<input type="checkbox" /> 否，说明
+										<br />
+										<input type="checkbox" /> 不适用
+										<br />
+										<input type="checkbox" /> 无法视察
+									</td>
+									<td style="width:400px;" valign="top" align="left">
+										说明：
+										<br />
+										<textarea cols="20" rows="10" style="width: 380px;"></textarea>
+
+										<br />
+										<br />
+										<p>
+											<a href="#" onclick="uploadFile();">
+
+										上传文件
+
+									</a>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="problemlist">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td style="width:110px;" valign="top">
+										<img src="../images/dc_filled.png" />
+									</td>
+									<td style="width:400px;" valign="top">
+										1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？
+
+										<br />
+										<br />
+										<br />
+										<input type="button" class="yButton" value="规章要求" />
+										<input type="button" class="yButton" value="任务指南" />
+									</td>
+									<td style="width:100px; padding-left: 20px;" valign="top" align="left">
+										<input type="checkbox" checked="checked" /> 是
+										<br />
+										<input type="checkbox" /> 否，说明
+										<br />
+										<input type="checkbox" /> 不适用
+										<br />
+										<input type="checkbox" /> 无法视察
+									</td>
+									<td style="width:400px;" valign="top" align="left">
+										说明：
+										<br />
+										<textarea cols="20" rows="10" style="width: 380px;">已核实</textarea>
+
+										<br />
+										<br />
+										<p>
+											<a href="#" onclick="uploadFile();">
+
+
+
+										上传文件
+
+
+
+									</a>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="problemlist">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td style="width:110px;" valign="top">
+										<img src="../images/dc_errorfilled.png" />
+									</td>
+									<td style="width:400px;" valign="top">
+										1.1.1.3 在所有旅客登机门或售票柜台处，是否将制定的有关出口座位旅客安排程序的书面规定提供给公众？
+										<br />
+										<br />
+										<br />
+										<input type="button" class="yButton" value="规章要求" />
+										<input type="button" class="yButton" value="任务指南" />
+									</td>
+									<td style="width:100px; padding-left: 20px;" valign="top" align="left">
+										<input type="checkbox" /> 是
+										<br />
+										<input type="checkbox" /> 否，说明
+										<br />
+										<input type="checkbox" /> 不适用
+										<br />
+										<input type="checkbox" /> 无法视察
+									</td>
+									<td style="width:400px;" valign="top" align="left">
+										说明：
+										<br />
+										<textarea cols="20" rows="10" style="width: 380px;"></textarea>
+
+										<br />
+										<br />
+										<p>
+											<a href="#" onclick="uploadFile();">
+										上传文件
+									</a>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="problemlist">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td style="width:110px;" valign="top">
+										<img src="../images/dc_notfilled.png" />
+									</td>
+									<td style="width:400px;" valign="top">
+										1.1.1.4 每个出口座位处放置的旅客须知卡是否包含了必需的出口座位信息？
+										<br />
+										<br />
+										<br />
+										<input type="button" class="yButton" value="规章要求" />
+										<input type="button" class="yButton" value="任务指南" />
+									</td>
+									<td style="width:100px; padding-left: 20px;" valign="top" align="left">
+										<input type="checkbox" /> 是
+										<br />
+										<input type="checkbox" /> 否，说明
+										<br />
+										<input type="checkbox" /> 不适用
+										<br />
+										<input type="checkbox" /> 无法视察
+									</td>
+									<td style="width:400px;" valign="top" align="left">
+										说明：
+										<br />
+										<textarea cols="20" rows="10" style="width: 380px;"></textarea>
+
+										<br />
+										<br />
+										<p>
+											<a href="#" onclick="uploadFile();">
+
+
+
+										上传文件
+
+
+
+									</a>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+
+</html>

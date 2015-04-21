@@ -7,6 +7,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>审计计划</title>
 		<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+		<link rel="stylesheet" href="../includes/styleBase/css/bootstrap.css" />
+		<link rel="stylesheet" href="../includes/styleBase/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css" type="text/css" />
 		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
 		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
@@ -54,10 +56,9 @@
 		</style>
 		<script>
 			$(document).ready(function() {
-				var winH = $(window).height() - 160;
+				var winH = $(window).height() - 190;
 				$("#tableContainerList").css('height', winH + 'px');
-				
-				$(".plantd").each(function(){
+				$(".plantd").each(function() {
 					var currentid = $(this);
 					$(this).dialog({
 						id: currentid.attr("id"),
@@ -90,7 +91,6 @@
 				$("#yearspan").html(parseInt($("#yearspan").text()) + num);
 				return false;
 			}
-			
 			$(".plantd").live('mouseover',
 				function() {
 					$(this).css('background-color', '#F2F2F2');
@@ -106,7 +106,9 @@
 
 	<body class="yBodyBg">
 		<div class="yContentBox">
-			<div class="yTip">在空白单元格里单击添加计划，在已添加计划的单元格里单击修改或者删除计划。</div>
+			<div class="alert alert-warning">
+				在空白单元格里单击添加计划，在已添加计划的单元格里单击修改或者删除计划。
+			</div>
 			<div class="year">
 				<a href="#112" onclick="addyear(-1);">
 					<img src="../images/20150417032611750_easyicon_net_64.png" width="12" />
@@ -696,4 +698,5 @@
 			</div>
 		</div>
 	</body>
+
 </html>

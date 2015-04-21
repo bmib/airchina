@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>数据收集</title>
+		<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+		<link rel="stylesheet" href="../includes/styleBase/css/bootstrap.css" />
+		<link rel="stylesheet" href="../includes/styleBase/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css" type="text/css" />
+		<link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
+		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+		<script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.js"></script>
+		<script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
+		<script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+		<script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+		<style>
+			.yTable {
+				width: 100%;
+			}
+		</style>
+		<script>
+			function qianshou() {
+				$.jBox.tip('签收成功！');
+			}
+
+			function tianxie() {
+				//window.location.href = "ep_sjsj_tianxie.html";
+				
+			}
+			
+			$(document).ready(function(){
+				$("#btntianxie").dialog({
+						id: "btntianxie",
+						content: 'url:enterprise/ep_sjsj_tianxie.html',
+						width: 1100,
+						height: 500,
+						title: '数据收集',
+						button: [{
+							name: '保存',
+							callback: function() {
+								//$.jBox.tip('计划保存成功！');
+								currentid.addClass("plantdon");
+							},
+							focus: true
+						}, {
+							name: '提交',
+							callback: function() {
+								//$.jBox.tip('计划删除成功！');
+								currentid.removeClass("plantdon");
+							}
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+					
+					$("#btntianxie").dialog({id: "btntianxie"}).max();
+			});
+		</script>
+	</head>
+
+	<body class="yBodyBg">
+		<div class="yContentBox">
+			<div class="yTabContainer">
+				<div class="yT yTabHOn">未完成</div>
+				<div class="yT yTabH">已完成</div>
+			</div>
+			<div class="yTabContent">
+				<div class="yTContent">
+					<table border="0" cellpadding="0" cellspacing="0" class="yTable" style="margin-top:5px;">
+						<thead>
+							<tr>
+								<th>
+									计划年月
+								</th>
+								<th>
+									预填结束日期
+								</th>
+								<th>
+									公司审计组长
+								</th>
+								<th>
+									公司审计专员
+								</th>
+								<th>
+									状态
+								</th>
+								<th>
+									操作
+								</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									2015年2月
+								</td>
+								<td>
+									2015-02-20
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									未填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="填写" id="btntianxie" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年4月
+								</td>
+								<td>
+									2015-04-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									未签收
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="签收" onclick="qianshou();" />
+								</td>
+
+							</tr>
+						</tbody>
+				</div>
+				<div class="yTContent" style="display: none;">
+					<table border="0" style="display: none;" cellpadding="0" cellspacing="0" class="yTable" style="margin-top:5px;">
+						<thead>
+							<tr>
+								<th>
+									计划年月
+								</th>
+								<th>
+									预填结束日期
+								</th>
+								<th>
+									公司审计组长
+								</th>
+								<th>
+									公司审计专员
+								</th>
+								<th>
+									状态
+								</th>
+								<th>
+									操作
+								</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									2015年2月
+								</td>
+								<td>
+									2015-02-20
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年3月
+								</td>
+								<td>
+									2015-03-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年3月
+								</td>
+								<td>
+									2015-03-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年3月
+								</td>
+								<td>
+									2015-03-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年3月
+								</td>
+								<td>
+									2015-03-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年3月
+								</td>
+								<td>
+									2015-03-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年3月
+								</td>
+								<td>
+									2015-03-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年3月
+								</td>
+								<td>
+									2015-03-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年3月
+								</td>
+								<td>
+									2015-03-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年3月
+								</td>
+								<td>
+									2015-03-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							<tr>
+								<td>
+									2015年3月
+								</td>
+								<td>
+									2015-03-28
+								</td>
+								<td>
+									齐龙
+								</td>
+								<td>
+									齐龙，李哲，王静
+								</td>
+								<td>
+									已填写
+								</td>
+								<td align="center">
+									<input type="button" class="yButton" value="查看" />
+								</td>
+
+							</tr>
+							
+							
+						</tbody>
+				</div>
+				
+				</div>
+			</div>
+
+	</body>
+
+</html>

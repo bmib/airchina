@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>   title   </title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../media/css/style.css" rel="stylesheet" type="text/css"/>
+	<script src="../media/js/jquery-1.10.1.min.js" type="text/javascript"></script>   
+	<script src="../media/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<!--以上是页面文件加载，直接拷贝使用，不要修改-->
+
+<!--页面框架开始-->
+<div class="portlet box">
+    <div class="portlet-body">
+    
+    <!--页面内容开始-->
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th align="center">title1</th>
+                  <th align="center">title2</th>
+                    <th align="center">title3</th>
+
+              </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td align="left">
+                        <!--select下拉选择-->
+                            <select class="small m-wrap" tabindex="1" name="filter2" id="filter7">
+                                <option>全部</option>
+                                <option value="A">A 部</option>
+                                <option value="B">B 部</option>
+                                <option value="C">C 部</option>
+                                <option value="D">D 部</option>
+                                <option value="H">H 部</option>
+                            </select>
+                        <!---->
+                        </td>
+                        <td align="left">
+                        <!--select下拉选择-->
+                            <select class="medium m-wrap" tabindex="1" name="filter2" id="filter7">
+                                <option>全部</option>
+                                <option value="A">A 部</option>
+                                <option value="B">B 部</option>
+                                <option value="C">C 部</option>
+                                <option value="D">D 部</option>
+                                <option value="H">H 部</option>
+                          </select>
+                        <!---->
+                      </td>
+                        <td align="left">
+                        <!--select下拉选择-->
+                            <select class="large m-wrap" tabindex="1" name="filter2" id="filter7">
+                                <option>全部</option>
+                                <option value="A">A 部</option>
+                                <option value="B">B 部</option>
+                                <option value="C">C 部</option>
+                                <option value="D">D 部</option>
+                                <option value="H">H 部</option>
+                          </select>
+                        <!---->
+                        
+                      </td>
+                  </tr>
+                    <tr>
+                        <td align="left">
+                         <!--input输入框-->
+                        <input type="text" placeholder="输入关键词" class="m-wrap small" id="filter8" />
+                         <!--input输入框-->
+                        </td>
+                        <td align="left">
+                        <!--input输入框-->
+                        <input type="text" placeholder="输入关键词" class="m-wrap medium" id="filter8" />
+                         <!--input输入框-->
+                      </td>
+                        <td align="left">
+                        <!--input输入框-->
+                        <input type="text" placeholder="输入关键词" class="m-wrap large" id="filter8" />
+                         <!--input输入框-->
+                      </td>
+    
+                  </tr>
+                    <tr>
+                        <td align="left">
+                        <!--radio多选一-->
+                            <div class="controls">
+                                <label class="radio">
+                                    <input type="radio" name="optionsRadios1" value="option1" />
+                                    Option 1
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="optionsRadios1" value="option2" checked />
+                                    Option 2
+                                </label>  
+                                <label class="radio">
+                                    <input type="radio" name="optionsRadios1" value="option2" />
+                                    Option 3
+                                </label>  
+                            </div>
+                        <!--radio多选一-->
+                        </td>
+                        <td align="left">
+                        <!--radio多选一-->
+                            <div class="controls">
+                                <label class="radio line">
+                                <input type="radio" name="optionsRadios2" value="option1" />
+                                Option 1
+                                </label>
+                                <label class="radio line">
+                                <input type="radio" name="optionsRadios2" value="option2" checked />
+                                Option 2
+                                </label>  
+                                <label class="radio line">
+                                <input type="radio" name="optionsRadios2" value="option2" />
+                                Option 3
+                                </label>  
+                            </div>
+                        <!--radio多选一-->
+                        </td>
+                        <td align="left">
+                        <!--checkbox 多选-->
+                        <div class="controls">
+                            <label class="checkbox">
+                            <input type="checkbox" value="" /> Checkbox 1
+                            </label>
+                            <label class="checkbox">
+                            <input type="checkbox" value="" /> Checkbox 2
+                            </label>
+                        </div>
+                        <div class="controls">
+                            <label class="checkbox line">
+                            <input type="checkbox" value="" /> Checkbox 1
+                            </label>
+                            <label class="checkbox line">
+                            <input type="checkbox" value="" /> Checkbox 2
+                            </label>
+                        </div>
+                        <!--checkbox多选-->
+                        
+                        </td>
+                  </tr>
+                    <tr>
+                        <td align="left" height="40">
+                        <!--多行文本-->
+                        <div class="controls">
+                        <textarea class="medium m-wrap" rows="3"></textarea>
+                        </div>
+                        <!--多行文本-->
+                        </td>
+                        <td align="left">
+                         <!--多行文本-->
+                         <div class="controls">
+                        <textarea class="large m-wrap" rows="3"></textarea>
+                        </div>
+                         <!--多行文本-->
+                        </td>
+                        <td align="left">
+                        <!--操作按钮-->
+                        <button type="submit" class="btn green">保存</button>
+                        <button type="submit" class="btn blue">提交</button>
+                        <button type="button" class="btn">关闭</button>
+                        <button type="button" class="btn">返回</button>
+                        <br><br>
+                        <button class="btn mini" >增加</button>
+                        <button class="btn blue mini" > 修改</button>
+                        <button class="btn red mini" >删除</button>
+                        <br><br>
+                        <button class="btn mini"> 进入</button>
+                        <button class="btn green mini"> 查看</button>
+                        <button class="btn yellow mini"> 更多</button>
+                        <br><br>
+                        <button class="btn mini"> 检查</button>
+                        <button class="btn mini"> 归档</button>
+                        <button class="btn mini"> 导出</button>
+                        <button class="btn mini"> 导出目录</button>
+                        <br><br>
+                        <button class="btn blue mini"> 更新</button>
+                        <button class="btn red mini"> 退出</button>
+                        
+                        <!--操作按钮-->
+                        </td>
+    
+                    </tr>
+                    <tr>
+                        <td align="left">
+                        <!--状态-->
+                        <span class="label label-success">有效</span>
+                        <span class="label label-danger">无效</span>
+                        <span class="label label-important">冲突</span>
+                         <!--状态-->
+                        </td>
+                        <td align="left">
+                        <button class="btn blue mini" data-toggle="modal" data-target="#myModal-1">弹出窗口-小</button>
+                        <button class="btn blue mini" data-toggle="modal" data-target="#myModal-2">弹出窗口-大</button>
+                        
+                        </td>
+                        <td align="left">
+                         <!--书签-->
+                        <div class="tabbable tabbable-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab_1_1" data-toggle="tab">书签 1</a></li>
+                                <li><a href="#tab_1_2" data-toggle="tab">书签 2</a></li>
+                                <li><a href="#tab_1_3" data-toggle="tab">书签 3</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab_1_1">
+                                    <p>书签1</p>
+                                    <p>
+                                        <a class="btn green" href="#" data-toggle="dropdown"><i class="icon-arrow-left"></i> 进入</a>
+                                    </p>
+                                </div>
+                                <div class="tab-pane" id="tab_1_2">
+                                    <p>书签2</p>
+                                    <p>
+                                       <a class="btn green" href="#" target="_blank"><i class="icon-search"></i> 查看</a>
+                                    </p>
+                                </div>
+                                <div class="tab-pane" id="tab_1_3">
+                                    <p>书签3</p>
+                                    <p>
+                                        <a class="btn yellow" href="#" target="_blank"><i class="icon-external-link"></i> 更多</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                         <!--书签-->
+                        </td>
+    
+                  </tr>
+                </tbody>
+            </table>
+        <!--页面内容结束-->
+    </div>
+</div>
+<!--页面框架结束-->
+
+
+<!--页面框架2开始-->
+<div class="portlet box">
+    <div class="portlet-body">
+    <!--页面内容开始-->
+    <div class="row-fluid">
+    	<div class="span5">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th align="left" colspan="3" class="left">
+                        输入条件<input type="text" placeholder="输入关键词" class="m-wrap small" id="filter8" />
+                        </th>
+                  </tr>
+                </thead>
+                <thead>
+                    <tr>
+                      <th align="center">title1</th>
+                      <th align="center">title2</th>
+                      <th align="center">title3</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    	<div class="span4">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th align="center">title1</th>
+                      <th align="center">title2</th>
+                        <th align="center">title3</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="span3">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th align="center">title1</th>
+                      <th align="center">title2</th>
+                        <th align="center">title3</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+        <!--页面内容结束-->
+    </div>
+</div>
+<!--页面框架2结束-->
+
+
+<!--页面框架3开始-->
+<div class="portlet box">
+    <div class="portlet-body">
+    
+    <!--页面内容开始-->
+    <div class="row-fluid">
+    	<div class="span9">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th align="center">title1</th>
+                      <th align="center">title2</th>
+                        <th align="center">title3</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="span3">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th align="center">title1</th>
+                      <th align="center">title2</th>
+                        <th align="center">title3</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+        <!--页面内容结束-->
+    </div>
+</div>
+<!--页面框架3结束-->
+
+
+<!--页面框架开始股东条-->
+<div class="portlet box">
+    <div class="portlet-body">
+    <!--页面内容开始-->
+    <div class="row-fluid">
+    	<div class="span9">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th align="center">title1</th>
+                      <th align="center">title2</th>
+                        <th align="center">title3</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="span3">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th align="center">title1</th>
+                      <th align="center">title2</th>
+                        <th align="center">title3</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                  </tr>
+                    <tr>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+    
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+        <!--页面内容结束-->
+    </div>
+</div>
+<!--页面框架4结束-->
+
+
+
+</body>
+
+<!--调取脚本开始-->
+
+<!--调取脚本结束-->
+
+</html>
+
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">窗口title</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" width="100%" id="relateTable">
+                        <thead>
+                            <tr style="background: #FF0000;" bgcolor="#FF0000">
+                                <th width="15%" align="center">title1</th>
+                                <th align="center">title1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td align="center">&nbsp; </td>
+                                <td align="center">&nbsp; </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                <button class="btn blue mini" data-toggle="modal" data-target="#myModal-2">弹出窗口-小</button>
+                                </td>
+                                <td align="center">&nbsp; </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="submit" class="btn green"><i class="icon-file-text"></i> 保存</button>
+            <button type="submit" class="btn blue"><i class="icon-ok"></i> 确定</button>
+			<button type="button" class="btn" data-dismiss="modal"><i class="icon-remove icon-white"></i> 取消</button>
+            <button type="submit" class="btn blue"><i class="icon-ok"></i> 提交</button>
+			<button type="button" class="btn" data-dismiss="modal"><i class="icon-remove icon-white"></i> 关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+<!--弹出窗口-大 开始-->
+
+
+<script type="text/javascript"> 
+$(document).ready(function() { 
+$('#load_content').load('load.htm'); 
+}); 
+</script> 
+
+
+<div id="myModal-2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog big">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">窗口title</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox" id="load_content">
+                
+                	<!--窗口的内容开始-->
+                    
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="submit" class="btn green"><i class="icon-file-text"></i> 保存</button>
+            <button type="submit" class="btn blue"><i class="icon-ok"></i> 确定</button>
+			<button type="button" class="btn" data-dismiss="modal"><i class="icon-remove icon-white"></i> 取消</button>
+            <button type="submit" class="btn blue"><i class="icon-ok"></i> 提交</button>
+			<button type="button" class="btn" data-dismiss="modal"><i class="icon-remove icon-white"></i> 关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口- 大 结束-->

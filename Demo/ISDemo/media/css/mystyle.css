@@ -4,7 +4,7 @@
 label{ padding:6px;}
 .portlet-body{ padding-top:10px; text-align:left; padding:5px;}
 .nav{ margin-bottom:0px;}
-.alert {padding: 5px 20px 3px 15px;  margin-bottom: 10px; }
+.alert {padding: 5px 20px 3px 15px;  margin-bottom: 0px; }
 .form-inline{ text-align:left;}
 [data-toggle="buttons"]>.btn>input[type="radio"], [data-toggle="buttons"]>.btn>input[type="checkbox"] {display: none !important;}
 .btn-primary{
@@ -25,14 +25,14 @@ border-color:#ccc #ccc #ccc;
 .btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.btn-primary.disabled,.btn-primary[disabled]{color:#fff;
 background-color:#ff9900;
 *background-color:#ff9900;}
-.tab-content{ margin-top:10px;}
+.tab-content{ margin-top:0px;}
 
 
 .panel {
-	margin-bottom: 20px;
+	margin-bottom: 1px;
 	background-color: #fff;
-	border: 1px solid transparent;
-	border-radius: 4px;
+	border: 0px solid transparent;
+	border-radius: 0px;
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	box-shadow: 0 1px 1px rgba(0,0,0,0.05)
 }
@@ -243,8 +243,13 @@ background-color:#ff9900;
 
 .modal-backdrop{background-color:#000000;}.modal-backdrop.fade{opacity:0;}
 .modal-backdrop,.modal-backdrop.fade.in{opacity:0.5;filter:alpha(opacity=50);}
-.
+.modal-footer{padding:5px 15px }
+.table {margin-bottom: 0px; }
 
-
-
+.table th, .table td {
+  padding: 5px;
+  line-height: 20px;
+  text-align: left;
+}
+.center{ text-align:center !important;}
 

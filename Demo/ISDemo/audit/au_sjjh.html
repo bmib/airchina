@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/html4/strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -44,9 +44,9 @@
 				width: 100%;
 				text-align: left;
 			}
-			.yearspan {
-				margin-left: 10px;
-				margin-right: 10px;
+			.stat th{
+				background-color: #F9F7ED !important;
+				background-image:none !important;
 			}
 			.plantdon {
 				background-image: url('../images/20150417030425697_easyicon_net_48.png') !important;
@@ -110,11 +110,11 @@
 				在空白单元格里单击添加计划，在已添加计划的单元格里单击修改或者删除计划。
 			</div>
 			<div class="year">
-				<a href="#112" onclick="addyear(-1);">
+				<a href="#112" onclick="addyear(-1);" style="margin-right: 10px;">
 					<img src="../images/20150417032611750_easyicon_net_64.png" width="12" />
 				</a>
-				<span id="yearspan" class="yearspan">2015</span>
-				<a onclick="addyear(1);" href="#112">
+				<span id="yearspan" class="yearspan">2015</span>年
+				<a onclick="addyear(1);" href="#112" style="margin-left: 10px;">
 					<img src="../images/20150417032611750_easyicon_net_64-2.png" width="12" />
 				</a>
 			</div>
@@ -122,10 +122,10 @@
 				<table class="yTable">
 					<thead>
 						<tr>
-							<th width="10%" class="title">
-								&nbsp;&nbsp;&nbsp;&nbsp;
+							<th width="10%" class="title" rowspan="2">
+								投资企业
 							</th>
-							<th width="6%">&nbsp;&nbsp;</th>
+							<th width="6%">月份</th>
 							<th width="7%">
 								1月
 							</th>
@@ -164,9 +164,6 @@
 							</th>
 						</tr>
 						<tr class="stat">
-							<th class="title">
-
-							</th>
 							<th>合计</th>
 							<th>
 								0

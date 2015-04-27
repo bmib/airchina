@@ -1,11 +1,11 @@
 /*!
 
  */
-label{ padding:6px;}
+label{ padding-left:6px;}
 .portlet-body{ padding-top:10px; text-align:left; padding:5px;}
 .nav{ margin-bottom:0px;}
 .alert {padding: 5px 20px 3px 15px;  margin-bottom: 0px; }
-.form-inline{ text-align:left;}
+.form-inline{ text-align:left; padding-top:5px; padding-bottom:5px;}
 [data-toggle="buttons"]>.btn>input[type="radio"], [data-toggle="buttons"]>.btn>input[type="checkbox"] {display: none !important;}
 .btn-primary{
 color:#333;
@@ -250,10 +250,7 @@ background-color:#ff9900;
   padding: 5px;
   line-height: 20px;
   text-align: left;
+  font-size:12px !important;
 }
 .center{ text-align:center !important;}
-
-.scrolldiv
-{
-    overflow-y:scroll;
-}
+.right{ text-align:right !important;}

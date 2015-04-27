@@ -1,0 +1,909 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>分析评估-行动跟踪-审计组长</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var winH = $(window).height() - 80;
+            $("#tab_div").css('height', winH + 'px');
+        });
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div id="tab_div">
+                <!--书签-->
+                <div class="tabbable tabbable-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab_1_1" data-toggle="tab">审计问题（0/5）</a></li>
+                        <li><a href="#tab_1_2" data-toggle="tab">新发现问题（0/3）</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_1_1">
+                            <div class="accordion" id="accordion2">
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？ <span style="color: Red;">(状态：未完成)</span>
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="accordion-body collapse out">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    预填结果
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    问题分类：
+                                                                </td>
+                                                                <td>
+                                                                    人员（例如：人力资源不足、人员资质不符合要求等）
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    问题说明：
+                                                                </td>
+                                                                <td>
+                                                                    未告知旅客
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    无
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改计划
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    计划完成时间：
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    整改措施：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改情况
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    整改完成说明：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a class="btn">完成整改</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div1">
+                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？ <span style="color: Red;">(状态：未完成)</span>
+                                        </a>
+                                    </div>
+                                    <div id="Div1" class="accordion-body collapse out">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    预填结果
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    问题分类：
+                                                                </td>
+                                                                <td>
+                                                                    人员（例如：人力资源不足、人员资质不符合要求等）
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    问题说明：
+                                                                </td>
+                                                                <td>
+                                                                    未告知旅客
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    无
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改计划
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    计划完成时间：
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    整改措施：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改情况
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    整改完成说明：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a class="btn">完成整改</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div2">
+                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？ <span style="color: Red;">(状态：未完成)</span>
+                                        </a>
+                                    </div>
+                                    <div id="Div2" class="accordion-body collapse out">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    预填结果
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    问题分类：
+                                                                </td>
+                                                                <td>
+                                                                    人员（例如：人力资源不足、人员资质不符合要求等）
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    问题说明：
+                                                                </td>
+                                                                <td>
+                                                                    未告知旅客
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    无
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改计划
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    计划完成时间：
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    整改措施：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改情况
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    整改完成说明：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a class="btn">完成整改</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div3">
+                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？ <span style="color: Red;">(状态：未完成)</span>
+                                        </a>
+                                    </div>
+                                    <div id="Div3" class="accordion-body collapse out">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    预填结果
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    问题分类：
+                                                                </td>
+                                                                <td>
+                                                                    人员（例如：人力资源不足、人员资质不符合要求等）
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    问题说明：
+                                                                </td>
+                                                                <td>
+                                                                    未告知旅客
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    无
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改计划
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    计划完成时间：
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    整改措施：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改情况
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    整改完成说明：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a class="btn">完成整改</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div4">
+                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？ <span style="color: Red;">(状态：未完成)</span>
+                                        </a>
+                                    </div>
+                                    <div id="Div4" class="accordion-body collapse out">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    预填结果
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    问题分类：
+                                                                </td>
+                                                                <td>
+                                                                    人员（例如：人力资源不足、人员资质不符合要求等）
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    问题说明：
+                                                                </td>
+                                                                <td>
+                                                                    未告知旅客
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    无
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改计划
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    计划完成时间：
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    整改措施：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 30%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改情况
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    整改完成说明：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a class="btn">完成整改</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_2">
+                            <div class="accordion" id="Div5">
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div6">
+                                            《客舱乘务员手册》第八章第三节未更新 <span style="color: Red;">(状态：未完成)</span> </a>
+                                    </div>
+                                    <div id="Div6" class="accordion-body collapse out">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td valign="top" style="width: 50%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改计划
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    计划完成时间：
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    整改措施：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 50%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改情况
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    整改完成说明：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a class="btn">完成整改</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div7">
+                                            《客舱乘务员手册》第八章第三节未更新 <span style="color: Red;">(状态：未完成)</span> </a>
+                                    </div>
+                                    <div id="Div7" class="accordion-body collapse out">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td valign="top" style="width: 50%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改计划
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    计划完成时间：
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    整改措施：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 50%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改情况
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    整改完成说明：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a class="btn">完成整改</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div8">
+                                            《客舱乘务员手册》第八章第三节未更新 <span style="color: Red;">(状态：未完成)</span> </a>
+                                    </div>
+                                    <div id="Div8" class="accordion-body collapse out">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td valign="top" style="width: 50%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改计划
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    计划完成时间：
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    整改措施：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td valign="top" style="width: 50%;">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">
+                                                                    整改情况
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    整改完成说明：
+                                                                </td>
+                                                                <td>
+                                                                    <textarea></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    附件：
+                                                                </td>
+                                                                <td>
+                                                                    <a>上传文件</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" align="right">
+                                                                    <a class="btn">完成整改</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--书签-->
+            </div>
+            <div style="width: 100%; text-align: center;">
+                <a class="btn btn-success">审核通过</a>&nbsp;&nbsp; <a class="btn btn-danger">审核退回</a>&nbsp;&nbsp;
+                <a class="btn" href="au_fxpg_xdgz.html">返回</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

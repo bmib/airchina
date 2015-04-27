@@ -1,0 +1,813 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>分析评估-行动跟踪-审计组长</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //var winH = $(window).height() - 80;
+            //$("#tab_div").css('height', winH + 'px');
+        });
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div id="tab_div">
+                <!--书签-->
+                <div class="tabbable tabbable-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab_1_1" data-toggle="tab">分析评估</a></li>
+                        <li><a href="#tab_1_2" data-toggle="tab">行动跟踪(预防纠正)</a></li>
+                        <li><a href="#tab_1_3" data-toggle="tab">行动跟踪(风险管理)</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_1_1">
+                            <div class="form-inline">
+                                <label>
+                                    选择计划年月：</label>
+                                <select name="select" class="span2">
+                                    <option value="4" selected="selected">2015年4月</option>
+                                    <option value="5">2015年5月</option>
+                                    <option value="5">2015年6月</option>
+                                </select>
+                                <label>
+                                    选择投资企业：</label>
+                                <select name="select" class="span2">
+                                    <option value="4" selected="selected">北京航空公司</option>
+                                    <option value="5">沈阳航空公司</option>
+                                    <option value="5">山东航空公司</option>
+                                </select>
+                                <label>
+                                    （要素总计30个，已完成评估15个，未完成评估15个。）
+                                </label>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td valign="top">
+                                        <div class="form-inline alert alert-info ">
+                                            <label>
+                                                检查单专业：</label>
+                                            <select name="select" class="span1">
+                                                <option value="4" selected="selected">飞行</option>
+                                                <option value="5">维修</option>
+                                                <option value="5">航务</option>
+                                                <option value="5">航卫</option>
+                                                <option value="5">专业5</option>
+                                                <option value="5">专业6</option>
+                                                <option value="5">专业7</option>
+                                                <option value="5">专业8</option>
+                                            </select>
+                                            <label>
+                                                检查单类型：</label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" value="" />
+                                                SAI
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" value="" />
+                                                EPI
+                                            </label>
+                                            <label>
+                                                要素</label>
+                                            <input type="text" />
+                                            <a class="btn">查询</a>
+                                        </div>
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        要素
+                                                    </th>
+                                                    <th>
+                                                        检查单类型
+                                                    </th>
+                                                    <th>
+                                                        评估状态
+                                                    </th>
+                                                    <th>
+                                                        问题（回答为否/总数）
+                                                    </th>
+                                                    <th>
+                                                        后续行动
+                                                    </th>
+                                                    <th>
+                                                        操作
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a title="点击查看检查单数据收集情况">3.1.5 手提行李程序</a>
+                                                    </td>
+                                                    <td>
+                                                        SAI
+                                                    </td>
+                                                    <td>
+                                                        数据收集中
+                                                    </td>
+                                                    <td>
+                                                        <a>5/20</a>
+                                                    </td>
+                                                    <td>
+                                                        无
+                                                    </td>
+                                                    <td>
+                                                        <a>查看评估历史</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a title="点击查看检查单数据收集情况">3.1.5 手提行李程序</a>
+                                                    </td>
+                                                    <td>
+                                                        SAI
+                                                    </td>
+                                                    <td>
+                                                        待评估
+                                                    </td>
+                                                    <td>
+                                                        <a>5/20</a>
+                                                    </td>
+                                                    <td>
+                                                        无
+                                                    </td>
+                                                    <td>
+                                                        <a>查看评估历史</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a title="点击查看检查单数据收集情况">3.1.5 手提行李程序</a>
+                                                    </td>
+                                                    <td>
+                                                        SAI
+                                                    </td>
+                                                    <td>
+                                                        评估中
+                                                    </td>
+                                                    <td>
+                                                        <a>5/20</a>
+                                                    </td>
+                                                    <td>
+                                                        未完成
+                                                    </td>
+                                                    <td>
+                                                        <a>查看评估历史</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a title="点击查看检查单数据收集情况">3.1.5 手提行李程序</a>
+                                                    </td>
+                                                    <td>
+                                                        SAI
+                                                    </td>
+                                                    <td>
+                                                        评估完成
+                                                    </td>
+                                                    <td>
+                                                        <a>5/20</a>
+                                                    </td>
+                                                    <td>
+                                                        已完成
+                                                    </td>
+                                                    <td>
+                                                        <a>查看评估历史</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a title="点击查看检查单数据收集情况">3.1.5 手提行李程序</a>
+                                                    </td>
+                                                    <td>
+                                                        SAI
+                                                    </td>
+                                                    <td>
+                                                        数据收集中
+                                                    </td>
+                                                    <td>
+                                                        <a>5/20</a>
+                                                    </td>
+                                                    <td>
+                                                        无
+                                                    </td>
+                                                    <td>
+                                                        <a>查看评估历史</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a title="点击查看检查单数据收集情况">3.1.5 手提行李程序</a>
+                                                    </td>
+                                                    <td>
+                                                        SAI
+                                                    </td>
+                                                    <td>
+                                                        数据收集中
+                                                    </td>
+                                                    <td>
+                                                        <a>5/20</a>
+                                                    </td>
+                                                    <td>
+                                                        无
+                                                    </td>
+                                                    <td>
+                                                        <a>查看评估历史</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a title="点击查看检查单数据收集情况">3.1.5 手提行李程序</a>
+                                                    </td>
+                                                    <td>
+                                                        SAI
+                                                    </td>
+                                                    <td>
+                                                        数据收集中
+                                                    </td>
+                                                    <td>
+                                                        <a>5/20</a>
+                                                    </td>
+                                                    <td>
+                                                        无
+                                                    </td>
+                                                    <td>
+                                                        <a>查看评估历史</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a title="点击查看检查单数据收集情况">3.1.5 手提行李程序</a>
+                                                    </td>
+                                                    <td>
+                                                        SAI
+                                                    </td>
+                                                    <td>
+                                                        数据收集中
+                                                    </td>
+                                                    <td>
+                                                        <a>5/20</a>
+                                                    </td>
+                                                    <td>
+                                                        无
+                                                    </td>
+                                                    <td>
+                                                        <a>查看评估历史</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a title="点击查看检查单数据收集情况">3.1.5 手提行李程序</a>
+                                                    </td>
+                                                    <td>
+                                                        SAI
+                                                    </td>
+                                                    <td>
+                                                        数据收集中
+                                                    </td>
+                                                    <td>
+                                                        <a>5/20</a>
+                                                    </td>
+                                                    <td>
+                                                        无
+                                                    </td>
+                                                    <td>
+                                                        <a>查看评估历史</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a title="点击查看检查单数据收集情况">3.1.5 手提行李程序</a>
+                                                    </td>
+                                                    <td>
+                                                        SAI
+                                                    </td>
+                                                    <td>
+                                                        数据收集中
+                                                    </td>
+                                                    <td>
+                                                        <a>5/20</a>
+                                                    </td>
+                                                    <td>
+                                                        无
+                                                    </td>
+                                                    <td>
+                                                        <a>查看评估历史</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td valign="top" style="width: 40%;">
+                                        <table border="1" style="width: 100%; border: 1px solid #d2d2d2; border-collapse: collapse;
+                                            margin-top: 50px; margin-left: 10px; margin-right: 10px;">
+                                            <tr>
+                                                <td colspan="2" style="">
+                                                    <b>评估结果</b>
+                                                </td>
+                                                <td style="text-align: center">
+                                                    <b>是否采取后续行动</b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" align="center">
+                                                    <b>绩效可接受</b>
+                                                </td>
+                                                <td>
+                                                    未观察到问题[1]
+                                                </td>
+                                                <td class="text-center">
+                                                    <label>
+                                                        <input type="checkbox" value="" />
+                                                        否</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    观察到小问题[2]
+                                                </td>
+                                                <td class="text-center">
+                                                    <label>
+                                                        <input type="checkbox" value="" />
+                                                        否</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    观察到小问题[3]
+                                                </td>
+                                                <td class="text-center">
+                                                    <label>
+                                                        <input type="checkbox" value="" />
+                                                        是</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    观察到需要关注的问题[4]
+                                                </td>
+                                                <td class="text-center">
+                                                    <label>
+                                                        <input type="checkbox" value="" />
+                                                        是</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2" align="center">
+                                                    <b>绩效不可接受</b>
+                                                </td>
+                                                <td>
+                                                    观察到安全和/或规章性问题[5]
+                                                </td>
+                                                <td class="text-center">
+                                                    <label>
+                                                        <input type="checkbox" value="" />
+                                                        是</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    观察到持续的、系统性的安全和/或规章性问题[6]
+                                                </td>
+                                                <td class="text-center">
+                                                    <label>
+                                                        <input type="checkbox" value="" />
+                                                        是</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <b>评估结果说明：</b><br />
+                                                    <textarea style="width: 400px;"></textarea>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="width: 100%; text-align: center; margin-top: 50px;">
+                                <a class="btn">保存</a>&nbsp;&nbsp; <a class="btn">完成评估</a>&nbsp;&nbsp; <a class="btn"
+                                    href="au_fxpg_qdyfjz.html" title="后续行动">启动预防纠正</a>&nbsp;&nbsp; <a class="btn" href="au_fxpg_qdfxgl.html"
+                                        title="后续行动">启动风险管理</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_2">
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                审计年月
+                                            </th>
+                                            <th>
+                                                下发时间
+                                            </th>
+                                            <th>
+                                                纠正措施期限
+                                            </th>
+                                            <th>
+                                                审计组长
+                                            </th>
+                                            <th>
+                                                审计专员
+                                            </th>
+                                            <th>
+                                                审计问题<br />
+                                                （已关闭数/总数）
+                                            </th>
+                                            <th>
+                                                状态
+                                            </th>
+                                            <th>
+                                                操作
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                2015-04-18
+                                            </td>
+                                            <td>
+                                                2015-04-30
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                已下发
+                                            </td>
+                                            <td>
+                                                <a href="au_fxpg_xdgz_detail.html" class="btn">查看</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年3月
+                                            </td>
+                                            <td>
+                                                2015-03-18
+                                            </td>
+                                            <td>
+                                                2015-03-30
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/19
+                                            </td>
+                                            <td>
+                                                制定整改措施中
+                                            </td>
+                                            <td>
+                                                <a href="" class="btn">查看</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年1月
+                                            </td>
+                                            <td>
+                                                2015-01-18
+                                            </td>
+                                            <td>
+                                                2015-01-30
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/19
+                                            </td>
+                                            <td>
+                                                整改措施待审核
+                                            </td>
+                                            <td>
+                                                <a href="" class="btn">查看</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2014年11月
+                                            </td>
+                                            <td>
+                                                2014-11-18
+                                            </td>
+                                            <td>
+                                                2014-11-30
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                12/19
+                                            </td>
+                                            <td>
+                                                待整改
+                                            </td>
+                                            <td>
+                                                <a href="" class="btn">查看</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2013年4月
+                                            </td>
+                                            <td>
+                                                2013-04-18
+                                            </td>
+                                            <td>
+                                                2013-04-30
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                25/25
+                                            </td>
+                                            <td>
+                                                已完成
+                                            </td>
+                                            <td>
+                                                <a href="" class="btn">查看</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane active" id="tab_1_3">
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                审计年月
+                                            </th>
+                                            <th>
+                                                审计组长
+                                            </th>
+                                            <th>
+                                                审计专员
+                                            </th>
+                                            <th>
+                                                审计问题<br />
+                                                （已关闭数/总数）
+                                            </th>
+                                            <th>
+                                                危险源数量
+                                            </th>
+                                            <th>
+                                                操作
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn">下载危险源报告单</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn">下载危险源报告单</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn">下载危险源报告单</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn">下载危险源报告单</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn">下载危险源报告单</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn">下载危险源报告单</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn">下载危险源报告单</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn">下载危险源报告单</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn">下载危险源报告单</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2015年4月
+                                            </td>
+                                            <td>
+                                                齐龙
+                                            </td>
+                                            <td>
+                                                王静、李哲
+                                            </td>
+                                            <td>
+                                                0/8
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn">下载危险源报告单</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--书签-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

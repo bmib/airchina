@@ -253,3 +253,7 @@ background-color:#ff9900;
 }
 .center{ text-align:center !important;}
 
+.scrolldiv
+{
+    overflow-y:scroll;
+}

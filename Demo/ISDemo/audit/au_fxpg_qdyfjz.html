@@ -17,7 +17,7 @@
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            var winH = $(window).height() - 80;
+            var winH = $(window).height() - 100;
             $("#tab_div").css('height', winH + 'px');
         });
     </script>
@@ -25,7 +25,7 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-            <div id="tab_div" class="scrolldiv">
+            <div id="tab_div" style="overflow-y: scroll;">
                 <table>
                     <tr>
                         <td>
@@ -236,13 +236,14 @@
                     </tr>
                 </table>
             </div>
-            <div style="width: 100%; text-align: center; margin-top:10px;">
+            <div class="modal-footer" style="margin-top: 10px;">
                 <div class="form-inline">
                     <label>
-                        整改措施提交期限</label>
-                    <input type="text" /> <label>
-                        预防纠正说明</label>
-                        <textarea></textarea>
+                        整改措施提交期限：</label>
+                    <input type="text" />
+                    <label>
+                        预防纠正说明：</label>
+                    <textarea></textarea>
                     <a class="btn">下发</a>
                 </div>
             </div>

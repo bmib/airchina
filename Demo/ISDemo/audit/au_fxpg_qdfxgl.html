@@ -17,7 +17,7 @@
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            var winH = $(window).height() - 80;
+            var winH = $(window).height() - 70;
             $("#tab_div").css('height', winH + 'px');
         });
     </script>
@@ -25,7 +25,7 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-            <div id="tab_div" class="scrolldiv">
+            <div id="tab_div" style="overflow-y: scroll;">
                 <table>
                     <tr>
                         <td>
@@ -58,8 +58,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                          
-                                
                                 <tr>
                                     <td>
                                         2.1.2 相关手册内容一致性
@@ -246,7 +244,7 @@
                     </tr>
                 </table>
             </div>
-            <div style="width: 100%; text-align: center; margin-top: 10px;">
+            <div class="modal-footer center" style="margin-top: 10px;">
                 <a class="btn btn-success">导出危险源报告</a> <a class="btn">发送危险源报告</a>
             </div>
         </div>

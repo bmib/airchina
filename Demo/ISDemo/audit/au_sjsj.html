@@ -22,7 +22,33 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-            <table class="table">
+        <div class="form-inline">
+                <label>选择计划年月：</label>
+                <select name="select" class="span2" >
+                	<option value="0" selected="selected">全部</option>
+                    <option value="4">2015年4月</option>
+                    <option value="5">2015年5月</option>
+                    <option value="5">2015年6月</option>
+                </select>
+                <label>选择投资企业：</label>
+                <select name="select" class="span2" >
+                	<option value="0" selected="selected">全部</option>
+                    <option value="4">北京航空公司</option>
+                    <option value="5">沈阳航空公司</option>
+                    <option value="5">山东航空公司</option>
+                </select>
+                <!--<label class="checkbox" style="padding-left:30px;">
+                	<input type="checkbox" value="" /> <span class="label label-success">未签收</span>
+                </label>
+                <label class="checkbox">
+                	<input type="checkbox" value="" /> <span class="label label-warning">未完成</span>
+                </label>
+                <label class="checkbox">
+                	<input type="checkbox" value="" /> <span class="label">已完成</span>
+                </label>-->
+                <label><div class="alert">注释：<span class="label label-warning">未完成  (20)</span>&nbsp;&nbsp;<span class="label">已完成  (12)</span></div></label>
+          </div>
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>
@@ -78,10 +104,10 @@
                             张三、李四、王五
                         </td>
                         <td>
-                            未签收
+                            <span class="label label-warning">未完成</span>
                         </td>
                         <td>
-                            <a class="btn">查看</a>
+                            <a class="btn" href="au_sjsj2.html">查看</a>
                         </td>
                     </tr>
                     <tr>
@@ -107,7 +133,7 @@
                             张三、李四、王五
                         </td>
                         <td>
-                            未完成
+                             <span class="label label-warning">未完成</span>
                         </td>
                         <td>
                             <a class="btn" href="au_sjsj2.html">查看</a>
@@ -136,7 +162,7 @@
                             张三、李四、王五
                         </td>
                         <td>
-                            已完成
+                            <span class="label">已完成</span>
                         </td>
                         <td>
                             <a class="btn">查看</a>

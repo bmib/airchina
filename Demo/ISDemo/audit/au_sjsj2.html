@@ -25,7 +25,7 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-            <div class="form-inline alert alert-info">
+            <div class="form-inline">
                 <label>
                     检查单专业：</label>
                 <select name="select" class="span1">
@@ -38,10 +38,23 @@
                     <option value="5">专业7</option>
                     <option value="5">专业8</option>
                 </select>
-                <span style="margin-left: 50px;">【审计要素共20个，已完成10个。问题共180个，已完成79个。】 </span>
+                <!--<label class="checkbox" style="padding-left:30px;">
+                	<input type="checkbox" value="" /> <span class="label label-success">未签收</span>
+                </label>
+                <label class="checkbox">
+                	<input type="checkbox" value="" /> <span class="label label-warning">未完成</span>
+                </label>
+                <label class="checkbox">
+                	<input type="checkbox" value="" /> <span class="label">已完成</span>
+                </label>-->
+                <label style="padding-left:30px;">状态：<span class="label label-warning">未完成</span>&nbsp;&nbsp;<span class="label label-info">完成预审</span>&nbsp;&nbsp;<span class="label">完成审计</span></label>
+                <label style="float:right;"><div class="alert">注释：<span style="margin-left:1">【审计要素共20个，已完成10个。问题共180个，已完成79个。】 </span></div></label>
+          </div>
+                
+                
             </div>
             <div id="datalistdiv" style="overflow-y: scroll;">
-                <table cellpadding="0" cellspacing="0" border="0" class="table" width="100%">
+                <table class="table table-hover">
                     <thead>
                         <tr>
                             <th>
@@ -71,66 +84,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                3.1.8 货物运输
-                            </td>
-                            <td>
-                                飞行
-                            </td>
-                            <td>
-                                SAI
-                            </td>
-                            <td>
-                                <button class="btn btn-link">
-                                    完整版</button>
-                                <button class="btn btn-link">
-                                    简版</button>
-                            </td>
-                            <td>
-                                未完成
-                            </td>
-                            <td>
-                                2015-04-18
-                            </td>
-                            <td>
-                                张三
-                            </td>
-                            <td>
-                                <a class="btn" href="au_sjsj_sj.html">预审/审计</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                3.1.10 降低的着陆最低标准
-                            </td>
-                            <td>
-                                飞行
-                            </td>
-                            <td>
-                                SAI
-                            </td>
-                            <td>
-                                <button class="btn btn-link">
-                                    完整版</button>
-                                <button class="btn btn-link">
-                                    简版</button>
-                            </td>
-                            <td>
-                                已完成
-                            </td>
-                            <td>
-                                2015-04-18
-                            </td>
-                            <td>
-                                张三
-                            </td>
-                            <td>
-                                <button class="btn">
-                                    查看</button>
-                            </td>
-                        </tr>
-                        <tr>
+                    	<tr>
                             <td>
                                 3.1.11 基于计算机的记录保存系统
                             </td>
@@ -147,7 +101,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                未完成
+                                <span class="label label-warning">未完成</span
                             </td>
                             <td>
                                 2015-04-18
@@ -156,8 +110,7 @@
                                 张三
                             </td>
                             <td>
-                                <button class="btn">
-                                    预审/审计</button>
+                                <a class="btn" href="au_sjsj_sj.html">预审</a>
                             </td>
                         </tr>
                         <tr>
@@ -177,7 +130,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                未完成
+                                <span class="label label-warning">未完成</span
                             </td>
                             <td>
                                 2015-04-18
@@ -187,7 +140,7 @@
                             </td>
                             <td>
                                 <button class="btn">
-                                    预审/审计</button>
+                                    预审</button>
                             </td>
                         </tr>
                         <tr>
@@ -207,7 +160,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                未完成
+                                <span class="label label-warning">未完成</span
                             </td>
                             <td>
                                 2015-04-18
@@ -216,8 +169,7 @@
                                 张三
                             </td>
                             <td>
-                                <button class="btn">
-                                    预审/审计</button>
+                                <a class="btn" href="au_sjsj_sj.html">预审</a>
                             </td>
                         </tr>
                         <tr>
@@ -237,7 +189,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                未完成
+                                <span class="label label-warning">未完成</span
                             </td>
                             <td>
                                 2015-04-18
@@ -246,8 +198,7 @@
                                 张三
                             </td>
                             <td>
-                                <button class="btn">
-                                    预审/审计</button>
+                                <a class="btn" href="au_sjsj_sj.html">预审</a>
                             </td>
                         </tr>
                         <tr>
@@ -267,7 +218,65 @@
                                     简版</button>
                             </td>
                             <td>
-                                未完成
+                                <span class="label label-warning">未完成</span
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <a class="btn" href="au_sjsj_sj.html">预审</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3.1.8 货物运输
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                <span class="label label-info">完成预审</span>
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <a class="btn" href="au_sjsj_sj.html">审计</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3.1.10 降低的着陆最低标准
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                <span class="label label-info">完成预审</span>
                             </td>
                             <td>
                                 2015-04-18
@@ -277,9 +286,10 @@
                             </td>
                             <td>
                                 <button class="btn">
-                                    预审/审计</button>
+                                   审计</button>
                             </td>
                         </tr>
+                        
                         <tr>
                             <td>
                                 4.2.6 航站人员训练
@@ -297,7 +307,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                未完成
+                                <span class="label">完成审计</span>
                             </td>
                             <td>
                                 2015-04-18
@@ -307,7 +317,7 @@
                             </td>
                             <td>
                                 <button class="btn">
-                                    预审/审计</button>
+                                    查看</button>
                             </td>
                         </tr>
                         <tr>
@@ -327,7 +337,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                未完成
+                                <span class="label">完成审计</span>
                             </td>
                             <td>
                                 2015-04-18
@@ -337,7 +347,7 @@
                             </td>
                             <td>
                                 <button class="btn">
-                                    预审/审计</button>
+                                   查看</button>
                             </td>
                         </tr>
                         <tr>
@@ -357,7 +367,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                未完成
+                                <span class="label">完成审计</span>
                             </td>
                             <td>
                                 2015-04-18
@@ -367,7 +377,7 @@
                             </td>
                             <td>
                                 <button class="btn">
-                                    预审/审计</button>
+                                    查看</button>
                             </td>
                         </tr>
                     </tbody>

@@ -30,96 +30,109 @@
     <div class="portlet box">
         <div class="portlet-body">
             <div id="tab_div">
-                <div class="alert alert-info" style="margin-top: 10px; margin-bottom: 10px;">
-                    <strong>3.1.8 货物运输</strong>&nbsp;&nbsp;[ 状态：草稿 ] <span style="margin-left: 20px;"><a
-                        class="btn btn-link">规章要求</a> <a class="btn btn-link">导出结果</a></span>
+                <div class="alert alert-info" style="">
+                    <strong>3.1.8 货物运输</strong>&nbsp;&nbsp;[ 状态：未完成 / 完成预审 / 完成审计 ] <span style="margin-left: 20px;"><a
+                        class="btn">规章要求</a> <a class="btn">导出结果</a></span>
                 </div>
                 <div>
-                    <table>
+                <table class="table">
+                      <thead>
                         <tr>
-                            <td>
-                                开始日期：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                结束日期：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                出发地点：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                到达地点：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
+                            <th>
+                                <table>
+                                  <tbody>
+                                    <tr>
+                                        <td>
+                                            开始日期：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                        <td>
+                                            结束日期：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                        <td>
+                                            出发地点：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                        <td>
+                                            到达地点：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            模拟器ID：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                        <td>
+                                            制造商/型号/编号：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                        <td>
+                                            航空器注册编号：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                        <td>
+                                            合格的修理站点：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            航班编号：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                        <td>
+                                            非工作时间：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                        <td>
+                                            工作时间统计：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                        <td>
+                                            被检查单位基地：
+                                        </td>
+                                        <td>
+                                            <input type="text" />
+                                        </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </th>
                         </tr>
+                    </thead>
+                    <thead>
                         <tr>
-                            <td>
-                                模拟器ID：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                制造商/型号/编号：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                航空器注册编号：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                合格的修理站点：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                航班编号：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                非工作时间：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                工作时间统计：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                被检查单位基地：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <label>
+                            <th><label>
                         <input type="checkbox" />
                         查看有预审备注的问题</label>
+                            </th>
+                        </tr>
+                     </thead>    
+                </table>
                 </div>
                 <div class="accordion" id="accordion2">
                     <div class="accordion-group">
@@ -1139,7 +1152,7 @@
                 </div>
             </div>
             <div class="modal-footer center" style="margin-top: 10px;">
-                <a class="btn">保存</a> <a class="btn">审计完成</a> <a class="btn" href="au_sjsj2.html">返回</a>
+                <a class="btn">保存</a> <a class="btn">完成预审</a> <a class="btn">完成审计</a> <a class="btn" href="au_sjsj2.html">返回</a>
             </div>
         </div>
     </div>

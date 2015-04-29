@@ -12,7 +12,7 @@ share       共享交流
 审计单类型管理     	/ad_sjdlx.html
 风险指标管理		/ad_fxzb.html
 审计单重要性管理	/ad_sjdzyx.html
-规章文件管理		/ad_gzwj.html
+专业权重管理		/ad_zyqz.html
 组织结构管理		/ad_zzjg.html
 色权限管理		/ad_jsqx.html
 人员管理		/ad_ry.html

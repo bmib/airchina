@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>专业权重管理</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" /><link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css"/>
+	<script src="../media/js/jquery-1.10.1.min.js" type="text/javascript"></script>   
+	<script src="../media/js/bootstrap.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+	<link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
+	<script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
+	<script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+    <script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+            $("a[name='modify']").each(function() {
+					$(this).dialog({
+						id: "ad_sjys_modify",
+						content: 'url:admin/ad_zyqz_modify.html',
+						width: 250,
+						height: 300,
+						title: '修改专业权重',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('专业权重修改成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            });
+        }); 
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div class="form-inline alert alert-info">
+                <label>
+                    投资企业专业权重列表</label>
+            </div>
+            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table table-hover">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th>投资企业</th>
+                        <th>组织管理权重</th>
+                        <th>飞行权重</th>
+                        <th>机务权重</th>
+                        <th>运控权重</th>
+                        <th>客舱权重</th>
+                        <th>地服权重</th>
+                        <th>货运权重</th>
+                        <th>保卫权重</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>国货航</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td>深圳航空</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td>山东航空</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京航空</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td>大连航空</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td>澳门航空</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td>内蒙航空</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+        </div>
+    </div>
+</body>
+</html>

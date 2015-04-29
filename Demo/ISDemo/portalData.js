@@ -20,7 +20,7 @@ var menuGroupJson=[
 				   {"UUID":"B1","NAME":"审计要素管理","PID":"A1","PAGEURL":"admin/ad_sjys.html"},
 				   {"UUID":"B1","NAME":"审计单类型管理","PID":"A1","PAGEURL":"admin/ad_sjdlx.html"},
 				   {"UUID":"B1","NAME":"风险指标管理","PID":"A1","PAGEURL":"admin/ad_fxzb.html"},
-				   {"UUID":"B2","NAME":"规章文件管理","PID":"A1","PAGEURL":"admin/ad_gzwj.html"},
+				   {"UUID":"B2","NAME":"专业权重管理","PID":"A1","PAGEURL":"admin/ad_zyqz.html"},
 				   {"UUID":"B6","NAME":"统计分析","PID":"A1","PAGEURL":"analysis/index.html"},
 				   {"UUID":"B7","NAME":"共享交流","PID":"A1","PAGEURL":"share/index.html"},
 				   {"UUID":"B2","NAME":"组织结构管理","PID":"A1","PAGEURL":"admin/ad_zzjg.html"},

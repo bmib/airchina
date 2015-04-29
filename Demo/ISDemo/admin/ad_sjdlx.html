@@ -27,7 +27,7 @@
 		if(this.name=="CHECKALL"){
 			var checkboxState = $(this).is(':checked');//将所有checkbox设置为全选checkbox状态
             $(".checkboxinlist").each(function (){ 
-				$(this).attr('checked',checkboxState);
+                $(this).attr('checked',checkboxState);
 			});
 		}else{
 			var checkAllFlag = true;
@@ -90,7 +90,6 @@
             var id = $("input:checked");
             if(id.length == 0)
             {
-                //alert("请选择要删除的审计单类型！");
                 $.jBox.tip("请选择要删除的审计单类型！");
                 return;
             }
@@ -109,7 +108,7 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="tab_1_1">
                     <div class="form-inline">
-                    <label>选择要素类别：</label>
+                    <label>要素类别：</label>
                     <label>
                         <select class="inputTextS">
                                 <option selected="selected">全部</option>
@@ -123,7 +122,14 @@
                                 <option>地服类</option>
                                 <option>货运类</option>
                                 <option>保卫类</option>
-                                <option>其他类</option>
+                            </select>
+                    </label>
+                    <label>来源：</label>
+                    <label>
+                        <select class="inputTextS" style="width:100px">
+                                <option selected="selected">全部</option>
+                                <option>局方</option>
+                                <option>自定义</option>
                             </select>
                     </label>
                     <button type="button" class="btn btn-default"
@@ -148,55 +154,55 @@
                             <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
                         </th>
                         <th>审计单类型编码</th>
-                        <th>说明</th>
+                        <th>审计单类型名称</th>
                         <th>要素类别</th>
-                        <th>状态</th>
+                        <th>来源</th>
                         <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjd_1"></td>
+                        <td><input type="checkbox" id="sjd_1" disabled></td>
                         <td>SAI</td>
                         <td>安全属性审计单</td>
                         <td>FSOP普通类</td>
-                        <td>可用</td>
+                        <td>局方</td>
                         <td>
                             <a name="modify">修改</a>
-                            <a onclick="changeState(this);">停用</a>
+                            <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjd_2"></td>
+                        <td><input type="checkbox" id="sjd_2" disabled></td>
                         <td>EPI</td>
                         <td>绩效审计单</td>
                         <td>FSOP普通类</td>
-                        <td>可用</td>
+                        <td>局方</td>
                         <td>
                             <a name="modify">修改</a>
-                            <a onclick="changeState(this);">停用</a>
+                            <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjd_3"> </td>
+                        <td><input type="checkbox" id="sjd_3" disabled> </td>
                         <td>ARI</td>
                         <td>维修_停机坪监察</td>
                         <td>FSOP专项类</td>
-                        <td>可用</td>
+                        <td>局方</td>
                         <td>
                             <a name="modify">修改</a>
-                            <a onclick="changeState(this);">停用</a>
+                            <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjd_4"></td>
+                        <td><input type="checkbox" id="sjd_4" disabled></td>
                         <td>ORI</td>
                         <td>飞行_停机坪监察</td>
                         <td>FSOP专项类</td>
-                        <td>停用</td>
+                        <td>局方</td>
                         <td>
                             <a name="modify">修改</a>
-                            <a onclick="changeState(this);">启用</a>
+                            <!--a onclick="changeState(this);">启用</a-->
                         </td>
                     </tr>
                     <tr>
@@ -204,10 +210,10 @@
                         <td>ZZL</td>
                         <td>组织管理_停机坪监察</td>
                         <td>组织管理类</td>
-                        <td>可用</td>
+                        <td>自定义</td>
                         <td>
                             <a name="modify">修改</a>
-                            <a onclick="changeState(this);">停用</a>
+                            <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
@@ -215,10 +221,10 @@
                         <td>FXL</td>
                         <td>飞行_停机坪监察</td>
                         <td>飞行类</td>
-                        <td>可用</td>
+                        <td>自定义</td>
                         <td>
                             <a name="modify">修改</a>
-                            <a onclick="changeState(this);">停用</a>
+                            <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                 </tbody>

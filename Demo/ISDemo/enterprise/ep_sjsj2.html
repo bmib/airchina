@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>数据收集</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var winH = $(window).height() - 150;
+            $("#datalistdiv").css('height', winH + 'px');
+        }); 
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div class="form-inline alert alert-info">
+                <label>
+                    检查单专业：</label>
+                <select name="select" class="span1">
+                    <option value="4" selected="selected">飞行</option>
+                    <option value="5">维修</option>
+                    <option value="5">航务</option>
+                    <option value="5">航卫</option>
+                    <option value="5">专业5</option>
+                    <option value="5">专业6</option>
+                    <option value="5">专业7</option>
+                    <option value="5">专业8</option>
+                </select>
+                <span style="margin-left: 50px;">【审计要素共20个，已完成10个。问题共180个，已完成79个。】 要求完成日期： 2015-05-15</span>
+            </div>
+            <div id="datalistdiv" style="overflow-y: scroll;">
+                <table cellpadding="0" cellspacing="0" border="0" class="table" width="100%">
+                    <thead>
+                        <tr>
+                            <th>
+                                要素
+                            </th>
+                            <th>
+                                专业
+                            </th>
+                            <th>
+                                检查单类型
+                            </th>
+                            <th>
+                                检查单下载
+                            </th>
+                            <th>
+                                状态
+                            </th>
+                            <th>
+                                上一次保存日期
+                            </th>
+                            <th>
+                                上一次保存人员
+                            </th>
+                            <th>
+                                操作
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                3.1.8 货物运输
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                未完成
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <a class="btn" href="ep_sjsj_tianxie.html">填报</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3.1.10 降低的着陆最低标准
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                已完成
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <button class="btn">
+                                    查看</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3.1.11 基于计算机的记录保存系统
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                未完成
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <button class="btn">
+                                    填报</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3.1.14 地面服务
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                未完成
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <button class="btn">
+                                    填报</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                未完成
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <button class="btn">
+                                    填报</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4.2.3 飞行机组成员的训练
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                未完成
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <button class="btn">
+                                    填报</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4.2.4 客舱乘务员训练
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                未完成
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <button class="btn">
+                                    填报</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4.2.6 航站人员训练
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                未完成
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <button class="btn">
+                                    填报</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4.2.7 航空检查员和教员的训练
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                未完成
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <button class="btn">
+                                    填报</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4.2.8 模拟机/训练设备
+                            </td>
+                            <td>
+                                飞行
+                            </td>
+                            <td>
+                                SAI
+                            </td>
+                            <td>
+                                <button class="btn btn-link">
+                                    完整版</button>
+                                <button class="btn btn-link">
+                                    简版</button>
+                            </td>
+                            <td>
+                                未完成
+                            </td>
+                            <td>
+                                2015-04-18
+                            </td>
+                            <td>
+                                张三
+                            </td>
+                            <td>
+                                <button class="btn">
+                                    填报</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer center" style="margin-top: 10px;">
+               <a class="btn" href="ep_sjsj.html>返回</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

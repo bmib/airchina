@@ -252,10 +252,12 @@ background-color:#ff9900;
   text-align: left;
   font-size:12px !important;
 }
+.table th{ background-color:#f8f8f8;}
 .center{ text-align:center !important;}
 .right{ text-align:right !important;}
 .label, .badge{ font-weight:100;}
 .table-bordered{-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
+
 
 
 

@@ -1,7 +1,7 @@
 /*!
 
  */
-label{ padding-left:6px;}
+label{ padding-left:6px; margin-bottom:0px !important;}
 .portlet-body{ padding-top:10px; text-align:left; padding:5px;}
 .nav{ margin-bottom:0px;}
 .alert {padding: 5px 20px 3px 15px;  margin-bottom: 0px; }
@@ -254,3 +254,9 @@ background-color:#ff9900;
 }
 .center{ text-align:center !important;}
 .right{ text-align:right !important;}
+.label, .badge{ font-weight:100;}
+.table-bordered{-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
+
+
+
+

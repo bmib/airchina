@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>审计要素重要性管理</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <link href="../media/css/style.css" rel="style" type="text/css"/>
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
+    <script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+    <script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+    <style type="text/css">
+select.input-sm {
+    font-size: 60%;
+  height: 20px;
+  line-height: 20px;
+  width:45px;
+    padding-top:0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+        .DIVDot {
+	width: 20px;
+	height: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	border: 1px solid #85838E;
+	background-color: #FFFFFF;
+	text-align: center;
+	cursor: pointer;
+	margin-top:2px;
+	}
+		</style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".DIVDot").bind("click",function(){
+		      $(".DIVDot").css("backgroundColor","");
+			  $("#"+this.id).css("backgroundColor","#fcf1c3");
+        });
+        $("td[name=risk]").bind("click",function(){
+		      $("td[name=risk]").css("backgroundColor","");
+			  $(this).css("backgroundColor","#fcf1c3");
+            var name = $(this).html().substr($(this).html().indexOf("</select>")+"</select>".length);
+            $("#riskType").html(name.length>20?name.substr(0,20)+"...":name);
+        });
+        $('#fxzb').find("select").change(function(){
+            $(".DIVDot").css("backgroundColor","");
+			  $("#eval_level_"+$(this).val()).css("backgroundColor","#fcf1c3");
+            var score = 0;
+            $('#fxzb').find("select").each(function (){
+				score += parseInt($(this).val());
+				});
+            $('#score').val(score);
+			});
+    });
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1_1">
+                    <div class="form-inline">
+                <label>专业分类：</label>
+                <label>
+                    <select style="width:70px">
+                            <option selected="selected">飞行</option>
+                            <option>机务</option>
+                            <option>运控</option>
+                            <option>客舱</option>
+                            <option>地服</option>
+                            <option>货运</option>
+                            <option>保卫</option>
+                            <option>其他</option>
+                        </select>
+                </label>
+                <label>系统：</label>
+                <label>
+                    <select style="width:190px">
+                            <option selected="selected">全部</option>
+                            <option>1、航空器构型控制</option>
+                            <option>2、手册</option>
+                            <option>3、飞行运行</option>
+                            <option>4、人员训练和合格审定</option>
+                            <option>5、航线结构</option>
+                            <option>6、飞行休息和执勤时间</option>
+                            <option>7、管理</option>
+                            <option>8、特定检查单</option>
+                        </select>
+                </label>
+                <label>重要性：</label>
+                <label>
+                    <select style="width:60px">
+                            <option selected="selected"></option>
+                            <option>高</option>
+                            <option>中</option>
+                            <option>低</option>
+                        </select>
+                </label>
+            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+            </div></div></div>
+            <div class="row-fluid">
+            <div class="span4">
+            <div class="form-inline alert alert-info">
+                <label>审计要素列表</label>
+            </div>
+            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table table-hover">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th>审计要素</th>
+                        <th style="width:15%;">风险得分</th>
+                        <th style="width:15%;">重要性</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tab-content" id="a4" style="overflow-y:auto; height:440px; border:1px solid #ccc;">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <td>1.1.2 适当的运行设备</td>
+                        <td style="width:12%;">44</td>
+                        <td style="width:10%;">高</td>
+                    </tr>
+                    <tr>
+                        <td>2.1.1 手册更新</td>
+                        <td>33</td>
+                        <td>中</td>
+                    </tr>
+                    <tr>
+                        <td>4.2.1 维修人员培训大纲</td>
+                        <td>22</td>
+                        <td>低</td>
+                    </tr>
+                    <tr>
+                        <td>8.1.1 停机坪监察</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>1.1.2 适当的运行设备</td>
+                        <td>44</td>
+                        <td>高</td>
+                    </tr>
+                    <tr>
+                        <td>2.1.1 手册更新</td>
+                        <td>33</td>
+                        <td>中</td>
+                    </tr>
+                    <tr>
+                        <td>4.2.1 维修人员培训大纲</td>
+                        <td>22</td>
+                        <td>低</td>
+                    </tr>
+                    <tr>
+                        <td>8.1.1 停机坪监察</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>1.1.2 适当的运行设备</td>
+                        <td>44</td>
+                        <td>高</td>
+                    </tr>
+                    <tr>
+                        <td>2.1.1 手册更新</td>
+                        <td>33</td>
+                        <td>中</td>
+                    </tr>
+                    <tr>
+                        <td>4.2.1 维修人员培训大纲</td>
+                        <td>22</td>
+                        <td>低</td>
+                    </tr>
+                    <tr>
+                        <td>8.1.1 停机坪监察</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>1.1.2 适当的运行设备</td>
+                        <td>44</td>
+                        <td>高</td>
+                    </tr>
+                    <tr>
+                        <td>2.1.1 手册更新</td>
+                        <td>33</td>
+                        <td>中</td>
+                    </tr>
+                    <tr>
+                        <td>4.2.1 维修人员培训大纲</td>
+                        <td>22</td>
+                        <td>低</td>
+                    </tr>
+                    <tr>
+                        <td>8.1.1 停机坪监察</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+        </div>
+        <div class="span4" style="margin-left:5px">
+            <div class="form-inline alert alert-info">
+                <label>当前要素的风险指标</label>
+            </div>
+            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table" id="fxzb">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th width="55%">环境风险度</th>
+                        <th>运行稳定性</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>机型机队混编/混合机队构型</td>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>高层管理人员的改变</td>
+                    </tr>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>飞机复杂性的影响</td>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>其它管理人员的改变</td>
+                    </tr>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>雇员结构复杂性的影响</td>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>人员流动</td>
+                    </tr>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>外包（维修、培训、地服）</td>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select> 缩减员工</td>
+                    </tr>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>季节性运行</td>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>运营规模的重大变化</td>
+                    </tr>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>设施的增添</td>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>兼并或接管</td>
+                    </tr>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>搬迁或关闭</td>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>劳资关系</td>
+                    </tr>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>租赁协定</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>局方正常办公时间以外的航空承运人活动（非办公时间活动）</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th>绩效历史表现</th>
+                        <th>航空承运人动态性</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>整改措施的执行</td>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>大纲的重大改变</td>
+                    </tr>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>事故/事故征候/不安全事件</td>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>安全管理体系</td>
+                    </tr>
+                    <tr>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>航空承运人的信息</td>
+                        <td name="risk"><select class="input-sm">
+                            <option selected="selected">1</option>
+                            <option>2</option><option>3</option>
+                            <option>4</option><option>5</option>
+                            <option>6</option><option>7</option>
+                        </select>与局方的合作关系</td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+        </div>
+        <div class="span4" style="margin-left:5px">
+            <div class="form-inline alert alert-info">
+                <label id="riskType">飞机复杂性的影响</label>
+            </div>
+            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th style="width:18%;">评分结果</th>
+                        <th style="padding-left:10px">评分标准 </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tab-content" id="a4" style="overflow-y:auto; height:380px; border:1px solid #ccc;">
+            <table class="table">
+                <tbody>
+                    <tr>
+							<td style="text-align:center;vertical-align:middle;width:15%;">
+							<div style="margin-left:25%" class="DIVDot" id="eval_level_1">1</div>
+							<div style="margin-left:25%" class="DIVDot" id="eval_level_2">2</div>
+							</td>
+							<td >
+								<div>
+									<span>航空承运人当前不存在飞机复杂性或技术发生改变的情况。航空承运人的程序、控制和流程测量能有效管理飞机复杂性或技术发生改变对航空承运人造成的影响。任何不利影响皆可忽略不计。</span>
+								</div>						
+							</td>
+						</tr>
+                    <tr>
+							<td style="text-align:center;vertical-align:middle;">
+							<div style="margin-left:25%" class="DIVDot" id="eval_level_3">3</div>
+							<div style="margin-left:25%" class="DIVDot" id="eval_level_4">4</div>
+							<div style="margin-left:25%" class="DIVDot" id="eval_level_5">5</div>
+							</td>
+							<td >
+								<div>
+									<span>存在风险关注点：多机型机队混编或混合机队构型对航空承运人有不利影响。例如：
+
+(1)对多机型机队混编或混合机队构型的影响进行管理的管理架构不完善；
+
+(2)潜在隐患：对航空承运人的维修大纲有不利影响；
+
+(3)潜在隐患：对航空承运人的运行大纲有不利影响；
+
+(4)潜在隐患：对航空承运人的培训大纲有不利影响；
+
+(5)航空承运人缺乏必要的对多机型机队混编或混合机队构型的系统控制；
+
+对于多机型机队混编或混合机队构型，航空承运人没有相关的系统绩效历史记录，或是有记录但其绩效较差。
+</span>
+								</div>						
+							</td>
+						</tr>
+                    <tr>
+							<td style="text-align:center;vertical-align:middle;">
+							<div style="margin-left:25%" class="DIVDot" id="eval_level_6">6</div>
+							<div style="margin-left:25%" class="DIVDot" id="eval_level_7">7</div>
+							</td>
+							<td >
+								<div>
+									<span>存在风险关注点：航空承运人缺乏完善的能有效支持多机型机队混编或混合机队构型的基础设施。航空承运人不能证明其已经对一些突发状况进行了适当或有效的管控。</span>
+								</div>						
+							</td>
+						</tr>
+                </tbody>
+            </table></div></div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1_1">
+                    <div class="form-inline">
+                <label>风险得分：</label>
+                <label>
+                    <input type="text" class="span2" id="score" value="22" readonly style="width:30px"/>
+                </label>
+                <label>重要性：</label>
+                <label>
+                    <select style="width:60px">
+                            <option selected="selected"></option>
+                            <option>高</option>
+                            <option>中</option>
+                            <option>低</option>
+                        </select>
+                </label>
+            <button type="button" class="btn btn-default" style="margin-left: 30px;">保存</button>
+            </div></div></div>
+        </div>
+    </div></div></div>
+</body>
+</html>

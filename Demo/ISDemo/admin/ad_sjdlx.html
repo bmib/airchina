@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>审计单类型管理</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css"/>
+	<script src="../media/js/jquery-1.10.1.min.js" type="text/javascript"></script>   
+	<script src="../media/js/bootstrap.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+	<link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
+	<script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
+	<script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+    <script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+    <script type="text/javascript">
+        //填报弹出窗口
+        $(document).ready(function () {
+            $(".checkboxinlist").bind("click",function(){
+		if(this.name=="CHECKALL"){
+			var checkboxState = $(this).is(':checked');//将所有checkbox设置为全选checkbox状态
+            $(".checkboxinlist").each(function (){ 
+				$(this).attr('checked',checkboxState);
+			});
+		}else{
+			var checkAllFlag = true;
+			$(".checkboxinlist").each(function (){
+				//判断所有的checkbox（不包括全选checkbox），有一个为false，则全选checkbox为false
+				if(!$(this).is(':checked') && this.name!="CHECKALL"){
+					checkAllFlag = false;
+				}
+			});
+			$("#CHECKALL").attr('checked',checkAllFlag);
+		}
+	});
+            $("a[name='modify']").each(function() {
+					$(this).dialog({
+						id: "ad_sjdlx_modify",
+						content: 'url:admin/ad_sjdlx_modify.html',
+						width: 350,
+						height: 400,
+						title: '修改审计单类型',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('审计单类型修改成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            });
+             $('#ad_sjdlx_add').dialog({
+						id: "ad_sjdlx_add",
+						content: 'url:admin/ad_sjdlx_modify.html',
+						width: 350,
+						height: 400,
+						title: '新增审计单类型',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('审计单类型保存成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+				});
+        }); 
+        
+        function changeState(obj) {
+            var state = $(obj).html();
+            $.jBox.tip(state+"成功！");
+            $(obj).html(state=="启用"?"停用":"启用");
+            $(obj).parent().prev("td").html(state=="启用"?"可用":"停用");
+            
+        };
+        
+        function delSjl() {
+            var id = $("input:checked");
+            if(id.length == 0)
+            {
+                //alert("请选择要删除的审计单类型！");
+                $.jBox.tip("请选择要删除的审计单类型！");
+                return;
+            }
+            else
+            {
+                id.parents("tr").remove();
+                $.jBox.tip("删除成功！");
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1_1">
+                    <div class="form-inline">
+                    <label>选择要素类别：</label>
+                    <label>
+                        <select class="inputTextS">
+                                <option selected="selected">全部</option>
+                                <option>FSOP普通类</option>
+                                <option>FSOP专项类</option>
+                                <option>组织管理类</option>
+                                <option>飞行类</option>
+                                <option>机务类</option>
+                                <option>运控类</option>
+                                <option>客舱类</option>
+                                <option>地服类</option>
+                                <option>货运类</option>
+                                <option>保卫类</option>
+                                <option>其他类</option>
+                            </select>
+                    </label>
+                    <button type="button" class="btn btn-default"
+                        style="margin-left: 30px;">
+                        查询</button>
+                    <button type="button" class="btn btn-default" id="ad_sjdlx_add"
+                        style="margin-left: 10px;">
+                        新增</button>
+                    <button type="button" class="btn btn-default" id="del" onclick="delSjl();"
+                        style="margin-left: 10px;">
+                        删除</button>
+                    </div></div></div>
+            <div class="form-inline alert alert-info">
+                <label>审计单类型列表</label>
+            </div>
+            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table table-hover">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th>
+                            <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
+                        </th>
+                        <th>审计单类型编码</th>
+                        <th>说明</th>
+                        <th>要素类别</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjd_1"></td>
+                        <td>SAI</td>
+                        <td>安全属性审计单</td>
+                        <td>FSOP普通类</td>
+                        <td>可用</td>
+                        <td>
+                            <a name="modify">修改</a>
+                            <a onclick="changeState(this);">停用</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjd_2"></td>
+                        <td>EPI</td>
+                        <td>绩效审计单</td>
+                        <td>FSOP普通类</td>
+                        <td>可用</td>
+                        <td>
+                            <a name="modify">修改</a>
+                            <a onclick="changeState(this);">停用</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjd_3"> </td>
+                        <td>ARI</td>
+                        <td>维修_停机坪监察</td>
+                        <td>FSOP专项类</td>
+                        <td>可用</td>
+                        <td>
+                            <a name="modify">修改</a>
+                            <a onclick="changeState(this);">停用</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjd_4"></td>
+                        <td>ORI</td>
+                        <td>飞行_停机坪监察</td>
+                        <td>FSOP专项类</td>
+                        <td>停用</td>
+                        <td>
+                            <a name="modify">修改</a>
+                            <a onclick="changeState(this);">启用</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjd_5"></td>
+                        <td>ZZL</td>
+                        <td>组织管理_停机坪监察</td>
+                        <td>组织管理类</td>
+                        <td>可用</td>
+                        <td>
+                            <a name="modify">修改</a>
+                            <a onclick="changeState(this);">停用</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
+                        <td>FXL</td>
+                        <td>飞行_停机坪监察</td>
+                        <td>飞行类</td>
+                        <td>可用</td>
+                        <td>
+                            <a name="modify">修改</a>
+                            <a onclick="changeState(this);">停用</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+        </div>
+    </div>
+</body>
+</html>

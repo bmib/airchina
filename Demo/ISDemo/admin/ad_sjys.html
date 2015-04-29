@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>审计要素管理</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" /><link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css"/>
+	<script src="../media/js/jquery-1.10.1.min.js" type="text/javascript"></script>   
+	<script src="../media/js/bootstrap.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+	<link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
+	<script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
+	<script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+    <script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+    <script type="text/javascript">
+        //填报弹出窗口
+        $(document).ready(function () {
+            $(".checkboxinlist").bind("click",function(){
+		if(this.name=="CHECKALL"){
+			var checkboxState = $(this).is(':checked');//将所有checkbox设置为全选checkbox状态
+            $(".checkboxinlist").each(function (){ 
+				$(this).attr('checked',checkboxState);
+			});
+		}else{
+			var checkAllFlag = true;
+			$(".checkboxinlist").each(function (){
+				//判断所有的checkbox（不包括全选checkbox），有一个为false，则全选checkbox为false
+				if(!$(this).is(':checked') && this.name!="CHECKALL"){
+					checkAllFlag = false;
+				}
+			});
+			$("#CHECKALL").attr('checked',checkAllFlag);
+		}
+	});
+            $("a[name='modify']").each(function() {
+					$(this).dialog({
+						id: "ad_sjys_modify",
+						content: 'url:admin/ad_sjys_modify.html',
+						width: 350,
+						height: 270,
+						title: '修改审计要素',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('审计要素修改成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            });
+             $('#ad_sjys_add').dialog({
+						id: "ad_sjys_add",
+						content: 'url:admin/ad_sjys_modify.html',
+						width: 350,
+						height: 270,
+						title: '新增审计要素',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('审计要素保存成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+				});
+            var winH = $(window).height() - 130;
+            $("#datalistdiv").css('height', winH + 'px');
+        }); 
+        
+        function delSjys() {
+            var id = $("input:checked");
+            if(id.length == 0)
+            {
+                //alert("请选择要删除的审计要素！");
+                $.jBox.tip("请选择要删除的审计要素！");
+                return;
+            }
+            else
+            {
+                id.parents("tr").remove();
+                $.jBox.tip("删除成功！");
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1_1">
+                    <div class="form-inline">
+                <label>专业分类：</label>
+                <label>
+                    <select style="width:100px;">
+                            <option selected="selected">飞行</option>
+                            <option>机务</option>
+                            <option>运控</option>
+                            <option>客舱</option>
+                            <option>地服</option>
+                            <option>货运</option>
+                            <option>保卫</option>
+                            <option>其他</option>
+                        </select>
+                </label>
+                <label>系统：</label>
+                <label>
+                    <select style="width:200px">
+                            <option selected="selected">全部</option>
+                            <option>1、航空器构型控制</option>
+                            <option>2、手册</option>
+                            <option>3、飞行运行</option>
+                            <option>4、人员训练和合格审定</option>
+                            <option>5、航线结构</option>
+                            <option>6、飞行休息和执勤时间</option>
+                            <option>7、管理</option>
+                            <option>8、特定检查单</option>
+                        </select>
+                </label>
+            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+            <button type="button" class="btn btn-default" id="ad_sjys_add" style="margin-left: 10px;">新增</button>
+            <button type="button" class="btn btn-default" id="del" onclick="delSjys();"style="margin-left: 10px;">删除</button>
+            </div></div></div>
+            <div class="form-inline alert alert-info">
+                <label>
+                    审计要素列表</label>
+            </div>
+            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table table-hover">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th><input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input></th>
+                        <th>系统</th>
+                        <!--th>系统权重</th-->
+                        <th>子系统</th>
+                        <!--th>子系统权重</th-->
+                        <th>审计要素</th>
+                        <th>审计要素权重</th>
+                        <th>专业分类</th>
+                        <th>审计单</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjys_1"></td>
+                        <td>1 航空器构型控制</td>
+                        <!--td>10</td-->
+                        <td>1.1 航空器</td>
+                        <!--td>10</td-->
+                        <td>1.1.2 适当的运行设备&nbsp;&nbsp;<img src="../images/hint_light.png" width="16" title="对局方要素的备注"/></td>
+                        <td>10</td>
+                        <td>飞行</td>
+                        <td><a href="ad_sjd_detail.html">SAI_1_1_2_OP</a>&nbsp;&nbsp;&nbsp;<a href="ad_sjd_detail.html">EPI_1_1_2_OP</a></td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjys_2"></td>
+                        <td>2 手册</td>
+                        <!--td>10</td-->
+                        <td>2.1 手册管理</td>
+                        <!--td>10</td-->
+                        <td>2.1.1 手册更新</td>
+                        <td>10</td>
+                        <td>飞行</td>
+                        <td><a href="ad_sjd_detail.html">SAI_2_1_1_OP</a>&nbsp;&nbsp;&nbsp;<a href="ad_sjd_detail.html">EPI_2_1_1_OP</a></td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjys_3"></td>
+                        <td>4 人员培训和资格</td>
+                        <!--td>10</td-->
+                        <td>4.2 训练大纲</td>
+                        <!--td>10</td-->
+                        <td>4.2.1 维修人员培训大纲</td>
+                        <td>10</td>
+                        <td>维修</td>
+                        <td><a href="ad_sjd_detail.html">SAI_4_2_1_AW</a>&nbsp;&nbsp;&nbsp;<a href="ad_sjd_detail.html">EPI_4_2_1_AW</a></td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjys_4"></td>
+                        <td>8 特定检查单</td>
+                        <!--td>10</td-->
+                        <td>8.1 停机坪</td>
+                        <!--td>10</td-->
+                        <td>8.1.1 停机坪监察</td>
+                        <td>10</td>
+                        <td>飞行</td>
+                        <td><a href="ad_sjd_detail.html">SOI_8_1_1_OP</a></td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+        </div>
+    </div>
+</body>
+</html>

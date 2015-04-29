@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css" type="text/css" />
+		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+		<script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.min.js"></script>
+        <script type="text/javascript" src="../includes/zTreev3.5.12/data/demoData.js"></script>
+        <script charset="utf-8" src="../includes/kindeditor401/kindeditor-min.js"></script>
+        <script charset="utf-8" src="../includes/kindeditor401/lang/zh_CN.js"></script>
+        <style type="text/css">
+input.input-sm {
+    font-size: 60%;
+  height: 20px;
+  line-height: 20px;
+  width:10px;
+    padding-top:0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+        </style>
+        <script>
+	var zTree1;
+	var setting = {
+		view: {
+			dblClickExpand: false,
+			showLine: true,
+			selectedMulti: false
+		},
+		data: {
+			simpleData: {
+				enable:true,
+				idKey: "id",
+				pIdKey: "pId",
+				rootPId: ""
+			}
+		}
+	};
+
+	$(document).ready(function(){
+        var t = $("#tree");
+		t = $.fn.zTree.init(t, setting, fxNodes);
+	
+	 var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="content"]', {
+			resizeType : 1,
+			allowPreviewEmoticons : false,
+			allowImageUpload : false,
+            
+					items : [
+						'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+		});
+        editor = K.create('textarea[name="content2"]', {
+			resizeType : 1,
+			allowPreviewEmoticons : false,
+			allowImageUpload : false,
+            
+					items : [
+						'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+		});
+        editor = K.create('textarea[name="content3"]', {
+			resizeType : 1,
+			allowPreviewEmoticons : false,
+			allowImageUpload : false,
+            
+					items : [
+						'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+		});
+	});
+	 });
+</script>
+	</head>
+
+	<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+<TABLE border=0 height=560px align=left width="99%">
+	<TR>
+		<TD width=260px align=left valign=top style="BORDER-RIGHT: #999999 1px dashed">
+            <div  class="form-inline alert alert-info ">
+                <label>风险指标管理</label>
+            </div>
+            <div style="overflow-y:auto;height:530px;margin-top:-20px">
+			<ul id="tree" class="ztree" style="width:260px; overflow:auto;"></ul>
+                </div>
+		</TD>
+		<TD  align=left valign=top>
+            <div  class="form-inline alert alert-info " style="overflow-y:auto;">
+                <label>维护风险指标评分标准</label>
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0" class="yInfoTable" style="margin-top:-10px;width:98%">
+                <tr>
+                    <td width="80px">
+                        <input type="text" class="input-sm" value="1" style="margin-left:10px;"></input>-
+                        <input type="text" value="2" class="input-sm">
+                    </td>
+                    <td style="text-align:center">
+                                    	<textarea name="content" style="width:100%;height:110px;visibility:hidden;">航空承运人不存在多机型机队混编或混合机队构型的情况。航空承运人的程序、控制和流程测量能有效管理多机型机队混编或混合机队构型的不利影响。任何不利影响皆可忽略不计。 </textarea>
+                    </td>
+                </tr>
+                <tr height="10px"></tr>
+                <tr>
+                    <td width="80px">
+                        <input type="text" value="3" class="input-sm" style="margin-left:10px;"></input>-
+                        <input type="text" value="5" class="input-sm">
+                    </td>
+                    <td style="text-align:center">
+                                    	<textarea name="content2" style="width:100%;height:110px;visibility:hidden;"> 
+存在风险关注点：多机型机队混编或混合机队构型对航空承运人有不利影响。例如：
+
+(1)对多机型机队混编或混合机队构型的影响进行管理的管理架构不完善；
+
+(2)潜在隐患：对航空承运人的维修大纲有不利影响；
+
+(3)潜在隐患：对航空承运人的运行大纲有不利影响；
+
+(4)潜在隐患：对航空承运人的培训大纲有不利影响；
+
+(5)航空承运人缺乏必要的对多机型机队混编或混合机队构型的系统控制；
+
+对于多机型机队混编或混合机队构型，航空承运人没有相关的系统绩效历史记录，或是有记录但其绩效较差。
+ </textarea>
+                    </td>
+                </tr>
+                <tr height="10px"></tr>
+                <tr>
+                    <td width="80px">
+                        <input type="text" value="6" class="input-sm" style="margin-left:10px;"></input>-
+                        <input type="text" value="7" class="input-sm">
+                    </td>
+                    <td style="text-align:center">
+                                    	<textarea name="content3" style="width:100%;height:110px;visibility:hidden;">存在风险关注点：航空承运人缺乏完善的能有效支持多机型机队混编或混合机队构型的基础设施。航空承运人不能证明其已经对一些突发状况进行了适当或有效的管控。  </textarea>
+                    </td>
+                </tr>
+            </table>
+            <a class="btn" style="margin-top:10px;margin-left:100px">保存</a>
+        </TD>
+	</TR>
+</TABLE></div></div>
+	</body>
+
+</html>

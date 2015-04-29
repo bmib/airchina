@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>分析评估-行动跟踪-审计组长</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <style type="text/css">
+input.input-sm {
+    font-size: 60%;
+  height: 20px;
+  line-height: 20px;
+  width:40px;
+    padding-top:0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+        </style>
+    <script>
+        $(document).ready(function () {
+            var winH = $(window).height() - 80;
+            $("#tab_div").css('height', winH + 'px');
+            $("a[name='del']").bind("click",function() {
+					$(this).parents("tr").remove();
+            });
+            $("a[name='add']").bind("click",function() {
+                
+					var trs = $("#wt"+this.id+" tr");
+                    var tr = $(trs[0]);
+                    var td = tr.find("td:first-child");
+                    td.attr("rowspan",td.attr("rowspan")+1);
+                    var newTr = tr.clone(true);
+                    newTr.find("input").each(function(){
+                           this.value = "";
+                         }); 
+                    newTr.find("textarea").each(function(){
+                           this.value = "";
+                         }); 
+                    newTr.insertAfter(trs[trs.length-1]);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div id="tab_div">
+                <!--书签-->
+                <div class="tabbable tabbable-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab_1_1" data-toggle="tab">基本信息</a></li>
+                        <li><a href="#tab_1_2" data-toggle="tab">程序</a></li>
+                        <li><a href="#tab_1_3" data-toggle="tab">控制</a></li>
+                        <li><a href="#tab_1_4" data-toggle="tab">流程测量</a></li>
+                        <li><a href="#tab_1_5" data-toggle="tab">接口</a></li>
+                        <li><a href="#tab_1_6" data-toggle="tab">责任</a></li>
+                        <li><a href="#tab_1_7" data-toggle="tab">权力</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_1_1">
+			 <table class="table">
+				<tr>
+					<td style="vertical-align:middle;width:170px">目的（合格证持有人的责任）：</td>
+					<td>
+                        <textarea  style="width: 600px; height: 80px;" >确保合格证持有人的飞机装配有在计划航路上安全运行所需的设备。</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align:middle;">目标（局方的监督职责）：</td>
+					<td>
+                        <textarea  style="width: 600px; height: 80px;" >确定合格证持有人的适当的运行设备的流程：
+－ 符合中国民航规章（CCAR）和局方政策的相关要求；
+－ 包含系统安全的六个属性； 	
+－ 能够识别出该要素相关程序中的任何不足。
+</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align:middle;">特别说明：</td>
+					<td>
+                        <textarea  style="width: 600px; height: 80px;" >&nbsp;</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align:middle;">相关法律法规：</td>
+					<td>
+                        <textarea  style="width: 600px; height: 80px;" >民航局政策/指南：
+《持续适航监察员手册》
+《运行监察员手册》第一、二、三卷
+</textarea>
+					</td>
+				</tr>
+			</table>
+                        </div>
+                        <div class="tab-pane" id="tab_1_2">
+                            <table class="table">
+				<tr>
+					<td style="vertical-align:middle;width:100px">目标：</td>
+					<td>
+                        <textarea  style="width: 600px; height: 40px;" >确定合格证持有人的书面程序可以确保何人、何事、何时、何地和如何完成这些程序。这些程序必须确保所有人员以较高的安全水平履行其职责。</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align:middle;">任务：</td>
+					<td>
+                        <textarea  style="width: 600px; height: 40px;" >查阅列入本工作单（SAI）补充信息部分的信息。
+查阅与本要素相关的管理规定和相关人员的职责。
+查阅与本要素相关程序的文件化流程。
+</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align:middle;">问题总描述：</td>
+					<td>
+                        <textarea  style="width: 600px; height: 40px;" >&nbsp;</textarea>
+					</td>
+				</tr>
+			</table>
+                <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:95%;">
+            <table class="table">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th width="40px">编号</th>
+                        <th>审计项描述</th>
+                        <th width="150px">规章依据</th>
+                        <th width="250px">任务指南</th>
+                        <th width="40px">分值</th>
+                        <th width="50px">操作<a name="add" id="1"><img src="../images/add.png" width="18"/></a></th>
+                    </tr>
+                </thead>
+                    </table></div></div>
+                <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:95%;height:220px">
+            <table class="table">
+                <tbody id="wt1">
+                    <tr>
+                        <td><input type="text" class="input-sm" value="1.1"></td>
+                        <td><textarea  style="width: 98%; height: 40px;" >合格证持有人适当运行设备的流程是否符合特定规章和局方政策的要求：</textarea></td>
+                        <td><textarea  style="width: 95%; height: 40px;" >121.309(c)(4)
+</textarea></td>
+                        <td><textarea  style="width: 95%; height: 40px;" >依照合格证持有人制定的程序和标准检查飞机，确保在驾驶舱、客舱、货舱、厨房内，装备经批准型号的手提灭火器，且灭火剂的型号和装量适用于该舱室可能发生的失火类型。</textarea></td>
+                        <td><input type="text" class="input-sm" style="width:20px" value="5"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="input-sm" value="1.1.1"></td>
+                        <td><textarea  style="width: 98%; height: 40px;" >  合格证持有人适当运行设备的流程是否有在以下位置安置便于取用的，经批准数量合适的手提灭火器的要求: </textarea></td>
+                        <td><textarea  style="width: 95%; height: 40px;" >121.309(c)(1)
+</textarea></td>
+                        <td><textarea  style="width: 95%; height: 40px;" >依照合格证持有人制定的程序和标准检查飞机，确保对于旅客座位数601或以上的飞机，客舱至少配备8个手提灭火器，且均匀分布于客舱中。</textarea></td>
+                        <td><input type="text" class="input-sm" style="width:20px" value="4"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+</tbody>
+</table>
+</div>
+</div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_3">
+                            <table class="table">
+				<tr>
+					<td style="vertical-align:middle;width:100px">目标：</td>
+					<td>
+                        <textarea  style="width: 600px; height: 40px;" > 确定是否已将控制（例如检查和限制）设计到与本要素相关的流程中，以确保政策和程序的执行可以达到预期效果。
+注：控制可以采取行政控制方式，这种方式是辅助性或补充性的书面程序。与书面程序一样，行政控制也需要回答关于何人、何事、何时、何地和如何完成。控制也可以采取工程控制方式，如自动化功能或机械化操作或设备（即安全装置、警告装置等）。
+</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align:middle;">任务：</td>
+					<td>
+                        <textarea  style="width: 600px; height: 40px;" >查阅合格证持有人的政策、程序、指令和信息，以便理解其与本要素相关的控制。
+</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align:middle;">问题总描述：</td>
+					<td>
+                        <textarea  style="width: 600px; height: 40px;" >&nbsp;</textarea>
+					</td>
+				</tr>
+			</table>
+                <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:95%">
+            <table class="table">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th width="40px">编号</th>
+                        <th>审计项描述</th>
+                        <th width="150px">规章依据</th>
+                        <th width="250px">任务指南</th>
+                        <th width="40px">分值</th>
+                        <th width="50px">操作<a name="add" id="2"><img src="../images/add.png" width="18"/></a></th>
+                    </tr>
+                </thead>
+                    </table></div></div>
+                <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:95%;height:220px">
+            <table class="table">
+                <tbody id="wt2">
+                    <tr>
+                        <td><input type="text" class="input-sm" value="2.1"></td>
+                        <td><textarea  style="width: 98%; height: 40px;" >是否已在适当的运行设备流程中建立下列控制：</textarea></td>
+                        <td><textarea  style="width: 95%; height: 40px;" ></textarea></td>
+                        <td><textarea  style="width: 95%; height: 40px;" ></textarea></td>
+                        <td><input type="text" class="input-sm" style="width:20px" value="3"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="input-sm" value="1.1.1"></td>
+                        <td><textarea  style="width: 98%; height: 40px;" >  是否有一个或多个适当的控制，确保在飞机上配备适当的手提灭火器？</textarea></td>
+                        <td><textarea  style="width: 95%; height: 40px;" >
+</textarea></td>
+                        <td><textarea  style="width: 95%; height: 40px;" ></textarea></td>
+                        <td><input type="text" class="input-sm" style="width:20px" value="3"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+</tbody>
+</table>
+</div>
+</div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--书签-->
+            </div>
+            <div class="modal-footer center" style="margin-top: 10px;">
+                                <a class="btn">保存</a>&nbsp;&nbsp; <a class="btn" href="ad_sjys.html">返回</a>
+                            </div>
+        </div>
+    </div>
+</body>
+</html>

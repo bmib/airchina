@@ -16,90 +16,35 @@
     <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        function qianshou() {
-            alert("签收成功！");
-            $("#btnqianshou").attr("disabled", "disabled");
-        }
-
-        //填报弹出窗口
-        $(document).ready(function () {
-            $('#load_content').load('ep_sjsj_tianxie.html');
-            var winH = $(window).height() - 150;
-            $("#datalistdiv").css('height', winH + 'px');
-        }); 
+        
     </script>
 </head>
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-            <form class="form-inline">
-            <div class="alert" style="float: right; margin-right: 10px;">
-                提示：签收后才能填报审计单问题。
-            </div>
-            <label>
-                选择计划年月：</label>
-            <label>
-                <select name="select" class="span2">
-                    <option value="4" selected="selected">2015年4月</option>
-                    <option value="9">2015年9月</option>
-                </select>
-                要求完成日期：
-            </label>
-            <label>
-                2015-05-15</label>
-            <button type="button" class="btn btn-danger" id="btnqianshou" onclick="qianshou();"
-                style="margin-left: 30px; margin-right: 30px;">
-                签收</button>
-            </form>
-            <div class="form-inline alert alert-info">
-                <label>
-                    检查单专业：</label>
-                <select name="select" class="span1">
-                    <option value="4" selected="selected">飞行</option>
-                    <option value="5">维修</option>
-                    <option value="5">航务</option>
-                    <option value="5">航卫</option>
-                    <option value="5">专业5</option>
-                    <option value="5">专业6</option>
-                    <option value="5">专业7</option>
-                    <option value="5">专业8</option>
-                </select>
-                <label>
-                    检查单类型：</label>
-                <label class="checkbox">
-                    <input type="checkbox" value="SAI" checked="checked" />
-                    SAI
-                </label>
-                <label class="checkbox">
-                    <input type="checkbox" value="EPI" checked="checked" />
-                    EPI
-                </label>
-                <span style="margin-left: 100px;">【审计要素共20个，已完成10个。问题共180个，已完成79个。】 </span>
-            </div>
-            <div id="datalistdiv" style=" overflow-y:scroll;">
-            <table cellpadding="0" cellspacing="0" border="0" class="table" width="100%">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>
-                            要素
+                            计划年月
                         </th>
                         <th>
-                            专业
+                            审计组长
                         </th>
                         <th>
-                            检查单类型
+                            审计专员
                         </th>
                         <th>
-                            检查单下载
+                            问题（已填写/总数）
                         </th>
                         <th>
-                            监察指导
+                            要求完成日期
+                        </th>
+                        <th>
+                            预填人员
                         </th>
                         <th>
                             状态
-                        </th>
-                        <th>
-                            上一次保存日期
                         </th>
                         <th>
                             操作
@@ -109,346 +54,84 @@
                 <tbody>
                     <tr>
                         <td>
-                            3.1.8 货物运输
+                            2015年5月
                         </td>
                         <td>
-                            飞行
+                            齐龙
                         </td>
                         <td>
-                            SAI
+                            飞行：刘静；运控：马峥；地服：张玲
                         </td>
                         <td>
-                            <button class="btn btn-link">
-                                完整版</button>
-                            <button class="btn btn-link">
-                                简版</button>
+                            0/190
                         </td>
                         <td>
-                            <button class="btn btn-link">
-                                查看</button>
+                            2015-05-30
                         </td>
                         <td>
-                            未完成
+                            张三、李四、王五
                         </td>
                         <td>
-                            2015-04-18
+                            未签收
                         </td>
                         <td>
-                            <!-- <button class="btn" data-toggle="modal" data-target="#myModal-2">
-                                填报</button>-->
-                            <a class="btn" href="ep_sjsj_tianxie.html">填报</a>
+                            <a class="btn">签收</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            3.1.10 降低的着陆最低标准
+                            2015年4月
                         </td>
                         <td>
-                            飞行
+                            齐龙
                         </td>
                         <td>
-                            SAI
+                            飞行：刘静；运控：马峥；地服：张玲
                         </td>
                         <td>
-                            <button class="btn btn-link">
-                                完整版</button>
-                            <button class="btn btn-link">
-                                简版</button>
+                            120/190
                         </td>
                         <td>
-                            <button class="btn btn-link">
-                                查看</button>
+                            2015-04-30
                         </td>
                         <td>
-                            已完成
+                            张三、李四、王五
                         </td>
                         <td>
-                            2015-04-18
+                            未提交
                         </td>
                         <td>
-                            <button class="btn">
-                                查看</button>
+                            <a class="btn" href="ep_sjsj2.html">填报</a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            3.1.11 基于计算机的记录保存系统
+                            2015年1月
                         </td>
                         <td>
-                            飞行
+                            齐龙
                         </td>
                         <td>
-                            SAI
+                            飞行：刘静；运控：马峥；地服：张玲
                         </td>
                         <td>
-                            <button class="btn btn-link">
-                                完整版</button>
-                            <button class="btn btn-link">
-                                简版</button>
+                            190/190
                         </td>
                         <td>
-                            <button class="btn btn-link">
-                                查看</button>
+                            2015-01-30
                         </td>
                         <td>
-                            未完成
+                            张三、李四、王五
                         </td>
                         <td>
-                            2015-04-18
+                            已提交
                         </td>
                         <td>
-                            <button class="btn">
-                                填报</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            3.1.14 地面服务
-                        </td>
-                        <td>
-                            飞行
-                        </td>
-                        <td>
-                            SAI
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                完整版</button>
-                            <button class="btn btn-link">
-                                简版</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                查看</button>
-                        </td>
-                        <td>
-                            未完成
-                        </td>
-                        <td>
-                            2015-04-18
-                        </td>
-                        <td>
-                            <button class="btn">
-                                填报</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序
-                        </td>
-                        <td>
-                            飞行
-                        </td>
-                        <td>
-                            SAI
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                完整版</button>
-                            <button class="btn btn-link">
-                                简版</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                查看</button>
-                        </td>
-                        <td>
-                            未完成
-                        </td>
-                        <td>
-                            2015-04-18
-                        </td>
-                        <td>
-                            <button class="btn">
-                                填报</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            4.2.3 飞行机组成员的训练
-                        </td>
-                        <td>
-                            飞行
-                        </td>
-                        <td>
-                            SAI
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                完整版</button>
-                            <button class="btn btn-link">
-                                简版</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                查看</button>
-                        </td>
-                        <td>
-                            未完成
-                        </td>
-                        <td>
-                            2015-04-18
-                        </td>
-                        <td>
-                            <button class="btn">
-                                填报</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            4.2.4 客舱乘务员训练
-                        </td>
-                        <td>
-                            飞行
-                        </td>
-                        <td>
-                            SAI
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                完整版</button>
-                            <button class="btn btn-link">
-                                简版</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                查看</button>
-                        </td>
-                        <td>
-                            未完成
-                        </td>
-                        <td>
-                            2015-04-18
-                        </td>
-                        <td>
-                            <button class="btn">
-                                填报</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            4.2.6 航站人员训练
-                        </td>
-                        <td>
-                            飞行
-                        </td>
-                        <td>
-                            SAI
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                完整版</button>
-                            <button class="btn btn-link">
-                                简版</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                查看</button>
-                        </td>
-                        <td>
-                            未完成
-                        </td>
-                        <td>
-                            2015-04-18
-                        </td>
-                        <td>
-                            <button class="btn">
-                                填报</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            4.2.7 航空检查员和教员的训练
-                        </td>
-                        <td>
-                            飞行
-                        </td>
-                        <td>
-                            SAI
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                完整版</button>
-                            <button class="btn btn-link">
-                                简版</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                查看</button>
-                        </td>
-                        <td>
-                            未完成
-                        </td>
-                        <td>
-                            2015-04-18
-                        </td>
-                        <td>
-                            <button class="btn">
-                                填报</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            4.2.8 模拟机/训练设备
-                        </td>
-                        <td>
-                            飞行
-                        </td>
-                        <td>
-                            SAI
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                完整版</button>
-                            <button class="btn btn-link">
-                                简版</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-link">
-                                查看</button>
-                        </td>
-                        <td>
-                            未完成
-                        </td>
-                        <td>
-                            2015-04-18
-                        </td>
-                        <td>
-                            <button class="btn">
-                                填报</button>
+                            <a class="btn">查看</a>
                         </td>
                     </tr>
                 </tbody>
-            </table></div>
-        </div>
-    </div>
-    <!--填报弹出窗口-->
-    <div id="myModal-2" class="modal big" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        style="display: none;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;</button>
-                    <!--窗口title-->
-                    <h4 class="modal-title" id="myModalLabel">
-                        开始数据收集</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="yContentBox" id="load_content">
-                        <!--窗口的内容开始-->
-                        <!--内容结束-->
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn">
-                        保存草稿</button>
-                    <button type="button" class="btn">
-                        提交</button>
-                    <button type="button" class="btn" data-dismiss="modal">
-                        关闭</button>
-                </div>
-            </div>
+            </table>
         </div>
     </div>
 </body>

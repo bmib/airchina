@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+        <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+	</head>
+    <script>
+function changeSjdlx(obj) {
+    var type = $(obj).val();
+    $("#1").hide();
+    $("#2").hide();
+    $("#3").hide();
+    if(type=="机务")
+    {
+        $("#2").show();
+    }
+    else if(type=="运控")
+    {
+        $("#3").show();
+    }
+    else
+    {
+        $("#1").show();
+    }
+            
+}
+    </script>
+	<body class="yBodyBg">
+		<div class="yContentBox">
+		
+			<table border="0" cellpadding="0" cellspacing="0" class="yInfoTable" style="margin-top:5px;">
+
+				<tr>
+					<td class="yLeftTipTD yleftTitleBg">专业类别</td>
+					<td>
+						<select style="width:80px;height: 20px;  line-height: 20px;font-size: 60%;" onchange="changeSjdlx(this);">
+                            <option selected="selected">组织管理</option>
+                            <option>飞行</option>
+                            <option>机务</option>
+                            <option>运控</option>
+                            <option>客舱</option>
+                            <option>地服</option>
+                            <option>货运</option>
+                            <option>保卫</option>
+                        </select>
+					</td>
+				</tr>
+				<tr>
+					<td class="yLeftTipTD yleftTitleBg" >审计要素</td>
+					<td>
+						<input type="text" value="1.1.2" style="width:40px"></input>&nbsp;<input type="text" value="适当的运行设备" style="width:140px"></input>
+					</td>
+				</tr>
+				<tr>
+					<td class="yLeftTipTD yleftTitleBg">系统</td>
+					<td>
+						<input type="text" value="1" style="width:40px" disabled></input>&nbsp;<input type="text" value="航空器构型控制" style="width:140px" disabled></input>
+					</td>
+					<!--td class="yLeftTipTD yleftTitleBg">系统权重</td>
+					<td>
+						<input type="text" value="10" style="width:20px" disabled></input></input>
+					</td!-->
+				</tr>
+				<tr>
+					<td class="yLeftTipTD yleftTitleBg">子系统</td>
+					<td>
+						<input type="text" value="1.1" style="width:40px" disabled></input>&nbsp;<input type="text" value="航空器" style="width:140px" disabled></input>
+					</td>
+					<!--td class="yLeftTipTD yleftTitleBg">子系统权重</td>
+					<td>
+						<input type="text" value="10" style="width:20px" disabled></input></input>
+					</td-->
+				</tr>
+				<!--tr>
+					<td class="yLeftTipTD yleftTitleBg">要素类别</td>
+					<td>
+						<select class="inputTextS" onchange="changeSjdlx(this);">
+                            <option selected="selected">组织管理类</option>
+                            <option>飞行类</option>
+                            <option>机务类</option>
+                            <option>运控类</option>
+                            <option>客舱类</option>
+                            <option>地服类</option>
+                            <option>货运类</option>
+                            <option>保卫类</option>
+                        </select>
+					</td>
+				</tr-->
+				<tr>
+					<td class="yLeftTipTD yleftTitleBg">审计要素权重</td>
+					<td>
+						<input type="text" value="10" style="width:20px"></input></input>
+					</td>
+				</tr>
+				<tr>
+					<td class="yLeftTipTD yleftTitleBg">审计要素备注</td>
+					<td>
+						<input type="text" value="对局方要素的备注" style="width:195px"></input></input>
+					</td>
+				</tr>
+				<tr>
+					<td class="yLeftTipTD yleftTitleBg">审计单类型</td>
+					<td>
+                        <div id="1"><input type="checkbox">FXI&nbsp;&nbsp;&nbsp;<input type="checkbox">FXI2</div>
+                        <div id="2" style="display:none"><input type="checkbox">JWI&nbsp;&nbsp;&nbsp;<input type="checkbox">JWI2&nbsp;&nbsp;&nbsp;<input type="checkbox">JWI3</div>
+                        <div id="3" style="display:none"><input type="checkbox">YKI&nbsp;&nbsp;&nbsp;<input type="checkbox">YKI2&nbsp;&nbsp;&nbsp;<input type="checkbox">YKI3</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+        <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+        <style type="text/css">
+input.input-sm {
+    font-size: 60%;
+  height: 20px;
+  line-height: 20px;
+  width:140px;
+    padding-top:0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+        </style>
+        <script type="text/javascript">
+        //填报弹出窗口
+        $(document).ready(function () {
+            $("a[name='del']").bind("click",function() {
+					$(this).parents("tr").remove();
+            });
+            $("a[name='add']").bind("click",function() {
+					var trs = $("#zj tr");
+                    var tr = $(trs[0]);
+                    var td = tr.find("td:first-child");
+                    td.attr("rowspan",td.attr("rowspan")+1);
+                    var newTr = tr.clone(true);
+                newTr.find("td:first-child").html(trs.length+1);
+                    newTr.find("input").each(function(){
+                           this.value = "";
+                         }); 
+                    newTr.insertAfter(trs[trs.length-1]);
+            });
+        });
+    </script>
+	</head>
+
+	<body class="yBodyBg">
+		<div class="yContentBox">
+			<table border="0" cellpadding="0" cellspacing="0" class="yInfoTable" style="margin-top:5px;">
+				<tr>
+					<td class="yLeftTipTD yleftTitleBg">审计单类型编码</td>
+					<td>
+						<input type="text" value="SAI" style="width:140px"></input>
+					</td>
+				</tr>
+				<tr>
+					<td class="yLeftTipTD yleftTitleBg">审计单类型名称</td>
+					<td>
+						<input type="text" value="安全属性审计单" style="width:140px"></input>
+					</td>
+				</tr>
+				<tr>
+					<td class="yLeftTipTD yleftTitleBg">要素类别</td>
+					<td>
+						<select style="width:155px">
+                            <option selected="selected">组织管理类</option>
+                            <option>飞行类</option>
+                            <option>机务类</option>
+                            <option>运控类</option>
+                            <option>客舱类</option>
+                            <option>地服类</option>
+                            <option>货运类</option>
+                            <option>保卫类</option>
+                        </select>
+					</td>
+				</tr>
+			</table><br/>
+            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:95%">
+            <table class="table">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th width="60px">章节排序号</th>
+                        <th>章节名称</th>
+                        <th width="50px">操作<a name="add"><img src="../images/add.png" width="18"/></a></th>
+                    </tr>
+                </thead>
+                    </table></div></div>
+                <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:95%;height:190px">
+            <table class="table">
+                <tbody id="zj">
+                    <tr style="height:20px">
+                        <td width="60px" style="text-align:center;">1</td>
+                        <td><input type="text" class="input-sm" value="程序"></td>
+                        <td width="25px">
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">2</td>
+                        <td><input type="text" class="input-sm" value="控制"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">3</td>
+                        <td><input type="text" class="input-sm" value="流程测量"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">4</td>
+                        <td><input type="text" class="input-sm" value="接口"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">5</td>
+                        <td><input type="text" class="input-sm" value="责任"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">6</td>
+                        <td><input type="text" class="input-sm" value="权力"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+</tbody>
+</table>
+</div>
+</div>
+		</div>
+	</body>
+
+</html>

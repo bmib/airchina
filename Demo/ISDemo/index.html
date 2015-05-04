@@ -1,95 +1,100 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>信息系统开发基础框架.Mr.liuyong</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="cache-control" content="no-cache">
-<meta http-equiv="expires" content="0">
-<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-<script type="text/javascript" src="includes/styleBase/js/jquery.js"></script>
-<style>
-*{
-	margin:0;
-    padding:0;
-}
-body,html{
-	height:100%;
-	overflow:hidden;
-}
-</style>
-<script>
-	//默认或选中的菜单组
-	var objectId=null;
-	//默认或选中的2级菜单
-	var object2Id=null;
-	//默认或选中的3级菜单
-	var object3Id=null;
-	
-	//调整到指定资源,指定菜单组、菜单、或左侧菜单
-	function loadMyResource(p_objectId,p_object2Id,p_object3Id){
-	
-		objectId=p_objectId;
-		object2Id=p_object2Id;
-		object3Id=p_object3Id;
-		
-		if(menuFrame.$("#"+objectId).length>0){
-			menuFrame.$("#"+objectId).click();
-			if(menuFrame.$("#"+object2Id).length>0){
-				menuFrame.$("#"+object2Id).click();
-			}
-		}
-		objectId=null;
-		object2Id=null;
-	}
-	
-	//--------------------------高度适配---------------------------
-	
-	window.onload=function(){
-		adaptWindowHeight();
-	}
-	
-	$(function(){
-		$(window).resize(function() {
-	 		adaptWindowHeight();
-		});
-	});
+    <title>投资企业航空安全监管平台</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <script type="text/javascript" src="includes/styleBase/js/jquery.js"></script>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body, html
+        {
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        //默认或选中的菜单组
+        var objectId = null;
+        //默认或选中的2级菜单
+        var object2Id = null;
+        //默认或选中的3级菜单
+        var object3Id = null;
 
-	//根据窗口高度适配内容frame高度
-	//除本页面调用外，控制二级菜单显示影藏的portalData.js中的changeTopAreaHeight也会调用本方法
-	function adaptWindowHeight(){
-		//网页可见区域高度
-		var ch=document.body.clientHeight;
-		//菜单区域高度
-		var menuH=$("#menuFrame").height();
-		//内容区域高度
-		var bH=ch-menuH;
-		$("#leftFrame").height(bH);
-		$("#controlFrame").height(bH);
-		$("#mainFrame").height(bH);
-	}
-	//--------------------------高度适配结束-------------------------
-</script>
+        //调整到指定资源,指定菜单组、菜单、或左侧菜单
+        function loadMyResource(p_objectId, p_object2Id, p_object3Id) {
+
+            objectId = p_objectId;
+            object2Id = p_object2Id;
+            object3Id = p_object3Id;
+
+            if (menuFrame.$("#" + objectId).length > 0) {
+                menuFrame.$("#" + objectId).click();
+                if (menuFrame.$("#" + object2Id).length > 0) {
+                    menuFrame.$("#" + object2Id).click();
+                }
+            }
+            objectId = null;
+            object2Id = null;
+        }
+
+        //--------------------------高度适配---------------------------
+
+        window.onload = function () {
+            adaptWindowHeight();
+        }
+
+        $(function () {
+            $(window).resize(function () {
+                adaptWindowHeight();
+            });
+        });
+
+        //根据窗口高度适配内容frame高度
+        //除本页面调用外，控制二级菜单显示影藏的portalData.js中的changeTopAreaHeight也会调用本方法
+        function adaptWindowHeight() {
+            //网页可见区域高度
+            var ch = document.body.clientHeight;
+            //菜单区域高度
+            var menuH = $("#menuFrame").height();
+            //内容区域高度
+            var bH = ch - menuH;
+            $("#leftFrame").height(bH);
+            $("#controlFrame").height(bH);
+            $("#mainFrame").height(bH);
+        }
+        //--------------------------高度适配结束-------------------------
+    </script>
 </head>
 <body>
-<table cellpadding="0" cellspacing="0" border="0" style="width:100%;height:100%;">
-    <tr>
-        <td valign="top" id="menuFrameTD" height="120" colspan="3">
-        	<iframe id="menuFrame" name="menuFrame" src="menuFrame.html" width="100%" height="120" frameborder="0" scrolling="no"></iframe>
-        </td>
-    </tr>
-    <tr>
-        <td width="200" id="leftFrameTD" valign="top" style="display:none;">
-            <iframe src="leftFrame.html" width="100%" frameborder="0" name="leftFrame" id="leftFrame" scrolling="auto" noresize="noresize"></iframe>
-        </td>
-        <td width="9" id="controlFrameTD" valign="top" style="display:none;">
-            <iframe src="controlFrame.html" name="controlFrame" width="100%" frameborder="0" id="controlFrame" scrolling="no" noresize="noresize"></iframe>
-        </td>
-        <td id="mainFrameTD" valign="top">
-            <iframe src="" width="100%" frameborder="0" name="mainFrame" id="mainFrame" scrolling="auto"></iframe>
-        </td>
-    </tr>
-</table>
+    <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; height: 100%;">
+        <tr>
+            <td valign="top" id="menuFrameTD" height="120" colspan="3">
+                <iframe id="menuFrame" name="menuFrame" src="menuFrame.html" width="100%" height="120"
+                    frameborder="0" scrolling="no"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td width="200" id="leftFrameTD" valign="top" style="display: none;">
+                <iframe src="leftFrame.html" width="100%" frameborder="0" name="leftFrame" id="leftFrame"
+                    scrolling="auto" noresize="noresize"></iframe>
+            </td>
+            <td width="9" id="controlFrameTD" valign="top" style="display: none;">
+                <iframe src="controlFrame.html" name="controlFrame" width="100%" frameborder="0"
+                    id="controlFrame" scrolling="no" noresize="noresize"></iframe>
+            </td>
+            <td id="mainFrameTD" valign="top">
+                <iframe src="" width="100%" frameborder="0" name="mainFrame" id="mainFrame" scrolling="auto">
+                </iframe>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
-

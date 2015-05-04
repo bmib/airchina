@@ -46,16 +46,17 @@ $(document).ready(function() {
             </div>
             <div class="form-inline ">
                 <label>检查单专业：</label>
-                <select name="select" class="span1" >
-                    <option value="4" selected="selected">全部</option>
+                <select name="select" class="span2" >
+                    <option value="0" selected="selected">全部</option>
+                    <option value="1">SFOP普通</option>
+                    <option value="2">SFOP专项</option>
+                    <option value="3">组织管理</option>
                     <option value="4">飞行</option>
-                    <option value="5">维修</option>
-                    <option value="5">航务</option>
-                    <option value="5">航卫</option>
-                    <option value="5">专业5</option>
-                    <option value="5">专业6</option>
-                    <option value="5">专业7</option>
-                    <option value="5">专业8</option>
+                    <option value="5">机务</option>
+                    <option value="6">运控</option>
+                    <option value="7">客舱</option>
+                    <option value="8">地服</option>
+                    <option value="9">货运</option>
                 </select>
                 <label style="padding-left:30px;">构型状态：未提交
                 </label>  
@@ -63,7 +64,7 @@ $(document).ready(function() {
             </div>
             <!---->
             
-    		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:1003px;">
               <tr>
                 <td style="width:30%; padding-right:5px;">
                     <div class="tab-content">
@@ -71,12 +72,15 @@ $(document).ready(function() {
                             <thead>
                                 <tr>
                                     <th align="left" class="left" style="line-height:30px;">审计要素库</th>
-                                    <th align="left" class="center" style="width:20%;line-height:25px;">
+                                    <th align="left" class="right form-inline" style="line-height:30px;">
                                         <label class="checkbox">
-                                        	<input type="checkbox" value="" /> 局方
+                                        	<input type="checkbox" value="" checked/> 局方
                                         </label>                                    
-                                     </th>
-                                     <th align="left" class="center" style="width:20%;line-height:25px;">
+                                     
+                                        <label class="checkbox">
+                                        	<input type="checkbox" value="" /> IOSA
+                                        </label>                                    
+                                     
                                          <label class="checkbox">
                                             <input type="checkbox" value="" />自定义
                                          </label>
@@ -88,11 +92,12 @@ $(document).ready(function() {
                         <table class="table table-hover">
                             <thead>
                                 <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
-                                    <th align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></th>
                                     <th align="left" class="left" style=" padding-left:5px;">要素</th>
-                                    <th align="left" class="center" style="width:10%;">权重</th>
-                                    <th align="left" class="center" style="width:15%;">重要性</th>
-                                    <th align="left" class="center" style="width:10%;">风险</th>
+                                    <th align="left" class="center" style="width:25px;">权重</th>
+                                    <th align="left" class="center" style="width:40px;">重要性</th>
+                                    <th align="left" class="center" style="width:25px;">风险</th>
+                                    <th align="left" class="center" style="width:15px;"><img src="../images/all_add.png" title="点击全部添加到右侧"></th>
+                                    
                               </tr>
                             </thead>
                          </table>
@@ -101,90 +106,88 @@ $(document).ready(function() {
                          <table class="table table-hover">
                             <tbody>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
-                                    <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【SAI】
-                                    <p class="popover-options"><a href="#" data-container="body" data-toggle="popover" data-content="<span>国航适用的自定义说明</span>">提示</a></p>
-									</td>
-                                    <td align="left"class="center" style="width:10%;">10</td>
-                                    <td align="left"class="center" style="width:15%;">高</td>
-                                    <td align="left"class="center" style="width:10%;">120</td>
+                                    <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【SAI】</td>
+                                    <td align="left"class="center" style="width:25px;">10</td>
+                                    <td align="left"class="center" style="width:40px;">高</td>
+                                    <td align="left"class="center" style="width:25px;">120</td>
+                                    <td align="left" class="center" style="width:15px; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【SPI】</td>
                                     <td align="left"class="center">10</td>
                                     <td align="left"class="center">中</td>
                                     <td align="left"class="center">120</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
-                                    <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】<p class="popover-options"><a href="#" data-container="body" data-toggle="popover" data-content="<span>国航适用的自定义说明</span>">提示</a></p></td>
+                                    <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】</td>
                                     <td align="left"class="center">10</td>
                                     <td align="left"class="center">中</td>
                                     <td align="left"class="center">120</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】</td>
                                     <td align="left"class="center">10</td>
                                     <td align="left"class="center">低</td>
                                     <td align="left"class="center">120</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】</td>
                                     <td align="left"class="center">2</td>
                                     <td align="left"class="center">低</td>
                                     <td align="left"class="center">60</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】<i class="icon-comment"></i></td>
                                     <td align="left"class="center">1</td>
                                     <td align="left"class="center">低</td>
                                     <td align="left"class="center">34</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】</td>
                                     <td align="left"class="center">1</td>
                                     <td align="left"class="center">低</td>
                                     <td align="left"class="center">34</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】</td>
                                     <td align="left"class="center">1</td>
                                     <td align="left"class="center">低</td>
                                     <td align="left"class="center">34</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】</td>
                                     <td align="left"class="center">1</td>
                                     <td align="left"class="center">低</td>
                                     <td align="left"class="center">34</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】</td>
                                     <td align="left"class="center">1</td>
                                     <td align="left"class="center">低</td>
                                     <td align="left"class="center">34</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】</td>
                                     <td align="left"class="center">1</td>
                                     <td align="left"class="center">低</td>
                                     <td align="left"class="center">34</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png">【EPI】</td>
                                     <td align="left"class="center">1</td>
                                     <td align="left"class="center">低</td>
                                     <td align="left"class="center">34</td>
+                                    <td align="left" class="center" style="width:5%; padding:2px !important;"><img src="../images/ys_add.png" title="点击添加到右侧"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -196,8 +199,21 @@ $(document).ready(function() {
                         <table class="table alert alert-info">
                             <thead>
                                 <tr>
-                                    <th align="left" class="left" style="width:70%; line-height:30px;">已选构型要素</th>
+                                    <th align="left" class="left" style="line-height:30px;">已选构型要素</th>
                                     <th align="left" class="center" style="line-height:30px;">共20个要素</th>
+                                    <th align="left" class="right form-inline" style="line-height:30px;">
+                                        <label class="checkbox">
+                                        	<input type="checkbox" value="" /> 局方
+                                        </label>                                    
+                                     
+                                        <label class="checkbox">
+                                        	<input type="checkbox" value="" /> IOSA
+                                        </label>                                    
+                                     
+                                         <label class="checkbox">
+                                            <input type="checkbox" value="" />自定义
+                                         </label>
+                                    </th>
                               </tr>
                             </thead>
                         </table>
@@ -205,10 +221,11 @@ $(document).ready(function() {
                         <table class="table table-hover">
                             <thead>
                                 <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
-                                    <th align="left" class="center" style="width:5%;"><input type="checkbox" value="" checked /></th>
+                                   
                                     <th align="left" class="left" style=" padding-left:5px;">要素</th>
-                                    <th align="left" class="center" style="width:15%;">问题</th>
-                                    <th align="left" class="center" style="width:15%;">审计员</th>
+                                    <th align="left" class="center" style="width:25px;">问题</th>
+                                    <th align="left" class="center" style="width:40px;">审计员</th>
+                                     <th align="left" class="center" style="width:25px;"><a href="#" class="btn btn-mini">空</a></th>
                               </tr>
                             </thead>
                          </table>
@@ -217,46 +234,46 @@ $(document).ready(function() {
                          <table class="table table-hover">
                             <tbody>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" checked /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png"></td>
-                                    <td align="left"class="center" style="width:15%;">11/30</td>
-                                    <td align="left"class="center" style="width:15%;">马征</td>
+                                    <td align="left"class="center" style="width:25px;">11/30</td>
+                                    <td align="left"class="center" style="width:40px;">马征</td>
+                                    <td align="left" class="center" style="width:25px;">删</td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value=""  checked/></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png"></td>
-                                    <td align="left"class="center" style="width:15%;">11/30</td>
-                                    <td align="left"class="center" style="width:15%;">马征</td>
+                                    <td align="left"class="center" >11/30</td>
+                                    <td align="left"class="center" >马征</td>
+                                    <td align="left" class="center">删</td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" checked /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png"></td>
-                                    <td align="left"class="center" style="width:15%;">11/30</td>
-                                    <td align="left"class="center" style="width:15%;">马征</td>
+                                    <td align="left"class="center">11/30</td>
+                                    <td align="left"class="center">马征</td>
+                                    <td align="left" class="center" >删</td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value=""  checked/></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png"></td>
-                                    <td align="left"class="center" style="width:15%;">11/30</td>
-                                    <td align="left"class="center" style="width:15%;">马征</td>
+                                    <td align="left"class="center" >11/30</td>
+                                    <td align="left"class="center" >马征</td>
+                                    <td align="left" class="center" >删</td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" checked /></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png"></td>
-                                    <td align="left"class="center" style="width:10%;">11/30</td>
-                                    <td align="left"class="center" style="width:15%;">马征</td>
+                                    <td align="left"class="center" >11/30</td>
+                                    <td align="left"class="center" >马征</td>
+                                    <td align="left" class="center" >删</td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" checked/></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png"></td>
-                                    <td align="left"class="center" style="width:10%;">11/30</td>
-                                    <td align="left"class="center" style="width:15%;">马征</td>
+                                    <td align="left"class="center" >11/30</td>
+                                    <td align="left"class="center" >马征</td>
+                                    <td align="left" class="center" >删</td>
                                 </tr>
                                 <tr>
-                                    <td align="left" class="center" style="width:5%;"><input type="checkbox" value=""  checked/></td>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png"></td>
-                                    <td align="left"class="center" style="width:10%;">11/30</td>
-                                    <td align="left"class="center" style="width:15%;">马征</td>
+                                    <td align="left"class="center" >11/30</td>
+                                    <td align="left"class="center" >马征</td>
+                                    <td align="left" class="center">删</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -290,9 +307,8 @@ $(document).ready(function() {
                                     <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
                                         <th align="left" class="center" style="width:5%;"><input type="checkbox" value="" checked/></th>
                                         <th align="left" class="left" style="">对应问题</th>
-                                        <th align="left" class="center" style="width:10%;">类型</th>
-                                        <th align="left" class="left" style="width:11%;">审计员</th>
-                                        <th align="left" class="center" style="width:10%;">分值</th>
+                                        <th align="left" class="center" style="width:40px;">类型</th>
+                                        <th align="left" class="left" style="width:40px;">审计员</th>
                                   </tr>
                                 </thead>
                             </table>
@@ -303,52 +319,45 @@ $(document).ready(function() {
                                 <tbody>
                                     <tr>
                                         <td align="left" class="center" style="width:5%;"><input type="checkbox" value=""  checked/></td>
-                                        <td align="left" class="left" style="">［查看详细］1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
-                                        <td align="left" class="center" style="width:10%;">局方</td>
-                                        <td align="left" class="left" style="width:10%;">马征</td>
-                                        <td align="left" class="left" style="width:10%;">10</td>
+                                        <td align="left" class="left" style="">［查看详细］1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？<span class="popover-options"><a href="#" data-container="body" data-toggle="popover" data-content="<span>国航适用的自定义说明国航适用的自定，义说明国航适用的自定义说明国航适用的自定义说明，国航适用的自定义说明</span>">提示</a></span></td>
+                                        <td align="left" class="center" style="width:40px;">局方</td>
+                                        <td align="left" class="center" style="width:40px;">马征</td>
                                     </tr>
                                     <tr>
                                         <td align="left" class="center" style="width:5%;"><input type="checkbox" value=""  checked/></td>
                                         <td align="left" class="left" style="">［查看详细］1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
-                                        <td align="left" class="center" style="width:10%;">局方</td>
-                                        <td align="left" class="left" style="width:10%;">马征</td>
-                                        <td align="left" class="left" style="width:10%;">5</td>
+                                        <td align="left" class="center" >局方</td>
+                                        <td align="left" class="center" >马征</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" checked /></td>
+                                        <td align="left" class="left" style="">［查看详细］1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？<span class="popover-options"><a href="#" data-container="body" data-toggle="popover" data-content="<span>国航适用的自定义说明，文字数量</span>">提示</a></span></td>
+                                        <td align="left" class="center" style="width:;">自定义</td>
+                                        <td align="left" class="center" style="width:;">马征</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" class="center" style="width:5%;"><input type="checkbox" value=""  checked/></td>
+                                        <td align="left" class="left" style="">［查看详细］1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                                        <td align="left" class="center" style="width:;"><span class="center" style="width:10%;">自定义</span></td>
+                                        <td align="left" class="center" style="width:;">刘静</td>
                                     </tr>
                                     <tr>
                                         <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" checked /></td>
                                         <td align="left" class="left" style="">［查看详细］1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
-                                        <td align="left" class="center" style="width:10%;">局方</td>
-                                        <td align="left" class="left" style="width:10%;">马征</td>
-                                        <td align="left" class="left" style="width:10%;">5</td>
+                                        <td align="left" class="center" style="width:;">局方</td>
+                                        <td align="left" class="center" style="width:;">刘静</td>
                                     </tr>
                                     <tr>
                                         <td align="left" class="center" style="width:5%;"><input type="checkbox" value=""  checked/></td>
                                         <td align="left" class="left" style="">［查看详细］1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
-                                        <td align="left" class="center" style="width:10%;">局方</td>
-                                        <td align="left" class="left" style="width:10%;">马征</td>
-                                        <td align="left" class="left" style="width:10%;">3</td>
-                                    </tr>
-                                    <tr>
-                                        <td align="left" class="center" style="width:5%;"><input type="checkbox" value="" checked /></td>
-                                        <td align="left" class="left" style="">［查看详细］1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
-                                        <td align="left" class="center" style="width:10%;">局方</td>
-                                        <td align="left" class="left" style="width:10%;">马征</td>
-                                        <td align="left" class="left" style="width:10%;">3</td>
+                                        <td align="left" class="center" style="width:;">局方</td>
+                                        <td align="left" class="center" style="width:;">马征</td>
                                     </tr>
                                     <tr>
                                         <td align="left" class="center" style="width:5%;"><input type="checkbox" value=""  checked/></td>
                                         <td align="left" class="left" style="">［查看详细］1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
-                                        <td align="left" class="center" style="width:10%;">局方</td>
-                                        <td align="left" class="left" style="width:10%;">马征</td>
-                                        <td align="left" class="left" style="width:10%;">3</td>
-                                    </tr>
-                                    <tr>
-                                        <td align="left" class="center" style="width:5%;"><input type="checkbox" value=""  checked/></td>
-                                        <td align="left" class="left" style="">［查看详细］1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
-                                        <td align="left" class="center" style="width:10%;">局方</td>
-                                        <td align="left" class="left" style="width:10%;">马征</td>
-                                        <td align="left" class="left" style="width:10%;">3</td>
+                                        <td align="left" class="center" style="width:;">局方</td>
+                                        <td align="left" class="center" style="width:;">马征</td>
                                     </tr>
                                 </tbody>
                             </table>

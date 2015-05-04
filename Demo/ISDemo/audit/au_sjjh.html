@@ -1,699 +1,711 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/html4/strict.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>审计计划</title>
+    <link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+    <link rel="stylesheet" href="../includes/styleBase/css/bootstrap.css" />
+    <link rel="stylesheet" href="../includes/styleBase/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css"
+        type="text/css" />
+    <script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+    <script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+    <script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.js"></script>
+    <link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
+    <script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
+    <script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+    <script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+    <style type="text/css">
+        div.tableContainer
+        {
+            clear: both;
+            border-collapse: collapse;
+            overflow-y: scroll;
+            width: 100%;
+            min-width: 1024px;
+            padding: 0;
+            margin: 0;
+        }
+        .yTable
+        {
+            width: 100%;
+        }
+        .yTable tr td
+        {
+            line-height: 50px;
+            height: 50px;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #FFFFFF;
+        }
+        .year
+        {
+            line-height: 30px;
+            height: 30px;
+            margin: 10px 10px;
+            width: 100%;
+            text-align: left;
+        }
+        .stat th
+        {
+            background-color: #F9F7ED !important;
+            background-image: none !important;
+        }
+        .plantdon
+        {
+            background-image: url('../images/20150504101556940_easyicon_net_43.7142857143.png') !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+        }
+        .plantdoff
+        {
+            background-image: url('../images/20150504101541685_easyicon_net_47.8802992519.png') !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            var winH = $(window).height() - 120;
+            $("#tableContainerList").css('height', winH + 'px');
+            $(".plantd").each(function () {
+                var currentid = $(this);
+                $(this).dialog({
+                    id: currentid.attr("id"),
+                    content: 'url:audit/au_sjjh_add.html',
+                    width: 650,
+                    height: 400,
+                    title: '新增/修改审计计划',
+                    button: [{
+                        name: '保存',
+                        callback: function () {
+                            $.jBox.tip('计划保存成功！');
+                            currentid.addClass("plantdon");
+                        },
+                        focus: true
+                    }, {
+                        name: '删除',
+                        callback: function () {
+                            $.jBox.tip('计划删除成功！');
+                            currentid.removeClass("plantdon");
+                        }
+                    }, {
+                        name: '关闭',
+                        callback: function () { }
+                    }]
+                });
+            });
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>审计计划</title>
-		<link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
-		<link rel="stylesheet" href="../includes/styleBase/css/bootstrap.css" />
-		<link rel="stylesheet" href="../includes/styleBase/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css" type="text/css" />
-		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
-		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
-		<script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.js"></script>
-		<link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
-		<script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
-		<script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
-		<script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
-		<style type="text/css">
-			div.tableContainer {
-				clear: both;
-				border-collapse: collapse;
-				overflow-y: scroll;
-				width: 100%;
-				min-width: 1024px;
-				padding: 0;
-				margin: 0;
-			}
-			.yTable {
-				width: 100%;
-			}
-			.yTable tr td {
-				line-height: 50px;
-				height: 50px;
-				vertical-align: middle;
-				text-align: center;
-				background-color: #FFFFFF;
-			}
-			.year {
-				line-height: 30px;
-				height: 30px;
-				margin: 10px 10px;
-				width: 100%;
-				text-align: left;
-			}
-			.stat th{
-				background-color: #F9F7ED !important;
-				background-image:none !important;
-			}
-			.plantdon {
-				background-image: url('../images/20150417030425697_easyicon_net_48.png') !important;
-				background-position: center center !important;
-				background-repeat: no-repeat !important;
-			}
-		</style>
-		<script>
-			$(document).ready(function() {
-				var winH = $(window).height() - 120;
-				$("#tableContainerList").css('height', winH + 'px');
-				$(".plantd").each(function() {
-					var currentid = $(this);
-					$(this).dialog({
-						id: currentid.attr("id"),
-						content: 'url:audit/au_sjjh_add.html',
-						width: 650,
-						height: 400,
-						title: '新增/修改审计计划',
-						button: [{
-							name: '保存',
-							callback: function() {
-								$.jBox.tip('计划保存成功！');
-								currentid.addClass("plantdon");
-							},
-							focus: true
-						}, {
-							name: '删除',
-							callback: function() {
-								$.jBox.tip('计划删除成功！');
-								currentid.removeClass("plantdon");
-							}
-						}, {
-							name: '关闭',
-							callback: function() {}
-						}]
-					});
-				});
-			});
+            $(".planviewradio").each(function () {
+                $(this).live('click',
+                function () {
+                    if ($(this).val() == "1") {
+                        $("#calanderDiv").show();
+                        $("#staffDiv").hide();
+                    }
+                    else {
+                        $("#staffDiv").show();
+                        $("#calanderDiv").hide();
+                    }
+                }
+                );
+            });
+        });
 
-			function addyear(num) {
-				$("#yearspan").html(parseInt($("#yearspan").text()) + num);
-				return false;
-			}
-			$(".plantd").live('mouseover',
-				function() {
-					$(this).css('background-color', '#F2F2F2');
+        function addyear(num) {
+            $("#yearspan").html(parseInt($("#yearspan").text()) + num);
+            return false;
+        }
+        $(".plantd").live('mouseover',
+				function () {
+				    $(this).css('background-color', '#F2F2F2');
 				}
 			);
-			$(".plantd").live('mouseout',
-				function() {
-					$(this).css('background-color', '#FFFFFF');
+        $(".plantd").live('mouseout',
+				function () {
+				    $(this).css('background-color', '#FFFFFF');
 				}
 			);
-		</script>
-	</head>
-
-	<body class="yBodyBg">
-		<div class="yContentBox">
-			<div class="yTip" style="float: right;">
-				在空白单元格里单击添加计划，在已添加计划的单元格里单击修改或者删除计划。
-			</div>
-			<div class="year">
-				<a href="#112" onclick="addyear(-1);" style="margin-right: 10px;">
-					<img src="../images/20150417032611750_easyicon_net_64.png" width="12" />
-				</a>
-				<span id="yearspan" class="yearspan">2015</span>年
-				<a onclick="addyear(1);" href="#112" style="margin-left: 10px;">
-					<img src="../images/20150417032611750_easyicon_net_64-2.png" width="12" />
-				</a>
-			</div>
-			<div class="tableContainer">
-				<table class="yTable">
-					<thead>
-						<tr>
-							<th width="10%" class="title" rowspan="2">
-								投资企业
-							</th>
-							<th width="6%">月份</th>
-							<th width="7%">
-								1月
-							</th>
-							<th width="7%">
-								2月
-							</th>
-							<th width="7%">
-								3月
-							</th>
-							<th width="7%">
-								4月
-							</th>
-							<th width="7%">
-								5月
-							</th>
-							<th width="7%">
-								6月
-							</th>
-							<th width="7%">
-								7月
-							</th>
-							<th width="7%">
-								8月</th>
-
-							<th width="7%">
-								9月
-							</th>
-							<th width="7%">
-								10月
-							</th>
-							<th width="7%">
-								11月
-							</th>
-							<th width="7%">
-								12月
-							</th>
-						</tr>
-						<tr class="stat">
-							<th>合计</th>
-							<th>
-								0
-							</th>
-							<th>
-								0
-							</th>
-							<th>
-								1
-							</th>
-							<th>
-								0
-							</th>
-							<th>
-								0
-							</th>
-							<th>
-								0
-							</th>
-							<th>
-								0
-							</th>
-							<th>
-								0
-							</th>
-							<th>
-								0
-							</th>
-							<th>
-								0
-							</th>
-							<th>
-								0
-							</th>
-							<th>
-								0
-							</th>
-						</tr>
-					</thead>
-				</table>
-			</div>
-			<div id="tableContainerList" class="tableContainer">
-				<table class="yTable">
-					<tbody>
-						<tr>
-							<td width="10%">
-								国货航
-							</td>
-							<td width="6%">0</td>
-							<td width="7%" class="plantd" id="td1">
-
-							</td>
-							<td width="7%" class="plantd" id="td2">
-
-							</td>
-							<td width="7%" class="plantd" id="td3">
-
-							</td>
-							<td width="7%" class="plantd" id="td4">
-
-							</td>
-							<td width="7%" class="plantd" id="td5">
-
-							</td>
-							<td width="7%" class="plantd" id="td6">
-
-							</td>
-							<td width="7%" class="plantd" id="td7">
-
-							</td>
-							<td width="7%" class="plantd" id="td8">
-
-							</td>
-							<td width="7%" class="plantd" id="td9">
-
-							</td>
-							<td width="7%" class="plantd" id="td10">
-
-							</td>
-							<td width="7%" class="plantd" id="td11">
-
-							</td>
-							<td width="7%" class="plantd" id="td12">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								深圳航空
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd" id="td13">
-
-							</td>
-							<td class="plantd" id="td14">
-
-							</td>
-							<td class="plantd" id="td15">
-
-							</td>
-							<td class="plantd" id="td16">
-
-							</td>
-							<td class="plantd" id="td17">
-
-							</td>
-							<td class="plantd" id="td18">
-
-							</td>
-							<td class="plantd" id="td19">
-
-							</td>
-							<td class="plantd" id="td20">
-
-							</td>
-							<td class="plantd" id="td21">
-
-							</td>
-							<td class="plantd" id="td22">
-
-							</td>
-							<td class="plantd" id="td23">
-
-							</td>
-							<td class="plantd" id="td24">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								山东航空
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd" id="td25">
-
-							</td>
-							<td class="plantd" id="td26">
-
-							</td>
-							<td class="plantd" id="td27">
-
-							</td>
-							<td class="plantd" id="td28">
-
-							</td>
-							<td class="plantd" id="td29">
-
-							</td>
-							<td class="plantd" id="td30">
-
-							</td>
-							<td class="plantd" id="td31">
-
-							</td>
-							<td class="plantd" id="td32">
-
-							</td>
-							<td class="plantd" id="td33">
-
-							</td>
-							<td class="plantd" id="td34">
-
-							</td>
-							<td class="plantd" id="td35">
-
-							</td>
-							<td class="plantd" id="td36">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								北京航空
-							</td>
-							<td>
-								1
-							</td>
-							<td class="plantd" id="td37">
-
-							</td>
-							<td class="plantd" id="td38">
-
-							</td>
-							<td class="plantd plantdon" id="td39">
-
-							</td>
-							<td class="plantd" id="td40">
-
-							</td>
-							<td class="plantd" id="td41">
-
-							</td>
-							<td class="plantd" id="td42">
-
-							</td>
-							<td class="plantd" id="td43">
-
-							</td>
-							<td class="plantd" id="td44">
-
-							</td>
-							<td class="plantd" id="td45">
-
-							</td>
-							<td class="plantd" id="td46">
-
-							</td>
-							<td class="plantd" id="td47">
-
-							</td>
-							<td class="plantd" id="td48">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								大连航空
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd" id="td49">
-
-							</td>
-							<td class="plantd" id="td50">
-
-							</td>
-							<td class="plantd" id="td51">
-
-							</td>
-							<td class="plantd" id="td52">
-
-							</td>
-							<td class="plantd" id="td53">
-
-							</td>
-							<td class="plantd" id="td54">
-
-							</td>
-							<td class="plantd" id="td55">
-
-							</td>
-							<td class="plantd" id="td56">
-
-							</td>
-							<td class="plantd" id="td57">
-
-							</td>
-							<td class="plantd" id="td58">
-
-							</td>
-							<td class="plantd" id="td59">
-
-							</td>
-							<td class="plantd" id="td60">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								澳门航空
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd" id="td61">
-
-							</td>
-							<td class="plantd" id="td62">
-
-							</td>
-							<td class="plantd" id="td63">
-
-							</td>
-							<td class="plantd" id="td64">
-
-							</td>
-							<td class="plantd" id="td65">
-
-							</td>
-							<td class="plantd" id="td66">
-
-							</td>
-							<td class="plantd" id="td67">
-
-							</td>
-							<td class="plantd" id="td68">
-
-							</td>
-							<td class="plantd" id="td69">
-
-							</td>
-							<td class="plantd" id="td70">
-
-							</td>
-							<td class="plantd" id="td71">
-
-							</td>
-							<td class="plantd" id="td72">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								内蒙航空
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd" id="td73">
-
-							</td>
-							<td class="plantd" id="td74">
-
-							</td>
-							<td class="plantd" id="td75">
-
-							</td>
-							<td class="plantd" id="td76">
-
-							</td>
-							<td class="plantd" id="td77">
-
-							</td>
-							<td class="plantd" id="td78">
-
-							</td>
-							<td class="plantd" id="td79">
-
-							</td>
-							<td class="plantd" id="td80">
-
-							</td>
-							<td class="plantd" id="td81">
-
-							</td>
-							<td class="plantd" id="td82">
-
-							</td>
-							<td class="plantd" id="td83">
-
-							</td>
-							<td class="plantd" id="td84">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								...
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd" id="td85">
-
-							</td>
-							<td class="plantd" id="td86">
-
-							</td>
-							<td class="plantd" id="td87">
-
-							</td>
-							<td class="plantd" id="td88">
-
-							</td>
-							<td class="plantd" id="td89">
-
-							</td>
-							<td class="plantd" id="td90">
-
-							</td>
-							<td class="plantd" id="td91">
-
-							</td>
-							<td class="plantd" id="td92">
-
-							</td>
-							<td class="plantd" id="td93">
-
-							</td>
-							<td class="plantd" id="td94">
-
-							</td>
-							<td class="plantd" id="td95">
-
-							</td>
-							<td class="plantd" id="td96">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								...
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd" id="td97">
-
-							</td>
-							<td class="plantd" id="td98">
-
-							</td>
-							<td class="plantd" id="td99">
-
-							</td>
-							<td class="plantd" id="td100">
-
-							</td>
-							<td class="plantd" id="td101">
-
-							</td>
-							<td class="plantd" id="td102">
-
-							</td>
-							<td class="plantd" id="td103">
-
-							</td>
-							<td class="plantd" id="td104">
-
-							</td>
-							<td class="plantd" id="td105">
-
-							</td>
-							<td class="plantd" id="td106">
-
-							</td>
-							<td class="plantd" id="td107">
-
-							</td>
-							<td class="plantd" id="td108">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								...
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd" id="td109">
-
-							</td>
-							<td class="plantd" id="td110">
-
-							</td>
-							<td class="plantd" id="td111">
-
-							</td>
-							<td class="plantd" id="td112">
-
-							</td>
-							<td class="plantd" id="td113">
-
-							</td>
-							<td class="plantd" id="td114">
-
-							</td>
-							<td class="plantd" id="td115">
-
-							</td>
-							<td class="plantd" id="td116">
-
-							</td>
-							<td class="plantd" id="td117">
-
-							</td>
-							<td class="plantd" id="td118">
-
-							</td>
-							<td class="plantd" id="td119">
-
-							</td>
-							<td class="plantd" id="td120">
-
-							</td>
-						</tr>
-						<tr>
-							<td>
-								...
-							</td>
-							<td>
-								0
-							</td>
-							<td class="plantd" id="td121">
-
-							</td>
-							<td class="plantd" id="td122">
-
-							</td>
-							<td class="plantd" id="td123">
-
-							</td>
-							<td class="plantd" id="td124">
-
-							</td>
-							<td class="plantd" id="td125">
-
-							</td>
-							<td class="plantd" id="td126">
-
-							</td>
-							<td>
-
-							</td>
-							<td class="plantd" id="td127">
-
-							</td>
-							<td class="plantd" id="td128">
-
-							</td>
-							<td class="plantd" id="td129">
-
-							</td>
-							<td class="plantd" id="td130">
-
-							</td>
-							<td class="plantd" id="td131">
-
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</body>
-
+    </script>
+</head>
+<body class="yBodyBg">
+    <div class="yContentBox">
+        <div style="float: right; margin-right: 20px;">
+            <label title="查看/修改年度计划">
+                <input type="radio" class="planviewradio" value="1" checked="checked" name="planviewradio" />日历视图</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label title="查看年度人员任务情况">
+                <input type="radio" class="planviewradio" value="2" name="planviewradio" />人员视图</label>
+        </div>
+        <div class="year">
+            审计年份： <a href="#112" onclick="addyear(-1);" style="margin-right: 10px;">
+                <img src="../images/20150417032611750_easyicon_net_64.png" width="12" />
+            </a><span id="yearspan" class="yearspan">2015</span>年 <a onclick="addyear(1);" href="#112"
+                style="margin-left: 10px;">
+                <img src="../images/20150417032611750_easyicon_net_64-2.png" width="12" />
+            </a>
+        </div>
+        <div id="calanderDiv">
+            <div class="tableContainer">
+                <table class="yTable">
+                    <thead>
+                        <tr>
+                            <th width="10%" class="title" rowspan="2">
+                                被审计企业
+                            </th>
+                            <th width="6%">
+                                审计月份
+                            </th>
+                            <th width="7%">
+                                1月
+                            </th>
+                            <th width="7%">
+                                2月
+                            </th>
+                            <th width="7%">
+                                3月
+                            </th>
+                            <th width="7%">
+                                4月
+                            </th>
+                            <th width="7%">
+                                5月
+                            </th>
+                            <th width="7%">
+                                6月
+                            </th>
+                            <th width="7%">
+                                7月
+                            </th>
+                            <th width="7%">
+                                8月
+                            </th>
+                            <th width="7%">
+                                9月
+                            </th>
+                            <th width="7%">
+                                10月
+                            </th>
+                            <th width="7%">
+                                11月
+                            </th>
+                            <th width="7%">
+                                12月
+                            </th>
+                        </tr>
+                        <tr class="stat">
+                            <th>
+                                合计
+                            </th>
+                            <th>
+                                0
+                            </th>
+                            <th>
+                                0
+                            </th>
+                            <th>
+                                1
+                            </th>
+                            <th>
+                                1
+                            </th>
+                            <th>
+                                0
+                            </th>
+                            <th>
+                                0
+                            </th>
+                            <th>
+                                1
+                            </th>
+                            <th>
+                                0
+                            </th>
+                            <th>
+                                0
+                            </th>
+                            <th>
+                                0
+                            </th>
+                            <th>
+                                0
+                            </th>
+                            <th>
+                                0
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="tableContainerList" class="tableContainer">
+                <table class="yTable">
+                    <tbody>
+                        <tr>
+                            <td width="10%">
+                                国货航
+                            </td>
+                            <td width="6%">
+                                0
+                            </td>
+                            <td width="7%" class="plantd" id="td1">
+                            </td>
+                            <td width="7%" class="plantd" id="td2">
+                            </td>
+                            <td width="7%" class="plantd" id="td3">
+                            </td>
+                            <td width="7%" class="plantd" id="td4">
+                            </td>
+                            <td width="7%" class="plantd" id="td5">
+                            </td>
+                            <td width="7%" class="plantd" id="td6">
+                            </td>
+                            <td width="7%" class="plantd" id="td7">
+                            </td>
+                            <td width="7%" class="plantd" id="td8">
+                            </td>
+                            <td width="7%" class="plantd" id="td9">
+                            </td>
+                            <td width="7%" class="plantd" id="td10">
+                            </td>
+                            <td width="7%" class="plantd" id="td11">
+                            </td>
+                            <td width="7%" class="plantd" id="td12">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                深圳航空
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td class="plantd" id="td13">
+                            </td>
+                            <td class="plantd" id="td14">
+                            </td>
+                            <td class="plantd" id="td15">
+                            </td>
+                            <td class="plantd" id="td16">
+                            </td>
+                            <td class="plantd" id="td17">
+                            </td>
+                            <td class="plantd" id="td18">
+                            </td>
+                            <td class="plantd" id="td19">
+                            </td>
+                            <td class="plantd" id="td20">
+                            </td>
+                            <td class="plantd" id="td21">
+                            </td>
+                            <td class="plantd" id="td22">
+                            </td>
+                            <td class="plantd" id="td23">
+                            </td>
+                            <td class="plantd" id="td24">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                山东航空
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td class="plantd" id="td25">
+                            </td>
+                            <td class="plantd" id="td26">
+                            </td>
+                            <td class="plantd" id="td27">
+                            </td>
+                            <td class="plantd" id="td28">
+                            </td>
+                            <td class="plantd" id="td29">
+                            </td>
+                            <td class="plantd" id="td30">
+                            </td>
+                            <td class="plantd" id="td31">
+                            </td>
+                            <td class="plantd" id="td32">
+                            </td>
+                            <td class="plantd" id="td33">
+                            </td>
+                            <td class="plantd" id="td34">
+                            </td>
+                            <td class="plantd" id="td35">
+                            </td>
+                            <td class="plantd" id="td36">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                北京航空
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td class="plantd" id="td37">
+                            </td>
+                            <td class="plantd" id="td38">
+                            </td>
+                            <td class="plantd plantdoff" id="td39" title="计划已经变更到7月">
+                            </td>
+                            <td class="plantd" id="td40">
+                            </td>
+                            <td class="plantd" id="td41">
+                            </td>
+                            <td class="plantd" id="td42">
+                            </td>
+                            <td class="plantd plantdon" id="td43" title="【计划构型中】审计组长：齐龙，审计专员：刘静，马峥，张玲。">
+                            </td>
+                            <td class="plantd" id="td44">
+                            </td>
+                            <td class="plantd" id="td45">
+                            </td>
+                            <td class="plantd" id="td46">
+                            </td>
+                            <td class="plantd" id="td47">
+                            </td>
+                            <td class="plantd" id="td48">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                大连航空
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td class="plantd" id="td49">
+                            </td>
+                            <td class="plantd" id="td50">
+                            </td>
+                            <td class="plantd" id="td51">
+                            </td>
+                            <td class="plantd" id="td52">
+                            </td>
+                            <td class="plantd" id="td53">
+                            </td>
+                            <td class="plantd" id="td54">
+                            </td>
+                            <td class="plantd" id="td55">
+                            </td>
+                            <td class="plantd" id="td56">
+                            </td>
+                            <td class="plantd" id="td57">
+                            </td>
+                            <td class="plantd" id="td58">
+                            </td>
+                            <td class="plantd" id="td59">
+                            </td>
+                            <td class="plantd" id="td60">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                澳门航空
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td class="plantd" id="td61">
+                            </td>
+                            <td class="plantd" id="td62">
+                            </td>
+                            <td class="plantd" id="td63">
+                            </td>
+                            <td class="plantd" id="td64">
+                            </td>
+                            <td class="plantd" id="td65">
+                            </td>
+                            <td class="plantd" id="td66">
+                            </td>
+                            <td class="plantd" id="td67">
+                            </td>
+                            <td class="plantd" id="td68">
+                            </td>
+                            <td class="plantd" id="td69">
+                            </td>
+                            <td class="plantd" id="td70">
+                            </td>
+                            <td class="plantd" id="td71">
+                            </td>
+                            <td class="plantd" id="td72">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                内蒙航空
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td class="plantd" id="td73">
+                            </td>
+                            <td class="plantd" id="td74">
+                            </td>
+                            <td class="plantd" id="td75">
+                            </td>
+                            <td class="plantd plantdon" id="td76" title="【数据收集中】审计组长：齐龙，审计专员：刘静，马峥，张玲。">
+                            </td>
+                            <td class="plantd" id="td77">
+                            </td>
+                            <td class="plantd" id="td78">
+                            </td>
+                            <td class="plantd" id="td79">
+                            </td>
+                            <td class="plantd" id="td80">
+                            </td>
+                            <td class="plantd" id="td81">
+                            </td>
+                            <td class="plantd" id="td82">
+                            </td>
+                            <td class="plantd" id="td83">
+                            </td>
+                            <td class="plantd" id="td84">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="staffDiv" style="display: none;">
+            <div class="tableContainer">
+                <table class="yTable">
+                    <thead>
+                        <tr>
+                            <th colspan="2" align="right">
+                                审计月份
+                            </th>
+                            <th width="7%" rowspan="2">
+                                1月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                2月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                3月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                4月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                5月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                6月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                7月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                8月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                9月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                10月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                11月
+                            </th>
+                            <th width="7%" rowspan="2">
+                                12月
+                            </th>
+                        </tr>
+                        <tr>
+                            <th width="10%" class="title">
+                                审计组长/审计员
+                            </th>
+                            <th width="6%">
+                                合计
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="Div1" class="tableContainer">
+                <table class="yTable">
+                    <tbody>
+                        <tr>
+                            <td width="10%" title="审计组长">
+                                王岩
+                            </td>
+                            <td width="6%">
+                                3
+                            </td>
+                            <td width="7%" class="plantd" id="td85">
+                            </td>
+                            <td width="7%" class="plantd" id="td86">
+                            </td>
+                            <td width="7%" class="plantd" id="td87" title="被审计企业：山东航空">
+                                1
+                            </td>
+                            <td width="7%" class="plantd" id="td88">
+                            </td>
+                            <td width="7%" class="plantd" id="td89">
+                            </td>
+                            <td width="7%" class="plantd" id="td90">
+                            </td>
+                            <td width="7%" class="plantd" id="td91" title="被审计企业：内蒙航空">
+                                1
+                            </td>
+                            <td width="7%" class="plantd" id="td92">
+                            </td>
+                            <td width="7%" class="plantd" id="td93" title="被审计企业：国货航">
+                                1
+                            </td>
+                            <td width="7%" class="plantd" id="td94">
+                            </td>
+                            <td width="7%" class="plantd" id="td95">
+                            </td>
+                            <td width="7%" class="plantd" id="td96">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td title="审计组长">
+                                齐龙
+                            </td>
+                            <td>
+                                4
+                            </td>
+                            <td class="plantd" id="td97">
+                            </td>
+                            <td class="plantd" id="td98">
+                            </td>
+                            <td class="plantd" id="td99">
+                            </td>
+                            <td class="plantd" id="td100" title="被审计企业：澳门航空，北京航空">
+                                2
+                            </td>
+                            <td class="plantd" id="td101">
+                            </td>
+                            <td class="plantd" id="td102">
+                            </td>
+                            <td class="plantd" id="td103">
+                            </td>
+                            <td class="plantd" id="td104">
+                            </td>
+                            <td class="plantd" id="td105">
+                            </td>
+                            <td class="plantd" id="td106" title="被审计企业：大连航空">
+                                1
+                            </td>
+                            <td class="plantd" id="td107" title="被审计企业：澳门航空">
+                                1
+                            </td>
+                            <td class="plantd" id="td108">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td title="审计专员">
+                                刘静
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td class="plantd" id="td109">
+                            </td>
+                            <td class="plantd" id="td110">
+                            </td>
+                            <td class="plantd" id="td111">
+                            </td>
+                            <td class="plantd" id="td112" title="被审计企业：澳门航空">
+                                1
+                            </td>
+                            <td class="plantd" id="td113" title="被审计企业：内蒙航空">
+                                1
+                            </td>
+                            <td class="plantd" id="td114">
+                            </td>
+                            <td class="plantd" id="td115">
+                            </td>
+                            <td class="plantd" id="td116">
+                            </td>
+                            <td class="plantd" id="td117">
+                            </td>
+                            <td class="plantd" id="td118">
+                            </td>
+                            <td class="plantd" id="td119" title="被审计企业：澳门航空">
+                                1
+                            </td>
+                            <td class="plantd" id="td120">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td title="审计专员">
+                                马峥
+                            </td>
+                            <td>
+                                4
+                            </td>
+                            <td class="plantd" id="td121">
+                            </td>
+                            <td class="plantd" id="td122">
+                            </td>
+                            <td class="plantd" id="td123" title="">
+                            </td>
+                            <td class="plantd" id="td124" title="被审计企业：北京航空">
+                                1
+                            </td>
+                            <td class="plantd" id="td125" title="被审计企业：内蒙航空">
+                                1
+                            </td>
+                            <td class="plantd" id="td126">
+                            </td>
+                            <td class="plantd" id="td127" title="" title="被审计企业：深圳航空">
+                                1
+                            </td>
+                            <td class="plantd" id="td128">
+                            </td>
+                            <td class="plantd" id="td129">
+                            </td>
+                            <td class="plantd" id="td130" title="被审计企业：大连航空">
+                                1
+                            </td>
+                            <td class="plantd" id="td131">
+                            </td>
+                            <td class="plantd" id="td132">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td title="审计专员">
+                                张玲
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td class="plantd" id="td133">
+                            </td>
+                            <td class="plantd" id="td134">
+                            </td>
+                            <td class="plantd" id="td51">
+                            </td>
+                            <td class="plantd" id="td52">
+                            </td>
+                            <td class="plantd" id="td53">
+                            </td>
+                            <td class="plantd" id="td54">
+                            </td>
+                            <td class="plantd" id="td55">
+                            </td>
+                            <td class="plantd" id="td56">
+                            </td>
+                            <td class="plantd" id="td57" title="被审计企业：国货航">
+                                1
+                            </td>
+                            <td class="plantd" id="td58">
+                            </td>
+                            <td class="plantd" id="td59">
+                            </td>
+                            <td class="plantd" id="td60">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

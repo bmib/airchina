@@ -34,7 +34,17 @@ $(document).ready(function() {
       $(function () { $('.popover-destroy').popover('destroy');});
       $(function () { $('.popover-toggle').popover('toggle');});
      $(function () { $(".popover-options a").popover({html : true });});
+
    </script>
+   <script type="text/javascript">
+	   $(document).ready(function(){
+		$("#each tr").click( 
+	  function() {
+			   $(this).css("background","#e9e9e9").siblings().css("background","#ffffff"); 
+			   $(this).css("color","#ff9900").siblings().css("color","#333"); 
+		   });
+		});
+    </script>
 <div class="portlet box">
     <div class="portlet-body" >
         <div class="tab-content">
@@ -88,7 +98,7 @@ $(document).ready(function() {
                               </tr>
                             </thead>
                         </table>
-                        <div style="overflow-y:auto; height:30px;">
+                        <div style="overflow-y:scroll ; height:30px;">
                         <table class="table table-hover">
                             <thead>
                                 <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
@@ -102,7 +112,7 @@ $(document).ready(function() {
                             </thead>
                          </table>
                          </div>
-                         <div class="panel-group" id="accordion" style="overflow-y:auto; height:50px; border:1px solid #ccc;">
+                         <div class="panel-group" id="accordion" style="overflow-y:scroll; height:50px; border:1px solid #ccc;">
                          <table class="table table-hover">
                             <tbody>
                                 <tr>
@@ -217,7 +227,7 @@ $(document).ready(function() {
                               </tr>
                             </thead>
                         </table>
-                        <div style="overflow-y:auto; height:30px;">
+                        <div style="overflow-y:scroll; height:30px;">
                         <table class="table table-hover">
                             <thead>
                                 <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
@@ -230,8 +240,8 @@ $(document).ready(function() {
                             </thead>
                          </table>
                          </div>
-                         <div class="panel-group" id="a2" style="overflow-y:auto; vertical-align:top; height:50px; border:1px solid #ccc;">
-                         <table class="table table-hover">
+                         <div class="panel-group" id="a2" style="overflow-y:scroll; vertical-align:top; height:50px; border:1px solid #ccc;">
+                         <table class="table table-hover" id="each">
                             <tbody>
                                 <tr>
                                     <td align="left"class="left" >3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序 <img src="../media/img/export_word.png"></td>
@@ -302,7 +312,7 @@ $(document).ready(function() {
                                   </tr>
                                 </thead>
                             </table>
-                        <div style="overflow-y:auto; height:30px;">
+                        <div style="overflow-y:scroll; height:30px;">
                             <table class="table">
                                 <thead>
                                     <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
@@ -315,7 +325,7 @@ $(document).ready(function() {
                             </table>
                           </div>
                         </div>
-                        <div class="tab-content" id="a3" style="overflow-y:auto; height:50px; border:1px solid #ccc;">
+                        <div class="tab-content" id="a3" style="overflow-y:scroll; height:50px; border:1px solid #ccc;">
                             <table class="table table-hover">
                                 <tbody>
                                     <tr>

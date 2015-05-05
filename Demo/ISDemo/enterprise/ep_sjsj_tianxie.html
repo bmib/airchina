@@ -5,7 +5,8 @@
 <html lang="en">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
-<head>
+
+    <head>
     <meta charset="utf-8" />
     <title>预填</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -15,1028 +16,864 @@
     <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script>
+$(document).ready(function() {
+	var winH = $(window).height() - 255;
+	$("#accordion").css('height', winH + 'px');
+	$("#a2").css('height', winH + 'px');
+	$("#a3").css('height', winH + 'px');
+	$("#a4").css('height', winH + 'px');
+});
+ function adds()
+	{
+		$("#xdd").show();
+	}
+</script>
     <style>
-        .problemlist
-        {
-            border: 1px solid #d2d2d2;
-            border-collapse: collapse;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            min-height: 70px;
-        }
-    </style>
-</head>
-<body>
+.problemlist {
+	border: 1px solid #d2d2d2;
+	border-collapse: collapse;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-height: 70px;
+}
+</style>
+    </head>
+    <body>
     <div class="portlet box">
-        <div class="portlet-body">
-            <div id="tab_div">
-                <div class="alert alert-info" style="margin-top: 10px; margin-bottom: 10px;">
-                    <strong>3.1.8 货物运输</strong>&nbsp;&nbsp;[ 状态：草稿 ] <span style="margin-left: 20px;"><a
-                        class="btn btn-link">规章要求</a> <a class="btn btn-link">导出结果</a></span>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <td>
-                                开始日期：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                结束日期：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                出发地点：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                到达地点：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                模拟器ID：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                制造商/型号/编号：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                航空器注册编号：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                合格的修理站点：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                航班编号：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                非工作时间：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                工作时间统计：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                            <td>
-                                被检查单位基地：
-                            </td>
-                            <td>
-                                <input type="text" />
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="accordion" id="accordion2">
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                第一部分 程序属性
-                                <div>
-                                    问题数量：25，未回答8，已回答17（是：10，否：2，不适用：3，无法视察：2）</div>
-                            </a>
-                        </div>
-                        <div id="collapseOne" class="accordion-body collapse out">
-                            <div class="accordion-inner">
-                                <table cellpadding="0" cellspacing="0" border="0" class="" width="100%">
-                                    <tr>
-                                        <td>
-                                            <div class="yTip">
-                                                目标: 确定合格证持有人的书面程序可以确保何人、何事、何时、何地和如何完成这些程序。这些程序必须确保所有人员以较高的安全水平履行其职责</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="problemlist">
-                                                1.1 合格证持有人的货物运输流程是否符合特定规章和CAAC政策的要求：
-                                            </div>
-                                            <div class="problemlist">
-                                                1.1.1 合格证持有人货物运输流程是否有关于将货物放置在经批准的货箱内且货箱满足下列要求,货物可以装在客舱内任一位置的详细说明： ACT 规章要求 任务指南
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_notfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.1 货箱能够承受适用于装有该货箱的飞机的旅客座椅载荷系数和应急着陆条件1.15倍的过载？计算时要用货箱重量和货箱中可以装载货物的最大重量的总重量
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_filled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" checked="checked" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;">已核实</textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_errorfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.3 在所有旅客登机门或售票柜台处，是否将制定的有关出口座位旅客安排程序的书面规定提供给公众？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_notfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.4 每个出口座位处放置的旅客须知卡是否包含了必需的出口座位信息？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div2">
-                                第二部分 控制属性
-                                <div>
-                                    问题数量：25，未回答8，已回答17（是：10，否：2，不适用：3，无法视察：2）</div>
-                            </a>
-                        </div>
-                        <div id="Div2" class="accordion-body collapse out">
-                            <div class="accordion-inner">
-                                <table cellpadding="0" cellspacing="0" border="0" class="" width="100%">
-                                    <tr>
-                                        <td>
-                                            <div class="yTip">
-                                                目标: 确定合格证持有人的书面程序可以确保何人、何事、何时、何地和如何完成这些程序。这些程序必须确保所有人员以较高的安全水平履行其职责</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="problemlist">
-                                                1.1 合格证持有人的货物运输流程是否符合特定规章和CAAC政策的要求：
-                                            </div>
-                                            <div class="problemlist">
-                                                1.1.1 合格证持有人货物运输流程是否有关于将货物放置在经批准的货箱内且货箱满足下列要求,货物可以装在客舱内任一位置的详细说明： ACT 规章要求 任务指南
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_notfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.1 货箱能够承受适用于装有该货箱的飞机的旅客座椅载荷系数和应急着陆条件1.15倍的过载？计算时要用货箱重量和货箱中可以装载货物的最大重量的总重量
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_filled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" checked="checked" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;">已核实</textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_errorfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.3 在所有旅客登机门或售票柜台处，是否将制定的有关出口座位旅客安排程序的书面规定提供给公众？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_notfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.4 每个出口座位处放置的旅客须知卡是否包含了必需的出口座位信息？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div4">
-                                第三部分 流程测量属性
-                                <div>
-                                    问题数量：25，未回答8，已回答17（是：10，否：2，不适用：3，无法视察：2）</div>
-                            </a>
-                        </div>
-                        <div id="Div4" class="accordion-body collapse out">
-                            <div class="accordion-inner">
-                                <table cellpadding="0" cellspacing="0" border="0" class="" width="100%">
-                                    <tr>
-                                        <td>
-                                            <div class="yTip">
-                                                目标: 确定合格证持有人的书面程序可以确保何人、何事、何时、何地和如何完成这些程序。这些程序必须确保所有人员以较高的安全水平履行其职责</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="problemlist">
-                                                1.1 合格证持有人的货物运输流程是否符合特定规章和CAAC政策的要求：
-                                            </div>
-                                            <div class="problemlist">
-                                                1.1.1 合格证持有人货物运输流程是否有关于将货物放置在经批准的货箱内且货箱满足下列要求,货物可以装在客舱内任一位置的详细说明： ACT 规章要求 任务指南
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_notfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.1 货箱能够承受适用于装有该货箱的飞机的旅客座椅载荷系数和应急着陆条件1.15倍的过载？计算时要用货箱重量和货箱中可以装载货物的最大重量的总重量
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_filled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" checked="checked" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;">已核实</textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_errorfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.3 在所有旅客登机门或售票柜台处，是否将制定的有关出口座位旅客安排程序的书面规定提供给公众？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_notfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.4 每个出口座位处放置的旅客须知卡是否包含了必需的出口座位信息？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div6">
-                                第四部分 接口属性
-                                <div>
-                                    问题数量：25，未回答8，已回答17（是：10，否：2，不适用：3，无法视察：2）</div>
-                            </a>
-                        </div>
-                        <div id="Div6" class="accordion-body collapse out">
-                            <div class="accordion-inner">
-                                <table cellpadding="0" cellspacing="0" border="0" class="" width="100%">
-                                    <tr>
-                                        <td>
-                                            <div class="yTip">
-                                                目标: 确定合格证持有人的书面程序可以确保何人、何事、何时、何地和如何完成这些程序。这些程序必须确保所有人员以较高的安全水平履行其职责</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="problemlist">
-                                                1.1 合格证持有人的货物运输流程是否符合特定规章和CAAC政策的要求：
-                                            </div>
-                                            <div class="problemlist">
-                                                1.1.1 合格证持有人货物运输流程是否有关于将货物放置在经批准的货箱内且货箱满足下列要求,货物可以装在客舱内任一位置的详细说明： ACT 规章要求 任务指南
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_notfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.1 货箱能够承受适用于装有该货箱的飞机的旅客座椅载荷系数和应急着陆条件1.15倍的过载？计算时要用货箱重量和货箱中可以装载货物的最大重量的总重量
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_filled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" checked="checked" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;">已核实</textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_errorfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.3 在所有旅客登机门或售票柜台处，是否将制定的有关出口座位旅客安排程序的书面规定提供给公众？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_notfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.4 每个出口座位处放置的旅客须知卡是否包含了必需的出口座位信息？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div8">
-                                第五部分 管理责任和权力属性<div>
-                                    问题数量：25，未回答8，已回答17（是：10，否：2，不适用：3，无法视察：2）</div>
-                            </a>
-                        </div>
-                        <div id="Div8" class="accordion-body collapse out">
-                            <div class="accordion-inner">
-                                <table cellpadding="0" cellspacing="0" border="0" class="" width="100%">
-                                    <tr>
-                                        <td>
-                                            <div class="yTip">
-                                                目标: 确定合格证持有人的书面程序可以确保何人、何事、何时、何地和如何完成这些程序。这些程序必须确保所有人员以较高的安全水平履行其职责</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="problemlist">
-                                                1.1 合格证持有人的货物运输流程是否符合特定规章和CAAC政策的要求：
-                                            </div>
-                                            <div class="problemlist">
-                                                1.1.1 合格证持有人货物运输流程是否有关于将货物放置在经批准的货箱内且货箱满足下列要求,货物可以装在客舱内任一位置的详细说明： ACT 规章要求 任务指南
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_notfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.1 货箱能够承受适用于装有该货箱的飞机的旅客座椅载荷系数和应急着陆条件1.15倍的过载？计算时要用货箱重量和货箱中可以装载货物的最大重量的总重量
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_filled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" checked="checked" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;">已核实</textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_errorfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.3 在所有旅客登机门或售票柜台处，是否将制定的有关出口座位旅客安排程序的书面规定提供给公众？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="problemlist">
-                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tr>
-                                                        <td style="width: 110px;" valign="top">
-                                                            <img src="../images/dc_notfilled.png" />
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top">
-                                                            1.1.1.4 每个出口座位处放置的旅客须知卡是否包含了必需的出口座位信息？
-                                                            <br />
-                                                            <br />
-                                                            <br />
-                                                            <input type="button" class="btn" value="规章要求" />
-                                                            <input type="button" class="btn" value="任务指南" />
-                                                        </td>
-                                                        <td style="width: 100px; padding-left: 20px;" valign="top" align="left">
-                                                            <input type="checkbox" />
-                                                            是
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            否，说明
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            不适用
-                                                            <br />
-                                                            <input type="checkbox" />
-                                                            无法视察
-                                                        </td>
-                                                        <td style="width: 400px;" valign="top" align="left">
-                                                            说明：
-                                                            <br />
-                                                            <textarea cols="20" rows="10" style="width: 380px;"></textarea>
-                                                            <p>
-                                                                <a href="#" onclick="uploadFile();">上传文件 </a>
-                                                            </p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="portlet-body">
+        <div class="tab-content">
+          <div class="tabbable tabbable-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab_1_1" data-toggle="tab">基本信息</a></li>
+              <li><a href="#tab_1_2" data-toggle="tab">第一部分 绩效检查项</a></li>
+              <li><a href="#tab_1_3" data-toggle="tab">第二部分 管理责任和权力检查项</a></li>
+            </ul>
+            <div class="tab-content" style="border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;">
+              <div class="tab-pane active" id="tab_1_1">
+                <table width="100%" cellpadding="5" style="min-width:1000px;">
+                  <tr>
+                    <td width="150" class="right">开始日期：</td>
+                    <td width="20%"><input type="text" /></td>
+                    <td width="150" class="right">结束日期：</td>
+                    <td width="20%"><input type="text" /></td>
+                    <td rowspan="6" class="left" style="padding-left:30px; vertical-align:top; line-height:35px;">
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">规章阅读</button><br>
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">信息摘要</button><br>
+
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">特别说明</button><br>
+
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">规章要求</button><br>
+
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">补充信息</button><br>
+
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">检查指导</button>
+
+                    
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="right"> 出发地点： </td>
+                    <td><input type="text" /></td>
+                    <td class="right"> 到达地点： </td>
+                    <td><input type="text" /></td>
+                  </tr>
+                  <tr>
+                    <td class="right"> 模拟器ID： </td>
+                    <td><input type="text" /></td>
+                    <td class="right"> 制造商/型号/编号： </td>
+                    <td><input type="text" /></td>
+                  </tr>
+                  <tr>
+                    <td class="right"> 航空器注册编号： </td>
+                    <td><input type="text" /></td>
+                    <td class="right"> 合格的修理站点： </td>
+                    <td><input type="text" /></td>
+                  </tr>
+                  <tr>
+                    <td class="right"> 航班编号： </td>
+                    <td><input type="text" /></td>
+                    <td class="right"> 非工作时间： </td>
+                    <td><input type="text" /></td>
+                  </tr>
+                  <tr>
+                    <td class="right"> 工作时间统计： </td>
+                    <td><input type="text" /></td>
+                    <td class="right"> 被检查单位基地： </td>
+                    <td><input type="text" /></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tab-pane" id="tab_1_2">
+                
+                <div class="tab-content">
+                        <table class=" table">
+                            <thead>
+                                <tr>
+                                	<td align="left" class="left" style="line-height:30px; padding-left:20px;">
+                                    <div class="btn-group" data-toggle="buttons">
+                                       <label class="btn btn-primary active btn-mini">
+                                          <input type="radio" name="options" id="option1"> 显示全部
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option2"> 显示未回答问题
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option3"> 显示未覆盖检查问题
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option3"> 显示有说明的问题
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option3"> 显示回答否有说明的问题
+                                       </label>
+                                    </div>
+                                    
+                                    </td>
+                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规 <span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
+                                    <td align="left" class="right" style="line-height:30px;">
+                                    	
+                                    <button type="submit" class="btn btn-mini">任务</button>
+                                    <button type="submit" class="btn btn-mini">监察指导</button>
+                                    <button type="submit" class="btn btn-mini">目标</button>
+                                    </td>
+                              </tr>
+                            </thead>
+                        </table>
+                        <div style="overflow-y:scroll; height:35px;">
+                        <table class="table table-bordered">
+                            <thead>
+                            	<tr>
+                                    <th class="center" style=" padding-left:5px;">检查项（问题）</th>
+                                    <th class="center" style="width:400px;">答案选项</th>
+                                    <th class="center" style=" width:15%">说明及附件</th>
+                              	</tr>
+                            </thead>
+                          </table>
+						</div>
+                         <div class="panel-group" id="a2" style="overflow-y:scroll; height:50px;">
+                         <table class="table table-hover table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="left"><span class="label label-important">&nbsp;</span>1.1 合格证持有人适当运行设备的流程是否符合特定规章和局方政策的要求：</td>
+                                    <td class="left form-inline" style="width:400px;">
+                                    <label class="checkbox">
+                                    <input type="radio" name="optionsRadio2" value="option1" /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;" data-toggle="modal" data-target="#myModal-1">
+                                    <input type="radio" name="optionsRadio2" value="option2"  checked/><font style="color:#F00;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRadio2" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRadio2" value="option2"  /> 无法观察
+                                    </label>
+                                    </td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-2">调整回答说明及附件</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>1.1.1 合格证持有人适当运行设备的流程是否有在以下位置安置便于取用的，经批准数量合适的手提灭火器的要求:111</td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op3" value="option1" checked  /> <font style="color: #090;">是</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input data-toggle="modal" data-target="#myModal-1" type="radio" name="op3" value="option2"/> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op3" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op3" value="option2"  /> 无法观察
+                                    </label>
+                                    </td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>1.1.1.1 驾驶舱？
+                                  </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>1.1.1.2 货舱?
+                                  </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op5" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op5" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op5" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op5" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-success">&nbsp;</span>1.1.1.3 厨房隔舱?	</td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op6" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op6" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op6" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op6" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>1.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
+                                 </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op7" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op7" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op7" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op7" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>1.1.3 合格证持有人适当的运行设备流程是否规定每架载客飞机上配有电池供电的便携式扩音器，放在负责指挥应急撤离的机组成员方便取用的地方？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op8" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op8" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op8" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op8" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label">&nbsp;</span>1.1.4 当合格证持有人在飞行高度25000英尺以上运行具有增压座舱的涡轮发动机飞机时，是否要求为每个机组成员提供能迅速取出戴在脸上的氧气面罩？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op9" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op9" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op9" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op9" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label">&nbsp;</span>1.1.5 合格证持有人手册是否要求其飞机装备适当的呼吸保护装置（PBE）？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="opp2" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp2" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp2" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp2" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label">&nbsp;</span>1.1.6.1 在飞机的每个座位上，配备带有经批准的幸存者定位灯的救生衣或者经批准的等效漂浮装置？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="opp3" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+            			</div>
+
+           		  </div>
+              </div>
+              <div class="tab-pane" id="tab_1_3">
+               <div class="tab-content">
+                        <table class=" table">
+                            <thead>
+                                <tr>
+                                	<td align="left" class="left" style="line-height:30px; padding-left:20px;">
+                                    <div class="btn-group" data-toggle="buttons">
+                                       <label class="btn btn-primary active btn-mini">
+                                          <input type="radio" name="options" id="option1"> 显示全部
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option2"> 显示未回答问题
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option3"> 显示未覆盖检查问题
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option3"> 显示有说明的问题
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option3"> 显示回答否有说明的问题
+                                       </label>
+                                    </div>
+                                    
+                                    </td>
+                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规 <span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
+                                    <td align="left" class="right" style="line-height:30px;">
+                                    	
+                                    <button type="submit" class="btn btn-mini">任务</button>
+                                    <button type="submit" class="btn btn-mini">监察指导</button>
+                                    <button type="submit" class="btn btn-mini">目标</button>
+                                    </td>
+                              </tr>
+                            </thead>
+                        </table>
+                        <div style="overflow-y:scroll; height:35px;">
+                        <table class="table table-bordered">
+                            <thead>
+                            	<tr>
+                                    <th class="center" style=" padding-left:5px;">检查项（问题）</th>
+                                    <th class="center" style="width:400px;">答案选项</th>
+                                    <th class="center" style=" width:15%">说明及附件</th>
+                              	</tr>
+                            </thead>
+                          </table>
+						</div>
+                         <div class="panel-group" id="a3" style="overflow-y:scroll; height:50px;">
+                         <table class="table table-hover table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="left"><span class="label label-important">&nbsp;</span>2.1 合格证持有人适当运行设备的流程是否符合特定规章和局方政策的要求：</td>
+                                    <td class="left form-inline" style="width:400px;">
+                                    <label class="checkbox">
+                                    <input type="radio" name="optionsRad2" value="option1" /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;" data-toggle="modal" data-target="#myModal-1">
+                                    <input type="radio" name="optionsRad2" value="option2"  checked/><font style="color:#F00;">否，说明</font>
+                                    </label>
+
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRad2" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRad2" value="option2"  /> 无法观察
+                                    </label>
+                                    </td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-2">调整回答说明及附件</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>2.1.1 合格证持有人适当运行设备的流程是否有在以下位置安置便于取用的，经批准数量合适的手提灭火器的要求:111</td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="opp3" value="option1" checked  /> <font style="color: #090;">是</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input data-toggle="modal" data-target="#myModal-1" type="radio" name="op3" value="option2"/> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2"  /> 无法观察
+                                    </label>
+                                    </td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>2.1.1.1 驾驶舱？
+                                  </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>2.1.1.2 货舱?
+                                  </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op5" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op5" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op5" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op5" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-success">&nbsp;</span>2.1.1.3 厨房隔舱?	</td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op6" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op6" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op6" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op6" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>2.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
+                                 </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op7" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op7" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op7" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op7" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>2.1.3 合格证持有人适当的运行设备流程是否规定每架载客飞机上配有电池供电的便携式扩音器，放在负责指挥应急撤离的机组成员方便取用的地方？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op8" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op8" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op8" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op8" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label">&nbsp;</span>2.1.4 当合格证持有人在飞行高度25000英尺以上运行具有增压座舱的涡轮发动机飞机时，是否要求为每个机组成员提供能迅速取出戴在脸上的氧气面罩？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op9" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op9" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op9" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op9" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label">&nbsp;</span>2.1.5 合格证持有人手册是否要求其飞机装备适当的呼吸保护装置（PBE）？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="opp2" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp2" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp2" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp2" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label">&nbsp;</span>2.1.6.1 在飞机的每个座位上，配备带有经批准的幸存者定位灯的救生衣或者经批准的等效漂浮装置？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="opp3" value="option1"  /> 是
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2" /> 不适用
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+            			</div>
+
+           		  </div>
             </div>
-            <div class="modal-footer center" style="margin-top: 10px;">
-                <a class="btn">保存</a> <a class="btn">提交</a> <a class="btn" href="ep_sjsj2.html">返回</a>
-            </div>
+          </div>
         </div>
+        
+        
+        <div class="modal-footer center" style="margin-top: 10px;"> <a class="btn">保存</a> <a class="btn">提交</a> <a class="btn" href="ep_sjsj2.html">返回</a> </div>
+      </div>
     </div>
 </body>
 </html>
+
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">问题分类</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" width="100%" id="relateTable">
+
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                	<label class="checkbox">
+                                    <input type="checkbox" value="" /> 人员（例如：人力资源不足、人员资质不符合要求等）
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 工具和设备
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 技术资料（例如：厂家提供的手册、OEB、SB等）
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 政策、程序、指令或信息
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 材料（例如：航材等）
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 设施（例如：厂房、车间、机库、教室等）
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 控制
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 流量测量
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 接口
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 预测结果（与预设目标不符）
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 其它
+                                    </label>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+            
+            <button type="submit" class="btn blue">确定</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">回答说明及附件</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                    <table class="table table-bordered">
+                    	<thead>
+                            <tr>
+                                <th><span class="label label-success">&nbsp;</span>1.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
+                                </th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td class="left form-inline">
+                                  <label class="checkbox">
+                                    <input type="radio" name="optionsRadios2" value="option1"  /> 是
+                                  </label>
+                                  <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRadios2" value="option2" checked/> <font style="color:#F00;">否，说明</font>
+                                  </label>
+                                  <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRadios2" value="option2" /> 不适用
+                                  </label>
+                                  <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRadios2" value="option2"  /> 无法观察
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>说明：
+                              <div class="controls">
+                                <textarea class="medium m-wrap span5" rows="3"></textarea>
+                                </div>
+                              行动：
+                              <div class="controls">
+                                <textarea class="medium m-wrap span5" rows="3"></textarea>
+                                </div>
+                              </td>
+                            </tr>
+                         </tbody>
+                         <thead>
+                            <tr>
+                                <th>问题分类：
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>1、人员（例如：人力资源不足、人员资质不符合要求等）</td>
+                            </tr>
+                            <tr>
+                              <td>2、工具和设备</td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th><div class="form-group form-inline"><label class="checkbox">
+                                <input type="checkbox" value="" />
+                              上传附件 </label>
+   
+                               
+                                  <label class="sr-only" for="inputfile"></label>
+                                  <input type="file" id="inputfile">
+                               </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">附件1</a>&nbsp;&nbsp;<a href="">附件2</a></td>
+                            </tr>
+                        </tbody>
+					</table>
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+            
+            <button type="submit" class="btn blue">确定</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">回答说明及附件</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                    <table class="table table-bordered">
+                    	<thead>
+                            <tr>
+                                <th><span class="label label-success">&nbsp;</span>1.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
+                                </th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td class="left form-inline">
+                                  <label class="checkbox">
+                                    <input type="radio" name="optionsRadios2" value="option1"  /> 是
+                                  </label>
+                                  <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRadios2" value="option2" onClick="adds();" /> <font style="color:#F00;">否，说明</font>
+                                  </label>
+                                  <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRadios2" value="option2" /> 不适用
+                                  </label>
+                                  <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRadios2" value="option2"  /> 无法观察
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>说明：
+                              <div class="controls">
+                                <textarea class="medium m-wrap span5" rows="3"></textarea>
+                                </div>
+                              
+                            <div style=" display: none;" id="xdd">
+                            	行动：
+                              <div class="controls">
+                                <textarea class="medium m-wrap span5" rows="3"></textarea>
+                                </div>
+                              </td>
+                            </tr>
+                            </div>
+                         </tbody>
+                         <thead>
+                            <tr>
+                                <th>问题分类：
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>1、人员（例如：人力资源不足、人员资质不符合要求等）</td>
+                            </tr>
+                            <tr>
+                              <td>2、工具和设备</td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th><div class="form-group form-inline"><label class="checkbox">
+                                <input type="checkbox" value="" />
+                              上传附件 </label>
+   
+                               
+                                  <label class="sr-only" for="inputfile"></label>
+                                  <input type="file" id="inputfile">
+                               </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">附件1</a>&nbsp;&nbsp;<a href="">附件2</a></td>
+                            </tr>
+                        </tbody>
+					</table>
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+            
+            <button type="submit" class="btn blue">确定</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+<!--弹出窗口-小 开始-->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">说明类窗口信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                    <table class="table table-bordered">
+                    	<thead>
+                            <tr>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td>内容</td>
+                            </tr>
+                        </tbody>
+					</table>
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+

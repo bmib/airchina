@@ -25,6 +25,9 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
+            <div class="alert alert-info">
+                计划年月：2015年4月&nbsp;&nbsp;&nbsp;&nbsp;被审计单位：深圳航空
+            </div>
             <div id="tab_div">
                 <!--书签-->
                 <div class="tabbable tabbable-custom">
@@ -42,117 +45,103 @@
                                         </a>
                                     </div>
                                     <div id="collapseOne" class="accordion-body collapse out">
-                                        <table style="width: 100%;">
-                                            <tr>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    预填结果
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    问题分类：
-                                                                </td>
-                                                                <td>
-                                                                    人员（例如：人力资源不足、人员资质不符合要求等）
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    问题说明：
-                                                                </td>
-                                                                <td>
-                                                                    未告知旅客
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    无
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改计划
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    计划完成时间：
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    整改措施：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改情况
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    整改完成说明：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="2" align="right">
-                                                                    <a class="btn">完成整改</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
+                                        <table class=" table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        预填结果
+                                                    </th>
+                                                    <th>
+                                                        整改计划
+                                                    </th>
+                                                    <th>
+                                                        整改情况
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题分类：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    人员（例如：人力资源不足、人员资质不符合要求等）</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题说明：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    未告知旅客</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>附件一</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                计划完成时间：</label>
+                                                            <div class="controls">
+                                                                <input type="text" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改措施：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>上传附件</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改完成说明：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <a>上传附件</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                            </label>
+                                                            <div class="controls">
+                                                                <a class="btn btn-success">完成整改</a>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -163,117 +152,103 @@
                                         </a>
                                     </div>
                                     <div id="Div1" class="accordion-body collapse out">
-                                        <table style="width: 100%;">
-                                            <tr>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    预填结果
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    问题分类：
-                                                                </td>
-                                                                <td>
-                                                                    人员（例如：人力资源不足、人员资质不符合要求等）
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    问题说明：
-                                                                </td>
-                                                                <td>
-                                                                    未告知旅客
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    无
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改计划
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    计划完成时间：
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    整改措施：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改情况
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    整改完成说明：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="2" align="right">
-                                                                    <a class="btn">完成整改</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
+                                        <table class=" table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        预填结果
+                                                    </th>
+                                                    <th>
+                                                        整改计划
+                                                    </th>
+                                                    <th>
+                                                        整改情况
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题分类：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    人员（例如：人力资源不足、人员资质不符合要求等）</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题说明：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    未告知旅客</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>附件一</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                计划完成时间：</label>
+                                                            <div class="controls">
+                                                                <input type="text" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改措施：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>上传附件</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改完成说明：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <a>上传附件</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                            </label>
+                                                            <div class="controls">
+                                                                <a class="btn btn-success">完成整改</a>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -284,117 +259,103 @@
                                         </a>
                                     </div>
                                     <div id="Div2" class="accordion-body collapse out">
-                                        <table style="width: 100%;">
-                                            <tr>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    预填结果
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    问题分类：
-                                                                </td>
-                                                                <td>
-                                                                    人员（例如：人力资源不足、人员资质不符合要求等）
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    问题说明：
-                                                                </td>
-                                                                <td>
-                                                                    未告知旅客
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    无
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改计划
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    计划完成时间：
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    整改措施：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改情况
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    整改完成说明：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="2" align="right">
-                                                                    <a class="btn">完成整改</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
+                                        <table class=" table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        预填结果
+                                                    </th>
+                                                    <th>
+                                                        整改计划
+                                                    </th>
+                                                    <th>
+                                                        整改情况
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题分类：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    人员（例如：人力资源不足、人员资质不符合要求等）</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题说明：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    未告知旅客</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>附件一</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                计划完成时间：</label>
+                                                            <div class="controls">
+                                                                <input type="text" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改措施：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>上传附件</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改完成说明：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <a>上传附件</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                            </label>
+                                                            <div class="controls">
+                                                                <a class="btn btn-success">完成整改</a>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -405,117 +366,103 @@
                                         </a>
                                     </div>
                                     <div id="Div3" class="accordion-body collapse out">
-                                        <table style="width: 100%;">
-                                            <tr>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    预填结果
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    问题分类：
-                                                                </td>
-                                                                <td>
-                                                                    人员（例如：人力资源不足、人员资质不符合要求等）
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    问题说明：
-                                                                </td>
-                                                                <td>
-                                                                    未告知旅客
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    无
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改计划
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    计划完成时间：
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    整改措施：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改情况
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    整改完成说明：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="2" align="right">
-                                                                    <a class="btn">完成整改</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
+                                        <table class=" table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        预填结果
+                                                    </th>
+                                                    <th>
+                                                        整改计划
+                                                    </th>
+                                                    <th>
+                                                        整改情况
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题分类：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    人员（例如：人力资源不足、人员资质不符合要求等）</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题说明：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    未告知旅客</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>附件一</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                计划完成时间：</label>
+                                                            <div class="controls">
+                                                                <input type="text" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改措施：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>上传附件</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改完成说明：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <a>上传附件</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                            </label>
+                                                            <div class="controls">
+                                                                <a class="btn btn-success">完成整改</a>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -526,117 +473,103 @@
                                         </a>
                                     </div>
                                     <div id="Div4" class="accordion-body collapse out">
-                                        <table style="width: 100%;">
-                                            <tr>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    预填结果
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    问题分类：
-                                                                </td>
-                                                                <td>
-                                                                    人员（例如：人力资源不足、人员资质不符合要求等）
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    问题说明：
-                                                                </td>
-                                                                <td>
-                                                                    未告知旅客
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    无
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改计划
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    计划完成时间：
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    整改措施：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 30%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改情况
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    整改完成说明：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="2" align="right">
-                                                                    <a class="btn">完成整改</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
+                                        <table class=" table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        预填结果
+                                                    </th>
+                                                    <th>
+                                                        整改计划
+                                                    </th>
+                                                    <th>
+                                                        整改情况
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题分类：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    人员（例如：人力资源不足、人员资质不符合要求等）</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题说明：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    未告知旅客</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>附件一</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                计划完成时间：</label>
+                                                            <div class="controls">
+                                                                <input type="text" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改措施：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>上传附件</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改完成说明：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <a>上传附件</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                            </label>
+                                                            <div class="controls">
+                                                                <a class="btn btn-success">完成整改</a>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -650,80 +583,72 @@
                                             《客舱乘务员手册》第八章第三节未更新 <span style="color: Red;">(状态：未完成)</span> </a>
                                     </div>
                                     <div id="Div6" class="accordion-body collapse out">
-                                        <table style="width: 100%;">
-                                            <tr>
-                                                <td valign="top" style="width: 50%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改计划
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    计划完成时间：
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    整改措施：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 50%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改情况
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    整改完成说明：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="2" align="right">
-                                                                    <a class="btn">完成整改</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
+                                        <table class=" table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        整改计划
+                                                    </th>
+                                                    <th>
+                                                        整改情况
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                计划完成时间：</label>
+                                                            <div class="controls">
+                                                                <input type="text" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改措施：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>上传附件</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改完成说明：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <a>上传附件</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                            </label>
+                                                            <div class="controls">
+                                                                <a class="btn btn-success">完成整改</a>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -733,80 +658,72 @@
                                             《客舱乘务员手册》第八章第三节未更新 <span style="color: Red;">(状态：未完成)</span> </a>
                                     </div>
                                     <div id="Div7" class="accordion-body collapse out">
-                                        <table style="width: 100%;">
-                                            <tr>
-                                                <td valign="top" style="width: 50%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改计划
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    计划完成时间：
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    整改措施：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 50%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改情况
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    整改完成说明：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="2" align="right">
-                                                                    <a class="btn">完成整改</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
+                                        <table class=" table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        整改计划
+                                                    </th>
+                                                    <th>
+                                                        整改情况
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                计划完成时间：</label>
+                                                            <div class="controls">
+                                                                <input type="text" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改措施：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>上传附件</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改完成说明：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <a>上传附件</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                            </label>
+                                                            <div class="controls">
+                                                                <a class="btn btn-success">完成整改</a>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -816,80 +733,72 @@
                                             《客舱乘务员手册》第八章第三节未更新 <span style="color: Red;">(状态：未完成)</span> </a>
                                     </div>
                                     <div id="Div8" class="accordion-body collapse out">
-                                        <table style="width: 100%;">
-                                            <tr>
-                                                <td valign="top" style="width: 50%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改计划
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    计划完成时间：
-                                                                </td>
-                                                                <td>
-                                                                    <input type="text" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    整改措施：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td valign="top" style="width: 50%;">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th colspan="2">
-                                                                    整改情况
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    整改完成说明：
-                                                                </td>
-                                                                <td>
-                                                                    <textarea></textarea>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    附件：
-                                                                </td>
-                                                                <td>
-                                                                    <a>上传文件</a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="2" align="right">
-                                                                    <a class="btn">完成整改</a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
+                                        <table class=" table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        整改计划
+                                                    </th>
+                                                    <th>
+                                                        整改情况
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                计划完成时间：</label>
+                                                            <div class="controls">
+                                                                <input type="text" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改措施：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>上传附件</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                整改完成说明：</label>
+                                                            <div class="controls">
+                                                                <textarea></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <a>上传附件</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                            </label>
+                                                            <div class="controls">
+                                                                <a class="btn btn-success">完成整改</a>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -899,9 +808,9 @@
                 </div>
                 <!--书签-->
             </div>
-            <div style="width: 100%; text-align: center;">
-                <a class="btn btn-danger">签收</a>&nbsp;&nbsp; <a class="btn">保存</a>&nbsp;&nbsp; <a
-                    class="btn">提交</a>&nbsp;&nbsp; <a class="btn" href="ep_hxxd.html">返回</a>
+            <div class="modal-footer center">
+                <a class="btn btn-info">签收</a>&nbsp;&nbsp; <a class="btn btn-success">保存</a>&nbsp;&nbsp;
+                <a class="btn btn-danger">提交</a>&nbsp;&nbsp; <a class="btn" href="ep_hxxd.html">返回</a>
             </div>
         </div>
     </div>

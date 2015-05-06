@@ -15,6 +15,15 @@
     <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#each tr").click(
+	          function () {
+	              $(this).css("background", "#e9e9e9").siblings().css("background", "#ffffff");
+	              $(this).css("color", "#ff9900").siblings().css("color", "#333");
+	          });
+        });
+    </script>
 </head>
 <body>
     <div class="portlet box">
@@ -94,7 +103,7 @@
                             </table>
                         </div>
                         <div style="overflow-y: scroll; height: 280px;">
-                            <table class="table table-bordered table-hover">
+                            <table class="table table-bordered table-hover" id="each">
                                 <tbody>
                                     <tr>
                                         <td style="width: 200px">
@@ -903,19 +912,23 @@
                                         <label class="checkbox">
                                             <input type="checkbox" />
                                             是
-                                        </label>&nbsp;&nbsp;
+                                        </label>
+                                        &nbsp;&nbsp;
                                         <label class="checkbox">
                                             <input type="checkbox" checked="checked" />
                                             否
-                                        </label>&nbsp;&nbsp;
+                                        </label>
+                                        &nbsp;&nbsp;
                                         <label class="checkbox">
                                             <input type="checkbox" />
                                             无法视察
-                                        </label>&nbsp;&nbsp;
+                                        </label>
+                                        &nbsp;&nbsp;
                                         <label class="checkbox">
                                             <input type="checkbox" />
                                             不适用
-                                        </label>&nbsp;&nbsp;
+                                        </label>
+                                        &nbsp;&nbsp;
                                         <label>
                                             章节：
                                         </label>

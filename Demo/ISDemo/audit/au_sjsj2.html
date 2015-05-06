@@ -34,19 +34,19 @@
             </div>
             <div class="form-inline">
                 <label>
-                    检查单专业：</label>
+                    专业：</label>
                 <select name="select" class="span1">
-                    <option value="4" selected="selected">飞行</option>
-                    <option value="5">维修</option>
-                    <option value="5">航务</option>
-                    <option value="5">航卫</option>
-                    <option value="5">专业5</option>
-                    <option value="5">专业6</option>
-                    <option value="5">专业7</option>
-                    <option value="5">专业8</option>
+                     <option value="0" selected="selected">全部</option>
+                    <option value="4">飞行</option>
+                    <option value="5">机务</option>
+                    <option value="6">运控</option>
+                    <option value="7">客舱</option>
+                    <option value="8">地服</option>
+                    <option value="9">货运</option>
+                    <option value="9">保卫</option>
+                    <option value="9">组织管理</option>
                 </select>
-       
-                <label style="float:right;"><div class="alert">注释：<span class="label label-important">未完成  (20)</span>&nbsp;&nbsp;<span class="label">完成预审  (2)</span>&nbsp;&nbsp;<span class="label label-success">完成审计（5）</span>&nbsp;&nbsp;&nbsp;<span style="margin-left:1">【审计要素共20个，已完成10个。问题共180个，已完成79个。】 </span></div></label>
+                <label style="float:right;"><div class="alert">注释：<span class="label label-important">未审计  (20)</span>&nbsp;&nbsp;<span class="label">完成预审  (2)</span>&nbsp;&nbsp;<span class="label label-success">完成审计（5）</span>&nbsp;&nbsp;&nbsp;<span style="margin-left:1">【审计要素共20个，已完成10个。问题共180个，已完成79个。】 </span></div></label>
             </div>
                 
                 
@@ -68,7 +68,7 @@
                                 检查单下载
                             </th>
                             <th>
-                                状态
+                                状态 <span>&darr;</span>
                             </th>
                             <th>
                                 上一次保存日期
@@ -99,7 +99,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                <span class="label label-important">未完成</span
+                                <span class="label label-important">未审计</span
                             ></td>
                             <td>
                                 2015-04-18
@@ -128,7 +128,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                <span class="label label-important">未完成</span
+                                <span class="label label-important">未审计</span
                             ></td>
                             <td>
                                 2015-04-18
@@ -158,7 +158,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                <span class="label label-important">未完成</span></td>
+                                <span class="label label-important">未审计</span></td>
                             <td>
                                 2015-04-18
                             </td>
@@ -186,7 +186,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                <span class="label label-important">未完成</span></td>
+                                <span class="label label-important">未审计</span></td>
                             <td>
                                 2015-04-18
                             </td>
@@ -214,7 +214,7 @@
                                     简版</button>
                             </td>
                             <td>
-                                <span class="label label-important">未完成</span></td>
+                                <span class="label label-important">未审计</span></td>
                             <td>
                                 2015-04-18
                             </td>
@@ -379,6 +379,7 @@
                 </table>
             </div>
             <div class="modal-footer center" style="margin-top: 10px;">
+            <button class="btn btn-info" data-toggle="modal" data-target="#myModal">添加新发现问题</button>&nbsp;&nbsp;
                <a class="btn" href="au_sjsj.html">返回</a>
             </div>
         </div>
@@ -386,3 +387,68 @@
 </div>
 </body>
 </html>
+
+<!--弹出窗口-小 开始-->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">新发现问题</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                <div class="container-fluid">
+                          <div class="row-fluid">
+                            <div class="span12">
+                            <!--窗口的内容开始-->
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="form-inline"><label>发现问题：</label><input type="text" placeholder="输入关键词" style="width:350px;"/></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    
+                                        <tr>
+                                          <td>
+                                              <div class="controls form-inline">
+                                                <label>问题描述：</label>
+                                                <textarea class="medium m-wrap span5" rows="6" style="width:350px;"></textarea>
+                                              </div>
+                                          </td>
+                                        </tr>
+                                     </tbody>
+                                     
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-group form-inline">
+                                                <label class="checkbox">上传附件 </label>
+                                                  <label class="sr-only" for="inputfile"></label>
+                                                  <input type="file" id="inputfile">
+                                               </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#">附件1</a>&nbsp;&nbsp;<a href="">附件2</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            <!--内容结束-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+			<button type="button" class="btn" data-dismiss="modal">保存</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->

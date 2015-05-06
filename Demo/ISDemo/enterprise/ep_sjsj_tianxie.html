@@ -42,6 +42,8 @@ $(document).ready(function() {
     <body>
     <div class="portlet box">
       <div class="portlet-body">
+      
+      <div class="alert alert-info form-inline"><label>3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序</label><label style="padding-left:50px;">计划年月：2015年5月</label><label style="padding-left:50px;">被审计单位：深圳航空公司</label></div>
         <div class="tab-content">
           <div class="tabbable tabbable-custom">
             <ul class="nav nav-tabs">
@@ -110,7 +112,7 @@ $(document).ready(function() {
                         <table class=" table">
                             <thead>
                                 <tr>
-                                	<td align="left" class="left" style="line-height:30px; padding-left:20px;">
+                                	<td align="left" class="left" style="line-height:30px; padding-left:10px;">
                                     <div class="btn-group" data-toggle="buttons">
                                        <label class="btn btn-primary active btn-mini">
                                           <input type="radio" name="options" id="option1"> 显示全部
@@ -118,9 +120,7 @@ $(document).ready(function() {
                                        <label class="btn btn-primary btn-mini">
                                           <input type="radio" name="options" id="option2"> 显示未回答问题
                                        </label>
-                                       <label class="btn btn-primary btn-mini">
-                                          <input type="radio" name="options" id="option3"> 显示未覆盖检查问题
-                                       </label>
+                                      
                                        <label class="btn btn-primary btn-mini">
                                           <input type="radio" name="options" id="option3"> 显示有说明的问题
                                        </label>
@@ -130,7 +130,7 @@ $(document).ready(function() {
                                     </div>
                                     
                                     </td>
-                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规 <span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
+                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;<span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;<span class="label">&nbsp;</span>未填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
                                     <td align="left" class="right" style="line-height:30px;">
                                     	
                                     <button type="submit" class="btn btn-mini">任务</button>
@@ -336,16 +336,13 @@ $(document).ready(function() {
                         <table class=" table">
                             <thead>
                                 <tr>
-                                	<td align="left" class="left" style="line-height:30px; padding-left:20px;">
+                                	<td align="left" class="left" style="line-height:30px; padding-left:10px;">
                                     <div class="btn-group" data-toggle="buttons">
                                        <label class="btn btn-primary active btn-mini">
                                           <input type="radio" name="options" id="option1"> 显示全部
                                        </label>
                                        <label class="btn btn-primary btn-mini">
                                           <input type="radio" name="options" id="option2"> 显示未回答问题
-                                       </label>
-                                       <label class="btn btn-primary btn-mini">
-                                          <input type="radio" name="options" id="option3"> 显示未覆盖检查问题
                                        </label>
                                        <label class="btn btn-primary btn-mini">
                                           <input type="radio" name="options" id="option3"> 显示有说明的问题
@@ -356,7 +353,7 @@ $(document).ready(function() {
                                     </div>
                                     
                                     </td>
-                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规 <span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
+                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;<span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;<span class="label">&nbsp;</span>未填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
                                     <td align="left" class="right" style="line-height:30px;">
                                     	
                                     <button type="submit" class="btn btn-mini">任务</button>
@@ -570,77 +567,6 @@ $(document).ready(function() {
 </html>
 
 
-<!--弹出窗口-小 开始-->
-<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <!--窗口title-->
-            <h4 class="modal-title" id="myModalLabel">问题分类</h4>
-            </div>
-            <div class="modal-body">
-                <div class="yContentBox">
-                
-                	<!--窗口的内容开始-->
-                    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" width="100%" id="relateTable">
-
-                        <tbody>
-                            <tr>
-                                <td align="center">
-                                	<label class="checkbox">
-                                    <input type="checkbox" value="" /> 人员（例如：人力资源不足、人员资质不符合要求等）
-                                    </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 工具和设备
-                                    </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 技术资料（例如：厂家提供的手册、OEB、SB等）
-                                    </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 政策、程序、指令或信息
-                                    </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 材料（例如：航材等）
-                                    </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 设施（例如：厂房、车间、机库、教室等）
-                                    </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 控制
-                                    </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 流量测量
-                                    </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 接口
-                                    </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 预测结果（与预设目标不符）
-                                    </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 其它
-                                    </label>
-                                </td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                    <!--内容结束-->
-                    
-                </div>
-            </div>
-            <div class="modal-footer">
-            
-            <button type="submit" class="btn blue">确定</button>
-			<button type="button" class="btn" data-dismiss="modal">关闭</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!--弹出窗口-小 结束-->
-
-
 
 <!--弹出窗口-小 开始-->
 <div id="myModal-2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
@@ -768,7 +694,7 @@ $(document).ready(function() {
                                   <label class="checkbox">
                                     <input type="radio" name="optionsRadios2" value="option1"  /> 是
                                   </label>
-                                  <label class="checkbox" style="padding-left:25px;">
+                                  <label class="checkbox" style="padding-left:25px;" data-toggle="modal" data-target="#myModal-1">
                                     <input type="radio" name="optionsRadios2" value="option2" onClick="adds();" /> <font style="color:#F00;">否，说明</font>
                                   </label>
                                   <label class="checkbox" style="padding-left:25px;">
@@ -873,6 +799,77 @@ $(document).ready(function() {
             </div>
             <div class="modal-footer">
 
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">问题分类</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" width="100%" id="relateTable">
+
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                	<label class="checkbox">
+                                    <input type="checkbox" value="" /> 人员（例如：人力资源不足、人员资质不符合要求等）
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 工具和设备
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 技术资料（例如：厂家提供的手册、OEB、SB等）
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 政策、程序、指令或信息
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 材料（例如：航材等）
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 设施（例如：厂房、车间、机库、教室等）
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 控制
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 流量测量
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 接口
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 预测结果（与预设目标不符）
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 其它
+                                    </label>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+            
+            <button type="submit" class="btn" data-dismiss="modal">确定</button>
 			<button type="button" class="btn" data-dismiss="modal">关闭</button>
             </div>
         </div>

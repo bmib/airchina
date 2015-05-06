@@ -22,6 +22,7 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
+        <div class="tab-content">
         <div class="form-inline">
                 <label>选择计划年月：</label>
                 <select name="select" class="span2" >
@@ -46,13 +47,13 @@
                 <label class="checkbox">
                 	<input type="checkbox" value="" /> <span class="label">已完成</span>
                 </label>-->
-                <label><div class="alert">注释：<span class="label label-warning">未完成  (20)</span>&nbsp;&nbsp;<span class="label">已完成  (12)</span></div></label>
+                <label><div class="alert">注释：<span class="label label-important">未完成  (20)</span>&nbsp;&nbsp;<span class="label label-success">已完成  (12)</span>&nbsp;&nbsp;<span class="label label-warning">预填中 (3)</span></div></label>
           </div>
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>
-                            计划年月
+                            计划年月 <span>&darr;</span>
                         </th>
                         <th>
                             被审计企业
@@ -67,13 +68,13 @@
                             问题（已填写/总数）
                         </th>
                         <th>
-                            要求完成日期
+                            要求完成日期 <span>&darr;</span>
                         </th>
                         <th>
                             预填人员
                         </th>
                         <th>
-                            状态
+                            状态 <span>&darr;</span>
                         </th>
                         <th>
                             操作
@@ -92,7 +93,7 @@
                             齐龙
                         </td>
                         <td>
-                            飞行：刘静；运控：马峥；地服：张玲
+                           刘静[飞行]，马峥[运控]，张玲[地服]
                         </td>
                         <td>
                             0/190
@@ -104,7 +105,7 @@
                             张三、李四、王五
                         </td>
                         <td>
-                            <span class="label label-warning">未完成</span>
+                            <span class="label label-important">未完成</span>
                         </td>
                         <td>
                             <a class="btn" href="au_sjsj2.html">查看</a>
@@ -121,7 +122,7 @@
                             齐龙
                         </td>
                         <td>
-                            飞行：刘静；运控：马峥；地服：张玲
+                            刘静[飞行]，马峥[运控]，张玲[地服]
                         </td>
                         <td>
                             120/190
@@ -133,7 +134,7 @@
                             张三、李四、王五
                         </td>
                         <td>
-                             <span class="label label-warning">未完成</span>
+                             <span class="label label-important">未完成</span>
                         </td>
                         <td>
                             <a class="btn" href="au_sjsj2.html">查看</a>
@@ -150,7 +151,7 @@
                             齐龙
                         </td>
                         <td>
-                            飞行：刘静；运控：马峥；地服：张玲
+                            刘静[飞行]，马峥[运控]，张玲[地服]
                         </td>
                         <td>
                             190/190
@@ -162,7 +163,36 @@
                             张三、李四、王五
                         </td>
                         <td>
-                            <span class="label">已完成</span>
+                            <span class="label label-success">已完成</span>
+                        </td>
+                        <td>
+                            <a class="btn">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2015年1月
+                        </td>
+                        <td>
+                            深圳航空
+                        </td>
+                        <td>
+                            齐龙
+                        </td>
+                        <td>
+                            刘静[飞行]，马峥[运控]，张玲[地服]
+                        </td>
+                        <td>
+                            190/190
+                        </td>
+                        <td>
+                            2015-01-30
+                        </td>
+                        <td>
+                            张三、李四、王五
+                        </td>
+                        <td>
+                            <span class="label label-warning">预填中</span>
                         </td>
                         <td>
                             <a class="btn">查看</a>
@@ -170,6 +200,18 @@
                     </tr>
                 </tbody>
             </table>
+             <div class="pagination pagination-right pagination-small">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">末页</a></li> 
+                   </ul>
+                </div>
+            </div>
         </div>
     </div>
 </body>

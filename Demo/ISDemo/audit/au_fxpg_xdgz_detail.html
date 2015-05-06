@@ -552,6 +552,9 @@
                                             <thead>
                                                 <tr>
                                                     <th>
+                                                        问题说明
+                                                    </th>
+                                                    <th>
                                                         整改计划
                                                     </th>
                                                     <th>
@@ -561,6 +564,34 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题分类：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    其他</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题说明：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    未告知旅客</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>附件一</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
                                                     <td valign="top">
                                                         <form class="form-horizontal">
                                                         <div class="control-group">
@@ -620,6 +651,9 @@
                                             <thead>
                                                 <tr>
                                                     <th>
+                                                        问题说明
+                                                    </th>
+                                                    <th>
                                                         整改计划
                                                     </th>
                                                     <th>
@@ -629,6 +663,34 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题分类：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    其他</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题说明：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    未告知旅客</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>附件一</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
                                                     <td valign="top">
                                                         <form class="form-horizontal">
                                                         <div class="control-group">
@@ -688,6 +750,9 @@
                                             <thead>
                                                 <tr>
                                                     <th>
+                                                        问题说明
+                                                    </th>
+                                                    <th>
                                                         整改计划
                                                     </th>
                                                     <th>
@@ -697,6 +762,34 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
+                                                    <td valign="top">
+                                                        <form class="form-horizontal">
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题分类：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    其他</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                问题说明：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    未告知旅客</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="inputEmail">
+                                                                附件：</label>
+                                                            <div class="controls">
+                                                                <label>
+                                                                    <a>附件一</a></label>
+                                                            </div>
+                                                        </div>
+                                                        </form>
+                                                    </td>
                                                     <td valign="top">
                                                         <form class="form-horizontal">
                                                         <div class="control-group">
@@ -753,10 +846,43 @@
                 <!--书签-->
             </div>
             <div class="modal-footer center">
-                <a class="btn btn-success">审核通过</a>&nbsp;&nbsp; <a class="btn btn-danger">审核退回</a>&nbsp;&nbsp;
-                <a class="btn" href="au_yfjz.html">返回</a>
+                <a class="btn btn-success">审核通过</a>&nbsp;&nbsp; <a class="btn btn-danger" data-toggle="modal"
+                    data-target="#myModal-5">审核退回</a>&nbsp;&nbsp; <a class="btn" href="au_yfjz.html">返回</a>
             </div>
         </div>
     </div>
 </body>
+<!--弹出窗口-大 开始-->
+<div id="myModal-5" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    审核退回</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label">
+                        退回原因：</label>
+                    <div class="controls">
+                        <textarea></textarea>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    确定</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口- 大 结束-->
 </html>

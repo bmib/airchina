@@ -23,16 +23,16 @@
                 <thead>
                     <tr>
                         <th>
-                            审计年月
+                            审计年月<span>&darr;</span>
                         </th>
                         <th>
                             被审计单位
                         </th>
                         <th>
-                            下发时间
+                            下发时间<span>&darr;</span>
                         </th>
                         <th>
-                            纠正措施期限
+                            纠正措施期限<span>&darr;</span>
                         </th>
                         <th>
                             审计组长
@@ -41,10 +41,10 @@
                             审计专员
                         </th>
                         <th>
-                            审计问题 （已关闭数/总数）
+                            审计问题（已关闭数/总数）
                         </th>
                         <th>
-                            状态
+                            状态<span>&darr;</span>
                         </th>
                         <th>
                             操作
@@ -141,6 +141,36 @@
                     </tr>
                     <tr>
                         <td>
+                            2015年1月
+                        </td>
+                        <td>
+                            深圳航空
+                        </td>
+                        <td>
+                            2015-01-18
+                        </td>
+                        <td>
+                            2015-01-30
+                        </td>
+                        <td>
+                            齐龙
+                        </td>
+                        <td>
+                            王静、李哲
+                        </td>
+                        <td>
+                            0/19
+                        </td>
+                        <td>
+                            整改措施已退回<img width="18" src="../images/20150506010456638_easyicon_net_24.png" title="点击查看退回原因"
+                                data-toggle="modal" data-target="#myModal-6" />
+                        </td>
+                        <td>
+                            <a class="btn">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             2014年11月
                         </td>
                         <td>
@@ -213,4 +243,39 @@
         </div>
     </div>
 </body>
+<!--弹出窗口-大 开始-->
+<div id="myModal-6" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H1">
+                    查看纠正措施退回原因</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <ul>
+                        <li style="margin-bottom:10px; border-bottom:1px solid #d2d2d2; padding-bottom:5px;">
+                            <p>
+                                退回时间：2015年4月30日&nbsp;&nbsp;&nbsp;&nbsp;退回人：刘静</p>
+                            退回原因：<textarea disabled="disabled">整改计划无法按照预定时间实施。</textarea>
+                        </li>
+                        <li style="margin-bottom:10px; border-bottom:1px solid #d2d2d2; padding-bottom:5px;">
+                            <p>
+                                退回时间：2015年4月27日&nbsp;&nbsp;&nbsp;&nbsp;退回人：马峥</p>
+                            退回原因：<textarea disabled="disabled">整改计划无法按照预定时间实施。</textarea>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
 </html>

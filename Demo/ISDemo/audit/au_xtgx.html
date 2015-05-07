@@ -51,30 +51,51 @@ $(document).ready(function() {
                 <label><div class="alert">注释：<span class="label label-success">已完成</span>&nbsp;&nbsp;<span class="label label-warning">未完成</span></div></label>
           </div>
             <div class="tab-content">
-                <table class="table table-hover table-bordered">
+            <div style="overflow-y:scroll ; height:30px;">
+                <table class="table table-bordered">
                     <thead>
                         <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
-                            <th align="left" class="center" style="width:8%;">计划年月 <span>&darr;</span></th>
-                            <th align="left" class="center" style="width:15%;">被审计单位</th>
-                            <th align="left" class="center" style="width:8%;">审计组长</th>
+                            <th align="left" class="center" style="width:80px;">计划年月 <span>&darr;</span></th>
+                            <th align="left" class="center" style="width:150px;">被审计单位</th>
+                            <th align="left" class="center" style="width:80px;">审计组长</th>
                             <th align="left" class="center">审计专员</th>
-                            <th align="left" class="center" style="width:10%;">预填结束日期</th>
-                            <th align="left" class="center">预填专员</th>
-                            <th align="left" class="center" style="width:8%;">状态 <span>&uarr;</span></th>
-                            <th align="left" class="center" style="width:8%;">操作</th>
+                            <th align="left" class="center" style="width:80px;">预填结束日期</th>
+                            <th align="left" class="center" style="width:80px;">签收人员</th>
+                            <th align="left" class="center" style="width:80px;">预填专员</th>
+                            <th align="left" class="center" style="width:80px;">状态 <span>&uarr;</span></th>
+                            <th align="left" class="center" style="width:60px;">操作</th>
                       </tr>
                     </thead>
+                </table>
+             </div>
+             <div class="panel-group" id="a3" style="overflow-y:scroll; height:50px; border:1px solid #ccc;">
+                <table class="table table-hover table-bordered">
                     <tbody>
                         <tr>
-                            <td align="left" class="center">2015年6月</td>
-                            <td align="left"class="left" >山东航空公司</td>
-                            <td align="left"class="center">齐龙</td>
+                            <td align="left" class="center" style="width:80px;">2015年6月</td>
+                            <td align="left"class="left" style="width:150px;">山东航空公司</td>
+                            <td align="left"class="center" style="width:80px;">齐龙</td>
                             <td align="left"class="left">
                             <span class="label label-success" title="已提交构型">马征（飞行）</span>
                             <span class="label label-warning">刘静（机务）</span>
                             <span class="label label-warning" title="未提交构型">张玲（维修）</span>
-                            <span class="label label-warning" title="未提交构型">陈金福（航卫）</span>
                             </td>
+                            <td align="left"class="center" style="width:80px;">--</td>
+                            <td align="left"class="center" style="width:80px;">--</td>
+                            <td align="left"class="center" style="width:80px;">--</td>
+                            <td align="left"class="center" style="width:80px;">构型中</td>
+                            <td align="left"class="center" style="width:60px;"><a href="au_xtgx_setup.html" class="btn btn-mini">构型</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">2015年6月</td>
+                            <td align="left"class="left" >山东航空公司</td>
+                            <td align="left"class="center">齐龙</td>
+                            <td align="left"class="left">
+                            <span class="label label-success" title="已提交构型">马征（飞行）</span>
+                            <span class="label label-warning">刘静（机务）</span>
+                            <span class="label label-warning" title="未提交构型">马骏然（维修）</span>
+                            </td>
+                            <td align="left"class="center">--</td>
                             <td align="left"class="center">--</td>
                             <td align="left"class="center">--</td>
                             <td align="left"class="center">构型中</td>
@@ -88,12 +109,12 @@ $(document).ready(function() {
                             <span class="label label-success" title="已提交构型">马征（飞行）</span>
                             <span class="label label-warning">刘静（机务）</span>
                             <span class="label label-warning" title="未提交构型">马骏然（维修）</span>
-                            <span class="label label-warning" title="未提交构型">陈金福（航卫）</span>
                             </td>
-                            <td align="left"class="center">--</td>
-                            <td align="left"class="center">--</td>
-                            <td align="left"class="center">构型中</td>
-                            <td align="left"class="center"><a href="au_xtgx_setup.html" class="btn btn-mini">构型</a></td>
+                            <td align="left"class="center">2015-06-20</td>
+                            <td align="left"class="center">王领导</td>
+                            <td align="left"class="center">张小三/王小五/赵小六</td>
+                            <td align="left"class="center">已签收</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup2.html" class="btn btn-mini">查看</a></td>
                         </tr>
                         <tr>
                             <td align="left" class="center">2015年6月</td>
@@ -103,10 +124,10 @@ $(document).ready(function() {
                             <span class="label label-success" title="已提交构型">马征（飞行）</span>
                             <span class="label label-warning">刘静（机务）</span>
                             <span class="label label-warning" title="未提交构型">马骏然（维修）</span>
-                            <span class="label label-warning" title="未提交构型">陈金福（航卫）</span>
                             </td>
-                            <td align="left"class="center">2015-06-20</td>
-                            <td align="left"class="center">张小三/王小五/赵小六</td>
+                          <td align="left"class="center">2015-06-20</td>
+                            <td align="left"class="center">王领导</td>
+                          <td align="left"class="center">--</td>
                             <td align="left"class="center">已下发</td>
                             <td align="left"class="center"><a href="au_xtgx_setup2.html" class="btn btn-mini">查看</a></td>
                         </tr>
@@ -118,10 +139,10 @@ $(document).ready(function() {
                             <span class="label label-success" title="已提交构型">马征（飞行）</span>
                             <span class="label label-warning">刘静（机务）</span>
                             <span class="label label-warning" title="未提交构型">马骏然（维修）</span>
-                            <span class="label label-warning" title="未提交构型">陈金福（航卫）</span>
                             </td>
-                            <td align="left"class="center">2015-06-20</td>
-                            <td align="left"class="center">张小三/王小五/赵小六</td>
+                          <td align="left"class="center">2015-06-20</td>
+                            <td align="left"class="center">王领导</td>
+                          <td align="left"class="center">--</td>
                             <td align="left"class="center">已下发</td>
                             <td align="left"class="center"><a href="au_xtgx_setup2.html" class="btn btn-mini">查看</a></td>
                         </tr>
@@ -133,33 +154,18 @@ $(document).ready(function() {
                             <span class="label label-success" title="已提交构型">马征（飞行）</span>
                             <span class="label label-warning">刘静（机务）</span>
                             <span class="label label-warning" title="未提交构型">马骏然（维修）</span>
-                            <span class="label label-warning" title="未提交构型">陈金福（航卫）</span>
                             </td>
-                            <td align="left"class="center">2015-06-20</td>
-                            <td align="left"class="center">张小三/王小五/赵小六</td>
-                            <td align="left"class="center">已下发</td>
-                            <td align="left"class="center"><a href="au_xtgx_setup2.html" class="btn btn-mini">查看</a></td>
-                        </tr>
-                        <tr>
-                            <td align="left" class="center">2015年6月</td>
-                            <td align="left"class="left" >山东航空公司</td>
-                            <td align="left"class="center">齐龙</td>
-                            <td align="left"class="left">
-                            <span class="label label-success" title="已提交构型">马征（飞行）</span>
-                            <span class="label label-warning">刘静（机务）</span>
-                            <span class="label label-warning" title="未提交构型">马骏然（维修）</span>
-                            <span class="label label-warning" title="未提交构型">陈金福（航卫）</span>
-                            </td>
-                            <td align="left"class="center">2015-06-20</td>
-                            <td align="left"class="center">张小三/王小五/赵小六</td>
+                          <td align="left"class="center">2015-06-20</td>
+                            <td align="left"class="center">王领导</td>
+                          <td align="left"class="center">--</td>
                             <td align="left"class="center">已下发</td>
                             <td align="left"class="center"><a href="au_xtgx_setup2.html" class="btn btn-mini">查看</a></td>
                         </tr>
                     </tbody>
                 </table>
-                
+                </div>
                 <div class="pagination pagination-right pagination-small">
-                    <ul>
+                  <ul>
                         <li><a href="#">首页</a></li>
                         <li><a href="#">1</a></li>
                         <li><a href="#">2</a></li>

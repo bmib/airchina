@@ -43,16 +43,16 @@ $(document).ready(function() {
     <div class="portlet box">
       <div class="portlet-body">
       
-      <div class="alert alert-info form-inline"><label>3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序</label><label style="padding-left:50px;">计划年月：2015年5月</label><label style="padding-left:50px;">被审计单位：深圳航空公司</label></div>
+      <div class="alert alert-info form-inline" style="margin-bottom:10px;"><label>3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序</label><label style="padding-left:50px;">计划年月：2015年5月</label><label style="padding-left:50px;">被审计单位：深圳航空公司</label></div>
         <div class="tab-content">
           <div class="tabbable tabbable-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab_1_1" data-toggle="tab">基本信息</a></li>
-              <li><a href="#tab_1_2" data-toggle="tab">第一部分 绩效检查项</a></li>
+              <!--<li class="active"><a href="#tab_1_1" data-toggle="tab">基本信息</a></li>-->
+              <li class="active"><a href="#tab_1_2" data-toggle="tab">第一部分 绩效检查项</a></li>
               <li><a href="#tab_1_3" data-toggle="tab">第二部分 管理责任和权力检查项</a></li>
             </ul>
             <div class="tab-content" style="border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;">
-              <div class="tab-pane active" id="tab_1_1">
+              <!--<div class="tab-pane active" id="tab_1_1">
                 <table width="100%" cellpadding="5" style="min-width:1000px;">
                   <tr>
                     <td width="150" class="right" style="color:#C00">* 开始日期：</td>
@@ -105,8 +105,8 @@ $(document).ready(function() {
                     <td><input type="text" value="上海虹桥机场" /></td>
                   </tr>
                 </table>
-              </div>
-              <div class="tab-pane" id="tab_1_2">
+              </div>-->
+              <div class="tab-pane active" id="tab_1_2">
                 
                 <div class="tab-content">
                         <table class=" table">
@@ -606,6 +606,7 @@ $(document).ready(function() {
                                   <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="optionsRos2" value="option2"  /> 无法观察
                                   </label>
+                                  <span style="float:right"><button type="submit" class="btn" data-toggle="modal" data-target="#myModal-y">规章依据</button>&nbsp;<button type="button" class="btn" data-toggle="modal" data-target="#myModal-y">任务指南</button></span>
                                 </td>
                             </tr>
                             <tr>
@@ -703,6 +704,7 @@ $(document).ready(function() {
                                   <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="optionsRadios2" value="option2"  /> 无法观察
                                   </label>
+                                  <span style="float:right"><button type="submit" class="btn" data-toggle="modal" data-target="#myModal-y">规章依据</button>&nbsp;<button type="button" class="btn" data-toggle="modal" data-target="#myModal-y">任务指南</button></span>
                                 </td>
                             </tr>
                             <tr>
@@ -825,38 +827,39 @@ $(document).ready(function() {
                         <tbody>
                             <tr>
                                 <td align="center">
-                                	<label class="checkbox">
-                                    <input type="checkbox" value="" /> 人员（例如：人力资源不足、人员资质不符合要求等）
+                                    
+                                	<label class="radio">
+                                    <input type="radio" name="optionsRadios2" value="option1"  /> 人员（例如：人力资源不足、人员资质不符合要求等）
                                     </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 工具和设备
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2"/> 工具和设备
                                     </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 技术资料（例如：厂家提供的手册、OEB、SB等）
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 技术资料（例如：厂家提供的手册、OEB、SB等）
                                     </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 政策、程序、指令或信息
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 政策、程序、指令或信息
                                     </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 材料（例如：航材等）
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2"/> 材料（例如：航材等）
                                     </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 设施（例如：厂房、车间、机库、教室等）
+                                    <label class="radio">
+                                    <input type="radio" name="optionsRadios2" value="option2"/> 设施（例如：厂房、车间、机库、教室等）
                                     </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 控制
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 控制
                                     </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 流量测量
+                                    <label class="radio">
+                                    <input type="radio" name="optionsRadios2" value="option2"/> 流量测量
                                     </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 接口
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 接口
                                     </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 预测结果（与预设目标不符）
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 预测结果（与预设目标不符）
                                     </label>
-                                    <label class="checkbox">
-                                    <input type="checkbox" value="" /> 其它
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 其它
                                     </label>
                                 </td>
                             </tr>
@@ -877,3 +880,38 @@ $(document).ready(function() {
 </div>
 <!--弹出窗口-小 结束-->
 
+<!--弹出窗口-小 开始-->
+<div id="myModal-y" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">规章依据/任务指南</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" width="100%" id="relateTable">
+
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                    文字内容
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->

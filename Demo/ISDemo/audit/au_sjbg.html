@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>预审报告</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+        <div class="tab-content">
+        <div class="form-inline">
+       			<label>选择被审计单位：</label>
+                <select name="select" class=" input-small" >
+                	<option value="0" selected="selected">全部</option>
+                    <option value="4">北京航空公司</option>
+                    <option value="5">沈阳航空公司</option>
+                    <option value="5">山东航空公司</option>
+                </select>
+                
+                <label style="padding-left:20px;">选择审计年月：</label>
+                <select name="select" class=" input-small" >
+                	<option value="0" selected="selected">全部</option>
+                    <option value="4">2015年4月</option>
+                    <option value="5">2015年5月</option>
+                    <option value="5">2015年6月</option>
+                </select>
+                <label style="padding-left:20px;">报告生成日期：</label><input type="text" placeholder="yyyy-mm-dd" class="m-wrap input-small"/>~<input type="text" placeholder="yyyy-mm-dd" class="m-wrap input-small"/>
+				<label class="checkbox" style="padding-left:20px;">
+                <input type="checkbox" value="" /> 有预防纠正
+                </label>
+                <label class="checkbox" style="padding-left:20px;">
+                <input type="checkbox" value="" /> 有产生危险源
+                </label>
+                <label style="float:right; padding-left:20px;" class="alert"><span>未生成报告(8)</span><span>已生成报告(12)</span></label>
+          </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            计划年月 <span>&darr;</span>
+                        </th>
+                        <th>
+                            被审计单位
+                        </th>
+                        <th>
+                            审计组长
+                        </th>
+                        <th>
+                            审计专员
+                        </th>
+                        <th>
+                            是否有预防纠正
+                        </th>
+                        <th>
+                            是否产生危险源
+                        </th>
+                        <th>
+                            状态 <span>&darr;</span>
+                        </th>
+                        <th>
+                            报告生成日期
+                        </th>
+                        <th style="width:200px;">
+                            操作
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            2015年5月
+                        </td>
+                        <td>
+                            深圳航空
+                        </td>
+                        <td>
+                            齐龙
+                        </td>
+                        <td>
+                           刘静[飞行]，马峥[运控]，张玲[地服]
+                        </td>
+                        <td>是（16）</td>
+                        <td>否</td>
+                        <td><span class="label label-important">未生成报告</span></td>
+                        <td> 2015-05-30 </td>
+                        <td><a href="au_sjbg_st.html" class="btn btn-mini">查看</a> <button type="submit" class="btn btn-mini btn-info">导出问题列表</button> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2015年4月
+                        </td>
+                        <td>
+                            深圳航空
+                        </td>
+                        <td>
+                            齐龙
+                        </td>
+                        <td>
+                            刘静[飞行]，马峥[运控]，张玲[地服]
+                        </td>
+                        <td>是（16）</td>
+                        <td>是（2）</td>
+                        <td><span class="label label-important">未生成报告</span></td>
+                        <td> 2015-04-30 </td>
+                        <td><a href="au_sjbg_st.html" class="btn btn-mini">查看</a>  <button type="submit" class="btn btn-mini btn-info">导出问题列表</button> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2015年1月
+                        </td>
+                        <td>
+                            深圳航空
+                        </td>
+                        <td>
+                            齐龙
+                        </td>
+                        <td>
+                            刘静[飞行]，马峥[运控]，张玲[地服]
+                        </td>
+                        <td>是（16）</td>
+                        <td>否</td>
+                        <td><span class="label label-success">已生成报告</span></td>
+                        <td> 2015-01-30 </td>
+                        <td><button type="submit" class="btn btn-mini">预览</button> <button type="submit" class="btn btn-mini">下载报告</button> <button type="submit" class="btn btn-mini btn-info">导出问题列表</button> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2015年1月
+                        </td>
+                        <td>
+                            深圳航空
+                        </td>
+                        <td>
+                            齐龙
+                        </td>
+                        <td>
+                            刘静[飞行]，马峥[运控]，张玲[地服]
+                        </td>
+                        <td>否</td>
+                        <td>否</td>
+                        <td><span class="label label-success">已生成报告</span></td>
+                        <td> 2015-01-30 </td>
+                        <td><button type="submit" class="btn btn-mini">预览</button> <button type="submit" class="btn btn-mini">下载报告</button> <button type="submit" class="btn btn-mini btn-info">导出问题列表</button> </td>
+                    </tr>
+                </tbody>
+            </table>
+             <div class="pagination pagination-right pagination-small">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">末页</a></li> 
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

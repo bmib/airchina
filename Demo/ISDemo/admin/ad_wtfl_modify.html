@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+        <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+        <style type="text/css">
+input.input-sm {
+    font-size: 60%;
+  height: 20px;
+  line-height: 20px;
+  width:30px;
+    padding-top:0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+        </style>
+        <script type="text/javascript">
+        //填报弹出窗口
+        $(document).ready(function () {
+            $("a[name='del']").bind("click",function() {
+					$(this).parents("tr").remove();
+            });
+            $("a[name='add']").bind("click",function() {
+					var trs = $("#zj tr");
+                    var tr = $(trs[0]);
+                    var td = tr.find("td:first-child");
+                    td.attr("rowspan",td.attr("rowspan")+1);
+                    var newTr = tr.clone(true);
+                newTr.find("td:first-child").html(trs.length+1);
+                    newTr.find("input").each(function(){
+                           this.value = "";
+                         }); 
+                    newTr.find("textarea").each(function(){
+                           this.value = "";
+                         }); 
+                    newTr.insertAfter(trs[trs.length-1]);
+            });
+        });
+    </script>
+	</head>
+
+	<body class="yBodyBg">
+		<div class="yContentBox">
+            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:98%">
+            <table class="table">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th width="40px">序号</th>
+                        <th>描述</th>
+                        <th width="40px">分值</th>
+                        <th width="50px">操作<a name="add"><img src="../images/add.png" width="18"/></a></th>
+                    </tr>
+                </thead>
+                    </table></div></div>
+                <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:98%;height:320px">
+            <table class="table">
+                <tbody id="zj">
+                    <tr>
+                        <td width="50px" style="text-align:center;">1</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >查阅合格证持有人的政策、程序、指令和信息，以便理解其与本要素相关的控制。
+</textarea>
+					</td>
+                        <td width="40px"><input type="text" class="input-sm" value="5"></td>
+                        <td width="45px">
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">2</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >程序或指令和信息没有明确（何人、何事、何时、何地和如何）。
+</textarea>
+					</td>
+                        <td><input type="text" class="input-sm" value="4.9"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">3</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >程序、政策或指令和信息与民用航空法律法规不符。
+</textarea>
+					</td>
+                        <td><input type="text" class="input-sm" value="4.8"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">4</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >程序、政策或指令和信息与中国民航的政策和指南不符。
+</textarea>
+					</td>
+                        <td><input type="text" class="input-sm" value="4.7"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">5</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >程序、政策或指令和信息与其他文件（例如：生产厂家的数据，杰普逊航图等）不符。
+</textarea>
+					</td>
+                        <td><input type="text" class="input-sm" value="4.6"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">6</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >程序、政策或指令和信息不清晰或不完整。
+</textarea>
+					</td>
+                        <td><input type="text" class="input-sm" value="4.5"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">7</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >文件质量（例如，不可读或字迹模糊）。
+</textarea>
+					</td>
+                        <td><input type="text" class="input-sm" value="4.4"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">8</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >程序、政策或指令和信息在合格证持有人的各种手册中（飞行运行手册（FOM）、 总维修手册（GMM）等）不一致。
+</textarea>
+					</td>
+                        <td><input type="text" class="input-sm" value="4.3"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">9</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >程序、政策或指令和信息在各种载体中（例如，书面文件、微缩胶片和电子文档）不一致。
+</textarea>
+					</td>
+                        <td><input type="text" class="input-sm" value="4.2"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">10</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >资源要求不完整（人员、设施、设备、技术数据）。
+</textarea>
+					</td>
+                        <td><input type="text" class="input-sm" value="4.1"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">11</td>
+                        <td><textarea  style="width: 98%; height: 40px;" >其它。
+</textarea>
+					</td>
+                        <td><input type="text" class="input-sm" value="4"></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+</tbody>
+</table>
+</div>
+</div>
+		</div>
+	</body>
+
+</html>

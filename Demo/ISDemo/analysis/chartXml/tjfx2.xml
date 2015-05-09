@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="gb2312"?>
+<chart caption="" numberPrefix="" numberSuffix="" showSum="1" outCnvBaseFontSize="12" shownames="1" showvalues="1" xAxisName="业务系统被审计次数统计" rotateXAxisName="0" yAxisName="次数" rotateYAxisName="0">
+		<set label="航空器构型控制" value="32"/>
+		<set label="手册" value="28"/>
+		<set label="飞行运行" value="26"/>
+		<set label="人员训练和合格审定" value="22"/>
+		<set label="航线结构" value="12"/>
+		<set label="飞行休息和执勤时间" value="20"/>
+		<set label="技术管理" value="8"/>
+		<set label="组织管理" value="11"/>
+	<styles>
+		<definition>
+			<style type="font" name="CaptionFont" size="18"  />
+			<style type="font" name="DataLabelsFont" size="12" />
+			<style type="font" name="XAxisNameFont" size="12" />
+			<style type="font" name="YAxisNameFont" size="12" />
+			<style type="font" name="ToolTipFont" size="12" />
+		</definition>
+		<application>
+			<apply toObject="Caption" styles="CaptionFont" />
+			<apply toObject="DataLabels" styles="DataLabelsFont" />
+			<apply toObject="XAxisName" styles="XAxisNameFont" />
+			<apply toObject="YAxisName" styles="YAxisNameFont" />
+			<apply toObject="ToolTip" styles="ToolTipFont" />
+		</application>
+	</styles>
+</chart>
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>综合统计分析</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../includes/DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../includes/FusionCharts/Ajax.js"></script>
+    <script type="text/javascript" src="../includes/FusionCharts/code.js"></script>
+    <script type="text/javascript" src="../includes/FusionCharts/FusionCharts.js"></script>
+    <style type="text/css">
+
+        </style>
+    <script>
+      	$(document).ready(function(){
+		buildFusionChart();
+	});
+	
+	function buildFusionChart(){
+	 var chartHistogram = new FusionCharts("../includes/FusionCharts/Charts/Column3D.swf","chartHistogram","800","470","0", "0"); 
+	 chartHistogram.setDataURL("./chartXml/tjfx1.xml");
+	 chartHistogram.render("chart1");
+        
+     chartHistogram = new FusionCharts("../includes/FusionCharts/Charts/Column3D.swf","chartHistogram","800","470","0", "0"); 
+	 chartHistogram.setDataURL("./chartXml/tjfx2.xml");
+	 chartHistogram.render("chart2");
+        
+     chartHistogram = new FusionCharts("../includes/FusionCharts/Charts/Column3D.swf","chartHistogram","800","470","0", "0"); 
+	 chartHistogram.setDataURL("./chartXml/tjfx3.xml");
+	 chartHistogram.render("chart3");
+        
+     chartHistogram = new FusionCharts("../includes/FusionCharts/Charts/Column3D.swf","chartHistogram","800","470","0", "0"); 
+	 chartHistogram.setDataURL("./chartXml/tjfx4.xml");
+	 chartHistogram.render("chart4");
+        
+     chartHistogram = new FusionCharts("../includes/FusionCharts/Charts/Column3D.swf","chartHistogram","800","470","0", "0"); 
+	 chartHistogram.setDataURL("./chartXml/tjfx5.xml");
+	 chartHistogram.render("chart5");
+        
+     chartHistogram = new FusionCharts("../includes/FusionCharts/Charts/Pie3D.swf","chartHistogram","600","370","0", "0"); 
+	 chartHistogram.setDataURL("./chartXml/tjfx6.xml");
+	 chartHistogram.render("chart6");
+	};  
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div id="tab_div">
+                <!--书签-->
+                <div class="tabbable tabbable-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab_1_1" data-toggle="tab">责任单位被审计次数统计</a></li>
+                        <li><a href="#tab_1_2" data-toggle="tab">业务系统被审计次数统计</a></li>
+                        <li><a href="#tab_1_3" data-toggle="tab">业务子系统被审计次数统计</a></li>
+                        <li><a href="#tab_1_4" data-toggle="tab">业务系统发现问题统计</a></li>
+                        <li><a href="#tab_1_5" data-toggle="tab">业务子系统发现问题统计</a></li>
+                        <li><a href="#tab_1_6" data-toggle="tab">后续行动统计</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_1_1">
+                            <div class="form-inline">
+                                <label>时间范围：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            </div>
+                            <div style="border:1px solid #c3ddf4;border-top:0;background:white;height:480px;" id="chart1"></div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_2">
+                            <div class="form-inline">
+                                <label>时间范围：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            </div>
+                            <div style="border:1px solid #c3ddf4;border-top:0;background:white;height:480px;" id="chart2"></div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_3">
+                            <div class="form-inline">
+                                <label>时间范围：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            </div>
+                            <div style="border:1px solid #c3ddf4;border-top:0;background:white;height:480px;" id="chart3"></div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_4">
+                            <div class="form-inline">
+                                <label>时间范围：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            </div>
+                            <div style="border:1px solid #c3ddf4;border-top:0;background:white;height:480px;" id="chart4"></div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_5">
+                            <div class="form-inline">
+                                <label>时间范围：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            </div>
+                            <div style="border:1px solid #c3ddf4;border-top:0;background:white;height:480px;" id="chart5"></div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_6">
+                            <div class="form-inline">
+                                <label>时间范围：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            </div>
+                            <div style="border:1px solid #c3ddf4;border-top:0;background:white;height:480px;" id="chart6"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--书签-->
+            </div>
+    </div>
+</body>
+</html>

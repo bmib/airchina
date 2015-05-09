@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>安全现状监控</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../includes/DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../includes/FusionCharts/Ajax.js"></script>
+    <script type="text/javascript" src="../includes/FusionCharts/code.js"></script>
+    <script type="text/javascript" src="../includes/FusionCharts/FusionCharts.js"></script>
+    <style type="text/css">
+
+        </style>
+    <script>
+      	$(document).ready(function(){
+		buildFusionChart();
+	});
+	
+	function buildFusionChart(){
+	 var chartHistogram = new FusionCharts("../includes/FusionCharts/Charts/Column2D.swf","chartHistogram","800","470","0", "0"); 
+	 chartHistogram.setDataURL("./chartXml/tjfx7.xml");
+	 chartHistogram.render("chart1");
+	};  
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div id="tab_div">
+                <!--书签-->
+                <div class="tabbable tabbable-custom">
+                    <div class="tab-content">
+                            <div class="form-inline">
+                                <label>专业分类：</label>
+                                <label>
+                                    <select style="width:100px">
+                                            <option selected="selected">全部</option>
+                                            <option>组织管理</option>
+                                            <option>飞行</option>
+                                            <option>机务</option>
+                                            <option>运控</option>
+                                            <option>客舱</option>
+                                            <option>地服</option>
+                                            <option>货运</option>
+                                            <option>保卫</option>
+                                        </select>
+                                </label>
+                                <label>时间范围：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            </div>
+                            <div style="border:1px solid #c3ddf4;border-top:0;background:white;height:480px;" id="chart1"></div>
+                        
+                    </div>
+                </div>
+                <!--书签-->
+            </div>
+    </div>
+</body>
+</html>

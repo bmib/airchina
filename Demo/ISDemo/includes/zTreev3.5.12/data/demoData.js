@@ -30,3 +30,24 @@ var fxNodes =[
 		{id:402, pId:4,name:"安全管理体系" },
 		{id:403, pId:4,name:"与局方的合作关系"} 			   
 ];
+
+var sjdNodes =[
+		{id:9, pId:0,name:"审计单",open:true},
+		{id:5, pId:9, name:"组织管理",open:false},
+		{id:1, pId:9, name:"飞行",open:true},
+		{id:102, pId:1,name:"OP_EPI_1.1.2适当的运行设备" },
+		{id:103, pId:1,name:"OP_EPI_2.1.1手册更新" },
+		{id:104, pId:1,name:"OP_SAI_1.1.2适当的运行设备" },
+		{id:105, pId:1,name:"OP_SAI_2.1.2相关手册内容一致性" },
+		{id:106, pId:1,name:"OP_SOI_8.1.1停机坪监察" },
+		{id:107, pId:1,name:"OP_SOI_8.1.2连续下降最后进近（CDFA）"} ,
+			
+		{id:2, pId:9, name:"机务",open:false},	   
+			
+		{id:3, pId:9, name:"运控",open:false},
+			
+		{id:4, pId:9, name:"客舱",open:false},	
+		{id:6, pId:9, name:"地服",open:false},	
+		{id:7, pId:9, name:"货运",open:false},	
+		{id:8, pId:9, name:"保卫",open:false},		   
+];

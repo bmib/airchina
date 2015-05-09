@@ -45,7 +45,7 @@
 						id: "ad_sjdlx_modify",
 						content: 'url:admin/ad_sjdlx_modify.html',
 						width: 350,
-						height: 400,
+						height: 420,
 						title: '修改审计单类型',
 						button: [{
 							name: '保存',
@@ -63,7 +63,7 @@
 						id: "ad_sjdlx_add",
 						content: 'url:admin/ad_sjdlx_modify.html',
 						width: 350,
-						height: 400,
+						height: 420,
 						title: '新增审计单类型',
 						button: [{
 							name: '保存',
@@ -108,28 +108,23 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="tab_1_1">
                     <div class="form-inline">
-                    <label>要素类别：</label>
-                    <label>
-                        <select class="inputTextS">
-                                <option selected="selected">全部</option>
-                                <option>FSOP普通类</option>
-                                <option>FSOP专项类</option>
-                                <option>组织管理类</option>
-                                <option>飞行类</option>
-                                <option>机务类</option>
-                                <option>运控类</option>
-                                <option>客舱类</option>
-                                <option>地服类</option>
-                                <option>货运类</option>
-                                <option>保卫类</option>
-                            </select>
-                    </label>
                     <label>来源：</label>
                     <label>
                         <select class="inputTextS" style="width:100px">
                                 <option selected="selected">全部</option>
-                                <option>局方</option>
+                                <option>FSOP</option>
                                 <option>自定义</option>
+                                <option>IOSA</option>
+                            </select>
+                    </label>
+                    <label>要素类别：</label>
+                    <label>
+                        <select class="inputTextS" style="width:100px">
+                                <option selected="selected">全部</option>
+                                <option>普通类</option>
+                                <option>专项类</option>
+                                <option>国航类</option>
+                                <option>IOSA类</option>
                             </select>
                     </label>
                     <button type="button" class="btn btn-default"
@@ -153,20 +148,20 @@
                         <th>
                             <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
                         </th>
+                        <th>来源</th>
+                        <th>要素类别</th>
                         <th>审计单类型编码</th>
                         <th>审计单类型名称</th>
-                        <th>要素类别</th>
-                        <th>来源</th>
                         <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><input type="checkbox" id="sjd_1" disabled></td>
+                        <td>FSOP</td>
+                        <td>普通类</td>
                         <td>SAI</td>
                         <td>安全属性审计单</td>
-                        <td>FSOP普通类</td>
-                        <td>局方</td>
                         <td>
                             <a name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
@@ -174,10 +169,10 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" id="sjd_2" disabled></td>
+                        <td>FSOP</td>
+                        <td>普通类</td>
                         <td>EPI</td>
                         <td>绩效审计单</td>
-                        <td>FSOP普通类</td>
-                        <td>局方</td>
                         <td>
                             <a name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
@@ -185,10 +180,10 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" id="sjd_3" disabled> </td>
+                        <td>FSOP</td>
+                        <td>专项类</td>
                         <td>ARI</td>
                         <td>维修_停机坪监察</td>
-                        <td>FSOP专项类</td>
-                        <td>局方</td>
                         <td>
                             <a name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
@@ -196,10 +191,10 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" id="sjd_4" disabled></td>
+                        <td>FSOP</td>
+                        <td>专项类</td>
                         <td>ORI</td>
                         <td>飞行_停机坪监察</td>
-                        <td>FSOP专项类</td>
-                        <td>局方</td>
                         <td>
                             <a name="modify">修改</a>
                             <!--a onclick="changeState(this);">启用</a-->
@@ -207,10 +202,10 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="checkboxinlist" id="sjd_5"></td>
-                        <td>ZZL</td>
-                        <td>组织管理_停机坪监察</td>
-                        <td>组织管理类</td>
                         <td>自定义</td>
+                        <td>国航类</td>
+                        <td>AQZZGL</td>
+                        <td>安全组织管理</td>
                         <td>
                             <a name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
@@ -218,10 +213,43 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
-                        <td>FXL</td>
-                        <td>飞行_停机坪监察</td>
-                        <td>飞行类</td>
                         <td>自定义</td>
+                        <td>国航类</td>
+                        <td>SMS</td>
+                        <td>SMS9859</td>
+                        <td>
+                            <a name="modify">修改</a>
+                            <!--a onclick="changeState(this);">停用</a-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
+                        <td>CAAC</td>
+                        <td>CAAC类</td>
+                        <td>AQSJ</td>
+                        <td>安全审计</td>
+                        <td>
+                            <a name="modify">修改</a>
+                            <!--a onclick="changeState(this);">停用</a-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
+                        <td>IOSA</td>
+                        <td>IOSA类</td>
+                        <td>ORG</td>
+                        <td>组织和管理体系</td>
+                        <td>
+                            <a name="modify">修改</a>
+                            <!--a onclick="changeState(this);">停用</a-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
+                        <td>IOSA</td>
+                        <td>IOSA类</td>
+                        <td>FLT</td>
+                        <td>飞行运行</td>
                         <td>
                             <a name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->

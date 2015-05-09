@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>安全趋势监控</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css" type="text/css" />
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../includes/DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../includes/FusionCharts/Ajax.js"></script>
+    <script type="text/javascript" src="../includes/FusionCharts/code.js"></script>
+    <script type="text/javascript" src="../includes/FusionCharts/FusionCharts.js"></script>
+		<script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.min.js"></script>
+        <script type="text/javascript" src="../includes/zTreev3.5.12/data/demoData.js"></script>
+    <style type="text/css">
+
+        </style>
+    <script>
+	var zTree1;
+	var setting = {
+		view: {
+			dblClickExpand: false,
+			showLine: true,
+			selectedMulti: false
+		},
+		data: {
+			simpleData: {
+				enable:true,
+				idKey: "id",
+				pIdKey: "pId",
+				rootPId: ""
+			}
+		}
+	};
+      	$(document).ready(function(){
+        var t = $("#tree");
+		t = $.fn.zTree.init(t, setting, sjdNodes);
+		buildFusionChart();
+	});
+	
+	function buildFusionChart(){
+	 var chartHistogram = new FusionCharts("../includes/FusionCharts/Charts/Line.swf","chartHistogram","800","470","0", "0"); 
+	 chartHistogram.setDataURL("./chartXml/tjfx8.xml");
+	 chartHistogram.render("chart1");
+	};  
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div id="tab_div">
+                <!--书签-->
+                <div class="tabbable tabbable-custom">
+                    <div class="tab-content">
+                            <div class="form-inline">
+                                <label>审计单：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px"  data-toggle="modal" data-target="#myModal-1"/>
+                                </label>
+                                <label>时间范围：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            </div>
+                            <div style="border:1px solid #c3ddf4;border-top:0;background:white;height:480px;" id="chart1"></div>
+                        
+                    </div>
+                </div>
+                <!--书签-->
+            </div>
+    </div>
+</body>
+    <!--弹出窗口-大 开始-->
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="myModalLabel">
+                    选择审计单</h4>
+            </div>
+            <div class="modal-body">
+            <div style="overflow-y:auto;height:500px;">
+			<ul id="tree" class="ztree" style=" overflow:auto;"></ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口- 大 结束-->
+</html>

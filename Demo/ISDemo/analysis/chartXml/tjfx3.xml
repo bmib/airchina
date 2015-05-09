@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="gb2312"?>
+<chart caption="" numberPrefix="" numberSuffix="" showSum="1" outCnvBaseFontSize="12" shownames="1" showvalues="1" xAxisName="业务子系统被审计次数统计" rotateXAxisName="0" yAxisName="次数" rotateYAxisName="0">
+		<set label="航空器" value="28"/>
+		<set label="记录和报告" value="35"/>
+		<set label="组织" value="33"/>
+		<set label="手册要求" value="25"/>
+		<set label="大纲和程序" value="10"/>
+		<set label="签派和放行" value="22"/>
+		<set label="维修人员合格审定" value="33"/>
+		<set label="训练大纲" value="10"/>
+		<set label="机组和签派人员合格审定" value="8"/>
+		<set label="机队和维修人员合格审定" value="14"/>
+		<set label="经批准的航线和区域" value="21"/>
+		<set label="航空人员和机组人员限制" value="16"/>
+		<set label="维修人员" value="5"/>
+		<set label="关键人员" value="29"/>
+		<set label="其他大纲" value="16"/>
+	<styles>
+		<definition>
+			<style type="font" name="CaptionFont" size="18"  />
+			<style type="font" name="DataLabelsFont" size="12" />
+			<style type="font" name="XAxisNameFont" size="12" />
+			<style type="font" name="YAxisNameFont" size="12" />
+			<style type="font" name="ToolTipFont" size="12" />
+		</definition>
+		<application>
+			<apply toObject="Caption" styles="CaptionFont" />
+			<apply toObject="DataLabels" styles="DataLabelsFont" />
+			<apply toObject="XAxisName" styles="XAxisNameFont" />
+			<apply toObject="YAxisName" styles="YAxisNameFont" />
+			<apply toObject="ToolTip" styles="ToolTipFont" />
+		</application>
+	</styles>
+</chart>
+

@@ -7,7 +7,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-    <title>专业系数管理</title>
+    <title>问题分类管理</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" /><link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,15 +24,15 @@
         $(document).ready(function () {
             $("a[name='modify']").each(function() {
 					$(this).dialog({
-						id: "ad_sjys_modify",
-						content: 'url:admin/ad_zyqz_modify.html',
-						width: 250,
-						height: 300,
-						title: '修改专业系数',
+						id: "ad_wtfl_modify",
+						content: 'url:admin/ad_wtfl_modify.html',
+						width: 600,
+						height: 400,
+						title: '修改问题分类',
 						button: [{
 							name: '保存',
 							callback: function() {
-								$.jBox.tip('专业系数修改成功！');
+								$.jBox.tip('问题分类修改成功！');
 							},
 							focus: true
 						}, {
@@ -49,110 +49,70 @@
         <div class="portlet-body">
             <div class="form-inline alert alert-info">
                 <label>
-                    被审计单位专业系数列表</label>
+                    审计单章节列表</label>
             </div>
             <div class="tabbable tabbable-custom">
                 <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
             <table class="table table-hover">
                 <thead>
                     <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
-                        <th>被审计单位</th>
-                        <th>组织管理</th>
-                        <th>飞行</th>
-                        <th>机务</th>
-                        <th>运控</th>
-                        <th>客舱</th>
-                        <th>地服</th>
-                        <th>货运</th>
-                        <th>保卫</th>
+                        <th>审计单类型编码</th>
+                        <th>审计单类型名称</th>
+                        <th>章节序号</th>
+                        <th>章节名称</th>
                         <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>国货航</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
+                        <td>SAI</td>
+                        <td>安全属性审计单</td>
+                        <td>1</td>
+                        <td>程序</td>
                         <td><a name="modify">修改</a></td>
                     </tr>
                     <tr>
-                        <td>深圳航空</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td><a name="modify">修改</a></td>
-                    </tr>
-                    <tr>
-                        <td>山东航空</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td>3</td>
+                        <td>SAI</td>
+                        <td>安全属性审计单</td>
                         <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>4</td>
+                        <td>控制</td>
                         <td><a name="modify">修改</a></td>
                     </tr>
                     <tr>
-                        <td>北京航空</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>4</td>
+                        <td>SAI</td>
+                        <td>安全属性审计单</td>
                         <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
+                        <td>流程测量</td>
                         <td><a name="modify">修改</a></td>
                     </tr>
                     <tr>
-                        <td>大连航空</td>
-                        <td>5</td>
+                        <td>SAI</td>
+                        <td>安全属性审计单</td>
                         <td>4</td>
-                        <td>3</td>
+                        <td>接口</td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td>SAI</td>
+                        <td>安全属性审计单</td>
+                        <td>5</td>
+                        <td>责任和权力</td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <!--tr>
+                        <td>EPI</td>
+                        <td>绩效审计单</td>
+                        <td>1</td>
+                        <td>绩效检查项</td>
+                        <td><a name="modify">修改</a></td>
+                    </tr>
+                    <tr>
+                        <td>EPI</td>
+                        <td>绩效审计单</td>
                         <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>4</td>
+                        <td>管理责任和权力检查项</td>
                         <td><a name="modify">修改</a></td>
-                    </tr>
-                    <tr>
-                        <td>澳门航空</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td><a name="modify">修改</a></td>
-                    </tr>
-                    <tr>
-                        <td>内蒙航空</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>4</td>
-                        <td><a name="modify">修改</a></td>
-                    </tr>
+                    </tr-->
                 </tbody>
             </table></div></div>
         </div>

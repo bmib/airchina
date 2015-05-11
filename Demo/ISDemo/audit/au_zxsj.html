@@ -44,6 +44,7 @@
                     <input type="checkbox" checked="checked" />评估中</label>
                 <label class="checkbox">
                     <input type="checkbox" />已完成</label>
+                <label><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-1">新建专项审计</button></label>
             </div>
             <div style="overflow-y: scroll;">
                 <table class="table table-bordered table-hover">
@@ -85,7 +86,7 @@
                                 齐龙
                             </td>
                             <td style="width: 150px;">
-                                飞行：马峥；运控：刘静；机务：张玲
+                                马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
                             <td style="width: 50px;">
                                 构型中
@@ -105,7 +106,7 @@
                                 齐龙
                             </td>
                             <td style="width: 150px;">
-                                飞行：马峥；运控：刘静；机务：张玲
+                                马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
                             <td style="width: 50px;">
                                 数据收集中
@@ -125,7 +126,7 @@
                                 齐龙
                             </td>
                             <td style="width: 150px;">
-                                飞行：马峥；运控：刘静；机务：张玲
+                                马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
                             <td style="width: 50px;">
                                 评估中
@@ -145,7 +146,7 @@
                                 齐龙
                             </td>
                             <td style="width: 150px;">
-                                飞行：马峥；运控：刘静；机务：张玲
+                                马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
                             <td style="width: 50px;">
                                 已完成
@@ -165,7 +166,7 @@
                                 齐龙
                             </td>
                             <td style="width: 150px;">
-                                飞行：马峥；运控：刘静；机务：张玲
+                                马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
                             <td style="width: 50px;">
                                 已完成
@@ -185,7 +186,7 @@
                                 齐龙
                             </td>
                             <td style="width: 150px;">
-                                飞行：马峥；运控：刘静；机务：张玲
+                                马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
                             <td style="width: 50px;">
                                 已完成
@@ -205,7 +206,7 @@
                                 齐龙
                             </td>
                             <td style="width: 150px;">
-                                飞行：马峥；运控：刘静；机务：张玲
+                                马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
                             <td style="width: 50px;">
                                 已完成
@@ -225,7 +226,7 @@
                                 齐龙
                             </td>
                             <td style="width: 150px;">
-                                飞行：马峥；运控：刘静；机务：张玲
+                                马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
                             <td style="width: 50px;">
                                 已完成
@@ -241,3 +242,187 @@
     </div>
 </body>
 </html>
+<!--弹出窗口-大 开始-->
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
+    <div class="modal-dialog small">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H6">
+                    修改计划</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">
+                        被审计单位</label>
+                    <div class="controls">
+                        <select>
+                            <option>深圳航空</option>
+                            <option>北京航空</option>
+                            <option>澳门航空</option>
+                            <option>内蒙航空</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Text11">
+                        审计日期</label>
+                    <div class="controls">
+                        <input type="text" id="Text10" placeholder="" value="2015年4月28日" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Text1">
+                        审计组长</label>
+                    <div class="controls">
+                        <label class="checkbox inline">
+                            <input type="checkbox" checked="checked" />
+                            王岩</label><label class="checkbox inline">
+                                <input type="checkbox" />
+                                齐龙</label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Text1">
+                        审计专员</label>
+                    <div class="controls">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>
+                                        飞行
+                                    </td>
+                                    <td>
+                                        运控
+                                    </td>
+                                    <td>
+                                        机务
+                                    </td>
+                                    <td>
+                                        货运
+                                    </td>
+                                    <td>
+                                        客舱
+                                    </td>
+                                    <td>
+                                        地服
+                                    </td>
+                                    <td>
+                                        保卫
+                                    </td>
+                                    <td>
+                                        组织管理
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口- 大 结束-->

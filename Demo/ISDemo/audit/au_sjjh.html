@@ -60,7 +60,7 @@
             background-position: left top;
             background-repeat: no-repeat;
             background-color: #DDD;
-            color:#2486FF;
+            color: #2486FF;
         }
         .tian
         {
@@ -68,7 +68,7 @@
             background-position: left top;
             background-repeat: no-repeat;
             background-color: #DDD;
-            color:#FF9600;
+            color: #FF9600;
         }
         .shen
         {
@@ -76,7 +76,7 @@
             background-position: left top;
             background-repeat: no-repeat;
             background-color: #DDD;
-            color:#FF0000;
+            color: #FF0000;
         }
         .ping
         {
@@ -84,7 +84,7 @@
             background-position: left top;
             background-repeat: no-repeat;
             background-color: #DDD;
-            color:#C55FFF;
+            color: #C55FFF;
         }
         .wan
         {
@@ -92,7 +92,7 @@
             background-position: left top;
             background-repeat: no-repeat;
             background-color: #DDD;
-            color:#8FD400;
+            color: #8FD400;
         }
         .zhuan
         {
@@ -100,7 +100,7 @@
             background-position: left top;
             background-repeat: no-repeat;
             background-color: #DDD;
-            color:#333;
+            color: #333;
         }
         .zhuan-ok
         {
@@ -108,7 +108,7 @@
             background-position: left top;
             background-repeat: no-repeat;
             background-color: #DDD;
-            color:#333;
+            color: #333;
         }
         .yan
         {
@@ -116,7 +116,7 @@
             background-position: left top;
             background-repeat: no-repeat;
             background-color: #F8F8F8;
-            color:#666;
+            color: #666;
         }
         .plantd span
         {
@@ -143,11 +143,11 @@
                     <img style="margin-left: 10px;" onclick="addyear(1);" src="../images/20150417032611750_easyicon_net_64-2.png"
                         width="12" />
                     <span style="margin: 200px;">
-                        <img src="../images/gou.png" width="20" />构型 &nbsp; &nbsp;
-                        <img src="../images/tian.png" width="20" />预填 &nbsp; &nbsp;
-                        <img src="../images/shen.png" width="20" />审计 &nbsp; &nbsp;
-                        <img src="../images/ping.png" width="20" />评估 &nbsp; &nbsp;
-                        <img src="../images/wan.png" width="20" />完成 &nbsp; &nbsp;
+                        <img src="../images/gou.png" width="20" />构型中 &nbsp; &nbsp;
+                        <img src="../images/tian.png" width="20" />预填中 &nbsp; &nbsp;
+                        <img src="../images/shen.png" width="20" />审计中 &nbsp; &nbsp;
+                        <img src="../images/ping.png" width="20" />评估中 &nbsp; &nbsp;
+                        <img src="../images/wan.png" width="20" />完成审计 &nbsp; &nbsp;
                         <img src="../images/zhuan.png" width="20" />专项(未完成) &nbsp; &nbsp;
                         <img src="../images/zhuan-ok.png" width="20" />专项(完成) &nbsp; &nbsp; </span>
                 </div>
@@ -252,8 +252,9 @@
                                 <td width="6%" class="center">
                                     1
                                 </td>
-                                <td width="7%" class="plantd wan" id="td1" data-toggle="modal" data-target="#myModal-3">
-                                    <span>创建：齐龙</span>
+                                <td width="7%" class="plantd wan" id="td1" data-toggle="modal" data-target="#myModal-3"
+                                    title="完成审计">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td width="7%" class="plantd" id="td2" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -287,15 +288,15 @@
                                 </td>
                                 <td class="plantd" id="td13" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd yan" id="td14" data-toggle="modal" data-target="#myModal-5">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd yan" id="td14" data-toggle="modal" data-target="#myModal-5" title="此计划延期至9月份">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td15" data-toggle="modal" data-target="#myModal-1">
                                 </td>
                                 <td class="plantd" id="td16" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd zhuan" id="td17" data-toggle="modal" data-target="#myModal-4">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd zhuan" id="td17" data-toggle="modal" data-target="#myModal-4" title="专项审计中">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td18" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -303,8 +304,8 @@
                                 </td>
                                 <td class="plantd" id="td20" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd gou" id="td21" data-toggle="modal" data-target="#myModal-2">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd gou" id="td21" data-toggle="modal" data-target="#myModal-2" title="系统构型中">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td22" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -320,13 +321,14 @@
                                 <td class="center">
                                     2
                                 </td>
-                                <td class="plantd zhuan-ok" id="td25" data-toggle="modal" data-target="#myModal-4">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd zhuan-ok" id="td25" data-toggle="modal" data-target="#myModal-4"
+                                    title="完成专项审计">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td26" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd ping" id="td27" data-toggle="modal" data-target="#myModal-3">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd ping" id="td27" data-toggle="modal" data-target="#myModal-3" title="分析评估中">
+                                    <!-- <span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td28" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -358,13 +360,13 @@
                                 </td>
                                 <td class="plantd" id="td38" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd yan" id="td39" data-toggle="modal" data-target="#myModal-5">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd yan" id="td39" data-toggle="modal" data-target="#myModal-5" title="此计划延期至5月份">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td40" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd shen" id="td41" data-toggle="modal" data-target="#myModal-2">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd shen" id="td41" data-toggle="modal" data-target="#myModal-2" title="审计中">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td42" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -390,8 +392,8 @@
                                 </td>
                                 <td class="plantd" id="td49" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd zhuan" id="td50" data-toggle="modal" data-target="#myModal-4">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd zhuan" id="td50" data-toggle="modal" data-target="#myModal-4" title="专项审计中">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td51" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -399,8 +401,8 @@
                                 </td>
                                 <td class="plantd" id="td53" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd tian" id="td54" data-toggle="modal" data-target="#myModal-2">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd tian" id="td54" data-toggle="modal" data-target="#myModal-2" title="构型预填中">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td55" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -436,8 +438,8 @@
                                 </td>
                                 <td class="plantd" id="td67" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd tian" id="td68" data-toggle="modal" data-target="#myModal-2">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd tian" id="td68" data-toggle="modal" data-target="#myModal-2" title="构型预填中">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td69" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -461,8 +463,8 @@
                                 </td>
                                 <td class="plantd" id="td75" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd zhuan" id="td76" data-toggle="modal" data-target="#myModal-4">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd zhuan" id="td76" data-toggle="modal" data-target="#myModal-4" title="专项审计中">
+                                    <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td77" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -476,8 +478,8 @@
                                 </td>
                                 <td class="plantd" id="td82" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd gou" id="td83" data-toggle="modal" data-target="#myModal-2">
-                                    <span>创建：齐龙</span>
+                                <td class="plantd gou" id="td83" data-toggle="modal" data-target="#myModal-2" title="系统构型中">
+                                    <!-- <span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td84" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -487,29 +489,34 @@
                 </div>
             </div>
             <div id="staffDiv" style="display: none;">
+                <a class="btn" data-toggle="modal" data-target="#myModal-7">新增计划</a>&nbsp;&nbsp;<a
+                    class="btn">导出Excel</a>
                 <table class=" table table-bordered table-hover">
                     <thead>
                         <tr>
                             <th width="10%">
                                 被审计单位
                             </th>
-                           <th width="10%">
+                            <th width="10%">
                                 审计日期
                             </th>
                             <th width="10%">
                                 审计类别
                             </th>
-                           <th width="10%">
+                            <th width="10%">
                                 审计组长
                             </th>
                             <th>
                                 审计专员
                             </th>
-                           <th width="10%">
+                            <th width="10%">
                                 创建人
                             </th>
-                          <th width="10%">
+                            <th width="10%">
                                 创建日期
+                            </th>
+                            <th width="10%">
+                                操作
                             </th>
                         </tr>
                     </thead>
@@ -528,13 +535,17 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静，马峥，张玲
+                                刘静(飞行)，马峥(运控)，张玲(机务)
                             </td>
                             <td>
                                 王岩
                             </td>
                             <td>
                                 2015-01-06
+                            </td>
+                            <td>
+                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn">删除</a>
                             </td>
                         </tr>
                         <tr>
@@ -551,7 +562,7 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静，马峥，张玲
+                                刘静(飞行)，马峥(运控)，张玲(机务)
                             </td>
                             <td>
                                 王岩
@@ -559,28 +570,7 @@
                             <td>
                                 2015-04-16
                             </td>
-                        </tr>
-                        <tr>
                             <td>
-                                国货航
-                            </td>
-                            <td>
-                                2015年4月
-                            </td>
-                            <td>
-                                普通审计
-                            </td>
-                            <td>
-                                齐龙
-                            </td>
-                            <td>
-                                刘静，马峥，张玲
-                            </td>
-                            <td>
-                                王岩
-                            </td>
-                            <td>
-                                2015-01-06
                             </td>
                         </tr>
                         <tr>
@@ -597,13 +587,17 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静，马峥，张玲
+                                刘静(飞行)，马峥(运控)，张玲(机务)
                             </td>
                             <td>
                                 王岩
                             </td>
                             <td>
                                 2015-01-06
+                            </td>
+                            <td>
+                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn">删除</a>
                             </td>
                         </tr>
                         <tr>
@@ -620,13 +614,17 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静，马峥，张玲
+                                刘静(飞行)，马峥(运控)，张玲(机务)
                             </td>
                             <td>
                                 王岩
                             </td>
                             <td>
                                 2015-01-06
+                            </td>
+                            <td>
+                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn">删除</a>
                             </td>
                         </tr>
                         <tr>
@@ -643,13 +641,17 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静，马峥，张玲
+                                刘静(飞行)，马峥(运控)，张玲(机务)
                             </td>
                             <td>
                                 王岩
                             </td>
                             <td>
                                 2015-01-06
+                            </td>
+                            <td>
+                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn">删除</a>
                             </td>
                         </tr>
                         <tr>
@@ -666,13 +668,44 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静，马峥，张玲
+                                刘静(飞行)，马峥(运控)，张玲(机务)
                             </td>
                             <td>
                                 王岩
                             </td>
                             <td>
                                 2015-01-06
+                            </td>
+                            <td>
+                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                国货航
+                            </td>
+                            <td>
+                                2015年4月
+                            </td>
+                            <td>
+                                普通审计
+                            </td>
+                            <td>
+                                齐龙
+                            </td>
+                            <td>
+                                刘静(飞行)，马峥(运控)，张玲(机务)
+                            </td>
+                            <td>
+                                王岩
+                            </td>
+                            <td>
+                                2015-01-06
+                            </td>
+                            <td>
+                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn">删除</a>
                             </td>
                         </tr>
                     </tbody>
@@ -689,7 +722,6 @@
                     </ul>
                 </div>
                 <div class="modal-footer center">
-                    <a class="btn">导出Excel</a>
                 </div>
             </div>
         </div>
@@ -1599,6 +1631,374 @@
                 </form>
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口- 大 结束-->
+<!--弹出窗口-大 开始-->
+<div id="myModal-7" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
+    <div class="modal-dialog small">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H5">
+                    新增计划</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">
+                        被审计单位</label>
+                    <div class="controls">
+                        <select>
+                            <option>深圳航空</option>
+                            <option>北京航空</option>
+                            <option>澳门航空</option>
+                            <option>内蒙航空</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Text11">
+                        审计日期</label>
+                    <div class="controls">
+                        <input type="text" id="Text11" placeholder="" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Text1">
+                        审计组长</label>
+                    <div class="controls">
+                        <label class="checkbox inline">
+                            <input type="checkbox" />
+                            王岩</label><label class="checkbox inline">
+                                <input type="checkbox" />
+                                齐龙</label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Text1">
+                        审计专员</label>
+                    <div class="controls">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>
+                                        飞行
+                                    </td>
+                                    <td>
+                                        运控
+                                    </td>
+                                    <td>
+                                        机务
+                                    </td>
+                                    <td>
+                                        货运
+                                    </td>
+                                    <td>
+                                        客舱
+                                    </td>
+                                    <td>
+                                        地服
+                                    </td>
+                                    <td>
+                                        保卫
+                                    </td>
+                                    <td>
+                                        组织管理
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口- 大 结束-->
+<!--弹出窗口-大 开始-->
+<div id="myModal-8" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
+    <div class="modal-dialog small">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H6">
+                    修改计划</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">
+                        被审计单位</label>
+                    <div class="controls">
+                        <select>
+                            <option>深圳航空</option>
+                            <option>北京航空</option>
+                            <option>澳门航空</option>
+                            <option>内蒙航空</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Text11">
+                        审计日期</label>
+                    <div class="controls">
+                        <input type="text" id="Text10" placeholder="" value="2015年4月" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Text1">
+                        审计组长</label>
+                    <div class="controls">
+                        <label class="checkbox inline">
+                            <input type="checkbox" checked="checked" />
+                            王岩</label><label class="checkbox inline">
+                                <input type="checkbox" />
+                                齐龙</label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Text1">
+                        审计专员</label>
+                    <div class="controls">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>
+                                        飞行
+                                    </td>
+                                    <td>
+                                        运控
+                                    </td>
+                                    <td>
+                                        机务
+                                    </td>
+                                    <td>
+                                        货运
+                                    </td>
+                                    <td>
+                                        客舱
+                                    </td>
+                                    <td>
+                                        地服
+                                    </td>
+                                    <td>
+                                        保卫
+                                    </td>
+                                    <td>
+                                        组织管理
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                    <td>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            刘静</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            马峥</label>
+                                        <label class=" checkbox">
+                                            <input type="checkbox" checked="checked" />
+                                            张玲</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn" data-dismiss="modal">
+                    保存</button>
                 <button type="button" class="btn" data-dismiss="modal">
                     关闭</button>
             </div>

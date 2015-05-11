@@ -57,65 +57,65 @@
         .gou
         {
             background-image: url('../images/gou.png');
-            background-position: left top;
+            background-position:center;
             background-repeat: no-repeat;
-            background-color: #DDD;
+            background-color: #d7ebff;
             color: #2486FF;
         }
         .tian
         {
             background-image: url('../images/tian.png');
-            background-position: left top;
+            background-position: center;
             background-repeat: no-repeat;
-            background-color: #DDD;
+            background-color: #d7ebff;
             color: #FF9600;
         }
         .shen
         {
             background-image: url('../images/shen.png');
-            background-position: left top;
+            background-position: center;
             background-repeat: no-repeat;
-            background-color: #DDD;
+            background-color: #d7ebff;
             color: #FF0000;
         }
         .ping
         {
             background-image: url('../images/ping.png');
-            background-position: left top;
+            background-position: center;
             background-repeat: no-repeat;
-            background-color: #DDD;
+            background-color: #d7ebff;
             color: #C55FFF;
         }
         .wan
         {
             background-image: url('../images/wan.png');
-            background-position: left top;
+            background-position: center;
             background-repeat: no-repeat;
-            background-color: #DDD;
+            background-color: #d7ebff;
             color: #8FD400;
         }
         .zhuan
         {
             background-image: url('../images/zhuan.png');
-            background-position: left top;
+            background-position: center;
             background-repeat: no-repeat;
-            background-color: #DDD;
+            background-color: #d7ebff;
             color: #333;
         }
         .zhuan-ok
         {
             background-image: url('../images/zhuan-ok.png');
-            background-position: left top;
+            background-position: center;
             background-repeat: no-repeat;
-            background-color: #DDD;
+            background-color: #d7ebff;
             color: #333;
         }
         .yan
         {
             background-image: url('../images/yan.png');
-            background-position: left top;
+            background-position: center;
             background-repeat: no-repeat;
-            background-color: #F8F8F8;
+            background-color: #f8f8f8;
             color: #666;
         }
         .plantd span
@@ -135,21 +135,21 @@
                     <input type="radio" class="planviewradio" onclick="switchview('2');" value="2" name="planviewradio" />&nbsp;&nbsp;列表视图</label>
             </div>
             <div id="calanderDiv">
-                <div class="year" class=" form-inline">
+                <div class="year form-inline alert alert-info" style="margin-bottom:10px;">
                     审计年份：
                     <img onclick="addyear(-1);" style="margin-right: 10px;" src="../images/20150417032611750_easyicon_net_64.png"
                         width="12" />
                     <span id="yearspan">2015</span>年
                     <img style="margin-left: 10px;" onclick="addyear(1);" src="../images/20150417032611750_easyicon_net_64-2.png"
                         width="12" />
-                    <span style="margin: 200px;">
-                        <img src="../images/gou.png" width="20" />构型中 &nbsp; &nbsp;
-                        <img src="../images/tian.png" width="20" />预填中 &nbsp; &nbsp;
-                        <img src="../images/shen.png" width="20" />审计中 &nbsp; &nbsp;
-                        <img src="../images/ping.png" width="20" />评估中 &nbsp; &nbsp;
-                        <img src="../images/wan.png" width="20" />完成审计 &nbsp; &nbsp;
-                        <img src="../images/zhuan.png" width="20" />专项(未完成) &nbsp; &nbsp;
-                        <img src="../images/zhuan-ok.png" width="20" />专项(完成) &nbsp; &nbsp; </span>
+                    <span style="margin:20px;">
+                        <!--<img src="../images/gou.png" width="30" />构型中 &nbsp; &nbsp;
+                        <img src="../images/tian.png" width="30" />预填中 &nbsp; &nbsp;
+                        <img src="../images/shen.png" width="30" />审计中 &nbsp; &nbsp;
+                        <img src="../images/ping.png" width="30" />评估中 &nbsp; &nbsp;-->
+                        <img src="../images/gou.png" width="20" /> 普通审计计划 &nbsp; &nbsp;
+                        <img src="../images/yan.png" width="20" /> 审计计划延期&nbsp; &nbsp;
+                        <img src="../images/zhuan.png" width="20" /> 专项审计 &nbsp; &nbsp; </span>
                 </div>
                 <div class="tableContainer">
                     <table class="table table-bordered">
@@ -253,7 +253,7 @@
                                     1
                                 </td>
                                 <td width="7%" class="plantd wan" id="td1" data-toggle="modal" data-target="#myModal-3"
-                                    title="完成审计">
+                                    title="创建人：齐龙，状态：完成审计">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td width="7%" class="plantd" id="td2" data-toggle="modal" data-target="#myModal-1">
@@ -288,14 +288,14 @@
                                 </td>
                                 <td class="plantd" id="td13" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd yan" id="td14" data-toggle="modal" data-target="#myModal-5" title="此计划延期至9月份">
+                                <td class="plantd yan" id="td14" data-toggle="modal" data-target="#myModal-5" title="创建人：齐龙，状态：此计划延期至9月份">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td15" data-toggle="modal" data-target="#myModal-1">
                                 </td>
                                 <td class="plantd" id="td16" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd zhuan" id="td17" data-toggle="modal" data-target="#myModal-4" title="专项审计中">
+                                <td class="plantd zhuan" id="td17" data-toggle="modal" data-target="#myModal-4" title="创建人：齐龙，状态：专项审计中">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td18" data-toggle="modal" data-target="#myModal-1">
@@ -304,7 +304,7 @@
                                 </td>
                                 <td class="plantd" id="td20" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd gou" id="td21" data-toggle="modal" data-target="#myModal-2" title="系统构型中">
+                                <td class="plantd gou" id="td21" data-toggle="modal" data-target="#myModal-2" title="创建人：齐龙，状态：系统构型中">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td22" data-toggle="modal" data-target="#myModal-1">
@@ -322,12 +322,12 @@
                                     2
                                 </td>
                                 <td class="plantd zhuan-ok" id="td25" data-toggle="modal" data-target="#myModal-4"
-                                    title="完成专项审计">
+                                    title="创建人：齐龙，状态：完成专项审计">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td26" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd ping" id="td27" data-toggle="modal" data-target="#myModal-3" title="分析评估中">
+                                <td class="plantd ping" id="td27" data-toggle="modal" data-target="#myModal-3" title="创建人：齐龙，状态：分析评估中">
                                     <!-- <span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td28" data-toggle="modal" data-target="#myModal-1">
@@ -360,12 +360,12 @@
                                 </td>
                                 <td class="plantd" id="td38" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd yan" id="td39" data-toggle="modal" data-target="#myModal-5" title="此计划延期至5月份">
+                                <td class="plantd yan" id="td39" data-toggle="modal" data-target="#myModal-5" title="创建人：齐龙，状态：此计划延期至5月份">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td40" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd shen" id="td41" data-toggle="modal" data-target="#myModal-2" title="审计中">
+                                <td class="plantd shen" id="td41" data-toggle="modal" data-target="#myModal-2" title="创建人：齐龙，状态：审计中">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td42" data-toggle="modal" data-target="#myModal-1">
@@ -392,7 +392,7 @@
                                 </td>
                                 <td class="plantd" id="td49" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd zhuan" id="td50" data-toggle="modal" data-target="#myModal-4" title="专项审计中">
+                                <td class="plantd zhuan" id="td50" data-toggle="modal" data-target="#myModal-4" title="创建人：齐龙，状态：专项审计中">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td51" data-toggle="modal" data-target="#myModal-1">
@@ -401,7 +401,7 @@
                                 </td>
                                 <td class="plantd" id="td53" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd tian" id="td54" data-toggle="modal" data-target="#myModal-2" title="构型预填中">
+                                <td class="plantd tian" id="td54" data-toggle="modal" data-target="#myModal-2" title="创建人：齐龙，状态：构型预填中">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td55" data-toggle="modal" data-target="#myModal-1">
@@ -438,7 +438,7 @@
                                 </td>
                                 <td class="plantd" id="td67" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd tian" id="td68" data-toggle="modal" data-target="#myModal-2" title="构型预填中">
+                                <td class="plantd tian" id="td68" data-toggle="modal" data-target="#myModal-2" title="创建人：齐龙，状态：构型预填中">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td69" data-toggle="modal" data-target="#myModal-1">
@@ -463,7 +463,7 @@
                                 </td>
                                 <td class="plantd" id="td75" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd zhuan" id="td76" data-toggle="modal" data-target="#myModal-4" title="专项审计中">
+                                <td class="plantd zhuan" id="td76" data-toggle="modal" data-target="#myModal-4" title="创建人：齐龙，状态：专项审计中">
                                     <!--<span>创建：齐龙</span>-->
                                 </td>
                                 <td class="plantd" id="td77" data-toggle="modal" data-target="#myModal-1">
@@ -478,8 +478,174 @@
                                 </td>
                                 <td class="plantd" id="td82" data-toggle="modal" data-target="#myModal-1">
                                 </td>
-                                <td class="plantd gou" id="td83" data-toggle="modal" data-target="#myModal-2" title="系统构型中">
+                                <td class="plantd gou" id="td83" data-toggle="modal" data-target="#myModal-2" title="创建人：齐龙，状态：系统构型中">
                                     <!-- <span>创建：齐龙</span>-->
+                                </td>
+                                <td class="plantd" id="td84" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center">
+                                    --
+                                </td>
+                                <td class="center">
+                                    --
+                                </td>
+                                <td class="plantd" id="td73" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td74" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td75" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd " id="td76" data-toggle="modal" data-target="#myModal-1">
+                             
+                                </td>
+                                <td class="plantd" id="td77" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td78" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td79" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td80" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td81" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td82" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td83" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td84" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center">
+                                    --
+                                </td>
+                                <td class="center">
+                                    --
+                                </td>
+                                <td class="plantd" id="td73" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td74" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td75" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd " id="td76" data-toggle="modal" data-target="#myModal-1">
+                             
+                                </td>
+                                <td class="plantd" id="td77" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td78" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td79" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td80" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td81" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td82" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td83" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td84" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center">
+                                    --
+                                </td>
+                                <td class="center">
+                                    --
+                                </td>
+                                <td class="plantd" id="td73" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td74" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td75" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd " id="td76" data-toggle="modal" data-target="#myModal-1">
+                             
+                                </td>
+                                <td class="plantd" id="td77" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td78" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td79" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td80" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td81" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td82" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td83" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td84" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center">
+                                    --
+                                </td>
+                                <td class="center">
+                                    --
+                                </td>
+                                <td class="plantd" id="td73" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td74" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td75" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd " id="td76" data-toggle="modal" data-target="#myModal-1">
+                             
+                                </td>
+                                <td class="plantd" id="td77" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td78" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td79" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td80" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td81" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td82" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td83" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td84" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="center">
+                                    --
+                                </td>
+                                <td class="center">
+                                    --
+                                </td>
+                                <td class="plantd" id="td73" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td74" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td75" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd " id="td76" data-toggle="modal" data-target="#myModal-1">
+                             
+                                </td>
+                                <td class="plantd" id="td77" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td78" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td79" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td80" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td81" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td82" data-toggle="modal" data-target="#myModal-1">
+                                </td>
+                                <td class="plantd" id="td83" data-toggle="modal" data-target="#myModal-1">
                                 </td>
                                 <td class="plantd" id="td84" data-toggle="modal" data-target="#myModal-1">
                                 </td>
@@ -489,8 +655,24 @@
                 </div>
             </div>
             <div id="staffDiv" style="display: none;">
-                <a class="btn" data-toggle="modal" data-target="#myModal-7">新增计划</a>&nbsp;&nbsp;<a
-                    class="btn">导出Excel</a>
+            <div class="form-inline">
+                <label>计划年月：</label>
+                <select name="select" class="span2" >
+                	<option value="0" selected="selected">全部</option>
+                    <option value="4">2015年4月</option>
+                    <option value="5">2015年5月</option>
+                    <option value="5">2015年6月</option>
+                </select>
+                <label>被审计单位：</label>
+                <select name="select" class="span2" >
+                	<option value="0" selected="selected">全部</option>
+                    <option value="4">北京航空公司</option>
+                    <option value="5">沈阳航空公司</option>
+                    <option value="5">山东航空公司</option>
+                </select>
+                <label style=" padding-left:100px;"> <a href="#" class="btn" data-toggle="modal" data-target="#myModal-7">新增计划</a>&nbsp;&nbsp;<a href="#" class="btn">导出Excel</a></label>
+          </div>
+               
                 <table class=" table table-bordered table-hover">
                     <thead>
                         <tr>
@@ -535,7 +717,7 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静(飞行)，马峥(运控)，张玲(机务)
+                                刘静[飞行]，马峥[运控)]，张玲[机务]
                             </td>
                             <td>
                                 王岩
@@ -562,7 +744,7 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静(飞行)，马峥(运控)，张玲(机务)
+                                刘静[飞行]，马峥(运控)，张玲(机务]
                             </td>
                             <td>
                                 王岩
@@ -587,7 +769,7 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静(飞行)，马峥(运控)，张玲(机务)
+                                刘静(飞行)，马峥[运控]，张玲[机务)
                             </td>
                             <td>
                                 王岩
@@ -614,7 +796,7 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静(飞行)，马峥(运控)，张玲(机务)
+                                刘静[飞行]，马峥[运控]，张玲[机务]
                             </td>
                             <td>
                                 王岩
@@ -641,7 +823,7 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静(飞行)，马峥(运控)，张玲(机务)
+                                刘静[飞行]，马峥[运控]，张玲[机务]
                             </td>
                             <td>
                                 王岩
@@ -668,7 +850,7 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静(飞行)，马峥(运控)，张玲(机务)
+                                刘静[飞行]，马峥[运控]，张玲[机务]
                             </td>
                             <td>
                                 王岩
@@ -695,7 +877,7 @@
                                 齐龙
                             </td>
                             <td>
-                                刘静(飞行)，马峥(运控)，张玲(机务)
+                                刘静[飞行]，马峥[运控]，张玲[机务]
                             </td>
                             <td>
                                 王岩

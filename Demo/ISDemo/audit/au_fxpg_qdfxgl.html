@@ -13,8 +13,35 @@
     <meta content="" name="author" />
     <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css"
+        type="text/css" />
     <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.min.js"></script>
+    <script type="text/javascript" src="../includes/zTreev3.5.12/data/demoData.js"></script>
+        <script>
+            var zTree1;
+            var setting = {
+                view: {
+                    dblClickExpand: false,
+                    showLine: true,
+                    selectedMulti: false
+                },
+                data: {
+                    simpleData: {
+                        enable: true,
+                        idKey: "id",
+                        pIdKey: "pId",
+                        rootPId: ""
+                    }
+                }
+            };
+
+            $(document).ready(function () {
+                var t = $("#tree");
+                t = $.fn.zTree.init(t, setting, problemTypeNodes);
+            });
+    </script>
 </head>
 <body>
     <div class="portlet box">
@@ -594,59 +621,8 @@
             <div class="modal-body">
                 <div class="yContentBox">
                     <!--窗口的内容开始-->
-                    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" width="100%"
-                        id="relateTable">
-                        <tbody>
-                            <tr>
-                                <td align="center">
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option1" />
-                                        人员（例如：人力资源不足、人员资质不符合要求等）
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option2" />
-                                        工具和设备
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option2" />
-                                        技术资料（例如：厂家提供的手册、OEB、SB等）
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option2" />
-                                        政策、程序、指令或信息
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option2" />
-                                        材料（例如：航材等）
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option2" />
-                                        设施（例如：厂房、车间、机库、教室等）
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option2" />
-                                        控制
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option2" />
-                                        流量测量
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option2" />
-                                        接口
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option2" />
-                                        预测结果（与预设目标不符）
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios2" value="option2" />
-                                        其它
-                                    </label>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <ul id="tree" class="ztree" style="width: 100%; overflow: auto;">
+                    </ul>
                     <!--内容结束-->
                 </div>
             </div>

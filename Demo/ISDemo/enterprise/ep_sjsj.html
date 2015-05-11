@@ -51,10 +51,8 @@
 <body>
 <div class="portlet box">
     <div class="portlet-body">
-        <div class="tab-content">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:1003px;">
-              <tr>
-                <td style="width:35%; padding-right:5px;" valign="top">
+		 <div class="tab-content">
+
                     <div class="tab-content">
                         <table class="table alert alert-info">
                             <thead>
@@ -80,12 +78,15 @@
                             <table class="table">
                                 <thead>
                                     <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
-                                        <th align="left" class="left" style="width:70px;">审计年月</th>
-                                        <th align="left" class="center" style="width:90px;">审计组长/专员</th>
-                                        <th align="left" class="center" style="width:90px;">要求完成日期</th>
-                                        <th align="left" class="center" style="width:50px;">签收人员</th>
-                                        <th align="left" class="center" style="width:50px;">预填人员</th>
-                                        <th align="left" class="center" style="width:40px;">状态</th>
+                                        <th align="left" class="left" style="width:70px;">计划年月</th>
+                                        <th align="left" class="center" style="width:90px;">审计组长</th>
+                                        <th align="left" class="center">审计专员</th>
+                                        <th align="left" class="center" style="width:90px;">预填结束日期</th>
+                                        <th align="left" class="center" style="width:90px;">审计开始日期</th>
+                                        <th align="left" class="center" style="width:90px;">签收人员</th>
+                                        <th align="left" class="center" style="width:150px;">预填人员</th>
+                                        <th align="left" class="center" style="width:50px;">状态</th>
+                                        <th align="left" class="center" style="width:50px;">操作</th>
                                   </tr>
                                 </thead>
                              </table>
@@ -94,591 +95,79 @@
                          <table class="table table-hover" id="each">
                             <tbody>
                                 <tr onClick="showtd1()">
-                                  <td style="width:70px;"> 2015年5月 </td>
-                                  <td style="width:90px;"> 齐龙（组长）<br/>
-                                    刘静（机务）<br/>
-                                    马峥（运控）<br/>
-                                    张玲（地服） </td>
-                                  <td style="width:90px;"> 2015-05-30 </td>
-                                  <td style="width:50px;">王领导</td>
-                                  <td style="width:50px;">-- </td>
-                                  <td style="width:40px;"> 未签收 </td>
+                                  <td class="center" style="width:70px;"> 2015年5月 </td>
+                                  <td class="center" style="width:90px;">齐龙</td>
+                                  <td> 刘静[机务]，
+                                    马峥[运控]，
+                                    张玲[地服] </td>
+                                  <td class="center" style="width:90px;"> 2015-05-20 </td>
+                                  <td class="center" style="width:90px;"> 2015-05-30 </td>
+                                  <td class="center" style="width:90px;">王领导</td>
+                                  <td style="width:150px;">-- </td>
+                                  <td class="center" style="width:50px;"> 未签收 </td>
+                                  <td class="center" style="width:50px;"><a href="ep_sjsj2.html" class="btn btn-mini">查看</a></td>
                                 </tr>
                                 <tr onClick="showtd2()">
-                                  <td> 2015年4月 </td>
-                                  <td> 齐龙（组长）<br/>
-                                    刘静（机务）<br/>
-                                    马峥（运控）<br/>
-                                    张玲（地服） </td>
-                                  <td> 2015-05-30 </td>
-                                  <td>王领导</td>
+                                  <td class="center"> 2015年4月 </td>
+                                  <td class="center">齐龙</td>
+                                  <td>刘静[机务]，
+                                    马峥[运控]，
+                                    张玲[地服] </td>
+                                  <td class="center"> 2015-05-20 </td>
+                                  <td class="center"> 2015-05-30 </td>
+                                  <td class="center">王领导</td>
                                   <td> 张三/李四/王五 </td>
-                                  <td>未完成</td>
+                                  <td class="center">未完成</td>
+                                  <td class="center"><a href="ep_sjsj2.html" class="btn btn-mini">查看</a></td>
                                 </tr>
                                 <tr>
-                                  <td> 2014年3月 </td>
-                                  <td> 齐龙（组长）<br/>
-                                    刘静（机务）<br/>
-                                    马峥（运控）<br/>
-                                    张玲（地服） </td>
-                                  <td> 2015-05-30 </td>
-                                  <td>王领导</td>
+                                  <td class="center"> 2014年3月 </td>
+                                  <td class="center">齐龙</td>
+                                  <td>刘静[机务]，
+                                    马峥[运控]，
+                                    张玲[地服] </td>
+                                  <td class="center"> 2015-05-20 </td>
+                                  <td class="center"> 2015-05-30 </td>
+                                  <td class="center">王领导</td>
                                   <td> 张三/李四/王五 </td>
-                                  <td> 未完成 </td>
+                                  <td class="center"> 未完成 </td>
+                                  <td class="center"><a href="ep_sjsj2.html" class="btn btn-mini">查看</a></td>
                                 </tr>
                                 <tr>
-                                  <td> 2013年7月 </td>
-                                  <td> 齐龙（组长）<br/>
-                                    刘静（机务）<br/>
-                                    马峥（运控）<br/>
-                                    张玲（地服） </td>
-                                  <td> 2015-05-30 </td>
-                                  <td>王领导</td>
+                                  <td class="center"> 2013年7月 </td>
+                                  <td class="center">齐龙</td>
+                                  <td>刘静[机务]，
+                                    马峥[运控]，
+                                    张玲[地服] </td>
+                                  <td class="center"> 2015-05-20 </td>
+                                  <td class="center"> 2015-05-30 </td>
+                                  <td class="center">王领导</td>
                                   <td> 张三/李四/王五 </td>
-                                  <td> 已完成 </td>
+                                  <td class="center"> 已完成 </td>
+                                  <td class="center"><a href="ep_sjsj2.html" class="btn btn-mini">查看</a></td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td class="center">
                                         2012年5月
                                     </td>
-                                    <td>
-                                      齐龙（组长）<br/>
-                                      刘静（机务）<br/>
-                                      马峥（运控）<br/>
-                                      张玲（地服）
-                                    </td>
-                                    <td> 2015-05-30 </td>
-                                    <td>王领导</td>
+                                    <td class="center">齐龙</td>
+                                    <td>刘静[机务]，
+                                    马峥[运控]，
+                                    张玲[地服] </td>
+                                    <td class="center"> 2015-05-20 </td>
+                                    <td class="center"> 2015-05-30 </td>
+                                    <td class="center">王领导</td>
                                     <td> 张三/李四/王五 </td>
-                                    <td>
+                                    <td class="center">
                                         已完成
                                     </td>
+                                    <td class="center"><a href="ep_sjsj2.html" class="btn btn-mini">查看</a></td>
                                 </tr>
                             </tbody>
                         </table>
                         </div>
                     </div>
-                </td>
-                <td style="width:65%; padding-right:5px;" valign="top" id="td1">
-                	<div class="tab-content">
-                        <table class="table alert alert-info">
-                            <thead>
-                                <tr>
-                                	<th align="left" class="left" style="line-height:30px; font-size:14px !important; padding-left:20px;">审计年月：2015年5月</th>
-                                    <th align="left" class="right" style="line-height:30px;"><button type="submit" class="btn btn-warning btn-mini" sdata-toggle="modal" data-target="#myModal-1">签收</button></th>
-                                    <th align="left" class="right" style="line-height:30px;">预填人员：--</th>
-                                    <th align="left" class="right" style="line-height:30px;"> <span style="margin-left: 50px; font-weight:100">【审计要素共20个，已完成10个。问题共180个，已完成79个。】</span></th>
-                                  
-                              </tr>
-                            </thead>
-                        </table>
-                        <div style="overflow-y:auto; height:31px;">
-                        <table class="table">
-                            <thead>
-                            	<tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
-                                    <th align="left" class="left" style=" padding-left:5px;">要素</th>
-                                    <th align="left" class="center" style="width:40px; padding:1px;">
-                                    <select name="select" class="span1" style=" line-height:25px; height:25px; font-size:12px;">
-                                             <option value="0" selected="selected">全部</option>
-                                                <option value="4">飞行</option>
-                                                <option value="5">机务</option>
-                                                <option value="6">运控</option>
-                                                <option value="7">客舱</option>
-                                                <option value="8">地服</option>
-                                                <option value="9">货运</option>
-                                                <option value="9">保卫</option>
-                                                <option value="9">组织管理</option>
-                                        </select></th>
-                                    <th align="left" class="center" style="width:60px;">检查单类型</th>
-                                    <th align="left" class="center" style="width:100px;">检查单下载</th>
-                                    <th align="left" class="center" style="width:25px;">状态</th>
-                                    <th align="left" class="center" style="width:80px;">保存日期</th>
-                                    <th align="left" class="center" style="width:60px;">保存人员</th>
-                                    <th align="left" class="center" style="width:40px;">操作</th>
-                              	</tr>
-                            </thead>
-                          </table>
-						</div>
-                         <div class="panel-group" id="a2" style="overflow-y:auto; height:50px; border:1px solid #ccc;">
-                         <table class="table table-hover">
-                            <tbody>
-                                <tr>
-                                    <td>3.1.8 货物运输</td>
-                                    <td style="width:40px;" class="center">飞行</td>
-                                    <td align="center" class="center" style="width:60px;">SAI</td>
-                                    <td style="width:100px;" class="center">
-                                        <button class="btn btn-link btn-mini">
-                                            完整版</button>
-                                        <button class="btn btn-link btn-mini">
-                                            简版</button>
-                                    </td>
-                                    <td align="center" class="center" style="width:50px;">未完成</td>
-                                    <td align="center" class="center" style="width:80px;">2015-04-18</td>
-                                    <td align="center" class="center" style="width:60px;">张三</td>
-                                    <td align="center" class="center" style="width:40px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>3.1.10 降低的着陆最低标准</td>
-                                    <td class="center">飞行</td>
-                                  <td align="center" class="center">SAI</td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button><button class="btn btn-link btn-mini"> 简版</button></td>
-                                  <td align="center" class="center">已完成</td>
-                                    <td align="center">2015-04-18</td>
-                                    <td align="center" class="center">张三</td>
-                                  <td align="center" class="center"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">查看</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        3.1.11 基于计算机的记录保存系统
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        3.1.14 地面服务
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4.2.3 飞行机组成员的训练
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4.2.4 客舱乘务员训练
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td class="center" style="width:100px;"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4.2.6 航站人员训练
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4.2.7 航空检查员和教员的训练
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4.2.8 模拟机/训练设备
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-            			</div>
-
-           		  </div>
-                </td>
-				<!---->
                 
-                <td style="width:65%; padding-right:5px; display:none;" valign="top" id="td2">
-                	<div class="tab-content">
-                        <table class="table alert alert-info">
-                            <thead>
-                                <tr>
-                                	<th align="left" class="left" style="line-height:30px; font-size:14px !important; padding-left:20px;">审计年月：2015年5月</th>
-                                    <th align="left" class="right" style="line-height:30px;">预填人员：张三/李四/王五/赵六</th>
-                                    <th align="left" class="right" style="line-height:30px;"> <span style="margin-left: 50px; font-weight:100">【审计要素共20个，已完成10个。问题共180个，已完成79个。】</span></th>
-                                  
-                              </tr>
-                            </thead>
-                        </table>
-                        <div style="overflow-y:auto; height:31px;">
-                        <table class="table">
-                            <thead>
-                            	<tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
-                                    <th align="left" class="left" style=" padding-left:5px;">要素</th>
-                                    <th align="left" class="center" style="width:40px; padding:1px;">
-                                    <select name="select" class="span1" style=" line-height:25px; height:25px; font-size:12px;">
-                                             <option value="0" selected="selected">全部</option>
-                                                <option value="4">飞行</option>
-                                                <option value="5">机务</option>
-                                                <option value="6">运控</option>
-                                                <option value="7">客舱</option>
-                                                <option value="8">地服</option>
-                                                <option value="9">货运</option>
-                                                <option value="9">保卫</option>
-                                                <option value="9">组织管理</option>
-                                        </select></th>
-                                    <th align="left" class="center" style="width:60px;">检查单类型</th>
-                                    <th align="left" class="center" style="width:100px;">检查单下载</th>
-                                    <th align="left" class="center" style="width:25px;">状态</th>
-                                    <th align="left" class="center" style="width:80px;">保存日期</th>
-                                    <th align="left" class="center" style="width:60px;">保存人员</th>
-                                    <th align="left" class="center" style="width:40px;">操作</th>
-                              	</tr>
-                            </thead>
-                          </table>
-						</div>
-                         <div class="panel-group" id="a3" style="overflow-y:auto; height:50px; border:1px solid #ccc;">
-                         <table class="table table-hover">
-                            <tbody>
-                                <tr>
-                                    <td>3.1.8 货物运输</td>
-                                    <td style="width:40px;" class="center">飞行</td>
-                                    <td align="center" class="center" style="width:60px;">SAI</td>
-                                    <td style="width:100px;" class="center">
-                                        <button class="btn btn-link btn-mini">
-                                            完整版</button>
-                                        <button class="btn btn-link btn-mini">
-                                            简版</button>
-                                    </td>
-                                    <td align="center" class="center" style="width:50px;">未完成</td>
-                                    <td align="center" class="center" style="width:80px;">2015-04-18</td>
-                                    <td align="center" class="center" style="width:60px;">张三</td>
-                                    <td align="center" class="center" style="width:40px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>3.1.10 降低的着陆最低标准</td>
-                                    <td class="center">飞行</td>
-                                  <td align="center" class="center">SAI</td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button><button class="btn btn-link btn-mini"> 简版</button></td>
-                                  <td align="center" class="center">已完成</td>
-                                    <td align="center">2015-04-18</td>
-                                    <td align="center" class="center">张三</td>
-                                  <td align="center" class="center"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">查看</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        3.1.11 基于计算机的记录保存系统
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        3.1.14 地面服务
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4.2.3 飞行机组成员的训练
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4.2.4 客舱乘务员训练
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td class="center" style="width:100px;"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4.2.6 航站人员训练
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4.2.7 航空检查员和教员的训练
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        4.2.8 模拟机/训练设备
-                                    </td>
-                                    <td class="center">
-                                        飞行
-                                    </td>
-                              <td align="center" class="center">
-                                        SAI
-                                    </td>
-                                    <td style="width:100px;" class="center"><button class="btn btn-link btn-mini"> 完整版</button>
-                                      <button class="btn btn-link btn-mini"> 简版</button></td>
-                              <td align="center" class="center">
-                                        未完成
-                                    </td>
-                                  <td align="center" class="center">
-                                        2015-04-18
-                                    </td>
-                                    <td align="center" class="center">
-                                        张三
-                                    </td>
-                                  <td align="center" class="center" style="width:30px;"><a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-            			</div>
-
-           		  </div>
-                </td>
-                <!---->
-              </tr>
-            </table>
 
         </div>
     </div>

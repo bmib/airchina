@@ -30,119 +30,14 @@
 <body>
 <div class="portlet box">
     <div class="portlet-body">
-        <div class="tab-content">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:1003px;">
-              <tr>
-                <td style="width:35%; padding-right:5px;" valign="top">
-                    <div class="tab-content">
-                        <table class="table alert alert-info">
-                            <thead>
-                                <tr>
-                                    <th align="left" class="left" style="line-height:30px; font-size:14px !important;">数据收集任务</th>
-                                    <th align="left" class="right form-inline" style="line-height:30px;">
-                                        <label class="checkbox">
-                                        	<input type="checkbox" value="" checked/> 未签收
-                                        </label>                                    
-                                     
-                                        <label class="checkbox">
-                                        	<input type="checkbox" value="" checked/> 未完成
-                                        </label>                                    
-                                     
-                                         <label class="checkbox">
-                                            <input type="checkbox" value="" />已完成
-                                         </label>
-                                    </th>
-                              </tr>
-                            </thead>
-                        </table>
-                        <div style="overflow-y:auto; height:31px;">
-                        <table class="table">
-                            <thead>
-                                <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
-                                    <th align="left" class="left" style=" padding-left:5px;">审计年月</th>
-                                    <th align="left" class="center" style="width:120px;">审计组长/专员</th>
-                                    <th align="left" class="center" style="width:60px;">预填人员</th>
-                                    <th align="left" class="center" style="width:100px;">要求完成日期</th>
-                                    <th align="left" class="center" style="width:40px;">状态</th>
-                              </tr>
-                            </thead>
-                         </table>
-                         </div>
-                         <div class="panel-group" id="accordion" style="overflow-y:auto; height:50px; border:1px solid #ccc;">
-                         <table class="table table-hover">
 
-                                <tbody>
-                                    <tr>
-                                      <td> 2015年5月 </td>
-                                      <td> 齐龙（组长）<br/>
-                                        刘静（机务）<br/>
-                                        马峥（运控）<br/>
-                                        张玲（地服） </td>
-                                      <td> 张三、李四、王五 </td>
-                                      <td> 2015-05-30 </td>
-                                      <td> 未签收 </td>
-                                    </tr>
-                                    <tr>
-                                      <td> 2015年4月 </td>
-                                      <td> 齐龙（组长）<br/>
-                                        刘静（机务）<br/>
-                                        马峥（运控）<br/>
-                                        张玲（地服） </td>
-                                      <td> 张三、李四、王五 </td>
-                                      <td> 2015-05-30 </td>
-                                      <td>未完成</td>
-                                    </tr>
-                                    <tr>
-                                      <td> 2014年3月 </td>
-                                      <td> 齐龙（组长）<br/>
-                                        刘静（机务）<br/>
-                                        马峥（运控）<br/>
-                                        张玲（地服） </td>
-                                      <td> 张三、李四、王五 </td>
-                                      <td> 2015-05-30 </td>
-                                      <td> 未完成 </td>
-                                    </tr>
-                                    <tr>
-                                      <td> 2013年7月 </td>
-                                      <td> 齐龙（组长）<br/>
-                                        刘静（机务）<br/>
-                                        马峥（运控）<br/>
-                                        张玲（地服） </td>
-                                      <td> 张三、李四、王五 </td>
-                                      <td> 2015-05-30 </td>
-                                      <td> 已完成 </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            2012年5月
-                                        </td>
-                                        <td>
-                                          齐龙（组长）<br/>
-                                          刘静（机务）<br/>
-                                          马峥（运控）<br/>
-                                          张玲（地服）
-                                        </td>
-                                        <td>
-                                            张三、李四、王五
-                                        </td>
-                                        <td> 2015-05-30 </td>
-                                        <td>
-                                            已完成
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </td>
-                <td style="width:65%; padding-right:5px;" valign="top">
                 	<div class="tab-content">
                         <table class="table alert alert-info">
                             <thead>
                                 <tr>
-                                	<th align="left" class="left" style="line-height:30px; font-size:14px !important; padding-left:20px;">审计年月：2015年5月</th>
+                                	<th align="left" class="left" style="line-height:30px; font-size:14px !important; padding-left:20px;">计划年月：2015年5月</th>
+                                    <th align="left" class="right" style="line-height:30px;">签收人员：王领导</th>
                                     <th align="left" class="right" style="line-height:30px;">预填人员：张三、李四、王五</th>
-                                    <th align="left" class="right" style="line-height:30px;"><button type="submit" class="btn btn-warning">签收</button></th>
                                     <th align="left" class="right" style="line-height:30px;"> <span style="margin-left: 50px; font-weight:100">【审计要素共20个，已完成10个。问题共180个，已完成79个。】</span></th>
                                   
                               </tr>
@@ -153,25 +48,24 @@
                             <thead>
                             	<tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
                                     <th align="left" class="left" style=" padding-left:5px;">要素</th>
-                                    <th align="left" class="center" style="width:40px; padding:1px;">
+                                    <th align="left" class="center" style="width:60px; padding:1px;">
                                     <select name="select" class="span1" style=" line-height:25px; height:25px; font-size:12px;">
-                                            <option value="0" selected="selected">全部</option>
-                                            <option value="1">SFOP普通</option>
-                                            <option value="2">SFOP专项</option>
-                                            <option value="3">组织管理</option>
-                                            <option value="4">飞行</option>
+                                            <option value="0">全部</option>
+                                            <option value="4" selected="selected">飞行</option>
                                             <option value="5">机务</option>
                                             <option value="6">运控</option>
                                             <option value="7">客舱</option>
                                             <option value="8">地服</option>
                                             <option value="9">货运</option>
+                                            <option value="9">保卫</option>
+                                            <option value="9">组织管理</option>
                                         </select></th>
-                                    <th align="left" class="center" style="width:60px;">检查单类型</th>
-                                    <th align="left" class="center" style="width:100px;">检查单下载</th>
-                                    <th align="left" class="center" style="width:25px;">状态</th>
+                                    <th align="left" class="center" style="width:100px;">审计单类型</th>
+                                    <th align="left" class="center" style="width:150px;">审计单下载</th>
+                                    <th align="left" class="center" style="width:60px;">状态</th>
                                     <th align="left" class="center" style="width:100px;">上次保存日期</th>
                                     <th align="left" class="center" style="width:100px;">上次保存人员</th>
-                                    <th align="left" class="center" style="width:30px;">操作</th>
+                                    <th align="left" class="center" style="width:60px;">操作</th>
                               	</tr>
                             </thead>
                           </table>
@@ -183,29 +77,29 @@
                                         <td>
                                             3.1.8 货物运输
                                         </td>
-                                        <td>
+                                        <td style="width:60px;">
                                             飞行
                                         </td>
-                                        <td>
+                                        <td style="width:100px;">
                                             SAI
                                         </td>
-                                        <td>
+                                        <td style="width:150px;">
                                             <button class="btn btn-link">
                                                 完整版</button>
                                             <button class="btn btn-link">
                                                 简版</button>
                                         </td>
-                                        <td>
+                                        <td style="width:60px;">
                                             未完成
                                         </td>
-                                        <td>
+                                        <td style="width:100px;">
                                             2015-04-18
                                         </td>
-                                        <td>
+                                        <td style="width:100px;">
                                             张三
                                         </td>
-                                        <td>
-                                            <a class="btn" href="ep_sjsj_tianxie.html">填报</a>
+                                        <td style="width:60px;">
+                                            <a class="btn btn-mini" href="ep_sjsj_tianxie.html">填报</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -234,7 +128,7 @@
                                             张三
                                         </td>
                                         <td>
-                                            <button class="btn">
+                                            <button class="btn btn-mini">
                                                 查看</button>
                                         </td>
                                     </tr>
@@ -264,7 +158,7 @@
                                             张三
                                         </td>
                                         <td>
-                                            <button class="btn">
+                                            <button class="btn btn-mini">
                                                 填报</button>
                                         </td>
                                     </tr>
@@ -294,7 +188,7 @@
                                             张三
                                         </td>
                                         <td>
-                                            <button class="btn">
+                                            <button class="btn btn-mini">
                                                 填报</button>
                                         </td>
                                     </tr>
@@ -324,7 +218,7 @@
                                             张三
                                         </td>
                                         <td>
-                                            <button class="btn">
+                                            <button class="btn btn-mini">
                                                 填报</button>
                                         </td>
                                     </tr>
@@ -354,7 +248,7 @@
                                             张三
                                         </td>
                                         <td>
-                                            <button class="btn">
+                                            <button class="btn btn-mini">
                                                 填报</button>
                                         </td>
             
@@ -385,7 +279,7 @@
                                             张三
                                         </td>
                                         <td>
-                                            <button class="btn">
+                                            <button class="btn btn-mini">
                                                 填报</button>
                                         </td>
                                     </tr>
@@ -415,7 +309,7 @@
                                             张三
                                         </td>
                                         <td>
-                                            <button class="btn">
+                                            <button class="btn btn-mini">
                                                 填报</button>
                                         </td>
                                     </tr>
@@ -445,7 +339,7 @@
                                             张三
                                         </td>
                                         <td>
-                                            <button class="btn">
+                                            <button class="btn btn-mini">
                                                 填报</button>
                                         </td>
                                     </tr>
@@ -475,19 +369,17 @@
                                             张三
                                         </td>
                                         <td>
-                                            <button class="btn">
+                                            <button class="btn btn-mini">
                                                 填报</button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
             			</div>
-                       <!-- <div class="modal-footer center">
-                       
-                        <button type="submit" class="btn">保存草稿</button>
-                        <button type="submit" class="btn">保存终稿</button>
-                        <button type="submit" class="btn btn-info">提交</button>
-                        </div>-->
+                       <div class="modal-footer center">
+                        <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">签收</button><a type="button" class="btn" href="ep_sjsj.html" style=" margin-left:10px;">返回</a>
+                        </div>
+
                		 </div>
                 </td>
               </tr>
@@ -498,3 +390,90 @@
 </div>
 </body>
 </html>
+
+
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">构型下发</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                <table class="table table-bordered">
+					<tbody>
+                    	<tr>
+                            <td align="right" class="right" style="width:20%">审计年月：</td>
+                            <td align="left" colspan="2" class="left" >2015年6月</td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="right">被审计单位：</td>
+                            <td align="left" colspan="2" class="left" >山东航空公司</td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="right">预填结束日期：</td>
+                            <td align="left" colspan="2" class="left">2015-06-20</td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="right">审计开始日期：</td>
+                            <td align="left" colspan="2" class="left">2015-06-30</td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="right">单位检查专员：</td>
+                            <td align="left" class="left">
+                                 <div class="controls">
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 张三小
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 李小四
+                                    </label>
+                                
+                                    <label class="checkbox line">
+                                    <input type="checkbox" value="" /> 赵小六
+                                    </label>
+                                    <label class="checkbox line">
+                                    <input type="checkbox" value="" /> 冯七
+                                    </label>
+                                </div>
+                            </td>
+                            <td align="left" class="left">
+                                 <div class="controls">
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 张三小
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 李小四
+                                    </label>
+                                
+                                    <label class="checkbox line">
+                                    <input type="checkbox" value="" /> 赵小六
+                                    </label>
+                                    <label class="checkbox line">
+                                    <input type="checkbox" value="" /> 冯七
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                    </table>
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+            <!--<button type="submit" class="btn green"><i class="icon-file-text"></i> 保存</button>
+            <button type="submit" class="btn blue"><i class="icon-ok"></i> 确定</button>
+			<button type="button" class="btn" data-dismiss="modal"><i class="icon-remove icon-white"></i> 取消</button>-->
+            <button type="submit" class="btn blue" data-dismiss="modal">确定</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-大 开始-->

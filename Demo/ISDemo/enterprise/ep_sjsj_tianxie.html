@@ -14,21 +14,47 @@
     <meta content="" name="author" />
     <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css"
+        type="text/css" />
     <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
-    <script>
-$(document).ready(function() {
-	var winH = $(window).height() - 255;
-	$("#accordion").css('height', winH + 'px');
-	$("#a2").css('height', winH + 'px');
-	$("#a3").css('height', winH + 'px');
-	$("#a4").css('height', winH + 'px');
-});
- function adds()
-	{
-		$("#xdd").show();
-	}
-</script>
+    <script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.min.js"></script>
+    <script type="text/javascript" src="../includes/zTreev3.5.12/data/demoData.js"></script>
+     <script>
+        var zTree1;
+        var setting = {
+            view: {
+                dblClickExpand: false,
+                showLine: true,
+                selectedMulti: false
+            },
+            data: {
+                simpleData: {
+                    enable: true,
+                    idKey: "id",
+                    pIdKey: "pId",
+                    rootPId: ""
+                }
+            }
+        };
+
+        $(document).ready(function () {
+            var winH = $(window).height() - 255;
+            $("#accordion").css('height', winH + 'px');
+            $("#a2").css('height', winH + 'px');
+            $("#a3").css('height', winH + 'px');
+            $("#a4").css('height', winH + 'px');
+
+            var t = $("#tree");
+            t = $.fn.zTree.init(t, setting, problemTypeNodes);
+        });
+
+
+        function adds() {
+            $("#xdd").show();
+        }
+
+    </script>
     <style>
 .problemlist {
 	border: 1px solid #d2d2d2;
@@ -125,12 +151,12 @@ $(document).ready(function() {
                                           <input type="radio" name="options" id="option3"> 显示有说明的问题
                                        </label>
                                        <label class="btn btn-primary btn-mini">
-                                          <input type="radio" name="options" id="option3"> 显示回答否有说明的问题
+                                          <input type="radio" name="options" id="option3"> 显示不合格有说明的问题
                                        </label>
                                     </div>
                                     
                                     </td>
-                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;<span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;<span class="label">&nbsp;</span>未填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
+                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;<span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
                                     <td align="left" class="right" style="line-height:30px;">
                                     	
                                     <button type="submit" class="btn btn-mini">任务</button>
@@ -144,7 +170,7 @@ $(document).ready(function() {
                         <table class="table table-bordered">
                             <thead>
                             	<tr>
-                                    <th class="center" style=" padding-left:5px;">检查项（问题）</th>
+                                    <th class="center" style=" padding-left:5px;">审计项</th>
                                     <th class="center" style="width:400px;">答案选项</th>
                                     <th class="center" style=" width:15%">说明及附件</th>
                               	</tr>
@@ -158,13 +184,10 @@ $(document).ready(function() {
                                     <td class="left"><span class="label label-important">&nbsp;</span>1.1 合格证持有人适当运行设备的流程是否符合特定规章和局方政策的要求：</td>
                                     <td class="left form-inline" style="width:400px;">
                                     <label class="checkbox">
-                                    <input type="radio" name="optionsRadio2" value="option1" /> 是
+                                    <input type="radio" name="optionsRadio2" value="option1" /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;" data-toggle="modal" data-target="#myModal-1">
-                                    <input type="radio" name="optionsRadio2" value="option2"  checked/><font style="color:#F00;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="optionsRadio2" value="option2" /> 不适用
+                                    <input type="radio" name="optionsRadio2" value="option2"  checked/><font style="color:#F00;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="optionsRadio2" value="option2"  /> 无法观察
@@ -175,13 +198,10 @@ $(document).ready(function() {
                                 <tr>
                                     <td><span class="label label-success">&nbsp;</span>1.1.1 合格证持有人适当运行设备的流程是否有在以下位置安置便于取用的，经批准数量合适的手提灭火器的要求:111</td>
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op3" value="option1" checked  /> <font style="color: #090;">是</font>
+                                    <input type="radio" name="op3" value="option1" checked  /> <font style="color: #090;">合格</font>
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input data-toggle="modal" data-target="#myModal-1" type="radio" name="op3" value="option2"/> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op3" value="option2" /> 不适用
+                                    <input data-toggle="modal" data-target="#myModal-1" type="radio" name="op3" value="option2"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="op3" value="option2"  /> 无法观察
@@ -193,13 +213,10 @@ $(document).ready(function() {
                                     <td><span class="label label-success">&nbsp;</span>1.1.1.1 驾驶舱？
                                   </td>
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op4" value="option1"  /> 是
+                                    <input type="radio" name="op4" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op4" value="option2" /> 不适用
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="op4" value="option2"  /> 无法观察
@@ -210,16 +227,13 @@ $(document).ready(function() {
                                     <td><span class="label label-success">&nbsp;</span>1.1.1.2 货舱?
                                   </td>
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op5" value="option1"  /> 是
+                                    <input type="radio" name="op4" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op5" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op5" value="option2" /> 不适用
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op5" value="option2"  /> 无法观察
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
                                     </label></td>
                                     <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
                                 </tr>
@@ -227,16 +241,13 @@ $(document).ready(function() {
                                     <td>
                                         <span class="label label-success">&nbsp;</span>1.1.1.3 厨房隔舱?	</td>
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op6" value="option1"  /> 是
+                                    <input type="radio" name="op4" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op6" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op6" value="option2" /> 不适用
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op6" value="option2"  /> 无法观察
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
                                     </label></td>
                                     <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
                                 </tr>
@@ -244,16 +255,13 @@ $(document).ready(function() {
                                     <td><span class="label label-success">&nbsp;</span>1.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
                                  </td>
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op7" value="option1"  /> 是
+                                    <input type="radio" name="op4" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op7" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op7" value="option2" /> 不适用
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op7" value="option2"  /> 无法观察
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
                                     </label></td>
                                     <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
                                 </tr>
@@ -261,67 +269,55 @@ $(document).ready(function() {
                                     <td><span class="label label-success">&nbsp;</span>1.1.3 合格证持有人适当的运行设备流程是否规定每架载客飞机上配有电池供电的便携式扩音器，放在负责指挥应急撤离的机组成员方便取用的地方？</td>
                                     
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op8" value="option1"  /> 是
+                                    <input type="radio" name="op4" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op8" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op8" value="option2" /> 不适用
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op8" value="option2"  /> 无法观察
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
                                     </label></td>
                                     <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
                                 </tr>
                                 <tr>
-                                    <td><span class="label">&nbsp;</span>1.1.4 当合格证持有人在飞行高度25000英尺以上运行具有增压座舱的涡轮发动机飞机时，是否要求为每个机组成员提供能迅速取出戴在脸上的氧气面罩？</td>
+                                    <td>1.1.4 当合格证持有人在飞行高度25000英尺以上运行具有增压座舱的涡轮发动机飞机时，是否要求为每个机组成员提供能迅速取出戴在脸上的氧气面罩？</td>
                                     
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op9" value="option1"  /> 是
+                                    <input type="radio" name="op4" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op9" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op9" value="option2" /> 不适用
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op9" value="option2"  /> 无法观察
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
                                     </label></td>
                                     <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
                                 </tr>
                                 <tr>
-                                    <td><span class="label">&nbsp;</span>1.1.5 合格证持有人手册是否要求其飞机装备适当的呼吸保护装置（PBE）？</td>
+                                    <td>1.1.5 合格证持有人手册是否要求其飞机装备适当的呼吸保护装置（PBE）？</td>
                                     
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="opp2" value="option1"  /> 是
+                                    <input type="radio" name="op4" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp2" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp2" value="option2" /> 不适用
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp2" value="option2"  /> 无法观察
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
                                     </label></td>
                                     <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
                                 </tr>
                                 <tr>
-                                    <td><span class="label">&nbsp;</span>1.1.6.1 在飞机的每个座位上，配备带有经批准的幸存者定位灯的救生衣或者经批准的等效漂浮装置？</td>
+                                    <td>1.1.6.1 在飞机的每个座位上，配备带有经批准的幸存者定位灯的救生衣或者经批准的等效漂浮装置？</td>
                                     
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="opp3" value="option1"  /> 是
+                                    <input type="radio" name="op4" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp3" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp3" value="option2" /> 不适用
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp3" value="option2"  /> 无法观察
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
                                     </label></td>
                                     <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
                                 </tr>
@@ -348,12 +344,12 @@ $(document).ready(function() {
                                           <input type="radio" name="options" id="option3"> 显示有说明的问题
                                        </label>
                                        <label class="btn btn-primary btn-mini">
-                                          <input type="radio" name="options" id="option3"> 显示回答否有说明的问题
+                                          <input type="radio" name="options" id="option3"> 显示不合格有说明的问题
                                        </label>
                                     </div>
                                     
                                     </td>
-                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;<span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;<span class="label">&nbsp;</span>未填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
+                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;<span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
                                     <td align="left" class="right" style="line-height:30px;">
                                     	
                                     <button type="submit" class="btn btn-mini">任务</button>
@@ -381,14 +377,10 @@ $(document).ready(function() {
                                     <td class="left"><span class="label label-important">&nbsp;</span>2.1 合格证持有人适当运行设备的流程是否符合特定规章和局方政策的要求：</td>
                                     <td class="left form-inline" style="width:400px;">
                                     <label class="checkbox">
-                                    <input type="radio" name="optionsRad2" value="option1" /> 是
+                                    <input type="radio" name="optionsRad2" value="option1" /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;" data-toggle="modal" data-target="#myModal-1">
-                                    <input type="radio" name="optionsRad2" value="option2"  checked/><font style="color:#F00;">否，说明</font>
-                                    </label>
-
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="optionsRad2" value="option2" /> 不适用
+                                    <input type="radio" name="optionsRad2" value="option2"  checked/><font style="color:#F00;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="optionsRad2" value="option2"  /> 无法观察
@@ -399,13 +391,10 @@ $(document).ready(function() {
                                 <tr>
                                     <td><span class="label label-success">&nbsp;</span>2.1.1 合格证持有人适当运行设备的流程是否有在以下位置安置便于取用的，经批准数量合适的手提灭火器的要求:111</td>
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="opp3" value="option1" checked  /> <font style="color: #090;">是</font>
+                                    <input type="radio" name="opp3" value="option1" checked  /> <font style="color: #090;">合格</font>
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input data-toggle="modal" data-target="#myModal-1" type="radio" name="op3" value="option2"/> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp3" value="option2" /> 不适用
+                                    <input data-toggle="modal" data-target="#myModal-1" type="radio" name="op3" value="option2"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="opp3" value="option2"  /> 无法观察
@@ -417,13 +406,10 @@ $(document).ready(function() {
                                     <td><span class="label label-success">&nbsp;</span>2.1.1.1 驾驶舱？
                                   </td>
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op4" value="option1"  /> 是
+                                    <input type="radio" name="op4" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op4" value="option2" /> 不适用
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="op4" value="option2"  /> 无法观察
@@ -434,13 +420,10 @@ $(document).ready(function() {
                                     <td><span class="label label-success">&nbsp;</span>2.1.1.2 货舱?
                                   </td>
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op5" value="option1"  /> 是
+                                    <input type="radio" name="op5" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op5" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op5" value="option2" /> 不适用
+                                    <input type="radio" name="op5" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="op5" value="option2"  /> 无法观察
@@ -451,13 +434,10 @@ $(document).ready(function() {
                                     <td>
                                         <span class="label label-success">&nbsp;</span>2.1.1.3 厨房隔舱?	</td>
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op6" value="option1"  /> 是
+                                    <input type="radio" name="op6" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op6" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op6" value="option2" /> 不适用
+                                    <input type="radio" name="op6" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="op6" value="option2"  /> 无法观察
@@ -468,13 +448,10 @@ $(document).ready(function() {
                                     <td><span class="label label-success">&nbsp;</span>2.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
                                  </td>
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op7" value="option1"  /> 是
+                                    <input type="radio" name="op7" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op7" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op7" value="option2" /> 不适用
+                                    <input type="radio" name="op7" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="op7" value="option2"  /> 无法观察
@@ -485,13 +462,10 @@ $(document).ready(function() {
                                     <td><span class="label label-success">&nbsp;</span>2.1.3 合格证持有人适当的运行设备流程是否规定每架载客飞机上配有电池供电的便携式扩音器，放在负责指挥应急撤离的机组成员方便取用的地方？</td>
                                     
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op8" value="option1"  /> 是
+                                    <input type="radio" name="op8" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op8" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op8" value="option2" /> 不适用
+                                    <input type="radio" name="op8" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="op8" value="option2"  /> 无法观察
@@ -502,13 +476,10 @@ $(document).ready(function() {
                                     <td><span class="label">&nbsp;</span>2.1.4 当合格证持有人在飞行高度25000英尺以上运行具有增压座舱的涡轮发动机飞机时，是否要求为每个机组成员提供能迅速取出戴在脸上的氧气面罩？</td>
                                     
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="op9" value="option1"  /> 是
+                                    <input type="radio" name="op9" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op9" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="op9" value="option2" /> 不适用
+                                    <input type="radio" name="op9" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="op9" value="option2"  /> 无法观察
@@ -519,13 +490,10 @@ $(document).ready(function() {
                                     <td><span class="label">&nbsp;</span>2.1.5 合格证持有人手册是否要求其飞机装备适当的呼吸保护装置（PBE）？</td>
                                     
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="opp2" value="option1"  /> 是
+                                    <input type="radio" name="opp2" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp2" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp2" value="option2" /> 不适用
+                                    <input type="radio" name="opp2" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="opp2" value="option2"  /> 无法观察
@@ -536,13 +504,10 @@ $(document).ready(function() {
                                     <td><span class="label">&nbsp;</span>2.1.6.1 在飞机的每个座位上，配备带有经批准的幸存者定位灯的救生衣或者经批准的等效漂浮装置？</td>
                                     
                                     <td class="left form-inline" style="width:400px;"><label class="checkbox">
-                                    <input type="radio" name="opp3" value="option1"  /> 是
+                                    <input type="radio" name="opp3" value="option1"  /> 合格
                                     </label>
                                     <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp3" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">否，说明</font>
-                                    </label>
-                                    <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="opp3" value="option2" /> 不适用
+                                    <input type="radio" name="opp3" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
                                     </label>
                                      <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="opp3" value="option2"  /> 无法观察
@@ -595,13 +560,10 @@ $(document).ready(function() {
                             <tr>
                                 <td class="left form-inline">
                                   <label class="checkbox">
-                                    <input type="radio" name="optionsRos2" value="option1"  /> 是
+                                    <input type="radio" name="optionsRos2" value="option1"  /> 合格
                                   </label>
                                   <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="optionsRos2" value="option2" checked="checked"/> <font style="color:#F00;">否，说明</font>
-                                  </label>
-                                  <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="optionsRos2" value="option2" /> 不适用
+                                    <input type="radio" name="optionsRos2" value="option2" checked="checked"/> <font style="color:#F00;">不合格</font>
                                   </label>
                                   <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="optionsRos2" value="option2"  /> 无法观察
@@ -693,13 +655,10 @@ $(document).ready(function() {
                             <tr>
                                 <td class="left form-inline">
                                   <label class="checkbox">
-                                    <input type="radio" name="optionsRadios2" value="option1"  /> 是
+                                    <input type="radio" name="optionsRadios2" value="option1"  /> 合格
                                   </label>
                                   <label class="checkbox" style="padding-left:25px;" data-toggle="modal" data-target="#myModal-1">
-                                    <input type="radio" name="optionsRadios2" value="option2" onClick="adds();" /> <font style="color:#F00;">否，说明</font>
-                                  </label>
-                                  <label class="checkbox" style="padding-left:25px;">
-                                    <input type="radio" name="optionsRadios2" value="option2" /> 不适用
+                                    <input type="radio" name="optionsRadios2" value="option2" onClick="adds();" /> <font style="color:#F00;">不合格</font>
                                   </label>
                                   <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="optionsRadios2" value="option2"  /> 无法观察
@@ -822,7 +781,7 @@ $(document).ready(function() {
                 <div class="yContentBox">
                 
                 	<!--窗口的内容开始-->
-                    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" width="100%" id="relateTable">
+                    <!--<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" width="100%" id="relateTable">
 
                         <tbody>
                             <tr>
@@ -865,7 +824,9 @@ $(document).ready(function() {
                             </tr>
                             
                         </tbody>
-                    </table>
+                    </table>-->
+                    <ul id="tree" class="ztree" style="width: 100%; overflow: auto;">
+                    </ul>
                     <!--内容结束-->
                     
                 </div>

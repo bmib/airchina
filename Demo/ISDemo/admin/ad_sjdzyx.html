@@ -63,6 +63,17 @@ select.input-sm {
             $('#score').val(score);
 			});
     });
+        
+    function changeSjdly(obj) {
+    var type = $(obj).val();
+    $("#1").hide();
+    $("#2").hide();
+    if(type=="全部" || type=="FSOP")
+    {
+        $("#1").show();
+        $("#2").show();
+    }
+    }
     </script>
 </head>
 <body>
@@ -99,15 +110,16 @@ select.input-sm {
                 </label>
                 <label>来源：</label>
                 <label>
-                    <select style="width:100px">
+                    <select style="width:100px" onchange="changeSjdly(this);">
                             <option selected="selected">全部</option>
                             <option>FSOP</option>
                             <option>自定义</option>
+                            <option>CAAC</option>
                             <option>IOSA</option>
                         </select>
                 </label>
-                <label>系统：</label>
-                <label>
+                <label id="1">系统：</label>
+                <label id="2">
                     <select style="width:190px">
                             <option selected="selected">全部</option>
                             <option>1、航空器构型控制</option>

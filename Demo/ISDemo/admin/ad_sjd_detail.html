@@ -15,6 +15,11 @@
     <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+	<link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
+	<script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
+	<script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+    <script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
     <style type="text/css">
 input.input-sm {
     font-size: 60%;
@@ -43,12 +48,41 @@ input.input-sm {
                     newTr.find("input").each(function(){
                            this.value = "";
                          }); 
+                     newTr.find("input[type=radio]").each(function(){
+                           this.name = "";  
+                            $(this).attr("checked",false);
+                         }); 
                     newTr.find("textarea").each(function(){
                            this.value = "";
                          }); 
                     newTr.insertAfter(trs[trs.length-1]);
             });
         });
+        
+        function addRw(obj) {
+            if($("input[name="+obj+"]").val()== "1")
+            {      
+                //$("input[name="+obj+"][value=1]").attr("checked",true);
+                $("input[name="+obj+"][value=1]").dialog({
+						id: "addRw",
+						content: 'url:admin/ad_sjys_rwzn.html',
+						width: 750,
+						height: 400,
+						title: '维护任务指南',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('任务指南维护成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            }
+            
+        }
     </script>
 </head>
 <body>
@@ -133,7 +167,8 @@ input.input-sm {
                         <th width="60px">编号</th>
                         <th width="250px">审计项描述</th>
                         <th width="100px">规章依据</th>
-                        <th width="250px">任务指南</th>
+                        <th width="100px">任务指南</th>
+                        <th width="100px">答案选项</th>
                         <th>备注</th>
                         <th width="50px">操作<a name="add" id="1"><img src="../images/add.png" width="18"/></a></th>
                     </tr>
@@ -148,7 +183,8 @@ input.input-sm {
                         <td width="250px"><textarea  style="width: 95%; height: 40px;" >合格证持有人适当运行设备的流程是否符合特定规章和局方政策的要求：</textarea></td>
                         <td width="100px"><textarea  style="width: 95%; height: 40px;" >121.309(c)(4)
 </textarea></td>
-                        <td width="250px"><textarea  style="width: 95%; height: 40px;" >依照合格证持有人制定的程序和标准检查飞机，确保在驾驶舱、客舱、货舱、厨房内，装备经批准型号的手提灭火器，且灭火剂的型号和装量适用于该舱室可能发生的失火类型。</textarea></td>
+                        <td width="100px">&nbsp;&nbsp;<input type="radio" name="1a" value="1" onchange="addRw('1a');">有&nbsp;&nbsp;&nbsp;<input type="radio" name="1a" value="0" checked>无</td>
+                        <td width="100px">&nbsp;&nbsp;<input type="radio" name="1b">有&nbsp;&nbsp;&nbsp;<input type="radio" name="1b"checked>无</td>
                         <td><textarea  style="width: 98%; height: 40px;" >对局方审计项进行备注</textarea></td>
                         <td width="50px">
                             <a name="del"><img src="../images/remove.png" width="18"/></a>
@@ -159,7 +195,8 @@ input.input-sm {
                         <td><textarea  style="width: 95%; height: 40px;" >  合格证持有人适当运行设备的流程是否有在以下位置安置便于取用的，经批准数量合适的手提灭火器的要求: </textarea></td>
                         <td><textarea  style="width: 95%; height: 40px;" >121.309(c)(1)
 </textarea></td>
-                        <td><textarea  style="width: 95%; height: 40px;" >依照合格证持有人制定的程序和标准检查飞机，确保对于旅客座位数601或以上的飞机，客舱至少配备8个手提灭火器，且均匀分布于客舱中。</textarea></td>
+                        <td width="100px">&nbsp;&nbsp;<input type="radio" name="2a" value="1"  onchange="addRw('2a')" checked>有&nbsp;&nbsp;&nbsp;<input type="radio" name="2a" >无</td>
+                        <td width="100px">&nbsp;&nbsp;<input type="radio" name="2b" checked>有&nbsp;&nbsp;&nbsp;<input type="radio" name="2b">无</td>
                         <td><textarea  style="width: 98%; height: 40px;" >对局方审计项进行备注</textarea></td>
                         <td>
                             <a name="del"><img src="../images/remove.png" width="18"/></a>
@@ -202,7 +239,8 @@ input.input-sm {
                         <th width="60px">编号</th>
                         <th width="250px">审计项描述</th>
                         <th width="100px">规章依据</th>
-                        <th width="250px">任务指南</th>
+                        <th width="100px">规章依据</th>
+                        <th width="100px">任务指南</th>
                         <th>备注</th>
                         <th width="50px">操作<a name="add" id="2"><img src="../images/add.png" width="18"/></a></th>
                     </tr>
@@ -216,7 +254,8 @@ input.input-sm {
                         <td width="60px"><input type="text" class="input-sm" value="2.1"></td>
                         <td width="250px"><textarea  style="width: 95%; height: 40px;" >是否已在适当的运行设备流程中建立下列控制：</textarea></td>
                         <td width="100px"><textarea  style="width: 95%; height: 40px;" ></textarea></td>
-                        <td width="250px"><textarea  style="width: 95%; height: 40px;" ></textarea></td>
+                        <td width="100px">&nbsp;&nbsp;<input type="radio" name="1c" onchange="addRw(this);">有&nbsp;&nbsp;&nbsp;<input type="radio" name="1c" checked>无</td>
+                        <td width="100px">&nbsp;&nbsp;<input type="radio" name="1d">有&nbsp;&nbsp;&nbsp;<input type="radio" name="1d"checked>无</td>
                         <td><textarea  style="width: 95%; height: 40px;" >对局方审计项进行备注</textarea></td>
                         <td width="50px">
                             <a name="del"><img src="../images/remove.png" width="18"/></a>
@@ -226,7 +265,8 @@ input.input-sm {
                         <td><input type="text" class="input-sm" value="1.1.1"></td>
                         <td><textarea  style="width: 98%; height: 40px;" >  是否有一个或多个适当的控制，确保在飞机上配备适当的手提灭火器？</textarea></td>
                         <td><textarea  style="width: 95%; height: 40px;" ></textarea></td>
-                        <td><textarea  style="width: 95%; height: 40px;" ></textarea></td>
+                        <td width="100px">&nbsp;&nbsp;<input type="radio" name="2c" onchange="addRw(this);">有&nbsp;&nbsp;&nbsp;<input type="radio" name="2c" checked>无</td>
+                        <td width="100px">&nbsp;&nbsp;<input type="radio" name="2d" checked>有&nbsp;&nbsp;&nbsp;<input type="radio" name="2d">无</td>
                         <td><textarea  style="width: 95%; height: 40px;" ></textarea></td>
                         <td>
                             <a name="del"><img src="../images/remove.png" width="18"/></a>

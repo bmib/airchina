@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+        <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
+		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
+        <style type="text/css">
+input.input-sm {
+    font-size: 60%;
+  height: 20px;
+  line-height: 20px;
+  width:20px;
+    padding-top:0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+        </style>
+        <script type="text/javascript">
+        //填报弹出窗口
+        $(document).ready(function () {
+            $("a[name='del']").bind("click",function() {
+					$(this).parents("tr").remove();
+            });
+            $("a[name='add']").bind("click",function() {
+					var trs = $("#wt2 tr");
+                    var tr = $(trs[0]);
+                    var td = tr.find("td:first-child");
+                    var newTr = tr.clone(true);
+                    newTr.find("input").each(function(){
+                           this.value = "";
+                         }); 
+                    newTr.find("textarea").each(function(){
+                           this.value = "";
+                         }); 
+                    newTr.insertAfter(trs[trs.length-1]);
+            });
+        });
+    </script>
+	</head>
+
+	<body class="yBodyBg">
+		<div class="yContentBox">
+			<div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:99%">
+            <table class="table">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th width="30px">序号</th>
+                        <th >描述</th>
+                        <th width="120px">来源</th>
+                        <th width="120px">接口</th>
+                        <th width="50px">操作<a name="add" id="2"><img src="../images/add.png" width="18"/></a></th>
+                    </tr>
+                </thead>
+                    </table></div></div>
+                <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:99%;height:320px">
+            <table class="table">
+                <tbody id="wt2">
+                    <tr>
+                        <td width="30px"><input type="text" class="input-sm" value="1"></td>
+                        <td ><textarea  style="width: 98%; height: 60px;" >检查合格证持有人的手册，确保其中包括必需的说明和信息，以便有关人员履行其职责，在出口座位旅客安全须知卡上有关于在出口座位就座的旅客阅读为其专备的出口座位旅客安全须知卡并进行自我对照的提示。</textarea></td>
+                        <td width="120px"><textarea style="width: 95%; height: 60px;" >121.593(a)(4)
+121.133(b)(11)
+</textarea></td>
+                        <td width="120px"><textarea style="width: 95%; height: 60px;" ></textarea></td>
+                        <td width="50px">
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="input-sm" value="2"></td>
+                        <td><textarea  style="width: 98%; height: 60px;" >  . 检查合格证持有人的手册，确保其中包括必需的说明和信息，以便有关人员履行其职责，出口座位旅客安全须知卡应当包含就座于出口座位的旅客应当具备的能力。</textarea></td>
+                        <td><textarea  style="width: 95%; height: 60px;" >121.133(b)(12)
+121.133(b)(10)</textarea></td>
+                        <td><textarea  style="width: 95%; height: 60px;" ></textarea></td>
+                        <td>
+                            <a name="del"><img src="../images/remove.png" width="18"/></a>
+                        </td>
+                    </tr>
+</tbody>
+</table>
+</div>
+</div>
+		</div>
+	</body>
+
+</html>

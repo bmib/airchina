@@ -44,6 +44,25 @@
 						id: "ad_sjys_modify",
 						content: 'url:admin/ad_sjys_modify.html',
 						width: 350,
+						height: 170,
+						title: '修改审计要素',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('审计要素修改成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            });
+            $("a[name='modify2']").each(function() {
+					$(this).dialog({
+						id: "ad_sjys_modify2",
+						content: 'url:admin/ad_sjys_modify2.html',
+						width: 350,
 						height: 270,
 						title: '修改审计要素',
 						button: [{
@@ -62,7 +81,7 @@
 						id: "ad_sjys_add",
 						content: 'url:admin/ad_sjys_modify.html',
 						width: 350,
-						height: 270,
+						height: 170,
 						title: '新增审计要素',
 						button: [{
 							name: '保存',
@@ -94,6 +113,18 @@
             }
             
         }
+        
+        function changeSjdly(obj) {
+    var type = $(obj).val();
+    $("#1").hide();
+    $("#2").hide();
+    if(type=="全部" || type=="FSOP")
+    {
+        $("#1").show();
+        $("#2").show();
+    }
+            
+}
     </script>
 </head>
 <body>
@@ -117,7 +148,7 @@
                 </label>
                 <label>来源：</label>
                 <label>
-                    <select style="width:100px">
+                    <select style="width:100px" onchange="changeSjdly(this);">
                             <option selected="selected">全部</option>
                             <option>FSOP</option>
                             <option>自定义</option>
@@ -125,8 +156,8 @@
                             <option>IOSA</option>
                         </select>
                 </label>
-                <label>系统：</label>
-                <label>
+                <label id="1">系统：</label>
+                <label id="2">
                     <select style="width:200px">
                             <option selected="selected">全部</option>
                             <option>1、航空器构型控制</option>
@@ -177,7 +208,7 @@
                         <td>1.1.2 适当的运行设备&nbsp;&nbsp;<!--img src="../images/hint_light.png" width="16" title="对局方要素的备注"/--></td>
                         <td>5</td>
                         <td><a href="ad_sjd_detail.html">SAI_1_1_2_OP</a>&nbsp;&nbsp;&nbsp;<a href="ad_sjd_detail.html">EPI_1_1_2_OP</a></td>
-                        <td><a name="modify">修改</a></td>
+                        <td><a name="modify2">修改</a></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" id="sjys_2" disabled></td>
@@ -190,7 +221,7 @@
                         <td>2.1.1 手册更新</td>
                         <td>5</td>
                         <td><a href="ad_sjd_detail.html">SAI_2_1_1_OP</a>&nbsp;&nbsp;&nbsp;<a href="ad_sjd_detail.html">EPI_2_1_1_OP</a></td>
-                        <td><a name="modify">修改</a></td>
+                        <td><a name="modify2">修改</a></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" id="sjys_3" disabled></td>
@@ -203,7 +234,7 @@
                         <td>4.2.1 维修人员培训大纲</td>
                         <td>4</td>
                         <td><a href="ad_sjd_detail.html">SAI_4_2_1_AW</a>&nbsp;&nbsp;&nbsp;<a href="ad_sjd_detail.html">EPI_4_2_1_AW</a></td>
-                        <td><a name="modify">修改</a></td>
+                        <td><a name="modify2">修改</a></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="checkboxinlist" id="sjys_4"></td>
@@ -216,17 +247,17 @@
                         <td>8.1.1 停机坪监察</td>
                         <td>3</td>
                         <td><a href="ad_sjd_detail.html">SOI_8_1_1_OP</a></td>
-                        <td><a name="modify">修改</a></td>
+                        <td><a name="modify2">修改</a></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="checkboxinlist" id="sjys_5"></td>
                         <td>飞行</td>
                         <td>自定义</td>
-                        <td>8 特定检查单</td>
+                        <td></td>
                         <!--td>10</td-->
-                        <td>8.2 安全组织管理</td>
+                        <td></td>
                         <!--td>10</td-->
-                        <td>8.2.1 安全组织管理</td>
+                        <td>1 安全组织管理</td>
                         <td>4</td>
                         <td><a href="ad_sjd_detail.html">SOI_8_2_1_OP</a></td>
                         <td><a name="modify">修改</a></td>

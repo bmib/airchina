@@ -17,7 +17,7 @@
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            var winH = $(window).height() - 150;
+            var winH = $(window).height() - 190;
             $("#accordion").css('height', winH + 'px');
 			$("#a2").css('height', winH + 'px');
 			$("#a3").css('height', winH + 'px');
@@ -78,20 +78,20 @@
                             <table class="table">
                                 <thead>
                                     <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
-                                        <th align="left" class="left" style="width:70px;">计划年月</th>
+                                        <th align="left" class="left" style="width:70px;">计划年月 <span>&uarr;</span></th>
                                         <th align="left" class="center" style="width:90px;">审计组长</th>
                                         <th align="left" class="center">审计专员</th>
-                                        <th align="left" class="center" style="width:90px;">预填结束日期</th>
-                                        <th align="left" class="center" style="width:90px;">审计开始日期</th>
+                                        <th align="left" class="center" style="width:90px;">预填结束日期 <span>&uarr;</span></th>
+                                        <th align="left" class="center" style="width:90px;">审计开始日期 <span>&uarr;</span></th>
                                         <th align="left" class="center" style="width:90px;">签收人员</th>
                                         <th align="left" class="center" style="width:150px;">预填人员</th>
-                                        <th align="left" class="center" style="width:50px;">状态</th>
+                                        <th align="left" class="center" style="width:50px;">状态 <span>&uarr;</span></th>
                                         <th align="left" class="center" style="width:50px;">操作</th>
                                   </tr>
                                 </thead>
                              </table>
                          </div>
-                         <div class="panel-group" id="accordion" style="overflow-y:scroll; height:50px; border:1px solid #ccc;">
+                         <div class="panel-group" id="accordion" style="overflow-y:scroll; height:300px; border:1px solid #ccc;">
                          <table class="table table-hover" id="each">
                             <tbody>
                                 <tr onClick="showtd1()">
@@ -105,7 +105,7 @@
                                   <td class="center" style="width:90px;">王领导</td>
                                   <td style="width:150px;">-- </td>
                                   <td class="center" style="width:50px;"> 未签收 </td>
-                                  <td class="center" style="width:50px;"><a href="ep_sjsj2.html" class="btn btn-mini">查看</a></td>
+                                  <td class="center" style="width:50px;"><a href="ep_sjsj2.html" class="btn btn-mini">签收</a></td>
                                 </tr>
                                 <tr onClick="showtd2()">
                                   <td class="center"> 2015年4月 </td>
@@ -118,7 +118,7 @@
                                   <td class="center">王领导</td>
                                   <td> 张三/李四/王五 </td>
                                   <td class="center">未完成</td>
-                                  <td class="center"><a href="ep_sjsj2.html" class="btn btn-mini">查看</a></td>
+                                  <td class="center"><a href="ep_sjsj2_2.html" class="btn btn-mini">查看</a></td>
                                 </tr>
                                 <tr>
                                   <td class="center"> 2014年3月 </td>
@@ -131,7 +131,7 @@
                                   <td class="center">王领导</td>
                                   <td> 张三/李四/王五 </td>
                                   <td class="center"> 未完成 </td>
-                                  <td class="center"><a href="ep_sjsj2.html" class="btn btn-mini">查看</a></td>
+                                  <td class="center"><a href="ep_sjsj2_2.html" class="btn btn-mini">查看</a></td>
                                 </tr>
                                 <tr>
                                   <td class="center"> 2013年7月 </td>
@@ -144,7 +144,7 @@
                                   <td class="center">王领导</td>
                                   <td> 张三/李四/王五 </td>
                                   <td class="center"> 已完成 </td>
-                                  <td class="center"><a href="ep_sjsj2.html" class="btn btn-mini">查看</a></td>
+                                  <td class="center"><a href="ep_sjsj2_2.html" class="btn btn-mini">查看</a></td>
                                 </tr>
                                 <tr>
                                     <td class="center">
@@ -161,7 +161,7 @@
                                     <td class="center">
                                         已完成
                                     </td>
-                                    <td class="center"><a href="ep_sjsj2.html" class="btn btn-mini">查看</a></td>
+                                    <td class="center"><a href="ep_sjsj2_2.html" class="btn btn-mini">查看</a></td>
                                 </tr>
                             </tbody>
                         </table>

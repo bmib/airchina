@@ -36,8 +36,8 @@
                             <thead>
                                 <tr>
                                 	<th align="left" class="left" style="line-height:30px; font-size:14px !important; padding-left:20px;">计划年月：2015年5月</th>
-                                    <th align="left" class="right" style="line-height:30px;">签收人员：王领导</th>
-                                    <th align="left" class="right" style="line-height:30px;">预填人员：张三、李四、王五</th>
+                                    <th align="left" class="right" style="line-height:30px;">签收人员：---</th>
+                                    <th align="left" class="right" style="line-height:30px;">预填人员：---</th>
                                     <th align="left" class="right" style="line-height:30px;"> <span style="margin-left: 50px; font-weight:100">【审计要素共20个，已完成10个。问题共180个，已完成79个。】</span></th>
                                   
                               </tr>
@@ -49,7 +49,7 @@
                             	<tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
                                     <th align="left" class="left" style=" padding-left:5px;">要素</th>
                                     <th align="left" class="center" style="width:60px; padding:1px;">
-                                    <select name="select" class="span1" style=" line-height:25px; height:25px; font-size:12px;">
+                                    <select name="select" style=" line-height:25px; height:25px; width:80px !important; font-size:12px;">
                                             <option value="0">全部</option>
                                             <option value="4" selected="selected">飞行</option>
                                             <option value="5">机务</option>
@@ -60,17 +60,17 @@
                                             <option value="9">保卫</option>
                                             <option value="9">组织管理</option>
                                         </select></th>
-                                    <th align="left" class="center" style="width:100px;">审计单类型</th>
+                                    <th align="left" class="center" style="width:100px;">审计单类型 <span>&uarr;</span></th>
                                     <th align="left" class="center" style="width:150px;">审计单下载</th>
-                                    <th align="left" class="center" style="width:60px;">状态</th>
-                                    <th align="left" class="center" style="width:100px;">上次保存日期</th>
+                                    <th align="left" class="center" style="width:60px;">状态 <span>&uarr;</span></th>
+                                    <th align="left" class="center" style="width:100px;">上次保存日期 <span>&uarr;</span></th>
                                     <th align="left" class="center" style="width:100px;">上次保存人员</th>
                                     <th align="left" class="center" style="width:60px;">操作</th>
                               	</tr>
                             </thead>
                           </table>
 						</div>
-                         <div class="panel-group" id="a2" style="overflow-y:auto; height:50px; border:1px solid #ccc;">
+                         <div class="panel-group" id="a2" style="overflow-y:auto; height:300px; border:1px solid #ccc;">
                          <table class="table table-hover">
                                 <tbody>
                                     <tr>
@@ -377,7 +377,7 @@
                             </table>
             			</div>
                        <div class="modal-footer center">
-                        <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">签收</button><a type="button" class="btn" href="ep_sjsj.html" style=" margin-left:10px;">返回</a>
+                        <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#myModal-1">确认签收</button><a type="button" class="btn" href="ep_sjsj.html" style=" margin-left:10px;">返回</a>
                         </div>
 
                		 </div>
@@ -470,7 +470,7 @@
             <!--<button type="submit" class="btn green"><i class="icon-file-text"></i> 保存</button>
             <button type="submit" class="btn blue"><i class="icon-ok"></i> 确定</button>
 			<button type="button" class="btn" data-dismiss="modal"><i class="icon-remove icon-white"></i> 取消</button>-->
-            <button type="submit" class="btn blue" data-dismiss="modal">确定</button>
+            <button type="submit" class="btn blue" onclick="location='ep_sjsj2_b.html'">确定</button>
 			<button type="button" class="btn" data-dismiss="modal">关闭</button>
             </div>
         </div>

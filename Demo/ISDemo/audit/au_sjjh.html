@@ -127,7 +127,7 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-            <div style="float: right; margin-right: 20px;" class="form-inline">
+            <div style="float: right; margin-right: 30px;" class="form-inline">
                 <label title="查看/修改年度计划">
                     <input type="radio" class="planviewradio" onclick="switchview('1');" value="1" checked="checked"
                         name="planviewradio" />&nbsp;&nbsp;日历视图</label>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -135,7 +135,7 @@
                     <input type="radio" class="planviewradio" onclick="switchview('2');" value="2" name="planviewradio" />&nbsp;&nbsp;列表视图</label>
             </div>
             <div id="calanderDiv">
-                <div class="year form-inline alert alert-info" style="margin-bottom:10px;">
+                <div class="year form-inline alert alert-info" style="margin-bottom:10px; height:30px;">
                     审计年份：
                     <img onclick="addyear(-1);" style="margin-right: 10px;" src="../images/20150417032611750_easyicon_net_64.png"
                         width="12" />
@@ -655,7 +655,7 @@
                 </div>
             </div>
             <div id="staffDiv" style="display: none;">
-            <div class="form-inline">
+            <div class="form-inline alert alert-info" style="margin-bottom:10px;">
                 <label>计划年月：</label>
                 <select name="select" class="span2" >
                 	<option value="0" selected="selected">全部</option>
@@ -670,34 +670,35 @@
                     <option value="5">沈阳航空公司</option>
                     <option value="5">山东航空公司</option>
                 </select>
-                <label style=" padding-left:100px;"> <a href="#" class="btn" data-toggle="modal" data-target="#myModal-7">新增计划</a>&nbsp;&nbsp;<a href="#" class="btn">导出Excel</a></label>
+                <label style=" padding-left:60px;"> <a href="#" class="btn" data-toggle="modal" data-target="#myModal-7">新增计划</a>&nbsp;&nbsp;<a href="#" class="btn">导出Excel</a></label>
           </div>
                
                 <table class=" table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th width="10%">
+                            <th style="width:70px;">
                                 被审计单位
                             </th>
-                            <th width="10%">
-                                审计日期
+                            <th style="width:100px;">
+                                审计日期 <span>&darr;</span>
                             </th>
-                            <th width="10%">
+                            <th style="width:70px;">
                                 审计类别
                             </th>
-                            <th width="10%">
+                            <th style="width:60px;">
                                 审计组长
                             </th>
                             <th>
                                 审计专员
                             </th>
-                            <th width="10%">
+                            <th style="width:60px;">
                                 创建人
                             </th>
-                            <th width="10%">
-                                创建日期
+                            <th style="width:70px;">
+                                创建日期 <span>&darr;</span>
                             </th>
-                            <th width="10%">
+                            <th style="width:70px;">状态 <span>&darr;</span></th>
+                            <th style="width:90px;">
                                 操作
                             </th>
                         </tr>
@@ -708,7 +709,7 @@
                                 国货航
                             </td>
                             <td>
-                                2015年4月
+                                2015年1月
                             </td>
                             <td>
                                 普通审计
@@ -725,9 +726,10 @@
                             <td>
                                 2015-01-06
                             </td>
+                            <td>完成审计</td>
                             <td>
-                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
-                                    class="btn">删除</a>
+                                <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn btn-mini">删除</a>
                             </td>
                         </tr>
                         <tr>
@@ -735,7 +737,7 @@
                                 内蒙航空
                             </td>
                             <td>
-                                2015年4月28日
+                                2015年2月28日
                             </td>
                             <td>
                                 专项审计
@@ -752,6 +754,7 @@
                             <td>
                                 2015-04-16
                             </td>
+                            <td>分析评估中</td>
                             <td>
                             </td>
                         </tr>
@@ -777,9 +780,10 @@
                             <td>
                                 2015-01-06
                             </td>
+                            <td>审计中</td>
                             <td>
-                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
-                                    class="btn">删除</a>
+                                <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn btn-mini">删除</a>
                             </td>
                         </tr>
                         <tr>
@@ -787,7 +791,7 @@
                                 国货航
                             </td>
                             <td>
-                                2015年4月
+                                2015年5月
                             </td>
                             <td>
                                 普通审计
@@ -804,9 +808,10 @@
                             <td>
                                 2015-01-06
                             </td>
+                            <td>预填中</td>
                             <td>
-                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
-                                    class="btn">删除</a>
+                                <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn btn-mini">删除</a>
                             </td>
                         </tr>
                         <tr>
@@ -814,7 +819,7 @@
                                 国货航
                             </td>
                             <td>
-                                2015年4月
+                                2015年6月
                             </td>
                             <td>
                                 普通审计
@@ -831,9 +836,10 @@
                             <td>
                                 2015-01-06
                             </td>
+                            <td>构型中</td>
                             <td>
-                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
-                                    class="btn">删除</a>
+                                <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn btn-mini">删除</a>
                             </td>
                         </tr>
                         <tr>
@@ -841,7 +847,7 @@
                                 国货航
                             </td>
                             <td>
-                                2015年4月
+                                2015年7月
                             </td>
                             <td>
                                 普通审计
@@ -858,9 +864,10 @@
                             <td>
                                 2015-01-06
                             </td>
+                            <td>构型中</td>
                             <td>
-                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
-                                    class="btn">删除</a>
+                                <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn btn-mini">删除</a>
                             </td>
                         </tr>
                         <tr>
@@ -868,7 +875,7 @@
                                 国货航
                             </td>
                             <td>
-                                2015年4月
+                                2015年11月
                             </td>
                             <td>
                                 普通审计
@@ -885,14 +892,98 @@
                             <td>
                                 2015-01-06
                             </td>
+                            <td>构型中</td>
                             <td>
-                                <a class="btn" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
-                                    class="btn">删除</a>
+                                <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn btn-mini">删除</a>
+                            </td>
+                        </tr><tr>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>--</td>
+                            <td>
+                                <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn btn-mini">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>--</td>
+                            <td>
+                                <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn btn-mini">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>--</td>
+                            <td>
+                                <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-8">修改</a>&nbsp;&nbsp;<a
+                                    class="btn btn-mini">删除</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="pagination pagination-right pagination-small">
+               <!-- <div class="pagination pagination-right pagination-small">
                     <ul>
                         <li><a href="#">首页</a></li>
                         <li><a href="#">1</a></li>
@@ -902,9 +993,9 @@
                         <li><a href="#">5</a></li>
                         <li><a href="#">末页</a></li>
                     </ul>
-                </div>
-                <div class="modal-footer center">
-                </div>
+                </div>-->
+             <!--   <div class="modal-footer center">
+                </div>-->
             </div>
         </div>
     </div>
@@ -1850,7 +1941,7 @@
                     <label class="control-label" for="Text11">
                         审计日期</label>
                     <div class="controls">
-                        <input type="text" id="Text11" placeholder="" />
+                        <input type="text" id="Text11" placeholder="yyyy-mm-dd" />
                     </div>
                 </div>
                 <div class="control-group">

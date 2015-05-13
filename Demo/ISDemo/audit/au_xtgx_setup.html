@@ -48,15 +48,14 @@ $(document).ready(function() {
 <div class="portlet box">
     <div class="portlet-body" >
         <div class="tab-content">
-            <div class="form-inline">
+            <div class="form-inline alert alert-info">
                 <label><strong>计划年月</strong>：2015年4月</label>
                 <label><strong>被审计单位</strong>：山东航空公司</label>
-                <button type="button" class="btn " data-toggle="modal" data-target="#myModal-2" style=" margin-left:30px;">历史不合格的问题</button>
-                <label style="float:right"><div class="alert alert-warning"><strong>审计组长：</strong>齐龙；<strong>审计专员：</strong>李哲、王静、某某某、某某某、某某某、某某某、某某某、某某某、某某某</div></label>
+                <button type="button" class="btn btn-info btn-mini" data-toggle="modal" data-target="#myModal-2" style=" margin-left:30px;">历史不合格的问题</button></div></label>
             </div>
-            <div class="form-inline ">
+            <div class="form-inline">
                 <label>专业：</label>
-                <select name="select" class="span1" >
+                <select name="select" >
                     <option value="0" selected="selected">全部</option>
                     <option value="4">飞行</option>
                     <option value="5">机务</option>
@@ -70,7 +69,7 @@ $(document).ready(function() {
                 </select>
                 <label style="padding-left:30px;">构型状态：未提交
                 </label>  
-                <label style=" float:right;"><div class="alert alert-success"><span><strong>要素总数：</strong>80；<strong>问题总数：</strong>230</span>&nbsp;&nbsp;<strong>预填结束日期：</strong>2015年6月20日；&nbsp;&nbsp;<strong>审计开始日期：</strong>2015年6月30日；<strong>签收人员：</strong>王领导；<strong>预填人员：</strong>张小三/王小五/赵小六</div></label>
+                <label style=" float:right;"><div class="alert"><span><strong>要素总数：</strong>80；<strong>问题总数：</strong>230</span>&nbsp;&nbsp;<strong>预填结束日期：</strong>2015年6月20日；</div></label>
             </div>
             <!---->
             
@@ -100,21 +99,21 @@ $(document).ready(function() {
                               </tr>
                             </thead>
                         </table>
-                        <div style="overflow-y:scroll ; height:30px;">
+                        <div style="overflow-y:scroll ; height:35px;">
                         <table class="table table-hover">
                             <thead>
                                 <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
                                     <th align="left" class="left" style=" padding-left:5px;">要素</th>
-                                    <th align="left" class="center" style="width:25px;">权重</th>
-                                    <th align="left" class="center" style="width:40px;">重要性</th>
-                                    <th align="left" class="center" style="width:25px;">风险</th>
+                                    <th align="left" class="center" style="width:25px;">权重 <span>&uarr;</span></th>
+                                    <th align="left" class="center" style="width:40px;">重要性 <span>&uarr;</span></th>
+                                    <th align="left" class="center" style="width:25px;">风险 <span>&darr;</span></th>
                                     <th align="left" class="center" style="width:50px;"><button type="button" class="btn btn-mini btn-info">全部+</button></th>
                                     
                               </tr>
                             </thead>
                          </table>
                          </div>
-                         <div class="panel-group" id="accordion" style="overflow-y:scroll; height:50px; border:1px solid #ccc;">
+                         <div class="panel-group" id="accordion" style="overflow-y:scroll; height:300px; border:1px solid #ccc;">
                          <table class="table table-hover">
                             <tbody>
                                 <tr>
@@ -221,12 +220,12 @@ $(document).ready(function() {
                         </div>
                     </div>
                 </td>
-                <td style="width:30%; padding-right:5px;">
+                <td style="width:32%; padding-right:5px;">
                     <div class="tab-content">
                         <table class="table alert alert-info">
                             <thead>
                                 <tr>
-                                    <th align="left" class="left" style="line-height:30px;">已选构型要素(20)</th>
+                                    <th align="left" class="left" style="line-height:30px;">已选要素(20)</th>
                                     <th align="left" class="right form-inline" style="line-height:30px;">
                                         <label class="checkbox">
                                         	<input type="checkbox" value=""  checked /> 局方
@@ -251,15 +250,15 @@ $(document).ready(function() {
                                 <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
                                    
                                     <th align="left" class="left" style=" padding-left:5px;">要素</th>
-                                    <th align="left" class="center" style="width:25px;">类型</th>
-                                    <th align="left" class="center" style="width:25px;">问题</th>
+                                    <th align="left" class="center" style="width:25px;">类型 <span>&uarr;</span></th>
+                                    <th align="left" class="center" style="width:25px;">问题 <span>&uarr;</span></th>
                                     <th align="left" class="center" style="width:40px;">审计员</th>
                                      <th align="left" class="center" style="width:25px;"><a href="#"><img src="../images/del.png" title="点删除选择要素"></a></th>
                               </tr>
                             </thead>
                          </table>
                          </div>
-                         <div class="panel-group" id="a2" style="overflow-y:scroll; vertical-align:top; height:50px; border:1px solid #ccc;">
+                         <div class="panel-group" id="a2" style="overflow-y:scroll; vertical-align:top; height:300px; border:1px solid #ccc;">
                          <table class="table table-hover" id="each">
                             <tbody>
                                 <tr>
@@ -351,16 +350,16 @@ $(document).ready(function() {
                         </div>
                     </div>
                 </td>
-                <td style="width:40%">
+                <td style="width:38%">
                     	<div class="tab-content">
                             <table class="table alert alert-info">
                                 <thead>
                                     <tr>
-                                        <th align="left" class="left" style="line-height:30px;">问题</th>
+                                        <th align="left" class="left" style="line-height:30px;">审计项</th>
                                         <th align="left" class="left"></th>
                                         <th align="left" class="center form-inline" style="line-height:30px;">
                                         <span style="font-size:12px;">章节</span>
-                                         <select name="select" class="span2" style=" line-height:25px; height:25px; font-size:12px;">
+                                         <select name="select" style=" line-height:25px; height:25px; font-size:12px;">
                                             <option value="4" selected="selected">第一部分-程序</option>
                                             <option value="5">第二部分-控制</option>
                                             <option value="5">第三部分-流程测量</option>
@@ -368,7 +367,7 @@ $(document).ready(function() {
                                             <option value="5">第五部分-责任</option>
                                             <option value="5">第六部分-权利</option>
                                         </select>
-                                         <input type="text" placeholder="关键词搜索" id="filter8" class="span2" style=" line-height:20px; height:20px; font-size:12px; padding:1px;"/>
+                                         <input type="text" placeholder="关键词搜索" style=" line-height:20px;  width:130px; height:20px; font-size:12px; padding:1px;"/>
                        					</th>
                                   </tr>
                                 </thead>
@@ -386,7 +385,7 @@ $(document).ready(function() {
                             </table>
                           </div>
                         </div>
-                        <div class="tab-content" id="a3" style="overflow-y:scroll; height:50px; border:1px solid #ccc;">
+                        <div class="tab-content" id="a3" style="overflow-y:scroll; height:300px; border:1px solid #ccc;">
                             <table class="table table-hover">
                                 <tbody>
                                     <tr>
@@ -440,7 +439,10 @@ $(document).ready(function() {
     </div>
 </div>
 <div class="modal-footer center">
-<button type="button" class="btn" onClick="sive();">保存</button><button type="button" class="btn" onClick="sive();">提交</button><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-1" style=" margin-left:10px;">下发</button>&nbsp;&nbsp;&nbsp;<a type="button" class="btn" href="au_xtgx.html" style=" margin-left:10px;">返回</a>
+<button type="button" class="btn" onClick="sive();">保存</button>
+<button type="button" class="btn" onClick="sive();">提交</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-1" style=" margin-left:10px;">下发</button>&nbsp;&nbsp;&nbsp;
+<a type="button" class="btn" href="au_xtgx.html" style=" margin-left:10px;">返回</a>
 </div>
 </div>
  </body>
@@ -544,50 +546,50 @@ $('#load_content').load('load.htm');
                         <tbody>
                             <tr>
                                 <td align="left" class="center">2014年8月</td>
-                                <td align="left" class="left" >［<a href="#">查看</a>］1.1.1 </td>
+                                <td align="left" class="left" >［<a href="#" title="点击查看问题">查看</a>］1.1.1 </td>
                                 <td align="left" class="center">飞行</td>
                                 <td align="left" class="center">未关闭</td>
                                 <td align="left" class="left" >回答为否的问题说明，说明为否的原因，文字数量如果超过一行可自动折行！带有附件的在文字介绍后边跟随附件图标，如：<a href="#"><img src="../images/pdf.png" title="点击下载附件"></a></td>
                             </tr>
                             <tr>
                                 <td align="left" class="center">2014年8月</td>
-                                <td align="left" class="left" >［<a href="#">查看</a>］1.1.2</td>
+                                <td align="left" class="left" >［<a href="#" title="点击查看问题">查看</a>］1.1.2</td>
                                 <td align="left" class="center">航务</td>
                                 <td align="left" class="center">未关闭</td>
                                 <td align="left" class="left" >问题说明</td>
                             </tr><tr>
                                 <td align="left" class="center">2014年8月</td>
-                                <td align="left" class="left" >［<a href="#">查看</a>］1.1.4</td>
+                                <td align="left" class="left" >［<a href="#" title="点击查看问题">查看</a>］1.1.4</td>
                                 <td align="left" class="center">维修</td>
                                 <td align="left" class="center">已关闭</td>
                                 <td align="left" class="left" >问题说明</td>
                             </tr><tr>
                                 <td align="left" class="center">2014年8月</td>
-                                <td align="left" class="left" >［<a href="#">查看</a>］1.1.6</td>
+                                <td align="left" class="left" >［<a href="#" title="点击查看问题">查看</a>］1.1.6</td>
                                 <td align="left" class="center">航卫</td>
                                 <td align="left" class="center">已关闭</td>
                                 <td align="left" class="left" >问题说明</td>
                             </tr><tr>
                                 <td align="left" class="center">2014年8月</td>
-                                <td align="left" class="left" >［<a href="#">查看</a>］1.1.8</td>
+                                <td align="left" class="left" >［<a href="#" title="点击查看问题">查看</a>］1.1.8</td>
                                 <td align="left" class="center">航务</td>
                                 <td align="left" class="center">已关闭</td>
                                 <td align="left" class="left" >问题说明</td>
                             </tr><tr>
                                 <td align="left" class="center">2014年8月</td>
-                                <td align="left" class="left" >［<a href="#">查看</a>］1.2.5</td>
+                                <td align="left" class="left" >［<a href="#" title="点击查看问题">查看</a>］1.2.5</td>
                                 <td align="left" class="center">机务</td>
                                 <td align="left" class="center">已关闭</td>
                                 <td align="left" class="left" >问题说明</td>
                             </tr><tr>
                                 <td align="left" class="center">2014年8月</td>
-                                <td align="left" class="left" >［<a href="#">查看</a>］1.2.7</td>
+                                <td align="left" class="left" >［<a href="#" title="点击查看问题">查看</a>］1.2.7</td>
                                 <td align="left" class="center">维修</td>
                                 <td align="left" class="center">已关闭</td>
                                 <td align="left" class="left" >问题说明</td>
                             </tr><tr>
                                 <td align="left" class="center">2014年8月</td>
-                                <td align="left" class="left" >［<a href="#">查看</a>］1.2.9</td>
+                                <td align="left" class="left" >［<a href="#" title="点击查看问题">查看</a>］1.2.9</td>
                                 <td align="left" class="center">航卫</td>
                                 <td align="left" class="center">已关闭</td>
                                 <td align="left" class="left" >问题说明</td>
@@ -603,7 +605,7 @@ $('#load_content').load('load.htm');
             <button type="submit" class="btn blue"><i class="icon-ok"></i> 确定</button>
 			<button type="button" class="btn" data-dismiss="modal"><i class="icon-remove icon-white"></i> 取消</button>
             <button type="submit" class="btn blue"><i class="icon-ok"></i> 提交</button>-->
-			<button type="button" class="btn" data-dismiss="modal"><i class="icon-remove icon-white"></i> 关闭</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
             </div>
         </div>
     </div>

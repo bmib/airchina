@@ -1,6 +1,9 @@
 /*!
 
  */
+.form-inline{white-space:nowrap !important; word-break:keep-all !important;overflow: hidden !important; }
+.box{ min-width:1000px !important;}
+select{ width:130px !important;}
 label{ padding-left:6px; margin-bottom:0px !important;}
 .portlet-body{ padding-top:10px; text-align:left; padding:5px;}
 .nav{ margin-bottom:0px;}
@@ -254,7 +257,7 @@ background-color:#ff9900;
   text-align: left;
   font-size:12px !important;
 }
-.table th{ background-color:#f8f8f8;}
+.table th{ background-color:#f8f8f8;white-space:nowrap !important; word-break:keep-all !important;overflow: hidden !important}
 .center{ text-align:center !important;}
 .right{ text-align:right !important;}
 .label, .badge{ font-weight:100;}

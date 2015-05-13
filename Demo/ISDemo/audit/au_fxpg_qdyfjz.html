@@ -46,10 +46,11 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-            <div class="alert alert-info form-inline">
+            <div class="alert alert-info form-inline" style="margin-bottom:10px;">
                 <label>
                     启动根原因分析和预防纠正</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>计划年月：2015年4月</label>&nbsp;&nbsp;&nbsp;&nbsp;<label>被审计单位：深圳航空公司</label>
             </div>
+            <div class=" text-center">
             <table style="width: 100%;">
                 <tr>
                     <td>
@@ -67,8 +68,8 @@
                                         <!--书签-->
                                         <div class="tabbable tabbable-custom">
                                             <ul class="nav nav-tabs">
-                                                <li class="active"><a href="#tab_1_1" data-toggle="tab">审计问题</a></li>
-                                                <li><a href="#tab_1_2" data-toggle="tab">新发现问题</a></li>
+                                                <li class="active"><a href="#tab_1_1" data-toggle="tab">审计项（问题）</a></li>
+                                                <li><a href="#tab_1_2" data-toggle="tab">新增审计项</a></li>
                                             </ul>
                                             <div class="tab-content">
                                                 <div class="tab-pane active" id="tab_1_1">
@@ -80,12 +81,12 @@
                                                                         <input type="checkbox" checked="checked" />
                                                                     </th>
                                                                     <th style="width: 100px">
-                                                                        要素
+                                                                        审计单
                                                                     </th>
                                                                     <th style="width: 150px">
-                                                                        问题
+                                                                        审计项
                                                                     </th>
-                                                                    <th style="width: 180px">
+                                                                    <th style="width: 120px">
                                                                         问题分类
                                                                     </th>
                                                                     <th>
@@ -111,7 +112,7 @@
                                                                     <td style="width: 150px">
                                                                         2.1.2 相关手册内容一致性
                                                                     </td>
-                                                                    <td style="width: 180px">
+                                                                    <td style="width: 120px">
                                                                         人员（例如：人力资源不足、人员资质不符合要求等）
                                                                     </td>
                                                                     <td>
@@ -272,7 +273,7 @@
                                                                 <tr>
                                                                     <th colspan="6" style="text-align: right; padding-right: 30px;">
                                                                         <button class="btn btn-info btn-mini" data-toggle="modal" data-target="#myModal-8">
-                                                                            添加新发现问题</button>
+                                                                            增加审计项</button>
                                                                     </th>
                                                                 </tr>
                                                                 <tr>
@@ -280,12 +281,12 @@
                                                                         <input type="checkbox" checked="checked" />
                                                                     </th>
                                                                     <th style="width: 100px">
-                                                                        要素
-                                                                    </th>
-                                                                    <th style="width: 300px">
-                                                                        问题
+                                                                        审计单
                                                                     </th>
                                                                     <th style="width: 150px">
+                                                                        审计项
+                                                                    </th>
+                                                                    <th style="width: 120px">
                                                                         问题分类
                                                                     </th>
                                                                     <th>
@@ -298,7 +299,7 @@
                                                             </thead>
                                                         </table>
                                                     </div>
-                                                    <div style="overflow-y: scroll; height: 325px;">
+                                                    <div style="overflow-y: scroll; height:300px; vertical-align:top;">
                                                         <table class="table table-hover">
                                                             <tbody>
                                                                 <tr>
@@ -308,10 +309,10 @@
                                                                     <td style="width: 100px">
                                                                         1.1.1 [查看详细]
                                                                     </td>
-                                                                    <td style="width: 300px">
+                                                                    <td style="width: 150px">
                                                                         GRH 1.1.1 运营人必须具有管理体系，确保地面勤务运行的控制以及安全和保安管理成效。
                                                                     </td>
-                                                                    <td style="width: 150px">
+                                                                    <td style="width: 120px">
                                                                         工具和设备
                                                                     </td>
                                                                     <td>
@@ -473,67 +474,60 @@
                             </tbody>
                         </table>
                     </td>
-                    <td valign="top" style="width: 200px;">
+                    <td valign="top" style="width:300px;">
+                    <div style="overflow-y:auto; height: 430px;">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>
+                                    <th colspan="2">
                                         预防纠正通知书
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                  <tr>
+                                    <td class="right">整改措施提交期限：</td>
+                                    <td><input type="text" placeholder="yyyy-mm-dd" style="width:110px;"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="right">整改措施提交人员：</td>
                                     <td>
-                                        <form class=" form-horizontal">
-                                        <div class="control-group">
-                                            <label class="control-label" for="inputEmail">
-                                                整改措施提交期限</label>
-                                            <div class="controls">
-                                                <input type="text" id="inputEmail" placeholder="整改措施提交期限">
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <label class="control-label" for="inputEmail">
-                                                整改措施提交人员</label>
-                                            <div class="controls">
-                                                <label class="checkbox">
-                                                    <input type="checkbox" />张三月</label>
-                                                <label class="checkbox">
-                                                    <input type="checkbox" />张三月</label>
-                                                <label class="checkbox">
-                                                    <input type="checkbox" />张三月</label>
-                                                <label class="checkbox">
-                                                    <input type="checkbox" />张三月</label>
-                                                <label class="checkbox">
-                                                    <input type="checkbox" />张三月</label>
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <label class="control-label" for="Textarea1">
-                                                预防纠正说明</label>
-                                            <div class="controls">
-                                                <textarea id="Textarea1" style="height: 100px;"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <div class="controls">
-                                                <a>上传附件</a>
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <div class="controls">
-                                                <a class="btn btn-info">下发</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="au_fxpg2.html">返回</a>
-                                            </div>
-                                        </div>
-                                        </form>
+                                    <label class="checkbox">
+                                        <input type="checkbox" />张三月</label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" />张三月</label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" />张三月</label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" />张三月</label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" />张三月</label>
                                     </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="right">预防纠正说明：</td>
+                                    <td><textarea id="Textarea1" style="height: 120px; width:110px;"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2"><a>上传附件</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2"><a>附件1</a>，<a>附件2</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" class="center">
+                                        <a class="btn btn-info">下发</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="au_fxpg2.html">返回</a>
+                                    
+                                    </td>
+                                   
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
                     </td>
                 </tr>
             </table>
+            </div>
         </div>
     </div>
 </body>

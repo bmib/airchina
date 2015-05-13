@@ -46,30 +46,31 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-            <div class="alert">
+            <div class="alert alert-info form-inline" style="margin-bottom:10px;">
                 启动风险管理&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计划年月：2015年4月&nbsp;&nbsp;&nbsp;&nbsp;被审计单位：深圳航空</div>
-            <table style="width: 100%;">
-                <tr>
-                    <td>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        风险管理问题
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <!--书签-->
-                                        <div class="tabbable tabbable-custom">
-                                            <ul class="nav nav-tabs">
-                                                <li class="active"><a href="#tab_1_1" data-toggle="tab">审计问题</a></li>
-                                                <li><a href="#tab_1_2" data-toggle="tab">新发现问题</a></li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="tab_1_1">
+             <div class="text-center">
+                 <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            风险管理问题
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <!--书签-->
+                                            <div class="tabbable tabbable-custom">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a href="#tab_1_1" data-toggle="tab">审计项（问题）</a></li>
+                                                    <li><a href="#tab_1_2" data-toggle="tab">新增审计项</a></li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="tab_1_1">
                                                     <div style="overflow-y: scroll;">
                                                         <table class="table">
                                                             <thead>
@@ -78,12 +79,12 @@
                                                                         <input type="checkbox" checked="checked" />
                                                                     </th>
                                                                     <th style="width: 100px">
-                                                                        要素
+                                                                        审计单
                                                                     </th>
                                                                     <th style="width: 150px">
-                                                                        问题
+                                                                        审计项
                                                                     </th>
-                                                                    <th style="width: 180px">
+                                                                    <th style="width: 120px">
                                                                         问题分类
                                                                     </th>
                                                                     <th>
@@ -96,7 +97,7 @@
                                                             </thead>
                                                         </table>
                                                     </div>
-                                                    <div style="overflow-y: scroll; height: 325px;">
+                                                    <div style="overflow-y: scroll; height: 330px;">
                                                         <table class="table table-hover">
                                                             <tbody>
                                                                 <tr>
@@ -109,7 +110,7 @@
                                                                     <td style="width: 150px">
                                                                         2.1.2 相关手册内容一致性
                                                                     </td>
-                                                                    <td style="width: 180px">
+                                                                    <td style="width: 120px">
                                                                         人员（例如：人力资源不足、人员资质不符合要求等）
                                                                     </td>
                                                                     <td>
@@ -263,27 +264,27 @@
                                                         </table>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane" id="tab_1_2">
+                                                    <div class="tab-pane" id="tab_1_2">
                                                     <div style="overflow-y: scroll;">
                                                         <table class="table">
                                                             <thead>
                                                                 <tr>
-                                                                    <th colspan="6" style="text-align: right; padding-right: 30px;">
+                                                                    <td colspan="6" style="text-align: right; padding-right: 30px;">
                                                                         <button class="btn btn-info btn-mini" data-toggle="modal" data-target="#myModal-8">
-                                                                            添加新发现问题</button>
-                                                                    </th>
+                                                                            增加审计项</button>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th style="width: 30px">
                                                                         <input type="checkbox" checked="checked" />
                                                                     </th>
                                                                     <th style="width: 100px">
-                                                                        要素
-                                                                    </th>
-                                                                    <th style="width: 300px">
-                                                                        问题
+                                                                        审计单
                                                                     </th>
                                                                     <th style="width: 150px">
+                                                                        审计项
+                                                                    </th>
+                                                                    <th style="width: 120px">
                                                                         问题分类
                                                                     </th>
                                                                     <th>
@@ -296,7 +297,7 @@
                                                             </thead>
                                                         </table>
                                                     </div>
-                                                    <div style="overflow-y: scroll; height: 325px;">
+                                                    <div style="overflow-y: scroll; height:295px; vertical-align:top;">
                                                         <table class="table table-hover">
                                                             <tbody>
                                                                 <tr>
@@ -306,10 +307,10 @@
                                                                     <td style="width: 100px">
                                                                         1.1.1 [查看详细]
                                                                     </td>
-                                                                    <td style="width: 300px">
+                                                                    <td style="width: 150px">
                                                                         GRH 1.1.1 运营人必须具有管理体系，确保地面勤务运行的控制以及安全和保安管理成效。
                                                                     </td>
-                                                                    <td style="width: 150px">
+                                                                    <td style="width: 120px">
                                                                         工具和设备
                                                                     </td>
                                                                     <td>
@@ -463,53 +464,55 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <!--书签-->
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                    <td valign="top" style="width: 200px;">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        风险源报告
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td valign="top" style="height: 395px;">
-                                        <form class=" form-horizontal">
-                                        <div class="control-group">
-                                            <label class="control-label" for="Textarea1">
-                                                风险源说明</label>
-                                            <div class="controls">
-                                                <textarea id="Textarea1" style="height: 100px;"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <div class="controls">
-                                                <a>上传附件</a>
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <div class="controls">
-                                                <a class="btn btn-info">导出</a>&nbsp;&nbsp;<a class="btn">发送</a>&nbsp;&nbsp;<a class="btn"
-                                                    href="au_fxpg2.html">返回</a>
-                                            </div>
-                                        </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-            </table>
+                                            <!--书签-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td valign="top" style="width: 300px;">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            风险源报告
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            风险源说明：
+                                        
+                                            <textarea id="Textarea1" style="height: 250px; width:260px"></textarea>
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                    	<td class="left">
+											<a>上传附件</a>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                    	<td class="left">
+											<a>附件1</a>，<a>附件2</a>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                    	<td class="center">
+                                           <a class="btn btn-info">导出</a>&nbsp;&nbsp;<a class="btn">发送</a>&nbsp;&nbsp;<a class="btn"
+                                                        href="au_fxpg2.html">返回</a>
+                                         </td>
+                                    </tr>
+                                     
+                                    
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </body>

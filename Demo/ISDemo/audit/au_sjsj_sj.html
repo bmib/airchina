@@ -78,26 +78,25 @@
                         <li class="active"><a href="#tab_1_1" data-toggle="tab">基本信息</a></li>
                         <li><a href="#tab_1_2" data-toggle="tab">第一部分 绩效检查项</a></li>
                         <li><a href="#tab_1_3" data-toggle="tab">第二部分 管理责任和权力检查项</a></li>
-                        <li><a href="#tab_1_4" data-toggle="tab">新发现问题</a></li>
                     </ul>
                     <div class="tab-content" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd;
                         border-bottom: 1px solid #ddd;">
                         <div class="tab-pane active" id="tab_1_1">
                             <table width="100%" cellpadding="5" style="min-width: 1000px;">
                                 <tr>
-                                    <td width="150" class="right">
+                                    <td class="right" style="width:150px;">
                                         开始日期：
                                     </td>
-                                    <td width="25%">
+                                    <td>
                                         <input type="text" value="2015-05-01" />
                                     </td>
-                                    <td width="150" class="right">
+                                    <td class="right">
                                         结束日期：
                                     </td>
-                                    <td width="20%">
+                                    <td>
                                         <input type="text" value="2015-05-05" />
                                     </td>
-                                    <td rowspan="6" class="left" style="padding-left: 30px; vertical-align: top; line-height: 35px;">
+                                    <td rowspan="6" class="left" style="padding-left: 20px; vertical-align: top; line-height: 35px;">
                                         <!-- <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
                                             规章阅读</button><br>-->
                                         <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
@@ -113,7 +112,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="right">
+                                    <td class="right" style="width:150px;">
                                         出发地点：
                                     </td>
                                     <td>
@@ -189,7 +188,7 @@
                                 <table class=" table">
                                     <thead>
                                         <tr>
-                                            <td align="left" class="left" style="line-height: 30px; padding-left: 10px;">
+                                            <td align="left" class="left form-inline">
                                                 <div class="btn-group" data-toggle="buttons">
                                                     <label class="btn btn-primary active btn-mini">
                                                         <input type="radio" name="options" id="option1">
@@ -205,25 +204,23 @@
                                                     </label>
                                                     <label class="btn btn-primary btn-mini">
                                                         <input type="radio" name="options" id="option3">
-                                                        显示回答否有说明的问题
+                                                        显示不合格有说明的问题
                                                     </label>
                                                     <label class="btn btn-primary btn-mini">
                                                         <input type="radio" name="options" id="option3">
                                                         显示有预审备注的问题
                                                     </label>
+                                                    
                                                 </div>
-                                            </td>
-                                            <td align="left" class="right" style="line-height: 30px;">
-                                                <span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;
-                                                    <span class="label label-success">&nbsp;</span>已经填写 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span>
-                                            </td>
-                                            <td align="left" class="right" style="line-height: 30px;">
-                                                <button type="submit" class="btn btn-mini">
+                                          		<span class="alert" style="margin-top:10px !important; margin-left:30px;"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;<span class="label label-success">&nbsp;</span>已经填写</span>
+                                             <label style="padding-left:20px;"><button type="submit" class="btn btn-mini">
                                                     任务</button>
                                                 <button type="submit" class="btn btn-mini">
                                                     监察指导</button>
                                                 <button type="submit" class="btn btn-mini">
-                                                    目标</button>
+                                                    目标</button></label>
+                                                
+                                                
                                             </td>
                                         </tr>
                                     </thead>
@@ -233,12 +230,12 @@
                                         <thead>
                                             <tr>
                                                 <th class="center" style="padding-left: 5px;">
-                                                    审计项（问题）
+                                                    审计项<span class="alert">（问题数量：10，未回答：8，已回答：2）</span> 
                                                 </th>
-                                                <th class="center" style="width: 400px;">
+                                                <th class="center" style="width: 300px;">
                                                     答案选项
                                                 </th>
-                                                <th class="center" style="width: 15%">
+                                                <th class="center" style="width:170px;">
                                                     说明及附件
                                                 </th>
                                             </tr>
@@ -252,7 +249,7 @@
                                                 <td class="left">
                                                     <span class="label label-important">&nbsp;</span>1.1 合格证持有人适当运行设备的流程是否符合特定规章和局方政策的要求：
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline" style="width:300px;">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optionsRadio2" value="option1" />
                                                         合格
@@ -266,7 +263,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" style="width:170px;">
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-2">调整回答说明及附件</a>
                                                 </td>
                                             </tr>
@@ -274,7 +271,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>1.1.1 合格证持有人适当运行设备的流程是否有在以下位置安置便于取用的，经批准数量合适的手提灭火器的要求:111
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optionsRadio3" value="option1" checked="checked" />
                                                         合格
@@ -287,7 +284,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center">
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -295,7 +292,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>1.1.1.1 驾驶舱？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optionsRadio4" value="option1" checked="checked" />
                                                         合格
@@ -308,7 +305,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center">
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -316,7 +313,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>1.1.1.2 货舱?
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optionsRadio5" value="option1" checked="checked" />
                                                         合格
@@ -329,7 +326,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center">
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -337,7 +334,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>1.1.1.3 厨房隔舱?
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optionsRadio6" value="option1" checked="checked" />
                                                         合格
@@ -350,7 +347,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center">
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -358,7 +355,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>1.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optionsRadio7" value="option1" checked="checked" />
                                                         合格
@@ -371,7 +368,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center">
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -379,7 +376,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>1.1.3 合格证持有人适当的运行设备流程是否规定每架载客飞机上配有电池供电的便携式扩音器，放在负责指挥应急撤离的机组成员方便取用的地方？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optionsRadio8" value="option1" checked="checked" />
                                                         合格
@@ -392,7 +389,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center">
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -400,7 +397,7 @@
                                                 <td>
                                                     1.1.4 当合格证持有人在飞行高度25000英尺以上运行具有增压座舱的涡轮发动机飞机时，是否要求为每个机组成员提供能迅速取出戴在脸上的氧气面罩？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optionsRadio9" value="option1" />
                                                         合格
@@ -413,7 +410,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center">
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -421,7 +418,7 @@
                                                 <td>
                                                     1.1.5 合格证持有人手册是否要求其飞机装备适当的呼吸保护装置（PBE）？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optionsRadio12" value="option1" />
                                                         合格
@@ -434,7 +431,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center">
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -442,7 +439,7 @@
                                                 <td>
                                                     1.1.6.1 在飞机的每个座位上，配备带有经批准的幸存者定位灯的救生衣或者经批准的等效漂浮装置？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optionsRadio22" value="option1" />
                                                         合格
@@ -455,7 +452,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center">
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -469,7 +466,7 @@
                                 <table class=" table">
                                     <thead>
                                         <tr>
-                                            <td align="left" class="left" style="line-height: 30px; padding-left: 10px;">
+                                            <td align="left" class="left form-inline">
                                                 <div class="btn-group" data-toggle="buttons">
                                                     <label class="btn btn-primary active btn-mini">
                                                         <input type="radio" name="options" id="option1">
@@ -485,25 +482,23 @@
                                                     </label>
                                                     <label class="btn btn-primary btn-mini">
                                                         <input type="radio" name="options" id="option3">
-                                                        显示回答否有说明的问题
+                                                        显示不合格有说明的问题
                                                     </label>
                                                     <label class="btn btn-primary btn-mini">
                                                         <input type="radio" name="options" id="option3">
                                                         显示有预审备注的问题
                                                     </label>
+                                                    
                                                 </div>
-                                            </td>
-                                            <td align="left" class="right" style="line-height: 30px;">
-                                                <span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;
-                                                    <span class="label label-success">&nbsp;</span>已经填写 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span>
-                                            </td>
-                                            <td align="left" class="right" style="line-height: 30px;">
-                                                <button type="submit" class="btn btn-mini">
+                                          		<span class="alert" style="margin-top:10px !important; margin-left:30px;"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;<span class="label label-success">&nbsp;</span>已经填写</span>
+                                             <label style="padding-left:20px;"><button type="submit" class="btn btn-mini">
                                                     任务</button>
                                                 <button type="submit" class="btn btn-mini">
                                                     监察指导</button>
                                                 <button type="submit" class="btn btn-mini">
-                                                    目标</button>
+                                                    目标</button></label>
+                                                
+                                                
                                             </td>
                                         </tr>
                                     </thead>
@@ -513,12 +508,12 @@
                                         <thead>
                                             <tr>
                                                 <th class="center" style="padding-left: 5px;">
-                                                    审计项（问题）
+                                                    审计项<span class="alert">（问题数量：10，未回答：8，已回答：2）</span> 
                                                 </th>
-                                                <th class="center" style="width: 400px;">
+                                                <th class="center" style="width: 300px;">
                                                     答案选项
                                                 </th>
-                                                <th class="center" style="width: 15%">
+                                                <th class="center" style="width:170px;">
                                                     说明及附件
                                                 </th>
                                             </tr>
@@ -532,7 +527,7 @@
                                                 <td class="left">
                                                     <span class="label label-important">&nbsp;</span>2.1 合格证持有人适当运行设备的流程是否符合特定规章和局方政策的要求：
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optt2" value="option1" checked="checked" />
                                                         合格
@@ -545,7 +540,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" style="width:170px;" >
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-2">调整回答说明及附件</a>
                                                 </td>
                                             </tr>
@@ -553,7 +548,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>2.1.1 合格证持有人适当运行设备的流程是否有在以下位置安置便于取用的，经批准数量合适的手提灭火器的要求:111
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optt3" value="option1" checked="checked" />
                                                         <font style="color: #090;">合格</font>
@@ -567,7 +562,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" >
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -575,7 +570,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>2.1.1.1 驾驶舱？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optt4" value="option1" checked="checked" />
                                                         合格
@@ -589,7 +584,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" >
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -597,7 +592,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>2.1.1.2 货舱?
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="opt5" value="option1" checked="checked" />
                                                         合格
@@ -611,7 +606,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" >
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -619,7 +614,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>2.1.1.3 厨房隔舱?
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optt6" value="option1" checked="checked" />
                                                         合格
@@ -633,7 +628,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" >
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -641,7 +636,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>2.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optt7" value="option1" checked="checked" />
                                                         合格
@@ -655,7 +650,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" >
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -663,7 +658,7 @@
                                                 <td>
                                                     <span class="label label-success">&nbsp;</span>2.1.3 合格证持有人适当的运行设备流程是否规定每架载客飞机上配有电池供电的便携式扩音器，放在负责指挥应急撤离的机组成员方便取用的地方？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optt8" value="option1" checked="checked" />
                                                         合格
@@ -677,7 +672,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" >
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -685,7 +680,7 @@
                                                 <td>
                                                     2.1.4 当合格证持有人在飞行高度25000英尺以上运行具有增压座舱的涡轮发动机飞机时，是否要求为每个机组成员提供能迅速取出戴在脸上的氧气面罩？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="optt9" value="option1" />
                                                         合格
@@ -699,7 +694,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" >
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -707,7 +702,7 @@
                                                 <td>
                                                     2.1.5 合格证持有人手册是否要求其飞机装备适当的呼吸保护装置（PBE）？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="opttt2" value="option1" />
                                                         合格
@@ -721,7 +716,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" >
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -729,7 +724,7 @@
                                                 <td>
                                                     2.1.6.1 在飞机的每个座位上，配备带有经批准的幸存者定位灯的救生衣或者经批准的等效漂浮装置？
                                                 </td>
-                                                <td class="left form-inline" style="width: 400px;">
+                                                <td class="left form-inline">
                                                     <label class="checkbox">
                                                         <input type="radio" name="opptt2" value="option1" />
                                                         合格
@@ -743,7 +738,7 @@
                                                         无法观察
                                                     </label>
                                                 </td>
-                                                <td class="center" style="width: 15%">
+                                                <td class="center" >
                                                     <a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a>
                                                 </td>
                                             </tr>
@@ -752,181 +747,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="tab_1_4">
-                            <div class="tab-content">
-                                <div style="overflow-y: scroll;">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th colspan="5">
-                                                    <button class="btn btn-info" data-toggle="modal" data-target="#myModal-8">
-                                                        添加新发现问题</button>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <th style="width: 30px">
-                                                    <input type="checkbox" checked="checked" />
-                                                </th>
-                                                <th style="width: 200px">
-                                                    问题
-                                                </th>
-                                                <th>
-                                                    问题描述
-                                                </th>
-                                                <th style="width: 100px">
-                                                    附件
-                                                </th>
-                                                <th style="width: 70px">
-                                                    操作
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                </div>
-                                <div style="overflow-y: scroll; height: 325px;">
-                                    <table class="table table-hover table-bordered">
-                                        <tbody>
-                                            <tr>
-                                                <td style="width: 30px">
-                                                    <input type="checkbox" checked="checked" />
-                                                </td>
-                                                <td style="width: 200px">
-                                                    新发现问题相关手册内容一致性
-                                                </td>
-                                                <td>
-                                                    新发现问题描述
-                                                </td>
-                                                <td style="width: 100px">
-                                                    无
-                                                </td>
-                                                <td style="width: 70px">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal-8">编辑</a>&nbsp;&nbsp;<a href="#">删除</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="checkbox" checked="checked" />
-                                                </td>
-                                                <td>
-                                                    新发现问题相关手册内容一致性
-                                                </td>
-                                                <td>
-                                                    系发现问题描述
-                                                </td>
-                                                <td>
-                                                    无
-                                                </td>
-                                                <td style="width: 70px">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal-8">编辑</a>&nbsp;&nbsp;<a href="#">删除</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="checkbox" checked="checked" />
-                                                </td>
-                                                <td>
-                                                    新发现问题相关手册内容一致性
-                                                </td>
-                                                <td>
-                                                    系发现问题描述
-                                                </td>
-                                                <td>
-                                                    无
-                                                </td>
-                                                <td style="width: 70px">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal-8">编辑</a>&nbsp;&nbsp;<a href="#">删除</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="checkbox" checked="checked" />
-                                                </td>
-                                                <td>
-                                                    新发现问题相关手册内容一致性
-                                                </td>
-                                                <td>
-                                                    系发现问题描述
-                                                </td>
-                                                <td>
-                                                    无
-                                                </td>
-                                                <td style="width: 70px">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal-8">编辑</a>&nbsp;&nbsp;<a href="#">删除</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="checkbox" checked="checked" />
-                                                </td>
-                                                <td>
-                                                    新发现问题相关手册内容一致性
-                                                </td>
-                                                <td>
-                                                    系发现问题描述
-                                                </td>
-                                                <td>
-                                                    无
-                                                </td>
-                                                <td style="width: 70px">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal-8">编辑</a>&nbsp;&nbsp;<a href="#">删除</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="checkbox" checked="checked" />
-                                                </td>
-                                                <td>
-                                                    新发现问题相关手册内容一致性
-                                                </td>
-                                                <td>
-                                                    系发现问题描述
-                                                </td>
-                                                <td>
-                                                    无
-                                                </td>
-                                                <td style="width: 70px">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal-8">编辑</a>&nbsp;&nbsp;<a href="#">删除</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="checkbox" checked="checked" />
-                                                </td>
-                                                <td>
-                                                    新发现问题相关手册内容一致性
-                                                </td>
-                                                <td>
-                                                    系发现问题描述
-                                                </td>
-                                                <td>
-                                                    无
-                                                </td>
-                                                <td style="width: 70px">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal-8">编辑</a>&nbsp;&nbsp;<a href="#">删除</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="checkbox" checked="checked" />
-                                                </td>
-                                                <td>
-                                                    新发现问题相关手册内容一致性
-                                                </td>
-                                                <td>
-                                                    系发现问题描述
-                                                </td>
-                                                <td>
-                                                    无
-                                                </td>
-                                                <td style="width: 70px">
-                                                    <a href="#" data-toggle="modal" data-target="#myModal-8">编辑</a>&nbsp;&nbsp;<a href="#">删除</a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="modal-footer center" style="margin-top: 10px;">
@@ -954,7 +775,7 @@
                     <!--窗口的内容开始-->
                     <div class="container-fluid">
                         <div class="row-fluid">
-                            <div class="span8">
+                            <div class="span7">
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -990,10 +811,10 @@
                                                 <div class="controls form-inline">
                                                     <label>
                                                         说明：</label>
-                                                    <textarea class="medium m-wrap span5" rows="6"></textarea>
+                                                    <textarea class="medium m-wrap span4" rows="6"></textarea>
                                                     <label>
                                                         行动：</label>
-                                                    <textarea class="medium m-wrap span5" rows="6"></textarea>
+                                                    <textarea class="medium m-wrap span4" rows="6"></textarea>
                                                 </div>
                                             </td>
                                         </tr>
@@ -1108,7 +929,7 @@
                 <div class="yContentBox">
                     <div class="container-fluid">
                         <div class="row-fluid">
-                            <div class="span8">
+                            <div class="span7">
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -1144,11 +965,11 @@
                                                 <div class="controls form-inline">
                                                     <label>
                                                         说明：</label>
-                                                    <textarea class="medium m-wrap span5" rows="6"></textarea>
+                                                    <textarea class="medium m-wrap span4" rows="6"></textarea>
                                                     <span class="controls" style="display: none;" id="xdd">
                                                         <label>
                                                             行动：</label>
-                                                        <textarea class="medium m-wrap span5" rows="6"></textarea>
+                                                        <textarea class="medium m-wrap span4" rows="6"></textarea>
                                                     </span>
                                                 </div>
                                             </td>

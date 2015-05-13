@@ -28,9 +28,10 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-            <div class="alert alert-info">
-                计划年月：2015年4月&nbsp;&nbsp;&nbsp;&nbsp;被审计单位：深圳航空 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>（要素总计30个，已完成评估15个，未完成评估15个。）</span>
+            <div class="alert alert-info form-inline" style=" margin-bottom:10px;">
+                计划年月：2015年4月&nbsp;&nbsp;&nbsp;&nbsp;被审计单位：深圳航空 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>（审计单共30个，已完成评估15个，未完成评估15个。）</span>
             </div>
+            <div class="text-center">
             <table style="width: 100%">
                 <tr>
                     <td valign="top" style="width: 60%">
@@ -38,8 +39,8 @@
                             <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th colspan="7">
-                                            <div class="form-inline">
+                                        <th colspan="7" class="form-inline" style="text-align:left;">
+                                            
                                                 <label>
                                                     专业：
                                                     <select name="select">
@@ -53,41 +54,36 @@
                                                         <option value="5">组织管理</option>
                                                     </select>
                                                 </label>
-                                                &nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <label class="checkbox">
                                                     <input type="checkbox" checked="checked" />
                                                     待评估
                                                 </label>
-                                                &nbsp;&nbsp;
-                                                <label class="checkbox">
-                                                    <input type="checkbox" checked="checked" />
-                                                    评估中
-                                                </label>
+                                               
                                                 &nbsp;&nbsp;
                                                 <label class="checkbox">
                                                     <input type="checkbox" />
-                                                    数据收集中
+                                                    审计中
                                                 </label>
                                                 &nbsp;&nbsp;
                                                 <label class="checkbox">
                                                     <input type="checkbox" />
                                                     评估完成
                                                 </label>
-                                            </div>
+                                       
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th style="width: 200px">
-                                            要素
+                                        <th>
+                                            审计单
                                         </th>
                                         <th style="width: 50px">
-                                            审计单类型
+                                            类型
                                         </th>
-                                        <th style="width: 70px">
-                                            审计项<br />
-                                            (不合格/总数)
+                                        <th style="width: 80px">
+                                            审计项<br/><span style="font-size:12px; font-weight:100;"> (不合格/总数)</span>
                                         </th>
-                                        <th style="width: 50px">
+                                        <th style="width: 40px">
                                             扣分
                                         </th>
                                         <th style="width: 50px">
@@ -96,7 +92,7 @@
                                         <th style="width: 50px">
                                             后续行动
                                         </th>
-                                        <th style="width: 60px">
+                                        <th style="width: 70px">
                                             操作
                                         </th>
                                     </tr>
@@ -107,26 +103,26 @@
                             <table class="table table-bordered table-hover" id="each">
                                 <tbody>
                                     <tr>
-                                        <td style="width: 200px">
+                                        <td>
                                             3.1.5 手提行李程序
                                         </td>
                                         <td style="width: 50px">
                                             SAI
                                         </td>
-                                        <td style="width: 70px">
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
+                                        <td style="width: 80px">
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
                                         </td>
-                                        <td style="width: 50px">
+                                        <td style="width: 40px">
                                             35
                                         </td>
                                         <td style="width: 50px">
-                                            数据收集中
+                                            待评估
                                         </td>
                                         <td style="width: 50px">
                                             无
                                         </td>
-                                        <td style="width: 60px">
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
+                                        <td style="width: 70px">
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -137,7 +133,7 @@
                                             SAI
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
                                         </td>
                                         <td>
                                             35
@@ -149,7 +145,7 @@
                                             无
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -160,19 +156,19 @@
                                             SAI
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
                                         </td>
                                         <td>
                                             35
                                         </td>
                                         <td>
-                                            评估中
+                                            待评估
                                         </td>
                                         <td>
                                             无
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -183,7 +179,7 @@
                                             SAI
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
                                         </td>
                                         <td>
                                             35
@@ -196,7 +192,122 @@
                                             风险管理
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            3.1.5 手提行李程序
+                                        </td>
+                                        <td>
+                                            SAI
+                                        </td>
+                                        <td>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
+                                        </td>
+                                        <td>
+                                            35
+                                        </td>
+                                        <td>
+                                            评估完成
+                                        </td>
+                                        <td>
+                                            无
+                                        </td>
+                                        <td>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            3.1.5 手提行李程序
+                                        </td>
+                                        <td>
+                                            SAI
+                                        </td>
+                                        <td>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
+                                        </td>
+                                        <td>
+                                            35
+                                        </td>
+                                        <td>
+                                            审计中
+                                        </td>
+                                        <td>
+                                            无
+                                        </td>
+                                        <td>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            3.1.5 手提行李程序
+                                        </td>
+                                        <td>
+                                            SAI
+                                        </td>
+                                        <td>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
+                                        </td>
+                                        <td>
+                                            35
+                                        </td>
+                                        <td>
+                                            审计中
+                                        </td>
+                                        <td>
+                                            无
+                                        </td>
+                                        <td>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            3.1.5 手提行李程序
+                                        </td>
+                                        <td>
+                                            SAI
+                                        </td>
+                                        <td>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
+                                        </td>
+                                        <td>
+                                            35
+                                        </td>
+                                        <td>
+                                            审计中
+                                        </td>
+                                        <td>
+                                            无
+                                        </td>
+                                        <td>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            3.1.5 手提行李程序
+                                        </td>
+                                        <td>
+                                            SAI
+                                        </td>
+                                        <td>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
+                                        </td>
+                                        <td>
+                                            35
+                                        </td>
+                                        <td>
+                                            审计中
+                                        </td>
+                                        <td>
+                                            无
+                                        </td>
+                                        <td>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -213,13 +324,13 @@
                                             35
                                         </td>
                                         <td>
-                                            数据收集中
+                                            审计中
                                         </td>
                                         <td>
                                             无
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -230,19 +341,19 @@
                                             SAI
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
                                         </td>
                                         <td>
                                             35
                                         </td>
                                         <td>
-                                            数据收集中
+                                            审计中
                                         </td>
                                         <td>
                                             无
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -253,19 +364,19 @@
                                             SAI
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
                                         </td>
                                         <td>
                                             35
                                         </td>
                                         <td>
-                                            数据收集中
+                                            审计中
                                         </td>
                                         <td>
                                             无
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -276,19 +387,19 @@
                                             SAI
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
                                         </td>
                                         <td>
                                             35
                                         </td>
                                         <td>
-                                            数据收集中
+                                            审计中
                                         </td>
                                         <td>
                                             无
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -299,19 +410,19 @@
                                             SAI
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
                                         </td>
                                         <td>
                                             35
                                         </td>
                                         <td>
-                                            数据收集中
+                                            审计中
                                         </td>
                                         <td>
                                             无
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史">评估历史</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -322,134 +433,19 @@
                                             SAI
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
+                                            <a data-toggle="modal" data-target="#myModal-5" title="点击查看审计项回答列表">5/20</a>
                                         </td>
                                         <td>
                                             35
                                         </td>
                                         <td>
-                                            数据收集中
+                                            审计中
                                         </td>
                                         <td>
                                             无
                                         </td>
                                         <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            3.1.5 手提行李程序
-                                        </td>
-                                        <td>
-                                            SAI
-                                        </td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
-                                        </td>
-                                        <td>
-                                            35
-                                        </td>
-                                        <td>
-                                            数据收集中
-                                        </td>
-                                        <td>
-                                            无
-                                        </td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            3.1.5 手提行李程序
-                                        </td>
-                                        <td>
-                                            SAI
-                                        </td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
-                                        </td>
-                                        <td>
-                                            35
-                                        </td>
-                                        <td>
-                                            数据收集中
-                                        </td>
-                                        <td>
-                                            无
-                                        </td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            3.1.5 手提行李程序
-                                        </td>
-                                        <td>
-                                            SAI
-                                        </td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
-                                        </td>
-                                        <td>
-                                            35
-                                        </td>
-                                        <td>
-                                            数据收集中
-                                        </td>
-                                        <td>
-                                            无
-                                        </td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            3.1.5 手提行李程序
-                                        </td>
-                                        <td>
-                                            SAI
-                                        </td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
-                                        </td>
-                                        <td>
-                                            35
-                                        </td>
-                                        <td>
-                                            数据收集中
-                                        </td>
-                                        <td>
-                                            无
-                                        </td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            3.1.5 手提行李程序
-                                        </td>
-                                        <td>
-                                            SAI
-                                        </td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#myModal-5">5/20</a>
-                                        </td>
-                                        <td>
-                                            35
-                                        </td>
-                                        <td>
-                                            数据收集中
-                                        </td>
-                                        <td>
-                                            无
-                                        </td>
-                                        <td>
-                                            <a data-toggle="modal" data-target="#myModal-6">查看评估历史</a>
+                                            <a data-toggle="modal" data-target="#myModal-6" class="btn btn-mini" title="点击查看评估历史" title="点击查看评估历史">评估历史</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -464,19 +460,19 @@
                                         <b>评估结果</b>
                                     </th>
                                     <th style="text-align: center">
-                                        <b>是否采取后续行动</b>
+                                        <b>采取后续行动</b>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td rowspan="4" align="center">
+                                    <td rowspan="4" align="center" style="width:80px;" class="center">
                                         <b>绩效可接受</b>
                                     </td>
                                     <td>
                                         未观察到问题[1]
                                     </td>
-                                    <td class="text-center">
+                                    <td>
                                         <label class="radio">
                                             <input type="radio" name="pingguradio" value="1" />
                                             否</label>
@@ -486,7 +482,7 @@
                                     <td>
                                         观察到小问题[2]
                                     </td>
-                                    <td class="text-center">
+                                    <td>
                                         <label class="radio">
                                             <input type="radio" name="pingguradio" value="2" />
                                             否</label>
@@ -569,6 +565,7 @@
                     </td>
                 </tr>
             </table>
+            </div>
             <div class="modal-footer center" style="margin-top: 10px;">
                 <a class="btn btn-danger" href="au_fxpg_qdyfjz.html" title="后续行动">启动根原因分析和预防纠正</a>
                 <a class="btn btn-danger" href="au_fxpg_qdfxgl.html" title="后续行动">启动风险管理</a> <a class="btn btn-success">
@@ -587,7 +584,7 @@
                     &times;</button>
                 <!--窗口title-->
                 <h4 class="modal-title" id="H1">
-                    查看评估历史</h4>
+                    评估历史</h4>
             </div>
             <div class="modal-body">
                 <div class=" alert">

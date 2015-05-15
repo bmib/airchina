@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db
+END
+SQLAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db/SQLAdapter.java
+END
+MyQueryRunner.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db/MyQueryRunner.java
+END
+SQLBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db/SQLBuilder.java
+END
+DBType.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db/DBType.java
+END
+Pagination.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db/Pagination.java
+END
+ConnectionProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db/ConnectionProvider.java
+END
+RecordSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db/RecordSet.java
+END
+DBToolkit.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db/DBToolkit.java
+END
+AbstractConnectionProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db/AbstractConnectionProvider.java
+END
+Record.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/new_project_MinHang/!svn/ver/51567/EPARECA11/sourcecode/ass/src/com/mybase/db/Record.java
+END

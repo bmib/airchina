@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 数据源配置文件，配置类型ConfigType包含以下四种： -->
+<!-- JNDI：通过本配置中DataSourceList中的JNDI配置进行初始化 ，此时c3p0-config.xml无效-->
+<!-- C3P0：通过c3p0-config.xml连接池配置进行初始化，此时DataBaseConfig.xml中 DataSourceList无效-->
+<!-- JNDI|C3P0：先通过JNDI再通过C3P0方式进行混合配置，后者优先级更高 -->
+<!-- C3P0|JNDI：先通过C3P0再通过JNDI方式进行混合配置，后者优先级更高 -->
+<!-- 使用时，通过ConnectionProvider获取数据库连接即可 -->
+<!-- NAME为DEFAULT的配置为默认数据源配置,通过getConnection()获取 -->
+<!-- 警告：请正确配置数据源，一旦有一处配置有误，系统将直接初始化失败退出 -->
+<DBConfig>
+	<ConfigType>JNDI</ConfigType>
+	<DataSourceList>
+		<JNDISource name="DEFAULT" jndiName="jdbc/ASS"/>
+	</DataSourceList>
+</DBConfig>

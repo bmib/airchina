@@ -1,0 +1,473 @@
+/*
+*	yStyle CSS样式表文件,除了body样式外，其余样式均以y开头，避免冲突
+*   与yStyle无关样式或者一些特殊针对yStyle自定义的样式，不应写在本文件内
+*	Mr.liuyong.2013
+*/
+body{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-family:"宋体","Arial Narrow";
+}
+form,input,textarea,select{
+	margin:0;
+	padding:0;
+}
+a:link {
+ color: #0143BD; /*连接默认的颜色变化*/
+ text-decoration:none;
+}
+a:visited {
+ color: #0143BD; /*连接访问的颜色变化*/
+ text-decoration:none;
+}
+a:hover {
+ color: #CD0200; /*鼠标经过的颜色变化*/
+ text-decoration:underline;
+}
+a:active { 
+ color: #CD0200; /*鼠标按下的颜色变化*/
+ text-decoration:underline;
+}
+.yBodyBg{
+	margin-top:10px;
+	background:white url('../images/bodyBg.png') 0 -25px repeat-x;
+}
+.yContentBox{
+	width:98%;
+	margin:auto;
+}
+.yInfoBar{
+	color:#2076b6;
+	height:32px;
+	line-height:32px;
+	padding-left:15px;
+	text-align:left;
+	font-weight:bold;
+	border:1px solid #BECCDB;
+	border-bottom:0;
+	background:#DFEEFF url(../images/boxBgIn.png) repeat-x;
+}
+.ySearchArea{
+	margin:auto;
+	padding:5px;
+	font-size:12px;
+	text-align:left;
+	padding-left:20px;
+	border:1px solid #beccdb;
+	border-bottom:0;
+	background:#F5F8FE;
+}
+.yListButtonArea{
+	padding:3px;
+	text-align:left;
+	border:1px solid #BECCDB;
+	border-bottom:0;
+}
+.yListBottomArea{
+	height:26px;
+	line-height:26px;
+	font-size:12px;
+	text-align:right;
+	border:1px solid #beccdb;
+	border-top:0;
+	background:#EBF5FD url('../images/listBotton.png') repeat-x;
+}
+.yListBottomAreaLeft{
+	float:left;
+	padding-left:10px;
+}
+.yListBottomAreaRight{
+	float:right;
+	padding-right:10px;
+}
+.yLeftTipTD{
+	text-align:right;
+	padding-right:5px;
+	padding-left:20px;
+}
+/**表单元素**/
+.yTextInput{
+	width:140px;
+	height:20px;
+	line-height:20px;
+	border:1px solid #BECCDB;
+	background:url('../images/input.png') repeat-x;
+}
+.yTextReadInput{
+	color:#3e4244;
+	width:140px;
+	border:0px;
+	border-bottom:1px solid #BECCDB;
+	background:none;
+}
+.yTextInputL{
+	width:200px;
+	height:20px;
+	line-height:20px;
+	border:1px solid #BECCDB;
+	background:url('../images/input.png') repeat-x;
+}
+.yTextReadInputL{
+	color:#3e4244;
+	width:200px;
+	border:0px;
+	border-bottom:1px solid #BECCDB;
+	background:none;
+}
+.yTextInputS{
+	width:142px;
+	border:1px solid #BECCDB;
+	background:url('../images/input.png') repeat-x;
+}
+.yTextInputSL{
+	width:202px;
+	border:1px solid #BECCDB;
+	background:url('../images/input.png') repeat-x;
+}
+.yTextTextarea{
+	width:140px;
+	font-size:12px;
+	border:1px solid #BECCDB;
+	background:url('../images/input.png') repeat-x;
+}
+.yTextTextareaL{
+	width:200px;
+	font-size:12px;
+	border:1px solid #BECCDB;
+	background:url('../images/input.png') repeat-x;
+}
+.yButton{
+	cursor:pointer;
+	padding:2px;
+	padding-left:8px;
+	padding-right:8px;
+	border:1px solid #BECCDB;
+	background:url('../images/infoBarBg.gif') repeat-x;
+}
+.yButtonOver{
+	background:url('../images/btn_bg_hover.jpg') repeat-x;
+}
+/**表单元素结束**/
+/**-------------------------------------表格样式汇总------------------------------------------------**/
+/*yTable表格样式组*/
+.yTable{
+	text-align:left;
+	border-left:1px solid #beccdb;
+	border-top:1px solid #beccdb;
+}
+.yTable > thead > tr{
+	line-height:20px;
+}
+.yTable > tbody > tr{
+	line-height:20px;
+}
+.yTable > thead > tr > th{
+	padding:4px;
+	color:#015fa6;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	border-right:1px solid #beccdb;
+	border-bottom:1px solid #beccdb;
+	background:#E2F1FD url('../images/bg_header.jpg') repeat-x;
+}
+.yTable > tbody > tr > td{
+	padding:3px;
+	font-size:12px;
+	border-right:1px solid #beccdb;
+	border-bottom:1px solid #beccdb;
+}
+.yTableTrOver > td{
+	background:#E1EFEF;
+}
+.yTableTrDouble > td{
+	background:#F5FAFA;
+}
+/*yTable表格样式组结束*/
+/*yInfoBorderTable表格样式组*/
+.yInfoBorderTable{
+	text-align:left;
+	border-left:1px solid #beccdb;
+	border-top:1px solid #beccdb;
+}
+.yInfoBorderTable > thead > tr > th,.yInfoBorderTable > tbody > tr > td{
+	padding:5px;
+	font-size:12px;
+	border-right:1px solid #beccdb;
+	border-bottom:1px solid #beccdb;
+}
+/*yInfoBorderTable表格样式组结束*/
+.ySearchTable > thead > tr,.ySearchTable > tbody > tr,.yInfoTable > thead > tr,.yInfoTable > tbody > tr{
+	line-height:30px;
+}
+.yTableNoEffect{}
+/**-------------------------------------表格样式汇总结束------------------------------------------------**/
+/**横向标签组**/
+.yTabContainer{
+	height:30px;
+	padding-left:30px;
+	background:url('../images/tabBorder.gif') repeat-x;
+}
+.yTabH{
+	float:left;
+	height:29px;
+	line-height:29px;
+	padding-left:15px;
+	padding-right:15px;
+	color:#2e6e9e;
+	font-size:12px;	
+	font-weight:normal;
+	cursor:pointer;
+}
+.yTabHOn{
+	float:left;
+	height:29px;
+	line-height:29px;
+	padding-left:15px;
+	padding-right:15px;
+	color:#2e6e9e;
+	font-size:12px;	
+	border:1px solid #A6C9E2;
+	border-bottom:0;
+	cursor:pointer;
+	font-weight:bold;
+	background:url('../images/tabOn.gif') repeat-x;
+}
+.yTabContent{
+	border:1px solid #A6C9E2;
+	border-top:0;
+	padding:10px;
+}
+/**横向标签组结束**/
+/**首页样式**/
+.yNewsBox{
+	padding:15px;
+	border:1px solid #D7D7D7;
+	border-top:0;
+	background:url(../images/boxBg.gif) repeat-x;
+}
+.yCommonBox{
+	padding:15px;
+	border:1px solid #D7D7D7;
+}
+.yNewsTitle{
+	height:26px;
+	line-height:26px;
+	color:#2076B6;
+	font-weight:bold;
+	font-size:14px;
+	padding-left:20px;
+	margin-bottom:10px;
+	background:url('../images/newsTitleBg.png') left bottom repeat-x;
+}
+.yNewsTitleTab{
+	float:left;
+	height:26px;
+	padding-left:15px;
+	padding-right:15px;
+	margin-right:5px;
+	cursor:pointer;
+}
+.yNewsTitleTabOn{
+	height:24px;
+	border:1px solid #E6E6E6;
+	border-bottom:1px solid white;
+}
+.yNews,.yNews li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.yNews li{
+	line-height: 28px;
+	padding-left: 25px;
+	border-bottom: 1px dotted #EBEBEB;
+	background: url("../images/arr.jpg") no-repeat scroll 10px center transparent;
+}
+.yNews .yNewsTime{
+	float:right;
+}
+.yNewsParagraph{
+	line-height:20px;
+}
+.yNewsMore{
+	float:right;
+	font-size:12px;
+	font-weight:normal;
+}
+/**首页样式结束**/
+/**左侧导航样式**/
+.yLeftbodyBg{
+	background:#EDF4FC;
+}
+.yLeftNavBox{
+	width:100%;
+	margin:auto;
+	padding-top:7px;
+}
+.yLeftMenuType{
+	padding:10px;
+	font-size:12px;
+	font-weight:bold;
+	color:#2076b6;
+	text-align:center;
+	border-bottom:1px solid #BECCDB;
+}
+.yleftMenu{
+	text-align:left;
+	font-size:12px;
+	padding-left:40px;
+	line-height:28px;
+	cursor:pointer;
+	border-bottom:1px solid #d8e3f7;
+	border-top:1px solid white;
+	background:url('../images/bullet_blue.gif') 15px 5px no-repeat;
+}
+
+.yleftMenuOn{
+	color:#2076b6;
+	font-weight:bold;
+	background:#D3EAFD url('../images/02.gif') 18px 9px no-repeat;
+}
+
+.yleftMenuOver{
+	color:#0172A8;
+	font-weight:bold;
+	background:#EBF5FD url('../images/02.gif') 18px 9px no-repeat;
+}
+/**左侧导航样式结束**/
+/**上方菜单页面样式**/
+.yMenuTable{
+	width:100%;
+	height:100%;
+	background:url(../images/headerbg.jpg) repeat-x;
+}
+/**菜单组**/
+#yMenuGroup{
+	position:absolute;
+	top:65px;
+	width:100%;
+	height:31px;
+	z-index:1000;
+	padding-left:40px;
+	background:url(../images/mg-bg.gif) repeat-x;
+}
+.yTopMenu{
+	float:left;
+	font-size:12px;
+	height:31px;
+	line-height:31px;
+	margin-left:5px;
+	margin-right:5px;
+	padding-left:8px;
+	cursor:pointer;
+	color:#136EBF;
+}
+.yTopMenu div{
+	padding-right:8px;
+}
+.yTopMenuOn{
+	background:url(../images/menu-bg.jpg) left top no-repeat;
+}
+.yTopMenuOn div{
+	background:url(../images/menu-inner-bg.jpg) right top no-repeat;
+}
+.yTopMenuOver{
+	background:url(../images/menu-over-bg.jpg) left top no-repeat;
+}
+.yTopMenuOver div{
+	background:url(../images/menu-inner-over-bg.jpg) right top no-repeat;
+}
+/**菜单组结束**/
+/**二级菜单**/
+#yChildMenuGroup{
+	position:absolute;
+	top:96px;
+	height:24px;
+	width:100%;
+	padding-left:40px;
+	background:url('../images/m-bg.jpg') repeat-x;
+}
+.yChildMenu{
+	float:left;
+	height:24px;
+	line-height:24px;
+	margin-left:5px;
+	font-size:12px;
+	color:#146FC0;
+	cursor:pointer;
+	padding-left:8px;
+}
+.yChildMenu div{
+	padding-right:8px;
+}
+.yChildMenuOn{
+	background:url(../images/mm-bg.jpg) left top no-repeat;
+}
+.yChildMenuOn div{
+	background:url(../images/mm-inner-bg.jpg) right top no-repeat;
+}
+.yChildMenuOver{
+	background:url(../images/mm-over-bg.jpg) left top no-repeat;
+}
+.yChildMenuOver div{
+	background:url(../images/mm-inner-over-bg.jpg) right top no-repeat;
+}
+/**二级菜单结束**/
+#ySystemGroup{
+	position:absolute;
+	right:10px;
+	top:10px;
+	font-size:12px;
+	padding:5px;
+	border-top:0;
+	border-right:0;
+	color:#0172A8;
+}
+#ySystemGroupSelect{
+	width:120px;
+}
+.yControlBody{
+	background:#F2F5FE url('../images/boder_left.jpg') repeat-y;
+}
+/**上方菜单页面样式结束**/
+.yTip{
+	line-height:30px;
+	padding-left:30px;
+	border:1px solid #EAEACF;
+	background:#FFFFE9 url('../images/info.gif') 10px 7px no-repeat;
+}
+.yTreeBox{
+	background:#F5F8FE;
+}
+.yTreeBoxTitle{
+	color:#0172A8;
+	text-align:center;
+	background:#DFEFFC;
+	height:40px;
+	line-height:40px;
+	font-weight:bold;
+	border:1px solid #D8E3F7;
+}
+.yleftTitleBg{
+	background:#F5F8FE;
+}
+.yHandClass{
+	cursor:pointer;
+}
+.yTextRed{
+	color:red;
+}
+.yTextTip{
+	color:#808080;
+}
+.yTextCenter{
+	text-align:center;
+}
+.yTextRight{
+	text-align:right;
+}
+.yTextLeft{
+	text-align:left;
+}

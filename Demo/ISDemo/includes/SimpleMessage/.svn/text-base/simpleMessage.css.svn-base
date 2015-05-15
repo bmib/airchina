@@ -1,0 +1,124 @@
+@CHARSET "UTF-8";
+
+#ly_messageBox{
+	position:absolute;
+	bottom: 0px;
+	right:0px;
+	overflow: hidden;
+	font-size:0px;
+}
+
+#ly_messageBox_top{
+
+}
+#ly_messageBox_top_left{
+	float:left;
+	background:url('images/messagebox_03.gif') no-repeat;
+}
+#ly_messageBox_top_left div{
+	padding-top:8px;
+	margin-left:15px;
+	color:#002d4d;
+	font-size:12px;
+}
+#ly_messageBox_top_right{
+	float:right;
+	text-align:right;
+	background:url('images/messagebox_11.gif') no-repeat right top;
+}
+#ly_messageBox_top_right img{
+	margin-top:8px;
+	margin-right:15px;
+	cursor: pointer;
+}
+#ly_messageBox_middle{
+
+}
+#ly_messageBox_middle_left{
+	float:left;
+	background:url('images/messagebox_10-15.gif') repeat-y;
+}
+#ly_messageBox_middle_middle{
+	float:left;
+	overflow:hidden;
+	background:#E3F5FE url('images/messagebox_06.gif') repeat-x;
+}
+#ly_messageBox_middle_middle_l{
+	float:left;
+}
+#ly_messageBox_middle_middle_l img{
+	margin-top:10px;
+	margin-left:12px;
+}
+#ly_messageBox_middle_middle_r{
+	float:left;
+}
+#ly_messageBox_middle_middle_r1{
+	font-size:13px;
+	font-weight:bold;
+	margin-top:10px;
+	color:#002d4d;
+}
+#ly_messageBox_middle_middle_r2{
+	font-size:12px;
+}
+#ly_messageBox_middle_middle_r3{
+	font-size:12px;
+	text-align:right;
+	margin-right:50px;
+	margin-top:3px;
+}
+#ly_messageBox_middle_middle_r3 img{
+	cursor: pointer;
+}
+#ly_messageBox_middle_right{
+	float:left;
+	background:url('images/messagebox_18.gif') repeat-y;
+}
+#ly_messageBox_bottom{
+
+}
+#ly_messageBox_bottom_left{
+	float:left;
+	background:url('images/messagebox_08.gif') no-repeat;
+}
+#ly_messageBox_bottom_right{
+	float:right;
+	background:url('images/messagebox_20.gif') no-repeat right top;
+}
+#ly_messageBox_middle_page{
+	color:#A6A8AA;
+}
+
+#ly_messageBox_middle_middle_r2 a:visited{
+	color:#8F98BF;
+}
+#ly_messageBox_middle_middle_r2 a:active{
+	color:#2C69A0;
+}
+#ly_messageBox_middle_middle_r2 a:link{
+	color:#2C69A0;
+}
+#ly_messageBox_middle_middle_r2 a:hover{
+	color:#2C69A0;
+}
+
+#ly_messageBox_middle_middle_r1 a:visited{
+	color:#002d4d;
+	text-decoration: none;
+}
+#ly_messageBox_middle_middle_r1 a:active{
+	color:#002d4d;
+	text-decoration: none;
+}
+#ly_messageBox_middle_middle_r1 a:link{
+	color:#002d4d;
+	text-decoration: none;
+}
+#ly_messageBox_middle_middle_r1 a:hover{
+	color:#002d4d;
+	text-decoration: none;
+}
+
+
+

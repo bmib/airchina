@@ -1,0 +1,33 @@
+.popDiv{
+	position:absolute;
+	z-index:1000;
+	font-size:12px;
+	color:#0c1b18;
+	background:#f6f8f9;
+	padding:8px;
+	border:1px solid #CECEC3;
+}
+.contentDiv{
+	background:white;
+	border:1px solid #eff1f2;
+	padding:8px;
+	height:200px;
+	overflow-y:auto; 
+}
+.closeDiv{
+	text-align:center;
+	height:20px;
+	line-height:20px;
+	cursor:pointer;
+}
+.buttonAreaDiv{
+	text-align:center;
+	height:30px;
+	line-height:30px;
+}
+.loading{
+	height:37px;
+	line-height:37px;
+	padding-left:39px;
+	background:url('loading.gif') no-repeat;
+}

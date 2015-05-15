@@ -7,7 +7,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-    <title>后续行动-投资企业专员</title>
+    <title>预防纠正</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
@@ -15,897 +15,403 @@
     <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var winH = $(window).height() - 80;
-            $("#tab_div").css('height', winH + 'px');
-        });
-    </script>
 </head>
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-            <div class="alert alert-info">
-                计划年月：2015年4月&nbsp;&nbsp;&nbsp;&nbsp;被审计单位：深圳航空
+        <div class="alert alert-info form-inline" style="margin-bottom:10px;">
+                <label>计划年月：2015年4月</label>
+                <label style="padding-left:50px;">
+                    状态：代签收
+                </label>
+                <label style="padding-left:50px;">
+                <span>问题:（12）</span>&nbsp;&nbsp;<span>未完成（12）</span></label>
+          </div>
+
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th style="width:70px;">
+                            计划年月<span>&darr;</span>
+                        </th>
+                        <th>审计项（问题）</th>
+                        <th style="width:50px;">专业</th>
+                        <th style="width:50px;">
+                            审计组长
+                        </th>
+                        <th style="width:80px;">
+                            计划完成日期</th>
+                        <th style="width:50px;">提交人</th>
+                        <th style="width:50px;">
+                            状态<span>&darr;</span>
+                        </th>
+                        <th style="width:50px;">
+                            操作
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">
+                            2015年4月
+                        </td>
+                        <td class="left">
+                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？</td>
+                        <td class="center">飞行</td>
+                        <td class="center">
+                            齐龙
+                        </td>
+                        <td class="center">
+                            2015-05-30</td>
+                        <td class="center">张三</td>
+                        <td class="center">
+                            未完成
+                        </td>
+                        <td class="center">
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">
+                            2015年1月
+                        </td>
+                        <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                        <td class="center">飞行</td>
+                        <td class="center">
+                            齐龙
+                        </td>
+                        <td class="center"> 2015-05-30</td>
+                        <td class="center">张三</td>
+                        <td class="center">
+                            未完成
+                        </td>
+                        <td class="center">
+                           <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">
+                            2015年1月
+                        </td>
+                        <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                        <td class="center">飞行</td>
+                        <td class="center">
+                            齐龙
+                        </td>
+                        <td class="center"> 2015-05-30</td>
+                        <td class="center">张三</td>
+                        <td class="center">
+                            未完成
+                        </td>
+                        <td class="center">
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">
+                            2015年1月
+                        </td>
+                        <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                        <td class="center">机务</td>
+                        <td class="center">
+                            齐龙
+                        </td>
+                        <td class="center"> 2015-05-30</td>
+                        <td class="center">张三</td>
+                        <td class="center">
+                            未完成
+                        </td>
+                        <td class="center">
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">
+                            2015年1月
+                        </td>
+                        <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                        <td class="center">机务</td>
+                        <td class="center">
+                            齐龙
+                        </td>
+                        <td class="center"> 2015-05-30</td>
+                        <td class="center">张三</td>
+                        <td class="center">
+                            未完成
+                        </td>
+                        <td class="center">
+                           <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">
+                            2015年1月
+                        </td>
+                        <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                        <td class="center">机务</td>
+                        <td class="center">
+                            齐龙
+                        </td>
+                        <td class="center"> 2015-05-30</td>
+                        <td class="center">张三</td>
+                        <td class="center">
+                            未完成
+                        </td>
+                        <td class="center">
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">
+                            2015年1月
+                        </td>
+                        <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                        <td class="center">机务</td>
+                        <td class="center">
+                            齐龙
+                        </td>
+                        <td class="center"> 2015-05-30</td>
+                        <td class="center">张三</td>
+                        <td class="center">
+                            未完成
+                        </td>
+                        <td class="center">
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">
+                            2015年1月
+                        </td>
+                        <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                        <td class="center">航务</td>
+                        <td class="center">
+                            齐龙
+                        </td>
+                        <td class="center"> 2015-05-30</td>
+                        <td class="center">张三</td>
+                        <td class="center">
+                            未完成
+                        </td>
+                        <td class="center">
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">
+                            2015年1月
+                        </td>
+                        <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                        <td class="center">航务</td>
+                        <td class="center">
+                            齐龙
+                        </td>
+                        <td class="center"> 2015-05-30</td>
+                        <td class="center">张三</td>
+                        <td class="center">
+                            未完成
+                        </td>
+                        <td class="center">
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">
+                            2015年1月
+                        </td>
+                        <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                        <td class="center">航务</td>
+                        <td class="center">
+                            齐龙
+                        </td>
+                        <td class="center"> 2015-05-30</td>
+                        <td class="center">张三</td>
+                        <td class="center">
+                            未完成
+                        </td>
+                        <td class="center">
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <div class="modal-footer center">
+                <a class="btn btn-info" data-toggle="modal"data-target="#myModal-5">确认签收</a>
+                &nbsp;&nbsp; <a class="btn" href="ep_hxxd.html">返回</a>
             </div>
-            <div id="tab_div">
-                <!--书签-->
-                <div class="tabbable tabbable-custom">
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab_1_1" data-toggle="tab">审计问题（0/5）</a></li>
-                        <li><a href="#tab_1_2" data-toggle="tab">新发现问题（0/3）</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="tab_1_1">
-                            <div class="accordion" id="accordion2">
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？ <span style="color: Red;">(状态：未完成)</span>
-                                        </a>
-                                    </div>
-                                    <div id="collapseOne" class="accordion-body collapse out">
-                                        <table class=" table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        预填结果
-                                                    </th>
-                                                    <th>
-                                                        整改计划
-                                                    </th>
-                                                    <th>
-                                                        整改情况
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题分类：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    人员（例如：人力资源不足、人员资质不符合要求等）</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题说明：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    未告知旅客</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>附件一</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                计划完成时间：</label>
-                                                            <div class="controls">
-                                                                <input type="text" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改措施：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>上传附件</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改完成说明：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <a>上传附件</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                            </label>
-                                                            <div class="controls">
-                                                                <a class="btn btn-success">完成整改</a>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+</body>
+</html>
+<div id="myModal-5" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">签收预防纠正单-指定负责人</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                <table class="table table-bordered">
+					<tbody>
+                    	<tr>
+                            <td align="right" class="right" style="width:20%">审计年月：</td>
+                            <td align="left" colspan="2" class="left" >2015年6月</td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="right">审计组长：</td>
+                            <td align="left" colspan="2" class="left" >齐龙</td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="right">下发时间：</td>
+                            <td align="left" colspan="2" class="left">2015-06-20</td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="right">要求提交时间：</td>
+                            <td align="left" colspan="2" class="left">2015-06-30</td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="right">负责人：</td>
+                            <td align="left" class="left">
+                                 <div class="controls">
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 张三小
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 李小四
+                                    </label>
+                                
+                                    <label class="checkbox line">
+                                    <input type="checkbox" value="" /> 赵小六
+                                    </label>
+                                    <label class="checkbox line">
+                                    <input type="checkbox" value="" /> 冯七
+                                    </label>
                                 </div>
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div1">
-                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？ <span style="color: Red;">(状态：未完成)</span>
-                                        </a>
-                                    </div>
-                                    <div id="Div1" class="accordion-body collapse out">
-                                        <table class=" table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        预填结果
-                                                    </th>
-                                                    <th>
-                                                        整改计划
-                                                    </th>
-                                                    <th>
-                                                        整改情况
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题分类：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    人员（例如：人力资源不足、人员资质不符合要求等）</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题说明：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    未告知旅客</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>附件一</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                计划完成时间：</label>
-                                                            <div class="controls">
-                                                                <input type="text" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改措施：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>上传附件</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改完成说明：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <a>上传附件</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                            </label>
-                                                            <div class="controls">
-                                                                <a class="btn btn-success">完成整改</a>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                            </td>
+                            <td align="left" class="left">
+                                 <div class="controls">
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 张三小
+                                    </label>
+                                    <label class="checkbox">
+                                    <input type="checkbox" value="" /> 李小四
+                                    </label>
+                                
+                                    <label class="checkbox line">
+                                    <input type="checkbox" value="" /> 赵小六
+                                    </label>
+                                    <label class="checkbox line">
+                                    <input type="checkbox" value="" /> 冯七
+                                    </label>
                                 </div>
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div2">
-                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？ <span style="color: Red;">(状态：未完成)</span>
-                                        </a>
-                                    </div>
-                                    <div id="Div2" class="accordion-body collapse out">
-                                        <table class=" table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        预填结果
-                                                    </th>
-                                                    <th>
-                                                        整改计划
-                                                    </th>
-                                                    <th>
-                                                        整改情况
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题分类：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    人员（例如：人力资源不足、人员资质不符合要求等）</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题说明：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    未告知旅客</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>附件一</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                计划完成时间：</label>
-                                                            <div class="controls">
-                                                                <input type="text" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改措施：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>上传附件</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改完成说明：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <a>上传附件</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                            </label>
-                                                            <div class="controls">
-                                                                <a class="btn btn-success">完成整改</a>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div3">
-                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？ <span style="color: Red;">(状态：未完成)</span>
-                                        </a>
-                                    </div>
-                                    <div id="Div3" class="accordion-body collapse out">
-                                        <table class=" table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        预填结果
-                                                    </th>
-                                                    <th>
-                                                        整改计划
-                                                    </th>
-                                                    <th>
-                                                        整改情况
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题分类：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    人员（例如：人力资源不足、人员资质不符合要求等）</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题说明：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    未告知旅客</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>附件一</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                计划完成时间：</label>
-                                                            <div class="controls">
-                                                                <input type="text" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改措施：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>上传附件</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改完成说明：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <a>上传附件</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                            </label>
-                                                            <div class="controls">
-                                                                <a class="btn btn-success">完成整改</a>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div4">
-                                            1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？ <span style="color: Red;">(状态：未完成)</span>
-                                        </a>
-                                    </div>
-                                    <div id="Div4" class="accordion-body collapse out">
-                                        <table class=" table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        预填结果
-                                                    </th>
-                                                    <th>
-                                                        整改计划
-                                                    </th>
-                                                    <th>
-                                                        整改情况
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题分类：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    人员（例如：人力资源不足、人员资质不符合要求等）</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题说明：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    未告知旅客</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>附件一</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                计划完成时间：</label>
-                                                            <div class="controls">
-                                                                <input type="text" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改措施：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>上传附件</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改完成说明：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <a>上传附件</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                            </label>
-                                                            <div class="controls">
-                                                                <a class="btn btn-success">完成整改</a>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="tab_1_2">
-                            <div class="accordion" id="Div5">
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div6">
-                                            《客舱乘务员手册》第八章第三节未更新 <span style="color: Red;">(状态：未完成)</span> </a>
-                                    </div>
-                                    <div id="Div6" class="accordion-body collapse out">
-                                        <table class=" table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        问题说明
-                                                    </th>
-                                                    <th>
-                                                        整改计划
-                                                    </th>
-                                                    <th>
-                                                        整改情况
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题分类：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    其他</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题说明：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    未告知旅客</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>附件一</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                计划完成时间：</label>
-                                                            <div class="controls">
-                                                                <input type="text" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改措施：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>上传附件</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改完成说明：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <a>上传附件</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                            </label>
-                                                            <div class="controls">
-                                                                <a class="btn btn-success">完成整改</a>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div7">
-                                            《客舱乘务员手册》第八章第三节未更新 <span style="color: Red;">(状态：未完成)</span> </a>
-                                    </div>
-                                    <div id="Div7" class="accordion-body collapse out">
-                                        <table class=" table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        问题说明
-                                                    </th>
-                                                    <th>
-                                                        整改计划
-                                                    </th>
-                                                    <th>
-                                                        整改情况
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题分类：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    其他</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题说明：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    未告知旅客</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>附件一</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                计划完成时间：</label>
-                                                            <div class="controls">
-                                                                <input type="text" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改措施：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>上传附件</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改完成说明：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <a>上传附件</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                            </label>
-                                                            <div class="controls">
-                                                                <a class="btn btn-success">完成整改</a>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Div8">
-                                            《客舱乘务员手册》第八章第三节未更新 <span style="color: Red;">(状态：未完成)</span> </a>
-                                    </div>
-                                    <div id="Div8" class="accordion-body collapse out">
-                                        <table class=" table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        问题说明
-                                                    </th>
-                                                    <th>
-                                                        整改计划
-                                                    </th>
-                                                    <th>
-                                                        整改情况
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题分类：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    其他</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                问题说明：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    未告知旅客</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label" for="inputEmail">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>附件一</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                计划完成时间：</label>
-                                                            <div class="controls">
-                                                                <input type="text" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改措施：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <label>
-                                                                    <a>上传附件</a></label>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <form class="form-horizontal">
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                整改完成说明：</label>
-                                                            <div class="controls">
-                                                                <textarea></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                                附件：</label>
-                                                            <div class="controls">
-                                                                <a>上传附件</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <label class="control-label">
-                                                            </label>
-                                                            <div class="controls">
-                                                                <a class="btn btn-success">完成整改</a>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                    </table>
+                    <!--内容结束-->
+                    
                 </div>
-                <!--书签-->
             </div>
-            <div class="modal-footer center">
-                <a class="btn btn-info">签收</a>&nbsp;&nbsp; <a class="btn btn-success">保存</a>&nbsp;&nbsp;
-                <a class="btn btn-danger">提交</a>&nbsp;&nbsp; <a class="btn" href="ep_hxxd.html">返回</a>
+            <div class="modal-footer">
+            <!--<button type="submit" class="btn green"><i class="icon-file-text"></i> 保存</button>
+            <button type="submit" class="btn blue"><i class="icon-ok"></i> 确定</button>
+			<button type="button" class="btn" data-dismiss="modal"><i class="icon-remove icon-white"></i> 取消</button>-->
+            <button type="submit" class="btn blue" onclick="location='ep_hxxd.html'">确定</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
             </div>
         </div>
     </div>
-</body>
-</html>
+</div>
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
+    <div class="modal-dialog small">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="myModalLabel">
+                    后续行动整改信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                    <div class="container-fluid">
+                        <div class="row-fluid">
+                            <div class="span12">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style="text-align:left !important;">
+                                            1.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                      <td class="right" style="width:100px;">回答结果：</td>
+                                      <td>不合格</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right">
+                                            问题分类：
+                                        </td>
+                                        <td>工具和设备 </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="right">回答结果：</td>
+                                      <td>不合格</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="right"> 附件： </td>
+                                      <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table><br>
+						
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th colspan="2" style="text-align:left !important;">下发预防纠正整改通知说明</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="right" style="width:100px;">下发时间：</td>
+                                  <td>2015-06-20</td>
+                                </tr>
+                                <tr>
+                                  <td class="right" style="width:100px;">要求提交时间：</td>
+                                  <td>2015-06-30</td>
+                                </tr>
+                                <tr>
+                                  <td class="right"> 说明： </td>
+                                  <td>具体说明 </td>
+                                </tr>
+                                <tr>
+                                  <td class="right">附件： </td>
+                                  <td>附件1</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                   
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>

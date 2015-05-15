@@ -1,0 +1,878 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+    <head>
+    <meta charset="utf-8" />
+    <title>预填</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css"
+        type="text/css" />
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.min.js"></script>
+    <script type="text/javascript" src="../includes/zTreev3.5.12/data/demoData.js"></script>
+     <script>
+        var zTree1;
+        var setting = {
+            view: {
+                dblClickExpand: false,
+                showLine: true,
+                selectedMulti: false
+            },
+            data: {
+                simpleData: {
+                    enable: true,
+                    idKey: "id",
+                    pIdKey: "pId",
+                    rootPId: ""
+                }
+            }
+        };
+
+        $(document).ready(function () {
+            var winH = $(window).height() - 255;
+            $("#accordion").css('height', winH + 'px');
+            $("#a2").css('height', winH + 'px');
+            $("#a3").css('height', winH + 'px');
+            $("#a4").css('height', winH + 'px');
+
+            var t = $("#tree");
+            t = $.fn.zTree.init(t, setting, problemTypeNodes);
+        });
+
+
+        function adds() {
+            $("#xdd").show();
+        }
+
+    </script>
+    <style>
+.problemlist {
+	border: 1px solid #d2d2d2;
+	border-collapse: collapse;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-height: 70px;
+}
+</style>
+    </head>
+    <body>
+    <div class="portlet box">
+      <div class="portlet-body">
+      
+      <div class="alert alert-info form-inline" style="margin-bottom:10px;"><label>3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序</label><label style="padding-left:50px;">计划年月：2015年5月</label><label style="padding-left:50px;">被审计单位：深圳航空公司</label></div>
+        <div class="tab-content">
+          <div class="tabbable tabbable-custom">
+            <ul class="nav nav-tabs">
+              <!--<li class="active"><a href="#tab_1_1" data-toggle="tab">基本信息</a></li>-->
+              <li class="active"><a href="#tab_1_2" data-toggle="tab">第一部分 绩效检查项</a></li>
+              <li><a href="#tab_1_3" data-toggle="tab">第二部分 管理责任和权力检查项</a></li>
+            </ul>
+            <div class="tab-content" style="border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;">
+              <!--<div class="tab-pane active" id="tab_1_1">
+                <table width="100%" cellpadding="5" style="min-width:1000px;">
+                  <tr>
+                    <td width="150" class="right" style="color:#C00">* 开始日期：</td>
+                    <td width="25%"><input type="text"  value="2015-05-01"/></td>
+                    <td width="150" class="right" style="color:#C00">* 结束日期：</td>
+                    <td width="20%"><input type="text"  value="2015-05-05"/></td>
+                    <td rowspan="6" class="left" style="padding-left:30px; vertical-align:top; line-height:35px;">
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">规章阅读</button><br>
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">信息摘要</button><br>
+
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">特别说明</button><br>
+
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">规章要求</button><br>
+
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">补充信息</button><br>
+
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">检查指导</button>
+
+                    
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="right"> 出发地点： </td>
+                    <td><input type="text" value="北京" /></td>
+                    <td class="right"> 到达地点： </td>
+                    <td><input type="text"  value="上海"/></td>
+                  </tr>
+                  <tr>
+                    <td class="right"> 模拟器ID： </td>
+                    <td><input type="text" value="Bj00001" /></td>
+                    <td class="right"> 制造商/型号/编号： </td>
+                    <td><input type="text" value="A777" /></td>
+                  </tr>
+                  <tr>
+                    <td class="right"> 航空器注册编号： </td>
+                    <td><input type="text"  /></td>
+                    <td class="right"> 合格的修理站点： </td>
+                    <td><input type="text" /></td>
+                  </tr>
+                  <tr>
+                    <td class="right"> 航班编号： </td>
+                    <td><input type="text" /></td>
+                    <td class="right"> 非工作时间： </td>
+                    <td><input type="text" /></td>
+                  </tr>
+                  <tr>
+                    <td class="right" style="color:#C00">* 工作时间统计： </td>
+                    <td><input type="text"  value="3" />(小时/单人)</td>
+                    <td class="right" style="color:#C00">* 被检查单位基地： </td>
+                    <td><input type="text" value="上海虹桥机场" /></td>
+                  </tr>
+                </table>
+              </div>-->
+              <div class="tab-pane active" id="tab_1_2">
+                
+                <div class="tab-content">
+                        <table class=" table">
+                            <thead>
+                                <tr>
+                                	<td align="left" class="left" style="line-height:30px; padding-left:10px;">
+                                    <div class="btn-group" data-toggle="buttons">
+                                       <label class="btn btn-primary active btn-mini">
+                                          <input type="radio" name="options" id="option1"> 显示全部
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option2"> 显示未回答问题
+                                       </label>
+                                      
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option3"> 显示有说明的问题
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option3"> 显示不合格有说明的问题
+                                       </label>
+                                    </div>
+                                    
+                                    </td>
+                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;<span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
+                                    <td align="left" class="right" style="line-height:30px;">
+                                    	
+                                    <button type="submit" class="btn btn-mini">任务</button>
+                                    <button type="submit" class="btn btn-mini">监察指导</button>
+                                    <button type="submit" class="btn btn-mini">目标</button>
+                                    </td>
+                              </tr>
+                            </thead>
+                        </table>
+                        <div style="overflow-y:scroll; height:35px;">
+                        <table class="table table-bordered">
+                            <thead>
+                            	<tr>
+                                    <th class="center" style=" padding-left:5px;">审计项</th>
+                                    <th class="center" style="width:400px;">答案选项</th>
+                                    <th class="center" style=" width:15%">说明及附件</th>
+                              	</tr>
+                            </thead>
+                          </table>
+						</div>
+                         <div class="panel-group" id="a2" style="overflow-y:scroll; height:300px;">
+                         <table class="table table-hover table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="left"><span class="label label-important">&nbsp;</span>1.1 合格证持有人适当运行设备的流程是否符合特定规章和局方政策的要求：</td>
+                                    <td class="left form-inline" style="width:400px;">
+                                    <label class="checkbox">
+                                    <input type="radio" name="optionsRadio2" value="option1" /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;" data-toggle="modal" data-target="#myModal-1">
+                                    <input type="radio" name="optionsRadio2" value="option2"  checked/><font style="color:#F00;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRadio2" value="option2"  /> 无法观察
+                                    </label>
+                                    </td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-2">调整回答说明及附件</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>1.1.1 合格证持有人适当运行设备的流程是否有在以下位置安置便于取用的，经批准数量合适的手提灭火器的要求:111</td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op3" value="option1" checked  /> <font style="color: #090;">合格</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input data-toggle="modal" data-target="#myModal-1" type="radio" name="op3" value="option2"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op3" value="option2"  /> 无法观察
+                                    </label>
+                                    </td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>1.1.1.1 驾驶舱？
+                                  </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>1.1.1.2 货舱?
+                                  </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-success">&nbsp;</span>1.1.1.3 厨房隔舱?	</td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>1.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
+                                 </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>1.1.3 合格证持有人适当的运行设备流程是否规定每架载客飞机上配有电池供电的便携式扩音器，放在负责指挥应急撤离的机组成员方便取用的地方？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1.1.4 当合格证持有人在飞行高度25000英尺以上运行具有增压座舱的涡轮发动机飞机时，是否要求为每个机组成员提供能迅速取出戴在脸上的氧气面罩？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1.1.5 合格证持有人手册是否要求其飞机装备适当的呼吸保护装置（PBE）？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1.1.6.1 在飞机的每个座位上，配备带有经批准的幸存者定位灯的救生衣或者经批准的等效漂浮装置？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+            			</div>
+
+           		  </div>
+              </div>
+              <div class="tab-pane" id="tab_1_3">
+               <div class="tab-content">
+                        <table class=" table">
+                            <thead>
+                                <tr>
+                                	<td align="left" class="left" style="line-height:30px; padding-left:10px;">
+                                    <div class="btn-group" data-toggle="buttons">
+                                       <label class="btn btn-primary active btn-mini">
+                                          <input type="radio" name="options" id="option1"> 显示全部
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option2"> 显示未回答问题
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option3"> 显示有说明的问题
+                                       </label>
+                                       <label class="btn btn-primary btn-mini">
+                                          <input type="radio" name="options" id="option3"> 显示不合格有说明的问题
+                                       </label>
+                                    </div>
+                                    
+                                    </td>
+                                    <td align="left" class="right" style="line-height:30px;"><span class="alert alert-info"><span class="label label-important">&nbsp;</span>填写不规范&nbsp;&nbsp;<span class="label label-success">&nbsp;</span>已经填写&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题数量：10，未回答：8，已回答：2</span></td>
+                                    <td align="left" class="right" style="line-height:30px;">
+                                    	
+                                    <button type="submit" class="btn btn-mini">任务</button>
+                                    <button type="submit" class="btn btn-mini">监察指导</button>
+                                    <button type="submit" class="btn btn-mini">目标</button>
+                                    </td>
+                              </tr>
+                            </thead>
+                        </table>
+                        <div style="overflow-y:scroll; height:35px;">
+                        <table class="table table-bordered">
+                            <thead>
+                            	<tr>
+                                    <th class="center" style=" padding-left:5px;">检查项（问题）</th>
+                                    <th class="center" style="width:400px;">答案选项</th>
+                                    <th class="center" style=" width:15%">说明及附件</th>
+                              	</tr>
+                            </thead>
+                          </table>
+						</div>
+                         <div class="panel-group" id="a3" style="overflow-y:scroll; height:300px;">
+                         <table class="table table-hover table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="left"><span class="label label-important">&nbsp;</span>2.1 合格证持有人适当运行设备的流程是否符合特定规章和局方政策的要求：</td>
+                                    <td class="left form-inline" style="width:400px;">
+                                    <label class="checkbox">
+                                    <input type="radio" name="optionsRad2" value="option1" /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;" data-toggle="modal" data-target="#myModal-1">
+                                    <input type="radio" name="optionsRad2" value="option2"  checked/><font style="color:#F00;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRad2" value="option2"  /> 无法观察
+                                    </label>
+                                    </td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-2">调整回答说明及附件</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>2.1.1 合格证持有人适当运行设备的流程是否有在以下位置安置便于取用的，经批准数量合适的手提灭火器的要求:111</td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="opp3" value="option1" checked  /> <font style="color: #090;">合格</font>
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input data-toggle="modal" data-target="#myModal-1" type="radio" name="op3" value="option2"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2"  /> 无法观察
+                                    </label>
+                                    </td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">调整回答说明</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>2.1.1.1 驾驶舱？
+                                  </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op4" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2" data-toggle="modal" data-target="#myModal-1"/> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op4" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>2.1.1.2 货舱?
+                                  </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op5" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op5" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op5" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-success">&nbsp;</span>2.1.1.3 厨房隔舱?	</td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op6" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op6" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op6" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>2.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
+                                 </td>
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op7" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op7" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op7" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">&nbsp;</span>2.1.3 合格证持有人适当的运行设备流程是否规定每架载客飞机上配有电池供电的便携式扩音器，放在负责指挥应急撤离的机组成员方便取用的地方？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op8" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op8" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op8" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label">&nbsp;</span>2.1.4 当合格证持有人在飞行高度25000英尺以上运行具有增压座舱的涡轮发动机飞机时，是否要求为每个机组成员提供能迅速取出戴在脸上的氧气面罩？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="op9" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op9" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="op9" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label">&nbsp;</span>2.1.5 合格证持有人手册是否要求其飞机装备适当的呼吸保护装置（PBE）？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="opp2" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp2" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp2" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label">&nbsp;</span>2.1.6.1 在飞机的每个座位上，配备带有经批准的幸存者定位灯的救生衣或者经批准的等效漂浮装置？</td>
+                                    
+                                    <td class="left form-inline" style="width:400px;"><label class="checkbox">
+                                    <input type="radio" name="opp3" value="option1"  /> 合格
+                                    </label>
+                                    <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2" data-toggle="modal" data-target="#myModal-1" /> <font style="color:#333;">不合格</font>
+                                    </label>
+                                     <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="opp3" value="option2"  /> 无法观察
+                                    </label></td>
+                                    <td class="center" style=" width:15%"><a class="btn btn-link" data-toggle="modal" data-target="#myModal-3">填写</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+            			</div>
+
+           		  </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="modal-footer center" style="margin-top: 10px;"> <!--<a class="btn">保存</a> <a class="btn">提交</a> --><a class="btn" href="javascript:history.go(-1)">返回</a> </div>
+      </div>
+    </div>
+    </div>
+</body>
+</html>
+
+
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog small">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">回答说明及附件</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                	<div class="container-fluid">
+                          <div class="row-fluid">
+                            <div class="span12">
+                	<!--窗口的内容开始-->
+                    <table class="table table-bordered">
+                    	<thead>
+                            <tr>
+                                <th><span class="label label-success">&nbsp;</span>1.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
+                                </th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td class="left form-inline">
+                                  <label class="checkbox">
+                                    <input type="radio" name="optionsRos2" value="option1"  /> 合格
+                                  </label>
+                                  <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRos2" value="option2" checked="checked"/> <font style="color:#F00;">不合格</font>
+                                  </label>
+                                  <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRos2" value="option2"  /> 无法观察
+                                  </label>
+                                  <span style="float:right"><button type="submit" class="btn" data-toggle="modal" data-target="#myModal-y">规章依据</button>&nbsp;<button type="button" class="btn" data-toggle="modal" data-target="#myModal-y">任务指南</button></span>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>
+                              <div class="controls form-inline">
+                              <label>说明：</label>
+                                <textarea class="medium m-wrap span5" rows="6"></textarea>
+                              
+                              <label>行动：</label>
+                                <textarea class="medium m-wrap span5" rows="6"></textarea>
+                                </div>
+                              </td>
+                            </tr>
+                         </tbody>
+                         <thead>
+                            <tr>
+                                <th>问题分类：
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>1、人员（例如：人力资源不足、人员资质不符合要求等），2、工具和设备</td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th><div class="form-group form-inline">
+                                <label class="checkbox">上传附件 </label>
+   
+                               
+                                  <label class="sr-only" for="inputfile"></label>
+                                  <input type="file" id="inputfile">
+                               </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">附件1</a>&nbsp;&nbsp;<a href="">附件2</a></td>
+                            </tr>
+                        </tbody>
+					</table>
+                    <!--内容结束-->
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            
+            <button type="submit" class="btn" data-dismiss="modal">保存</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog small">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">回答说明及附件</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                <div class="container-fluid">
+                          <div class="row-fluid">
+                            <div class="span12">
+                	<!--窗口的内容开始-->
+                    <table class="table table-bordered">
+                    	<thead>
+                            <tr>
+                                <th><span class="label label-success">&nbsp;</span>1.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
+                                </th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td class="left form-inline">
+                                  <label class="checkbox">
+                                    <input type="radio" name="optionsRadios2" value="option1"  /> 合格
+                                  </label>
+                                  <label class="checkbox" style="padding-left:25px;" data-toggle="modal" data-target="#myModal-1">
+                                    <input type="radio" name="optionsRadios2" value="option2" onClick="adds();" /> <font style="color:#F00;">不合格</font>
+                                  </label>
+                                  <label class="checkbox" style="padding-left:25px;">
+                                    <input type="radio" name="optionsRadios2" value="option2"  /> 无法观察
+                                  </label>
+                                  <span style="float:right"><button type="submit" class="btn" data-toggle="modal" data-target="#myModal-y">规章依据</button>&nbsp;<button type="button" class="btn" data-toggle="modal" data-target="#myModal-y">任务指南</button></span>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>
+                              <div class="controls form-inline">
+                              <label>说明：</label>
+                                <textarea class="medium m-wrap span5" rows="6"></textarea>
+                              
+                              	<span class="controls" style=" display: none;" id="xdd">
+                            	<label>行动：</label>
+                             	<textarea class="medium m-wrap span5" rows="6"></textarea>
+                                </span>
+                                </div>
+                             
+                              </td>
+                            </tr>
+                         </tbody>
+                         <thead>
+                            <tr>
+                                <th>问题分类：</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>1、人员（例如：人力资源不足、人员资质不符合，2、工具和设备</td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th><div class="form-group form-inline"><label class="checkbox">上传附件 </label>
+   
+                               
+                                  <label class="sr-only" for="inputfile"></label>
+                                  <input type="file" id="inputfile">
+                               </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">附件1</a>&nbsp;&nbsp;<a href="">附件2</a></td>
+                            </tr>
+                        </tbody>
+					</table>
+                    <!--内容结束-->
+                   </div>
+                   </div>
+                   </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            
+            <button type="submit" class="btn" data-dismiss="modal">保存</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+<!--弹出窗口-小 开始-->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">说明类窗口信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                <div class="container-fluid">
+                          <div class="row-fluid">
+                            <div class="span12">
+                            <!--窗口的内容开始-->
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                            
+                                <tbody>
+                                    <tr>
+                                        <td>内容</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--内容结束-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">问题分类</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                    <!--<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" width="100%" id="relateTable">
+
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                    
+                                	<label class="radio">
+                                    <input type="radio" name="optionsRadios2" value="option1"  /> 人员（例如：人力资源不足、人员资质不符合要求等）
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2"/> 工具和设备
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 技术资料（例如：厂家提供的手册、OEB、SB等）
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 政策、程序、指令或信息
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2"/> 材料（例如：航材等）
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio" name="optionsRadios2" value="option2"/> 设施（例如：厂房、车间、机库、教室等）
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 控制
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio" name="optionsRadios2" value="option2"/> 流量测量
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 接口
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 预测结果（与预设目标不符）
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio"  name="optionsRadios2" value="option2" /> 其它
+                                    </label>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>-->
+                    <ul id="tree" class="ztree" style="width: 100%; overflow: auto;">
+                    </ul>
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+            
+            <button type="submit" class="btn" data-dismiss="modal">确定</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-y" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">规章依据/任务指南</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                
+                	<!--窗口的内容开始-->
+                    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered" width="100%" id="relateTable">
+
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                    文字内容
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <!--内容结束-->
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->

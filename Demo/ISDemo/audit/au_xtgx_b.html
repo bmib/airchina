@@ -1,0 +1,215 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>国航被审计单位航空安全监管平台-系统构型</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css"/>
+    <link href="../media/css/style.css" rel="style" type="text/css"/>
+	<script src="../media/js/jquery-1.10.1.min.js" type="text/javascript"></script>   
+	<script src="../media/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<!--以上是页面文件加载，直接拷贝使用，不要修改-->
+<script>
+$(document).ready(function() {
+	var winH = $(window).height() - 255;
+	$("#accordion").css('height', winH + 'px');
+	$("#wenti").css('height', winH + 'px');
+	$("#a3").css('height', winH + 'px');
+	$("#a4").css('height', winH + 'px');
+});
+</script>
+</head>
+<body>
+<div class="portlet box">
+    <div class="portlet-body">
+           <div class="form-inline">
+                <label>计划年月：</label>
+                <select name="select" >
+                	<option value="0" selected="selected">全部</option>
+                    <option value="4">2015年4月</option>
+                    <option value="5">2015年5月</option>
+                    <option value="5">2015年6月</option>
+                </select>
+                <label>被审计单位：</label>
+                <select name="select">
+                	<option value="0" selected="selected">全部</option>
+                    <option value="4">北京航空公司</option>
+                    <option value="5">沈阳航空公司</option>
+                    <option value="5">山东航空公司</option>
+                </select>
+                <label><div class="alert">注释：<span class="label label-success">已完成</span>&nbsp;&nbsp;<span class="label label-warning">未完成</span></div></label>
+          </div>
+            <div class="tab-content">
+            <div style="overflow-y:scroll ; height:30px;">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                            <th align="left" class="center" style="width:80px;">计划年月 <span>&darr;</span></th>
+                            <th align="left" class="center" style="width:100px;">被审计单位</th>
+                            <th align="left" class="center" style="width:60px;">审计组长</th>
+                            <th align="left" class="center">审计专员</th>
+                            <th align="left" class="center" style="width:100px;">预填结束日期 <span>&darr;</span></th>
+                            <th align="left" class="center" style="width:60px;">签收人员</th>
+                            <th align="left" class="center" style="width:80px;">预填专员</th>
+                            <th align="left" class="center" style="width:50px;">状态 <span>&uarr;</span></th>
+                            <th align="left" class="center" style="width:50px;">操作</th>
+                      </tr>
+                    </thead>
+                </table>
+             </div>
+             <div class="panel-group" id="a3" style="overflow-y:scroll; height:350px;">
+                <table class="table table-hover table-bordered">
+                    <tbody>
+                        <tr>
+                            <td align="left" class="center" style="width:80px;">2015年6月</td>
+                            <td align="left"class="left" style="width:100px;">山东航空公司</td>
+                            <td align="left"class="center" style="width:60px;">齐龙</td>
+                            <td align="left"class="left">
+                            <span class="label label-success" title="已提交构型">马征 [飞行]</span>，<span class="label label-warning">刘静 [机务]</span>，<span class="label label-warning" title="未提交构型">张玲 [维修]</span>
+                            </td>
+                            <td align="left"class="center" style="width:100px;">--</td>
+                            <td align="left"class="center" style="width:60px;">--</td>
+                            <td align="left"class="center" style="width:80px;">--</td>
+                            <td align="left"class="center" style="width:50px;">构型中</td>
+                            <td align="left"class="center" style="width:50px;"><a href="au_xtgx_setup_b.html" class="btn btn-mini">构型</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">2015年6月</td>
+                            <td align="left"class="left" >山东航空公司</td>
+                            <td align="left"class="center">齐龙</td>
+                            <td align="left"class="left"><span class="label label-success" title="已提交构型">马征 [飞行]</span>，<span class="label label-warning">刘静 [机务]</span>，<span class="label label-warning" title="未提交构型">马骏然 [维修]</span>
+                            </td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="center">构型中</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b.html" class="btn btn-mini">构型</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">2015年6月</td>
+                            <td align="left"class="left" >山东航空公司</td>
+                            <td align="left"class="center">齐龙</td>
+                            <td align="left"class="left"><span class="label label-success" title="已提交构型">马征 [飞行]</span>，<span class="label label-warning">刘静 [机务]</span>，<span class="label label-warning" title="未提交构型">马骏然 [维修]</span></td>
+                            <td align="left"class="center">2015-06-20</td>
+                            <td align="left"class="center">王领导</td>
+                            <td align="left"class="center">张小三/王小五/赵小六</td>
+                            <td align="left"class="center">已签收</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b2.html" class="btn btn-mini">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">2015年6月</td>
+                            <td align="left"class="left" >山东航空公司</td>
+                            <td align="left"class="center">齐龙</td>
+                            <td align="left"class="left"><span class="label label-success" title="已提交构型">马征 [飞行]</span>，<span class="label label-warning">刘静 [机务]</span>，<span class="label label-warning" title="未提交构型">马骏然 [维修]</span></td>
+                          <td align="left"class="center">2015-06-20</td>
+                            <td align="left"class="center">王领导</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">已下发</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b2.html" class="btn btn-mini">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">2015年6月</td>
+                            <td align="left"class="left" >山东航空公司</td>
+                            <td align="left"class="center">齐龙</td>
+                            <td align="left"class="left"><span class="label label-success" title="已提交构型">马征 [飞行]</span>，<span class="label label-warning">刘静 [机务]</span>，<span class="label label-warning" title="未提交构型">马骏然 [维修]</span></td>
+                          <td align="left"class="center">2015-06-20</td>
+                            <td align="left"class="center">王领导</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">已下发</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b2.html" class="btn btn-mini">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">2015年6月</td>
+                            <td align="left"class="left" >山东航空公司</td>
+                            <td align="left"class="center">齐龙</td>
+                            <td align="left"class="left"><span class="label label-success" title="已提交构型">马征 [飞行]</span>，<span class="label label-warning">刘静 [机务]</span>，<span class="label label-warning" title="未提交构型">马骏然 [维修]</span></td>
+                          <td align="left"class="center">2015-06-20</td>
+                            <td align="left"class="center">王领导</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">已下发</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b2.html" class="btn btn-mini">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">--</td>
+                            <td align="left"class="left" >--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="left">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b2.html" class="btn btn-mini">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">--</td>
+                            <td align="left"class="left" >--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="left">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b2.html" class="btn btn-mini">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">--</td>
+                            <td align="left"class="left" >--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="left">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b2.html" class="btn btn-mini">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">--</td>
+                            <td align="left"class="left" >--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="left">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b2.html" class="btn btn-mini">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">--</td>
+                            <td align="left"class="left" >--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="left">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b2.html" class="btn btn-mini">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="center">--</td>
+                            <td align="left"class="left" >--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="left">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                          <td align="left"class="center">--</td>
+                            <td align="left"class="center">--</td>
+                            <td align="left"class="center"><a href="au_xtgx_setup_b2.html" class="btn btn-mini">查看</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+      </div>
+	</div>
+</div>
+ </body>
+</html>

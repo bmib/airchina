@@ -23,6 +23,7 @@
             <div class="tabbable tabbable-custom">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#tab_1_1" data-toggle="tab">预防纠正</a></li>
+                    <li><a href="#tab_1_3" data-toggle="tab">待审核问题</a></li>
                     <li><a href="#tab_1_2" data-toggle="tab">风险管理</a></li>
                 </ul>
                 <div class="tab-content">
@@ -116,7 +117,7 @@
                                             0/8
                                         </td>
                                         <td class="center">
-                                            整改措施待审核
+                                            待审批
                                     </td>
                                         <td class="center">
                                             <a href="au_fxpg_xdgz_detail.html" class="btn btn-mini">查看</a>
@@ -148,7 +149,7 @@
                                             0/19
                                         </td>
                                         <td class="center">
-                                            整改措施制定中
+                                            已签收(制定中)
                                         </td>
                                         <td class="center">
                                             <a class="btn btn-mini">查看</a>
@@ -245,7 +246,7 @@
                                             已完成整改
                                         </td>
                                         <td class="center">
-                                            <a class="btn btn-mini">查看</a>
+                                            <a class="btn btn-mini" href="au_fxpg_xdgz_detail_b.html">查看</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -277,7 +278,7 @@
                                             已完成整改
                                         </td>
                                         <td class="center">
-                                            <a class="btn btn-mini">查看</a>
+                                            <a class="btn btn-mini" href="au_fxpg_xdgz_detail_b.html">查看</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -309,7 +310,7 @@
                                             已完成整改
                                         </td>
                                         <td class="center">
-                                            <a class="btn btn-mini">查看</a>
+                                            <a class="btn btn-mini" href="au_fxpg_xdgz_detail_b.html">查看</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -341,7 +342,7 @@
                                             已完成整改
                                         </td>
                                         <td class="center">
-                                            <a class="btn btn-mini">查看</a>
+                                            <a class="btn btn-mini" href="au_fxpg_xdgz_detail_b.html">查看</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -582,6 +583,224 @@
 </div>
 
                 </div>
+                	<div class="tab-pane" id="tab_1_3">
+                        <form class="form-horizontal">
+                            <div class=" form-inline">
+                                <label>
+                                    被审计企业：</label>
+                                <select>
+                                    <option>全部</option>
+                                    <option>山东航空</option>
+                                    <option>深圳航空</option>
+                                </select>
+                                <label>
+                                    计划年月：</label>
+                                <select>
+                               		 <option>全部</option>
+                                    <option>2015年4月</option>
+                                    <option>2015年3月</option>
+                                    <option>2015年2月</option>
+                                </select>
+                               </div>
+                         </form>
+                         
+                         <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width:70px;">
+                                        计划年月<span>&darr;</span>
+                                    </th>
+                                    <th style="width:70px;">被审计单位</th>
+                                    <th>审计项（问题）</th>
+                                    <th style="width:50px;">专业</th>
+                                    <th style="width:50px;">
+                                        审计组长
+                                    </th>
+                                    <th style="width:80px;">
+                                        计划完成日期&darr;</th>
+                                    <th style="width:50px;">提交人</th>
+                                    <th style="width:70px;">提交日期<span style="width:80px;">&darr;</span></th>
+                                    <th style="width:50px;">
+                                        操作
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td class="center">
+                                        2015年4月
+                                    </td>
+                                    <td class="left">山东航空</td>
+                                    <td class="left">
+                                        1.1.1.2 飞行或者客舱机组成员是否已核实仅由愿意并能够完成应急撤离功能的旅客在出口座位就坐？</td>
+                                    <td class="center">飞行</td>
+                                    <td class="center">
+                                        齐龙
+                                    </td>
+                                    <td class="center " title="">
+                                        2015-05-30</td>
+                                    <td class="center">张三</td>
+                                    <td class="center " title=""> 2015-05-30</td>
+                                    <td class="center">
+                                        <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center">
+                                        2015年1月
+                                    </td>
+                                    <td align="left" class="left" style="">深圳航空</td>
+                                    <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                                    <td class="center">飞行</td>
+                                    <td class="center">
+                                        齐龙
+                                    </td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">张三</td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">
+                                       <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center">
+                                        2015年1月
+                                    </td>
+                                    <td align="left" class="left" style="">北京航空</td>
+                                    <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                                    <td class="center">飞行</td>
+                                    <td class="center">
+                                        齐龙
+                                    </td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">张三</td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">
+                                        <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center">
+                                        2015年1月
+                                    </td>
+                                    <td align="left" class="left" style="">北京航空</td>
+                                    <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                                    <td class="center">机务</td>
+                                    <td class="center">
+                                        齐龙
+                                    </td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">张三</td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">
+                                        <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center">
+                                        2015年1月
+                                    </td>
+                                    <td align="left" class="left" style="">北京航空</td>
+                                    <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                                    <td class="center">机务</td>
+                                    <td class="center">
+                                        齐龙
+                                    </td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">张三</td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">
+                                       <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center">
+                                        2015年1月
+                                    </td>
+                                    <td align="left" class="left" style="">北京航空</td>
+                                    <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                                    <td class="center">机务</td>
+                                    <td class="center">
+                                        齐龙
+                                    </td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">张三</td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">
+                                        <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center">
+                                        2015年1月
+                                    </td>
+                                    <td align="left" class="left" style="">北京航空</td>
+                                    <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                                    <td class="center">机务</td>
+                                    <td class="center">
+                                        齐龙
+                                    </td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">张三</td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">
+                                        <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center">
+                                        2015年1月
+                                    </td>
+                                    <td align="left" class="left" style="">北京航空</td>
+                                    <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                                    <td class="center">航务</td>
+                                    <td class="center">
+                                        齐龙
+                                    </td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">张三</td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">
+                                        <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center">
+                                        2015年1月
+                                    </td>
+                                    <td align="left" class="left" style="">北京航空</td>
+                                    <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                                    <td class="center">航务</td>
+                                    <td class="center">
+                                        齐龙
+                                    </td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">张三</td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">
+                                        <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center">
+                                        2015年1月
+                                    </td>
+                                    <td align="left" class="left" style="">北京航空</td>
+                                    <td align="left" class="left" style="">1.1.4 是否有飞行签派和运行控制，包括适用的签派协调、飞行控制、飞行跟踪程序等？</td>
+                                    <td class="center">航务</td>
+                                    <td class="center">
+                                        齐龙
+                                    </td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">张三</td>
+                                    <td class="center"> 2015-05-30</td>
+                                    <td class="center">
+                                        <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
             </div>
             <!--书签-->
         </div>

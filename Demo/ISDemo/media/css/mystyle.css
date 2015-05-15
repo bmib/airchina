@@ -1,6 +1,7 @@
 /*!
 
  */
+
 .form-inline{white-space:nowrap !important; word-break:keep-all !important;overflow: hidden !important; }
 .box{ min-width:1000px !important;}
 select{ width:130px !important;}
@@ -262,7 +263,7 @@ background-color:#ff9900;
 .right{text-align:right !important;}
 .label, .badge{ font-weight:100;}
 .table-bordered{-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
-
+.red{color:#F00 !important; font-weight:bold;}
 
 
 

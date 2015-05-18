@@ -7,15 +7,12 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title></title>
         <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="../includes/styleBase/css/yStyle.css" />
 		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
-		<script type="text/javascript" src="../includes/styleBase/js/yStyle.js"></script>
         <style type="text/css">
 input.input-sm {
-    font-size: 60%;
   height: 20px;
   line-height: 20px;
-  width:140px;
+  width:130px;
     padding-top:0px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -43,11 +40,10 @@ input.input-sm {
     </script>
 	</head>
 
-	<body class="yBodyBg">
-		<div class="yContentBox">
-			<table border="0" cellpadding="0" cellspacing="0" class="yInfoTable" style="margin-top:5px;">
+	<body>
+			<table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
 				<tr>
-					<td class="yLeftTipTD yleftTitleBg">来源</td>
+					<td>来源</td>
 					<td>
 						<select style="width:155px">
                             <option selected="selected">自定义</option>
@@ -57,7 +53,7 @@ input.input-sm {
 					</td>
 				</tr>
 				<!--tr>
-					<td class="yLeftTipTD yleftTitleBg">要素类别</td>
+					<td>要素类别</td>
 					<td>
 						<select style="width:155px">
                             <option selected="selected">国航类</option>
@@ -67,21 +63,21 @@ input.input-sm {
 					</td>
 				</tr-->
 				<tr>
-					<td class="yLeftTipTD yleftTitleBg">审计单类型编码</td>
+					<td>审计单类型编码</td>
 					<td>
 						<input type="text" value="SAI" style="width:140px"></input>
 					</td>
 				</tr>
 				<tr>
-					<td class="yLeftTipTD yleftTitleBg">审计单类型名称</td>
+					<td>审计单类型名称</td>
 					<td>
 						<input type="text" value="安全属性审计单" style="width:140px"></input>
 					</td>
 				</tr>
-			</table><br/>
-            <div class="tabbable tabbable-custom">
-                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:95%">
-            <table class="table">
+			</table>
+            <div class="tab-content" style="margin-top:-10px">
+            <div style="overflow-y:scroll ; height:30px;">
+            <table class="table table-bordered">
                 <thead>
                     <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
                         <th width="60px">章节序号</th>
@@ -90,50 +86,46 @@ input.input-sm {
                     </tr>
                 </thead>
                     </table></div></div>
-                <div class="tabbable tabbable-custom">
-                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;width:95%;height:190px">
-            <table class="table">
+                <div class="panel-group" style="overflow-y:scroll; height:230px;">
+            <table class="table table-bordered">
                 <tbody id="zj">
-                    <tr style="height:20px">
+                    <tr>
                         <td width="60px" style="text-align:center;">1</td>
-                        <td><input type="text" class="input-sm" value="程序"></td>
-                        <td width="25px">
+                        <td><input type="text" value="程序" class="input-sm"></td>
+                        <td width="50px" style="text-align:center">
                             <a name="del"><img src="../images/remove.png" width="18"/></a>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:center;">2</td>
                         <td><input type="text" class="input-sm" value="控制"></td>
-                        <td>
+                        <td style="text-align:center">
                             <a name="del"><img src="../images/remove.png" width="18"/></a>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:center;">3</td>
                         <td><input type="text" class="input-sm" value="流程测量"></td>
-                        <td>
+                        <td style="text-align:center">
                             <a name="del"><img src="../images/remove.png" width="18"/></a>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:center;">4</td>
                         <td><input type="text" class="input-sm" value="接口"></td>
-                        <td>
+                        <td style="text-align:center">
                             <a name="del"><img src="../images/remove.png" width="18"/></a>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:center;">5</td>
                         <td><input type="text" class="input-sm" value="责任和权力"></td>
-                        <td>
+                        <td style="text-align:center">
                             <a name="del"><img src="../images/remove.png" width="18"/></a>
                         </td>
                     </tr>
 </tbody>
 </table>
-</div>
-</div>
-		</div>
 	</body>
 
 </html>

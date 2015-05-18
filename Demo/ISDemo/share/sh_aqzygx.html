@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>安全资源共享</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../includes/DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+	<link id="skin" rel="stylesheet" href="../includes/jBox/Skins/GrayCool/jbox.css" />
+	<script type="text/javascript" src="../includes/jBox/jquery.jBox-2.3.min.js"></script>
+	<script type="text/javascript" src="../includes/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+    <script type="text/javascript" src="../includes/lhgdialog4.1.1/lhgdialog.min.js?skin=blue"></script>
+    <script>
+    $(document).ready(function () {
+            $("a[name='modify']").each(function() {
+					$(this).dialog({
+						id: "sh_yxaqxx_modify",
+						content: 'url:share/sh_yxaqxx_modify.html',
+						width: 650,
+						height: 390,
+						title: '修改运行安全信息',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('运行安全信息修改成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            });
+             $('#ad_xx_add').dialog({
+						id: "ad_xx_add",
+						content: 'url:share/sh_yxaqxx_modify.html',
+						width: 650,
+						height: 390,
+						title: '新增运行安全信息',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('运行安全信息保存成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+				});
+        
+         $("a[name='modify2']").each(function() {
+					$(this).dialog({
+						id: "sh_gzbzzl_modify",
+						content: 'url:share/sh_gzbzzl_modify.html',
+						width: 650,
+						height: 350,
+						title: '修改规章标准',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('规章标准修改成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            });
+             $('#ad_gz_add').dialog({
+						id: "ad_gz_add",
+						content: 'url:share/sh_gzbzzl_modify.html',
+						width: 650,
+						height: 350,
+						title: '新增规章标准',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('规章标准保存成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+				});
+        
+        $("a[name='modify3']").each(function() {
+					$(this).dialog({
+						id: "sh_xcbzzl_modify",
+						content: 'url:share/sh_xcbzzl_modify.html',
+						width: 650,
+						height: 390,
+						title: '修改差错标准',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('差错标准修改成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            });
+             $('#ad_xc_add').dialog({
+						id: "ad_xc_add",
+						content: 'url:share/sh_xcbzzl_modify.html',
+						width: 650,
+						height: 390,
+						title: '新增差错标准',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('差错标准保存成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+				});
+        
+        $("a[name='modify4']").each(function() {
+					$(this).dialog({
+						id: "sh_txl_modify",
+						content: 'url:share/sh_txl_modify.html',
+						width: 350,
+						height: 310,
+						title: '修改通讯录',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('通讯录修改成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            });
+             $('#ad_txl_add').dialog({
+						id: "ad_ys_add",
+						content: 'url:share/sh_txl_modify.html',
+						width: 350,
+						height: 310,
+						title: '新增通讯录',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('通讯录保存成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+				});
+        
+        $("a[name='modify5']").each(function() {
+					$(this).dialog({
+						id: "sh_aqys_modify",
+						content: 'url:share/sh_aqys_modify.html',
+						width: 390,
+						height: 200,
+						title: '修改安全培训',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('安全培训修改成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            });
+             $('#ad_ys_add').dialog({
+						id: "ad_ys_add",
+						content: 'url:share/sh_aqys_modify.html',
+						width: 390,
+						height: 200,
+						title: '新增安全培训',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('安全培训保存成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+				});
+        
+        $("a[name='modify6']").each(function() {
+					$(this).dialog({
+						id: "sh_scgz_modify",
+						content: 'url:share/sh_scgz_modify.html',
+						width: 390,
+						height: 200,
+						title: '修改手册规章',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('手册规章修改成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+					});
+            });
+             $('#ad_sc_add').dialog({
+						id: "ad_sc_add",
+						content: 'url:share/sh_scgz_modify.html',
+						width: 390,
+						height: 200,
+						title: '新增手册规章',
+						button: [{
+							name: '保存',
+							callback: function() {
+								$.jBox.tip('手册规章保存成功！');
+							},
+							focus: true
+						}, {
+							name: '关闭',
+							callback: function() {}
+						}]
+				});
+        }); 
+	
+        
+        function delXx() {
+            var id = $("input:checked");
+            if(id.length == 0)
+            {
+                $.jBox.tip("请选择要删除的运行安全信息！");
+                return;
+            }
+            else
+            {
+                id.parents("tr").remove();
+                $.jBox.tip("删除成功！");
+            }
+            
+        };
+	
+        
+        function delGz() {
+            var id = $("input:checked");
+            if(id.length == 0)
+            {
+                $.jBox.tip("请选择要删除的规章标准！");
+                return;
+            }
+            else
+            {
+                id.parents("tr").remove();
+                $.jBox.tip("删除成功！");
+            }
+            
+        };
+        
+        function delXc() {
+            var id = $("input:checked");
+            if(id.length == 0)
+            {
+                $.jBox.tip("请选择要删除的差错标准！");
+                return;
+            }
+            else
+            {
+                id.parents("tr").remove();
+                $.jBox.tip("删除成功！");
+            }
+        }
+        
+        function delTxl() {
+            var id = $("input:checked");
+            if(id.length == 0)
+            {
+                $.jBox.tip("请选择要删除的通讯录！");
+                return;
+            }
+            else
+            {
+                id.parents("tr").remove();
+                $.jBox.tip("删除成功！");
+            }
+        }
+        
+        function delYs() {
+            var id = $("input:checked");
+            if(id.length == 0)
+            {
+                $.jBox.tip("请选择要删除的安全培训！");
+                return;
+            }
+            else
+            {
+                id.parents("tr").remove();
+                $.jBox.tip("删除成功！");
+            }
+        }
+        
+        function delSc() {
+            var id = $("input:checked");
+            if(id.length == 0)
+            {
+                $.jBox.tip("请选择要删除的手册规章！");
+                return;
+            }
+            else
+            {
+                id.parents("tr").remove();
+                $.jBox.tip("删除成功！");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="portlet box">
+        <div class="portlet-body">
+            <div id="tab_div">
+                <!--书签-->
+                <div class="tabbable tabbable-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab_1_1" data-toggle="tab">运行安全信息</a></li>
+                        <li><a href="#tab_1_2" data-toggle="tab">规章标准</a></li>
+                        <li><a href="#tab_1_3" data-toggle="tab">差错标准</a></li>
+                        <li><a href="#tab_1_4" data-toggle="tab">安全人员通讯录</a></li>
+                        <li><a href="#tab_1_5" data-toggle="tab">安全培训</a></li>
+                        <li><a href="#tab_1_6" data-toggle="tab">手册规章</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_1_1">
+                            <div class="form-inline">
+                                <label>运行安全信息类型：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>安全日报</option>
+                                            <option>安全周报</option>
+                                            <option>安全月报</option>
+                                            <option>月度安全生产讲评会材料</option>
+                                            <option>半年度安全生产讲评会材料</option>
+                                            <option>年度安全生产讲评会材料</option>
+                                            <option>安全快报</option>
+                                            <option>事件调查报告</option>
+                                        </select>
+                                </label>
+                                <label>标题：</label>
+                                <label>
+                                    <input class="textInput" style="width:140px"/>
+                                </label>
+                                <label>发布日期：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 10px;">查询</button>
+                            <button type="button" class="btn btn-default" id="ad_xx_add"
+                                style="margin-left: 10px;">
+                                新增</button>
+                            <button type="button" class="btn btn-default" onclick="delXx();"
+                                style="margin-left: 10px;">
+                                删除</button>
+                            </div>
+                            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th>
+                            <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
+                        </th>
+                        <th>运行安全信息类型</th>
+                        <th>标题</th>
+                        <th>发布单位</th>
+                        <th>发布人员</th>
+                        <th>发布日期</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xx_1"></td>
+                        <td>安全日报</td>
+                        <td>运行安全信息1</td>
+                        <td class="center">航安部</td>
+                        <td class="center">李某</td>
+                        <td class="center">2015年05月11日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xx_2"></td>
+                        <td>安全周报</td>
+                        <td>运行安全信息2</td>
+                        <td class="center">航安部</td>
+                        <td class="center">钱某</td>
+                        <td class="center">2015年05月10日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xx_3"></td>
+                        <td>安全月报</td>
+                        <td>运行安全信息3</td>
+                        <td class="center">航安部</td>
+                        <td class="center">孙某</td>
+                        <td class="center">2015年05月09日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xx_4"></td>
+                        <td>月度安全生产讲评会材料</td>
+                        <td>运行安全信息4</td>
+                        <td class="center">航安部</td>
+                        <td class="center">赵某</td>
+                        <td class="center">2015年05月08日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xx_5"></td>
+                        <td>半年度安全生产讲评会材料</td>
+                        <td>运行安全信息5</td>
+                        <td class="center">航安部</td>
+                        <td class="center">周某</td>
+                        <td class="center">2015年05月07日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xx_6"></td>
+                        <td>年度安全生产讲评会材料</td>
+                        <td>运行安全信息6</td>
+                        <td class="center">航安部</td>
+                        <td class="center">吴某</td>
+                        <td class="center">2015年05月06日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xx_7"></td>
+                        <td>安全快报</td>
+                        <td>运行安全信息7</td>
+                        <td class="center">航安部</td>
+                        <td class="center">郑某</td>
+                        <td class="center">2015年05月05日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xx_8"></td>
+                        <td>事件调查报告</td>
+                        <td>运行安全信息8</td>
+                        <td class="center">航安部</td>
+                        <td class="center">王某</td>
+                        <td class="center">2015年05月04日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify">修改</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_2">
+                            <div class="form-inline">
+                                <label>规章标准类型：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>法律法规</option>
+                                            <option>安全条例</option>
+                                            <option>行业标准</option>
+                                            <option>CCAR规章</option>
+                                            <option>AC咨询通告</option>
+                                            <option>ICAO公约</option>
+                                        </select>
+                                </label>
+                                <label>标题：</label>
+                                <label>
+                                    <input class="textInput" style="width:140px"/>
+                                </label>
+                                <label>发布日期：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            <button type="button" class="btn btn-default" id="ad_gz_add"
+                                style="margin-left: 10px;">
+                                新增</button>
+                            <button type="button" class="btn btn-default" onclick="delGz();"
+                                style="margin-left: 10px;">
+                                删除</button>
+                            </div>
+                            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th>
+                            <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
+                        </th>
+                        <th>规章标准类型</th>
+                        <th>标题</th>
+                        <th>发布单位</th>
+                        <th>发布人员</th>
+                        <th>发布日期</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="gz_1"></td>
+                        <td>法律法规</td>
+                        <td>规章标准1</td>
+                        <td class="center">航安部</td>
+                        <td class="center">李某</td>
+                        <td class="center">2015年05月11日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify2">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="gz_2"></td>
+                        <td>安全条例</td>
+                        <td>规章标准2</td>
+                        <td class="center">航安部</td>
+                        <td class="center">钱某</td>
+                        <td class="center">2015年05月10日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify2">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="gz_3"></td>
+                        <td>行业标准</td>
+                        <td>规章标准3</td>
+                        <td class="center">航安部</td>
+                        <td class="center">孙某</td>
+                        <td class="center">2015年05月09日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify2">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="gz_4"></td>
+                        <td>CCAR规章</td>
+                        <td>规章标准4</td>
+                        <td class="center">航安部</td>
+                        <td class="center">赵某</td>
+                        <td class="center">2015年05月08日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify2">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="gz_5"></td>
+                        <td>AC咨询通告</td>
+                        <td>规章标准5</td>
+                        <td class="center">航安部</td>
+                        <td class="center">周某</td>
+                        <td class="center">2015年05月07日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify2">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="gz_6"></td>
+                        <td>ICAO公约</td>
+                        <td>规章标准6</td>
+                        <td class="center">航安部</td>
+                        <td class="center">吴某</td>
+                        <td class="center">2015年05月06日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify2">修改</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_3">
+                            <div class="form-inline">
+                                <label>差错标准类型：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>一般差错</option>
+                                            <option>严重差错</option>
+                                            <option>航空器地面事故征候</option>
+                                            <option>运输航空一般事故征候</option>
+                                            <option>运输航空严重事故征候</option>
+                                        </select>
+                                </label>
+                                <label>标题：</label>
+                                <label>
+                                    <input class="textInput" style="width:140px"/>
+                                </label>
+                                <label>发布日期：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            <button type="button" class="btn btn-default" id="ad_xc_add"
+                                style="margin-left: 10px;">
+                                新增</button>
+                            <button type="button" class="btn btn-default" onclick="delXc();"
+                                style="margin-left: 10px;">
+                                删除</button>
+                            </div>
+                            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th>
+                            <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
+                        </th>
+                        <th>差错标准类型</th>
+                        <th>标题</th>
+                        <th>发布单位</th>
+                        <th>发布人员</th>
+                        <th>发布日期</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xc_1"></td>
+                        <td>一般差错</td>
+                        <td>差错标准1</td>
+                        <td class="center">航安部</td>
+                        <td class="center">李某</td>
+                        <td class="center">2015年05月11日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify3">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xc_2"></td>
+                        <td>严重差错</td>
+                        <td>差错标准2</td>
+                        <td class="center">航安部</td>
+                        <td class="center">钱某</td>
+                        <td class="center">2015年05月10日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify3">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xc_3"></td>
+                        <td>航空器地面事故征候</td>
+                        <td>差错标准3</td>
+                        <td class="center">航安部</td>
+                        <td class="center">孙某</td>
+                        <td class="center">2015年05月09日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify3">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xc_4"></td>
+                        <td>运输航空一般事故征候</td>
+                        <td>差错标准4</td>
+                        <td class="center">航安部</td>
+                        <td class="center">赵某</td>
+                        <td class="center">2015年05月08日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify3">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="xc_5"></td>
+                        <td>运输航空严重事故征候</td>
+                        <td>差错标准5</td>
+                        <td class="center">航安部</td>
+                        <td class="center">周某</td>
+                        <td class="center">2015年05月07日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify3">修改</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_4">
+                             <div class="form-inline">
+                                <label>部门：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>航安部</option>
+                                            <option>深圳航空</option>
+                                            <option>北京航空</option>
+                                        </select>
+                                </label>
+                                <label>姓名：</label>
+                                <label>
+                                    <input class="textInput" style="width:140px"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            <button type="button" class="btn btn-default" id="ad_txl_add"
+                                style="margin-left: 10px;">
+                                新增</button>
+                            <button type="button" class="btn btn-default" onclick="delTxl();"
+                                style="margin-left: 10px;">
+                                删除</button>
+                            </div>
+                            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th>
+                            <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
+                        </th>
+                        <th>部门</th>
+                        <th>姓名</th>
+                        <th>职务</th>
+                        <th>办公电话</th>
+                        <th>手机</th>
+                        <th>邮箱</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="txl_1"></td>
+                        <td class="center">航安部</td>
+                        <td class="center">李某</td>
+                        <td class="center">航安部领导</td>
+                        <td class="center">64580000</td>
+                        <td class="center">13100000000</td>
+                        <td>limou@airchina.com</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify4">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="txl_2"></td>
+                        <td class="center">航安部</td>
+                        <td class="center">钱某</td>
+                        <td class="center">航安部员工</td>
+                        <td class="center">64580000</td>
+                        <td class="center">13100000000</td>
+                        <td>qianmou@airchina.com</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify4">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="txl_3"></td>
+                        <td class="center">深圳航空</td>
+                        <td class="center">孙某</td>
+                        <td class="center">深圳航空领导</td>
+                        <td class="center">64580000</td>
+                        <td class="center">13100000000</td>
+                        <td>sunmou@airchina.com</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify4">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="txl_4"></td>
+                        <td class="center">北京航空</td>
+                        <td class="center">赵某</td>
+                        <td class="center">北京航空领导</td>
+                        <td class="center">64580000</td>
+                        <td class="center">13100000000</td>
+                        <td>zhaomou@airchina.com</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify4">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="txl_5"></td>
+                        <td class="center">北京航空</td>
+                        <td class="center">周某</td>
+                        <td class="center">北京航空员工</td>
+                        <td class="center">64580000</td>
+                        <td class="center">13100000000</td>
+                        <td>zhoumou@airchina.com</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify4">修改</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_5">
+                            <div class="form-inline">
+                                <label>安全培训类型：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>安全教育影片</option>
+                                            <option>安全教育讲座</option>
+                                        </select>
+                                </label>
+                                <label>标题：</label>
+                                <label>
+                                    <input class="textInput" style="width:140px"/>
+                                </label>
+                                <label>发布日期：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            <button type="button" class="btn btn-default" id="ad_ys_add"
+                                style="margin-left: 10px;">
+                                新增</button>
+                            <button type="button" class="btn btn-default" onclick="delYs();"
+                                style="margin-left: 10px;">
+                                删除</button>
+                            </div>
+                            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th>
+                            <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
+                        </th>
+                        <th>安全培训类型</th>
+                        <th>标题</th>
+                        <th>发布单位</th>
+                        <th>发布人员</th>
+                        <th>发布日期</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="ys_1"></td>
+                        <td>安全教育影片</td>
+                        <td>安全影视1</td>
+                        <td class="center">航安部</td>
+                        <td class="center">李某</td>
+                        <td class="center">2015年05月11日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify5">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="ys_2"></td>
+                        <td>安全教育影片</td>
+                        <td>安全影视2</td>
+                        <td class="center">航安部</td>
+                        <td class="center">钱某</td>
+                        <td class="center">2015年05月10日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify5">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="ys_3"></td>
+                        <td>安全教育讲座</td>
+                        <td>安全影视3</td>
+                        <td class="center">航安部</td>
+                        <td class="center">孙某</td>
+                        <td class="center">2015年05月09日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify5">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="ys_4"></td>
+                        <td>安全教育影片</td>
+                        <td>安全影视4</td>
+                        <td class="center">航安部</td>
+                        <td class="center">赵某</td>
+                        <td class="center">2015年05月08日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify5">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="ys_5"></td>
+                        <td>安全教育讲座</td>
+                        <td>安全影视5</td>
+                        <td class="center">航安部</td>
+                        <td class="center">周某</td>
+                        <td class="center">2015年05月07日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify5">修改</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+                        </div>
+                        <div class="tab-pane" id="tab_1_6">
+                            <div class="form-inline">
+                                <label>手册/程序类型：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>运行手册</option>
+                                            <option>工程手册</option>
+                                            <option>航空安全管理手册</option>
+                                            <option>站坪管理手册</option>
+                                            <option>乘务员管理手册</option>
+                                            <option>工作程序手册</option>
+                                        </select>
+                                </label>
+                                <label>标题：</label>
+                                <label>
+                                    <input class="textInput" style="width:140px"/>
+                                </label>
+                                <label>发布日期：</label>
+                                <label>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                            &nbsp;至&nbsp;
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                </label>
+                            <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
+                            <button type="button" class="btn btn-default" id="ad_sc_add"
+                                style="margin-left: 10px;">
+                                新增</button>
+                            <button type="button" class="btn btn-default" onclick="delSc();"
+                                style="margin-left: 10px;">
+                                删除</button>
+                            </div>
+                            <div class="tabbable tabbable-custom">
+                <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <th>
+                            <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
+                        </th>
+                        <th>手册规章类型</th>
+                        <th>标题</th>
+                        <th>发布单位</th>
+                        <th>发布人员</th>
+                        <th>发布日期</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="sc_1"></td>
+                        <td>规章类型1</td>
+                        <td>手册规章1</td>
+                        <td class="center">航安部</td>
+                        <td class="center">李某</td>
+                        <td class="center">2015年05月11日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify6">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="sc_2"></td>
+                        <td>规章类型2</td>
+                        <td>手册规章2</td>
+                        <td class="center">航安部</td>
+                        <td class="center">钱某</td>
+                        <td class="center">2015年05月10日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify6">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="sc_3"></td>
+                        <td>规章类型3</td>
+                        <td>手册规章3</td>
+                        <td class="center">航安部</td>
+                        <td class="center">孙某</td>
+                        <td class="center">2015年05月09日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify6">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="sc_4"></td>
+                        <td>规章类型4</td>
+                        <td>手册规章4</td>
+                        <td class="center">航安部</td>
+                        <td class="center">赵某</td>
+                        <td class="center">2015年05月08日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify6">修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" id="sc_5"></td>
+                        <td>规章类型5</td>
+                        <td>手册规章5</td>
+                        <td class="center">航安部</td>
+                        <td class="center">周某</td>
+                        <td class="center">2015年05月07日</td>
+                        <td class="center">
+                            <a  class="btn btn-mini" name="modify6">修改</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!--书签-->
+            </div>
+    </div>
+</body>
+</html>

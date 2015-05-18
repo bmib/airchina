@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+        <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="../includes/styleBase/js/jquery.js"></script>
+        <script charset="utf-8" src="../includes/kindeditor401/kindeditor-min.js"></script>
+        <script charset="utf-8" src="../includes/kindeditor401/lang/zh_CN.js"></script>
+        <style type="text/css">
+input.input-sm {
+    font-size: 60%;
+  height: 20px;
+  line-height: 20px;
+  width:140px;
+    padding-top:0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+        </style>
+        <script type="text/javascript">
+        //填报弹出窗口
+        $(document).ready(function () {
+            $("a[name='del']").bind("click",function() {
+					$(this).parents("tr").remove();
+            });
+            $("a[name='add']").bind("click",function() {
+					var trs = $("#zj tr");
+                    var tr = $(trs[0]);
+                    var td = tr.find("td:first-child");
+                    td.attr("rowspan",td.attr("rowspan")+1);
+                    var newTr = tr.clone(true);
+                newTr.find("td:first-child").html(trs.length+1);
+                    newTr.find("input").each(function(){
+                           this.value = "";
+                         }); 
+                    newTr.insertAfter(trs[trs.length-1]);
+            });
+        });
+            
+        var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="content"]', {
+			resizeType : 1,
+			allowPreviewEmoticons : false,
+			allowImageUpload : false,
+            
+					items : [
+						'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+		});
+    });
+    </script>
+	</head>
+	<body>
+			<table border="0" cellpadding="0" cellspacing="0"  class="table table-bordered">
+				<tr>
+					<td>差错标准类型</td>
+					<td>
+                        <select class="inputTextS" style="width:175px">
+                            <option selected="selected">一般差错</option>
+                            <option>严重差错</option>
+                            <option>航空器地面事故征候</option>
+                            <option>运输航空一般事故征候</option>
+                            <option>运输航空严重事故征候</option>
+                        </select>
+					</td>
+					<td>标题</td>
+					<td>
+						<input type="text" value="差错标准1" style="width:160px"></input>
+					</td>
+				</tr>
+				<tr>
+					<td>版本号</td>
+					<td>
+						<input type="text" value="1.0" style="width:160px"></input>
+					</td>
+					<td>有效性</td>
+					<td>
+                        <select class="inputTextS" style="width:175px">
+                            <option selected="selected">有效</option>
+                            <option>失效</option>
+                        </select>
+					</td>
+				</tr>
+				<tr>
+					<td>内容</td>
+                    <td style="text-align:center" colspan="3">
+                                    	<textarea name="content" style="width:100%;height:130px;visibility:hidden;">差错标准内容差错标准内容差错标准内容</textarea>
+                    </td>
+				</tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="form-group form-inline">
+                            <label class="checkbox">
+                                上传附件
+                            </label>
+                            <label class="sr-only" for="inputfile">
+                            </label>
+                            <input type="file" id="inputfile">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#">附件1</a>&nbsp;&nbsp;<a href="">附件2</a>
+                    </td>
+                </tr>
+			</table>
+	</body>
+</html>

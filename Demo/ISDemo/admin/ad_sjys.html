@@ -44,7 +44,7 @@
 						id: "ad_sjys_modify",
 						content: 'url:admin/ad_sjys_modify.html',
 						width: 350,
-						height: 170,
+						height: 250,
 						title: '修改审计要素',
 						button: [{
 							name: '保存',
@@ -63,7 +63,7 @@
 						id: "ad_sjys_modify2",
 						content: 'url:admin/ad_sjys_modify2.html',
 						width: 350,
-						height: 270,
+						height: 390,
 						title: '修改审计要素',
 						button: [{
 							name: '保存',
@@ -81,7 +81,7 @@
 						id: "ad_sjys_add",
 						content: 'url:admin/ad_sjys_modify.html',
 						width: 350,
-						height: 170,
+						height: 250,
 						title: '新增审计要素',
 						button: [{
 							name: '保存',
@@ -178,7 +178,7 @@
                 <label>
                     审计要素列表</label>
             </div>
-            <div class="tabbable tabbable-custom">
+            <div class="tabbable table-bordered tabbable-custom">
                 <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
             <table class="table table-hover">
                 <thead>
@@ -198,108 +198,108 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="checkbox" id="sjys_1" disabled></td>
-                        <td>飞行</td>
-                        <td>FSOP</td>
+                        <td class="center"><input type="checkbox" id="sjys_1" disabled></td>
+                        <td class="center">飞行</td>
+                        <td class="center">FSOP</td>
                         <td>1 航空器构型控制</td>
                         <!--td>10</td-->
                         <td>1.1 航空器</td>
                         <!--td>10</td-->
                         <td>1.1.2 适当的运行设备&nbsp;&nbsp;<!--img src="../images/hint_light.png" width="16" title="对局方要素的备注"/--></td>
-                        <td>5</td>
+                        <td class="center">5</td>
                         <td><a href="ad_sjd_detail.html">SAI_1_1_2_OP</a>&nbsp;&nbsp;&nbsp;<a href="ad_sjd_detail.html">EPI_1_1_2_OP</a></td>
-                        <td><a name="modify2">修改</a></td>
+                        <td class="center"><a class="btn btn-mini" name="modify2">修改</a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="sjys_2" disabled></td>
-                        <td>飞行</td>
-                        <td>FSOP</td>
+                        <td class="center"><input type="checkbox" id="sjys_2" disabled></td>
+                        <td class="center">飞行</td>
+                        <td class="center">FSOP</td>
                         <td>2 手册</td>
                         <!--td>10</td-->
                         <td>2.1 手册管理</td>
                         <!--td>10</td-->
                         <td>2.1.1 手册更新</td>
-                        <td>5</td>
+                        <td class="center">5</td>
                         <td><a href="ad_sjd_detail.html">SAI_2_1_1_OP</a>&nbsp;&nbsp;&nbsp;<a href="ad_sjd_detail.html">EPI_2_1_1_OP</a></td>
-                        <td><a name="modify2">修改</a></td>
+                        <td class="center"><a class="btn btn-mini" name="modify2">修改</a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="sjys_3" disabled></td>
-                        <td>维修</td>
-                        <td>FSOP</td>
+                        <td class="center"><input type="checkbox" id="sjys_3" disabled></td>
+                        <td class="center">维修</td>
+                        <td class="center">FSOP</td>
                         <td>4 人员培训和资格</td>
                         <!--td>10</td-->
                         <td>4.2 训练大纲</td>
                         <!--td>10</td-->
                         <td>4.2.1 维修人员培训大纲</td>
-                        <td>4</td>
+                        <td class="center">4</td>
                         <td><a href="ad_sjd_detail.html">SAI_4_2_1_AW</a>&nbsp;&nbsp;&nbsp;<a href="ad_sjd_detail.html">EPI_4_2_1_AW</a></td>
-                        <td><a name="modify2">修改</a></td>
+                        <td class="center"><a class="btn btn-mini" name="modify2">修改</a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjys_4"></td>
-                        <td>飞行</td>
-                        <td>FSOP</td>
+                        <td class="center"><input type="checkbox" class="checkboxinlist" id="sjys_4"></td>
+                        <td class="center">飞行</td>
+                        <td class="center">FSOP</td>
                         <td>8 特定检查单</td>
                         <!--td>10</td-->
                         <td>8.1 停机坪</td>
                         <!--td>10</td-->
                         <td>8.1.1 停机坪监察</td>
-                        <td>3</td>
+                        <td class="center">3</td>
                         <td><a href="ad_sjd_detail.html">SOI_8_1_1_OP</a></td>
-                        <td><a name="modify2">修改</a></td>
+                        <td class="center"><a class="btn btn-mini" name="modify2">修改</a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjys_5"></td>
-                        <td>飞行</td>
-                        <td>自定义</td>
+                        <td class="center"><input type="checkbox" class="checkboxinlist" id="sjys_5"></td>
+                        <td class="center">飞行</td>
+                        <td class="center">自定义</td>
                         <td></td>
                         <!--td>10</td-->
                         <td></td>
                         <!--td>10</td-->
                         <td>1 安全组织管理</td>
-                        <td>4</td>
+                        <td class="center">4</td>
                         <td><a href="ad_sjd_detail.html">SOI_8_2_1_OP</a></td>
-                        <td><a name="modify">修改</a></td>
+                        <td class="center"><a class="btn btn-mini" name="modify">修改</a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjys_5"></td>
-                        <td>飞行</td>
-                        <td>CAAC</td>
+                        <td class="center"><input type="checkbox" class="checkboxinlist" id="sjys_5"></td>
+                        <td class="center">飞行</td>
+                        <td class="center">CAAC</td>
                         <td></td>
                         <!--td>10</td-->
                         <td></td>
                         <!--td>10</td-->
                         <td>1 安全审计</td>
-                        <td>3</td>
+                        <td class="center">3</td>
                         <td><a href="ad_sjd_detail.html">CAAC_FLT_OP</a></td>
-                        <td><a name="modify">修改</a></td>
+                        <td class="center"><a class="btn btn-mini" name="modify">修改</a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjys_6"></td>
-                        <td>组织管理</td>
-                        <td>IOSA</td>
+                        <td class="center"><input type="checkbox" class="checkboxinlist" id="sjys_6"></td>
+                        <td class="center">组织管理</td>
+                        <td class="center">IOSA</td>
                         <td></td>
                         <!--td>10</td-->
                         <td></td>
                         <!--td>10</td-->
                         <td>1 组织和管理体系</td>
-                        <td>4</td>
+                        <td class="center">4</td>
                         <td><a href="ad_sjd_detail.html">IOSA_ORG_ZZ</a></td>
-                        <td><a name="modify">修改</a></td>
+                        <td class="center"><a class="btn btn-mini" name="modify">修改</a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjys_7"></td>
-                        <td>飞行</td>
-                        <td>IOSA</td>
+                        <td class="center"><input type="checkbox" class="checkboxinlist" id="sjys_7"></td>
+                        <td class="center">飞行</td>
+                        <td class="center">IOSA</td>
                         <td></td>
                         <!--td>10</td-->
                         <td></td>
                         <!--td>10</td-->
                         <td>2 飞行运行</td>
-                        <td>3</td>
+                        <td class="center">3</td>
                         <td><a href="ad_sjd_detail.html">IOSA_FLT_OP</a></td>
-                        <td><a name="modify">修改</a></td>
+                        <td class="center"><a class="btn btn-mini" name="modify">修改</a></td>
                     </tr>
                 </tbody>
             </table></div></div>

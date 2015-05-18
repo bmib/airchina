@@ -45,7 +45,7 @@
 						id: "ad_sjdlx_modify",
 						content: 'url:admin/ad_sjdlx_modify.html',
 						width: 350,
-						height: 390,
+						height: 420,
 						title: '修改审计单类型',
 						button: [{
 							name: '保存',
@@ -63,7 +63,7 @@
 						id: "ad_sjdlx_add",
 						content: 'url:admin/ad_sjdlx_modify.html',
 						width: 350,
-						height: 390,
+						height: 420,
 						title: '新增审计单类型',
 						button: [{
 							name: '保存',
@@ -117,7 +117,7 @@
                                 <option>IOSA</option>
                             </select>
                     </label>
-                    <label>要素类别：</label>
+                    <!--label>要素类别：</label>
                     <label>
                         <select class="inputTextS" style="width:100px">
                                 <option selected="selected">全部</option>
@@ -126,7 +126,7 @@
                                 <option>国航类</option>
                                 <option>IOSA类</option>
                             </select>
-                    </label>
+                    </label-->
                     <button type="button" class="btn btn-default"
                         style="margin-left: 30px;">
                         查询</button>
@@ -142,14 +142,14 @@
             </div>
             <div class="tabbable tabbable-custom">
                 <div class="tab-content" style="overflow-y:auto; border:1px solid #ccc;">
-            <table class="table table-hover">
+            <table class="table table-bordered table-hover">
                 <thead>
                     <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
                         <th>
                             <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
                         </th>
                         <th>来源</th>
-                        <th>要素类别</th>
+                        <!--th>要素类别</th-->
                         <th>审计单类型编码</th>
                         <th>审计单类型名称</th>
                         <th>操作</th>
@@ -157,101 +157,101 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="checkbox" id="sjd_1" disabled></td>
-                        <td>FSOP</td>
-                        <td>普通类</td>
-                        <td>SAI</td>
-                        <td>安全属性审计单</td>
-                        <td>
-                            <a name="modify">修改</a>
+                        <td class="center"><input type="checkbox" id="sjd_1" disabled></td>
+                        <td class="center">FSOP</td>
+                        <!--td>普通类</td!-->
+                        <td class="center">SAI</td>
+                        <td class="center">安全属性审计单</td>
+                        <td class="center">
+                            <a class="btn btn-mini" name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="sjd_2" disabled></td>
-                        <td>FSOP</td>
-                        <td>普通类</td>
-                        <td>EPI</td>
-                        <td>绩效审计单</td>
-                        <td>
-                            <a name="modify">修改</a>
+                        <td class="center"><input type="checkbox" id="sjd_2" disabled></td>
+                        <td class="center">FSOP</td>
+                        <!--td>普通类</td!-->
+                        <td class="center">EPI</td>
+                        <td class="center">绩效审计单</td>
+                        <td class="center">
+                            <a class="btn btn-mini" name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="sjd_3" disabled> </td>
-                        <td>FSOP</td>
-                        <td>专项类</td>
-                        <td>ARI</td>
-                        <td>维修_停机坪监察</td>
-                        <td>
-                            <a name="modify">修改</a>
+                        <td class="center"><input type="checkbox" id="sjd_3" disabled> </td>
+                        <td class="center">FSOP</td>
+                        <!--td>专项类</td!-->
+                        <td class="center">ARI</td>
+                        <td class="center">维修_停机坪监察</td>
+                        <td class="center">
+                            <a class="btn btn-mini" name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="sjd_4" disabled></td>
-                        <td>FSOP</td>
-                        <td>专项类</td>
-                        <td>ORI</td>
-                        <td>飞行_停机坪监察</td>
-                        <td>
-                            <a name="modify">修改</a>
+                        <td class="center"><input type="checkbox" id="sjd_4" disabled></td>
+                        <td class="center">FSOP</td>
+                        <!--td>专项类</td!-->
+                        <td class="center">ORI</td>
+                        <td class="center">飞行_停机坪监察</td>
+                        <td class="center">
+                            <a class="btn btn-mini" name="modify">修改</a>
                             <!--a onclick="changeState(this);">启用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjd_5"></td>
-                        <td>自定义</td>
-                        <td>国航类</td>
-                        <td>AQZZGL</td>
-                        <td>安全组织管理</td>
-                        <td>
-                            <a name="modify">修改</a>
+                        <td class="center"><input type="checkbox" class="checkboxinlist" id="sjd_5"></td>
+                        <td class="center">自定义</td>
+                        <!--td>国航类</td!-->
+                        <td class="center">AQZZGL</td>
+                        <td class="center">安全组织管理</td>
+                        <td class="center">
+                            <a class="btn btn-mini" name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
-                        <td>自定义</td>
-                        <td>国航类</td>
-                        <td>SMS</td>
-                        <td>SMS9859</td>
-                        <td>
-                            <a name="modify">修改</a>
+                        <td class="center"><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
+                        <td class="center">自定义</td>
+                        <!--td>国航类</td!-->
+                        <td class="center">SMS</td>
+                        <td class="center">SMS9859</td>
+                        <td class="center">
+                            <a class="btn btn-mini" name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
-                        <td>CAAC</td>
-                        <td>CAAC类</td>
-                        <td>AQSJ</td>
-                        <td>安全审计</td>
-                        <td>
-                            <a name="modify">修改</a>
+                        <td class="center"><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
+                        <td class="center">CAAC</td>
+                        <!--td>CAAC类</td!-->
+                        <td class="center">AQSJ</td>
+                        <td class="center">安全审计</td>
+                        <td class="center">
+                            <a class="btn btn-mini" name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
-                        <td>IOSA</td>
-                        <td>IOSA类</td>
-                        <td>ORG</td>
-                        <td>组织和管理体系</td>
-                        <td>
-                            <a name="modify">修改</a>
+                        <td class="center"><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
+                        <td class="center">IOSA</td>
+                        <!--td>IOSA类</td!-->
+                        <td class="center">ORG</td>
+                        <td class="center">组织和管理体系</td>
+                        <td class="center">
+                            <a class="btn btn-mini" name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
-                        <td>IOSA</td>
-                        <td>IOSA类</td>
-                        <td>FLT</td>
-                        <td>飞行运行</td>
-                        <td>
-                            <a name="modify">修改</a>
+                        <td class="center"><input type="checkbox" class="checkboxinlist" id="sjd_6"></td>
+                        <td class="center">IOSA</td>
+                        <!--td>IOSA类</td!-->
+                        <td class="center">FLT</td>
+                        <td class="center">飞行运行</td>
+                        <td class="center">
+                            <a class="btn btn-mini" name="modify">修改</a>
                             <!--a onclick="changeState(this);">停用</a-->
                         </td>
                     </tr>

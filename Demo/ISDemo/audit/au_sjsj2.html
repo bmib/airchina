@@ -638,9 +638,8 @@
     </div>
 </div>
 <!--弹出窗口-小 结束-->
-<div id="myModal-8" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true" style="display: none">
-    <div class="modal-dialog">
+<div id="myModal-8" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+    <div class="modal-dialog small">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -655,29 +654,62 @@
                         <div class="row-fluid">
                             <div class="span12">
                                 <!--窗口的内容开始-->
-                                <table class="table table-bordered">
+                               <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th class="form-inline" style="text-align:left !important;">
-                                                <label>
-                                                    新增审计项：</label><input type="text" placeholder="输入编号或关键词索引" style="width: 350px;" />
-                                            </th>
+                                          <td class="form-inline">
+                                           <label>专业：</label>
+                                            <select name="select" >
+                                                <option value="0" selected="selected">全部</option>
+                                                <option value="4">飞行</option>
+                                                <option value="5">机务</option>
+                                                <option value="6">运控</option>
+                                                <option value="7">客舱</option>
+                                                <option value="8">地服</option>
+                                                <option value="9">货运</option>
+                                                <option value="9">保卫</option>
+                                                <option value="9">组织管理</option>
+                                                
+                                            </select>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="form-inline">
+                                                <label>审计项：</label><input type="text" placeholder="输入关键词" style="width: 350px;" />
+                                            </td>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                <div class="controls form-inline">
-                                                    <label>
-                                                        对应审计单：</label><input type="text" placeholder="输入要素编号或关键字索引" style="width: 350px;" /></div>
+                                          <td class=" form-inline">
+                                          <label class="checkbox"><input type="checkbox" value="" />关联审计单：</label>
+                                          <label><input type="text" placeholder="审计单名称" style="width: 350px;" /></label>
+                                          </td>
+                                        </tr>
+                                     
+                                        <tr>
+                                          <td class="form-inline">
+                                          审计单重要性：<label class="radio line">
+                                            <input type="radio" name="optionsRadios2" value="option1" />
+                                            高
+                                            </label>
+                                            <label class="radio line">
+                                            <input type="radio" name="optionsRadios2" value="option2" checked />
+                                            中
+                                            </label>  
+                                            <label class="radio line">
+                                            <input type="radio" name="optionsRadios2" value="option2" />
+                                            低
+                                            </label>
                                             </td>
                                         </tr>
+                                        
                                         <tr>
                                             <td>
                                                 <div class="controls form-inline">
                                                     <label>
                                                         问题分类：</label><input type="text" placeholder="问题分类" style="width: 250px;" />
-                                                    <button class="btn" data-toggle="modal" data-target="#myModal-11">
+                                                    <button class="btn" data-toggle="modal" data-target="#myModal-1">
                                                         选择问题分类</button>
                                                 </div>
                                             </td>
@@ -686,7 +718,7 @@
                                             <td>
                                                 <div class="controls form-inline">
                                                     <label>
-                                                        问题描述：</label>
+                                                        问题说明：</label>
                                                     <textarea class="medium m-wrap span5" rows="6" style="width: 350px;"></textarea>
                                                 </div>
                                             </td>
@@ -696,7 +728,7 @@
                                         <tr>
                                             <th>
                                                 <div class="form-group form-inline">
-                                                    <label class="checkbox">
+                                                    <input type="checkbox" value="" />
                                                         上传附件
                                                     </label>
                                                     <label class="sr-only" for="inputfile">
@@ -729,6 +761,8 @@
         </div>
     </div>
 </div>
+
+
 <div id="myModal-11" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
     <div class="modal-dialog">
         <div class="modal-content">

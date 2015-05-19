@@ -13,8 +13,47 @@
     <meta content="" name="author" />
     <link href="../media/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="../includes/zTreev3.5.12/css/zTreeStyle/zTreeStyle.css"
+        type="text/css" />
     <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../includes/zTreev3.5.12/js/jquery.ztree.all-3.5.min.js"></script>
+    <script type="text/javascript" src="../includes/zTreev3.5.12/data/demoData.js"></script>
+    <script>
+        var zTree1;
+        var setting = {
+            view: {
+                dblClickExpand: false,
+                showLine: true,
+                selectedMulti: false
+            },
+            data: {
+                simpleData: {
+                    enable: true,
+                    idKey: "id",
+                    pIdKey: "pId",
+                    rootPId: ""
+                }
+            }
+        };
+
+        $(document).ready(function () {
+            var winH = $(window).height() - 255;
+            $("#accordion").css('height', winH + 'px');
+            $("#a2").css('height', winH + 'px');
+            $("#a3").css('height', winH + 'px');
+            $("#a4").css('height', winH + 'px');
+
+            var t = $("#tree");
+            t = $.fn.zTree.init(t, setting, problemTypeNodes);
+        });
+
+
+        function adds() {
+            $("#xdd").show();
+        }
+
+    </script>
 </head>
 <body>
     <div class="portlet box">
@@ -25,7 +64,7 @@
                     <li class="active"><a href="#tab_1_1" data-toggle="tab">预防纠正</a></li>
                     <li><a href="#tab_1_3" data-toggle="tab">待审核问题</a></li>
                     <li><a href="#tab_1_2" data-toggle="tab">风险管理</a></li>
-                </ul>
+                    </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="tab_1_1">
                         <div class="text-center">
@@ -48,6 +87,7 @@
                                 <label class="checkbox">
                                     <input type="checkbox" checked="checked" />已完成整改
                                 </label>
+                                <label style=" padding-left:20px;"><button type="button" class="btn btn-info btn-mini" data-toggle="modal" data-target="#myModal-3">新增预防纠正通知书</button></label>
 								<label style="float:right; margin-right:10px;"><div class="alert"><span>未完成（4）</span>&nbsp;&nbsp;<span>已完成（4）</span></div></label>
 
                                 </form>
@@ -807,3 +847,277 @@
     </div>
 </body>
 </html>
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog middle">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">新增预防纠正通知书</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                	<table width="100%">
+                    	<tbody>
+                        	<tr>
+                            	<td style="width:70%; padding-right:10px; vertical-align:top">
+                                    <div class="tab-content">
+                                        <div style="overflow-y: scroll;">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="7" style="text-align:left !important;">新增审计项列表
+                                                           <label style="float:right; padding-right:10px;"> <button class="btn btn-info btn-mini" data-toggle="modal" data-target="#myModal-4">
+                                                                增加审计项</button></label>
+                                                        </th>
+                                                    </tr>
+                                                        <tr>
+                                                        <th style="width: 50px">
+                                                                专业
+                                                          </th>
+                                                             <th style="width:70px">
+                                                                要素
+                                                            </th>
+                                                            
+                                                            <th style="width: 200px">审计项</th>
+                                                            <th style="width: 60px">分类</th>
+                                                            <th>
+                                                                问题描述
+                                                            </th>
+                                                            
+                                                            <th style="width: 50px">
+                                                                附件
+                                                            </th>
+                                                            
+                                                            <th style="width: 50px">
+                                                                操作
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                            </table>
+                                        </div>
+                                        <div style="overflow-y: scroll; height: 325px;">
+                                            <table class="table table-hover table-bordered">
+                                                <tbody>
+                                                    <tr>
+                                                      <td class="center" style="width:50px"> 机务 </td>
+                                                      <td style="width:70px"> 3.1.11 [详细]</td>
+                                                      <td style="width: 200px">3.2.3 最低设备清单（MEL）/外形缺损清单（CDL）程序</td>
+                                                      <td class="center" style="width:60px">设备问题</td>
+                                                      <td>
+                                                          新发现问题描述
+                                                      </td>
+                                                        <td class="center"style="width:50px">
+                                                            无
+                                                        </td>
+                                                        <td class="center" style="width:50px"><a href="#" class="btn btn-mini" data-toggle="modal" data-target="#myModal-4">编辑</a><br/><a href="#" class="btn btn-mini">删除</a></td>
+                                                    </tr>
+                                                  
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    	
+                                </td>
+                                <td style="width:30%; vertical-align:top;">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th class="form-inline" style="text-align:left !important; width:30%;">
+                                                预防纠正
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                              <td class="">
+                                              <label>整改措施提交期限：</label>
+                                                 <input type="text" placeholder="yyyy-mm-dd" class="m-wrap"/>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class="">
+                                              
+                                              <label>预防纠正说明：</label>
+                                                <textarea class="medium m-wrap" rows="10">说明</textarea>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                    </table>	
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>	
+                </div>
+            </div>
+            <div class="modal-footer">
+            
+            <button type="submit" class="btn btn-info" data-dismiss="modal">下发通知书</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H1">
+                    新增审计项</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                    <div class="container-fluid">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <!--窗口的内容开始-->
+                               <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                          <td class="form-inline">
+                                           <label>专业：</label>
+                                            <select name="select" >
+                                                <option value="0" selected="selected">全部</option>
+                                                <option value="4">飞行</option>
+                                                <option value="5">机务</option>
+                                                <option value="6">运控</option>
+                                                <option value="7">客舱</option>
+                                                <option value="8">地服</option>
+                                                <option value="9">货运</option>
+                                                <option value="9">保卫</option>
+                                                <option value="9">组织管理</option>
+                                                
+                                            </select>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="form-inline">
+                                                <label>审计项：</label><input type="text" placeholder="输入关键词" style="width: 350px;" />
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                          <td class=" form-inline">
+                                          <label class="checkbox"><input type="checkbox" value="" />关联审计单：</label>
+                                          <label><input type="text" placeholder="审计单名称" style="width: 350px;" /></label>
+                                          </td>
+                                        </tr>
+                                     
+                                        <tr>
+                                          <td class="form-inline">
+                                          审计单重要性：<label class="radio line">
+                                            <input type="radio" name="optionsRadios2" value="option1" />
+                                            高
+                                            </label>
+                                            <label class="radio line">
+                                            <input type="radio" name="optionsRadios2" value="option2" checked />
+                                            中
+                                            </label>  
+                                            <label class="radio line">
+                                            <input type="radio" name="optionsRadios2" value="option2" />
+                                            低
+                                            </label>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>
+                                                <div class="controls form-inline">
+                                                    <label>
+                                                        问题分类：</label><input type="text" placeholder="问题分类" style="width: 250px;" />
+                                                    <button class="btn" data-toggle="modal" data-target="#myModal-1">
+                                                        选择问题分类</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="controls form-inline">
+                                                    <label>
+                                                        问题说明：</label>
+                                                    <textarea class="medium m-wrap span5" rows="6" style="width: 350px;"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-group form-inline">
+                                                    <input type="checkbox" value="" />
+                                                        上传附件
+                                                    </label>
+                                                    <label class="sr-only" for="inputfile">
+                                                    </label>
+                                                    <input type="file" id="File1">
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#">附件1</a>&nbsp;&nbsp;<a href="">附件2</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--内容结束-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+
+
+<!--弹出窗口-小 开始-->
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="myModalLabel">
+                    问题分类</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                    <!--窗口的内容开始-->
+                    <ul id="tree" class="ztree" style="width: 100%; overflow: auto;">
+                    </ul>
+                    
+                    <!--内容结束-->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn" data-dismiss="modal">
+                    确定</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->     

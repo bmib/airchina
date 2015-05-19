@@ -98,9 +98,9 @@
                         </td>
                         <td>是（16）</td>
                         <td>否</td>
-                        <td><span class="label label-important">未生成报告</span></td>
+                        <td><span class="label label-important">未编写</span></td>
                         <td> 2015-05-30 </td>
-                        <td><a href="au_sjbg_st.html" class="btn btn-mini">查看</a> <button type="submit" class="btn btn-mini btn-info">导出问题列表</button> </td>
+                        <td><a href="au_sjbg_st.html" class="btn btn-mini">编写</a> <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal-3" disabled>上传报告</button><button type="submit" class="btn btn-mini">导出问题列表</button> </td>
                     </tr>
                     <tr>
                         <td>
@@ -117,9 +117,9 @@
                         </td>
                         <td>是（16）</td>
                         <td>是（2）</td>
-                        <td><span class="label label-important">未生成报告</span></td>
+                        <td><span class="label label-warning">未上传</span></td>
                         <td> 2015-04-30 </td>
-                        <td><a href="au_sjbg_st.html" class="btn btn-mini">查看</a>  <button type="submit" class="btn btn-mini btn-info">导出问题列表</button> </td>
+                        <td><a href="au_sjbg_st.html" class="btn btn-mini">查看</a>  <button type="button" class="btn btn-info btn-mini" data-toggle="modal" data-target="#myModal-3">上传报告</button><button type="submit" class="btn btn-mini">导出问题列表</button> </td>
                     </tr>
                     <tr>
                         <td>
@@ -136,9 +136,9 @@
                         </td>
                         <td>是（16）</td>
                         <td>否</td>
-                        <td><span class="label label-success">已生成报告</span></td>
+                        <td><span class="label label-success">已完成</span></td>
                         <td> 2015-01-30 </td>
-                        <td><button type="submit" class="btn btn-mini">预览</button> <button type="submit" class="btn btn-mini">下载报告</button> <button type="submit" class="btn btn-mini btn-info">导出问题列表</button> </td>
+                        <td><button type="submit" class="btn btn-mini">预览</button> <button type="submit" class="btn btn-mini btn-info">下载报告</button> <button type="submit" class="btn btn-mini">导出问题列表</button> </td>
                     </tr>
                     <tr>
                         <td>
@@ -155,9 +155,9 @@
                         </td>
                         <td>否</td>
                         <td>否</td>
-                        <td><span class="label label-success">已生成报告</span></td>
+                        <td><span class="label label-success">已完成</span></td>
                         <td> 2015-01-30 </td>
-                        <td><button type="submit" class="btn btn-mini">预览</button> <button type="submit" class="btn btn-mini">下载报告</button> <button type="submit" class="btn btn-mini btn-info">导出问题列表</button> </td>
+                        <td><button type="submit" class="btn btn-mini">预览</button> <button type="submit" class="btn btn-mini btn-info">下载报告</button> <button type="submit" class="btn btn-mini">导出问题列表</button> </td>
                     </tr>
                     <tr>
                         <td>
@@ -271,3 +271,84 @@
     </div>
 </body>
 </html>
+<!--弹出窗口-小 开始-->
+<div id="myModal-3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <!--窗口title-->
+            <h4 class="modal-title" id="myModalLabel">上传审计报告/启动预防纠正、风险管理</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                	<table class="table table-bordered">
+
+	<thead>
+        <tr>
+            <th class="form-inline" style="text-align:left !important;">
+            <label>
+             <input type="checkbox" value="" checked/> 上传审计报告
+       		</label>
+              <label class="sr-only" for="inputfile"></label>
+              <input type="file" id="inputfile">
+   
+            </th>
+        </tr>
+    </thead>
+    <thead>
+		 <tr>
+          <th class=" form-inline" style="text-align:left !important;">
+          	<label class="checkbox">
+            <input type="checkbox" value="" checked disabled/> 发送预防纠正整改通知单
+            </label>
+           
+          </th>
+		</tr>
+     </thead>
+     <tbody>
+        <tr>
+          <td class=" form-inline">
+          
+          <label>预防纠正说明：</label>
+            <textarea class="medium m-wrap span5" rows="3">说明</textarea>
+           
+          </td>
+      	</tr>
+      </tbody>
+     <thead>
+        <tr>
+          <th class=" form-inline" style="text-align:left !important;">
+          	<label class="checkbox">
+            <input type="checkbox" value="" checked disabled/> 启动风险管理
+            </label>
+        </tr>
+     </thead>
+     <tbody>
+          <td class=" form-inline">
+          <label>风险管理说明：</label>
+            <textarea class="medium m-wrap span5" rows="3">请自行识别危险源，完善风险管理系统</textarea>
+          </td>
+        </tr>
+     </tbody>
+     <tbody>
+          <td class=" form-inline">
+          <label>整改措施提交期限：</label>
+             <input type="text" placeholder="yyyy-mm-dd" class="m-wrap"/>
+          </td>
+        </tr>
+     </tbody>
+
+</table>	
+                </div>
+            </div>
+            <div class="modal-footer">
+            
+            <button type="submit" class="btn" data-dismiss="modal">提交</button>
+			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出窗口-小 结束-->
+             

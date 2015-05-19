@@ -46,13 +46,17 @@ var menuGroupJson=[
 				   {"UUID":"B5","NAME":"行动跟踪","PID":"A4","PAGEURL":"audit/au_yfjz.html"},
 				   {"UUID":"B2","NAME":"规章文件","PID":"A4","PAGEURL":"audit/au_gzwj.html"},
 				   {"UUID":"B6","NAME":"统计分析","PID":"A4","PAGEURL":"analysis/an_zhtjfx.html"},
-				   {"UUID":"B7","NAME":"共享交流","PID":"A4","PAGEURL":"share/index.html"},
+				   {"UUID":"B7","NAME":"安全资源共享","PID":"A4","PAGEURL":"share/sh_aqzygx.html"},
+				   {"UUID":"B8","NAME":"安全交流平台","PID":"A4","PAGEURL":"share/sh_aqjlpt.html"},
+				   {"UUID":"B9","NAME":"互助直通车","PID":"A4","PAGEURL":"share/sh_hzztc.html"},
 				   {"UUID":"B9","NAME":"首页","PID":"A3","SELECTED":true,"PAGEURL":"enterprise/index.html"},
 				   {"UUID":"B4","NAME":"数据收集","PID":"A3","PAGEURL":"enterprise/ep_sjsj_b.html"},
 				   {"UUID":"B2","NAME":"规章文件","PID":"A3","PAGEURL":"audit/au_gzwj.html"},
 				   {"UUID":"B6","NAME":"后续行动","PID":"A3","PAGEURL":"enterprise/ep_hxxd_b.html"},
 				   {"UUID":"B6","NAME":"统计分析","PID":"A3","PAGEURL":"analysis/an_tjfx.html"},
-				   {"UUID":"B7","NAME":"共享交流","PID":"A3","PAGEURL":"share/index.html"},
+				   {"UUID":"B7","NAME":"安全资源共享","PID":"A3","PAGEURL":"share/sh_aqzygx.html"},
+				   {"UUID":"B8","NAME":"安全交流平台","PID":"A3","PAGEURL":"share/sh_aqjlpt.html"},
+				   {"UUID":"B9","NAME":"互助直通车","PID":"A3","PAGEURL":"share/sh_hzztc.html"},
 				   {"UUID":"B9","NAME":"首页","PID":"A5","SELECTED":true,"PAGEURL":"enterprise/leader_index.html"},
 				   //{"UUID":"B3","NAME":"审计计划","PID":"A5","PAGEURL":"enterprise/ep_sjsj.html"},
 				   //{"UUID":"B5","NAME":"审计报告","PID":"A5","PAGEURL":"enterprise/ep_sjbg.html"},
@@ -60,7 +64,9 @@ var menuGroupJson=[
 				   {"UUID":"B2","NAME":"规章文件","PID":"A5","PAGEURL":"audit/au_gzwj.html"},
 				   {"UUID":"B6","NAME":"后续行动","PID":"A5","PAGEURL":"enterprise/ep_hxxd.html"},
 				   {"UUID":"B6","NAME":"统计分析","PID":"A5","PAGEURL":"analysis/an_zhtjfx.html"},
-				   {"UUID":"B7","NAME":"共享交流","PID":"A5","PAGEURL":"share/index.html"}
+				   {"UUID":"B7","NAME":"安全资源共享","PID":"A5","PAGEURL":"share/sh_aqzygx.html"},
+				   {"UUID":"B8","NAME":"安全交流平台","PID":"A5","PAGEURL":"share/sh_aqjlpt.html"},
+				   {"UUID":"B9","NAME":"互助直通车","PID":"A5","PAGEURL":"share/sh_hzztc.html"}
 				   ];
 //菜单数据
 var menuJson=[

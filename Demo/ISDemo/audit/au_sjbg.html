@@ -22,240 +22,352 @@
 <body>
     <div class="portlet box">
         <div class="portlet-body">
-        <div class="tab-content">
-        <div class="form-inline">
-       			<label>被审计单位：</label>
-                <select name="select" class=" input-small" >
-                	<option value="0" selected="selected">全部</option>
-                    <option value="4">北京航空公司</option>
-                    <option value="5">沈阳航空公司</option>
-                    <option value="5">山东航空公司</option>
-                </select>
-                
-                <label style="padding-left:20px;">审计年月：</label>
-                <select name="select" class=" input-small" >
-                	<option value="0" selected="selected">全部</option>
-                    <option value="4">2015年4月</option>
-                    <option value="5">2015年5月</option>
-                    <option value="5">2015年6月</option>
-                </select>
-                <label style="padding-left:20px;">报告生成日期：</label><input type="text" placeholder="yyyy-mm-dd" class="m-wrap input-small"/>~<input type="text" placeholder="yyyy-mm-dd" class="m-wrap input-small"/>
-		
-                <label class="checkbox" style="padding-left:20px;">
-                <input type="checkbox" value="" /> 有预防纠正
-                </label>
-                <label class="checkbox" style="padding-left:20px;">
-                <input type="checkbox" value="" /> 有产生危险源
-                </label>
-                
-<!--                <label style="float:right; padding-left:20px;" class="alert"><span>未生成报告(8)</span><span>已生成报告(12)</span></label>
--->          </div>
-            <table class="table table-hover table-bordered">
-                <thead>
-                    <tr>
-                        <th>
-                            计划年月 <span>&darr;</span>
-                        </th>
-                        <th>
-                            被审计单位
-                        </th>
-                        <th>
-                            审计组长
-                        </th>
-                        <th>
-                            审计专员
-                        </th>
-                        <th>
-                            是否有预防纠正
-                        </th>
-                        <th>
-                            是否产生危险源
-                        </th>
-                        <th>
-                            状态 <span>&darr;</span>
-                        </th>
-                        <th>
-                            报告生成日期
-                        </th>
-                        <th style="width:200px;">
-                            操作
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            2015年5月
-                        </td>
-                        <td>
-                            深圳航空
-                        </td>
-                        <td>
-                            齐龙
-                        </td>
-                        <td title="刘静[飞行]，马峥[运控]，张玲[地服]，刘静[飞行]，马峥[运控]，张玲[地服]">
-                           刘静[飞行]，马峥[运控]，张玲[地服] ...
-                        </td>
-                        <td>是（16）</td>
-                        <td>否</td>
-                        <td><span class="label label-important">未编写</span></td>
-                        <td> 2015-05-30 </td>
-                        <td><a href="au_sjbg_st.html" class="btn btn-mini">编写</a> <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal-3" disabled>上传报告</button><button type="submit" class="btn btn-mini">导出问题列表</button> </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            2015年4月
-                        </td>
-                        <td>
-                            深圳航空
-                        </td>
-                        <td>
-                            齐龙
-                        </td>
-                        <td title="刘静[飞行]，马峥[运控]，张玲[地服]，刘静[飞行]，马峥[运控]，张玲[地服]">
-                           刘静[飞行]，马峥[运控]，张玲[地服] ...
-                        </td>
-                        <td>是（16）</td>
-                        <td>是（2）</td>
-                        <td><span class="label label-warning">未上传</span></td>
-                        <td> 2015-04-30 </td>
-                        <td><a href="au_sjbg_st.html" class="btn btn-mini">查看</a>  <button type="button" class="btn btn-info btn-mini" data-toggle="modal" data-target="#myModal-3">上传报告</button><button type="submit" class="btn btn-mini">导出问题列表</button> </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            2015年1月
-                        </td>
-                        <td>
-                            深圳航空
-                        </td>
-                        <td>
-                            齐龙
-                        </td>
-                        <td title="刘静[飞行]，马峥[运控]，张玲[地服]，刘静[飞行]，马峥[运控]，张玲[地服]">
-                           刘静[飞行]，马峥[运控]，张玲[地服] ...
-                        </td>
-                        <td>是（16）</td>
-                        <td>否</td>
-                        <td><span class="label label-success">已完成</span></td>
-                        <td> 2015-01-30 </td>
-                        <td><button type="submit" class="btn btn-mini">预览</button> <button type="submit" class="btn btn-mini btn-info">下载报告</button> <button type="submit" class="btn btn-mini">导出问题列表</button> </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            2015年1月
-                        </td>
-                        <td>
-                            深圳航空
-                        </td>
-                        <td>
-                            齐龙
-                        </td>
-                        <td title="刘静[飞行]，马峥[运控]，张玲[地服]，刘静[飞行]，马峥[运控]，张玲[地服]">
-                           刘静[飞行]，马峥[运控]，张玲[地服] ...
-                        </td>
-                        <td>否</td>
-                        <td>否</td>
-                        <td><span class="label label-success">已完成</span></td>
-                        <td> 2015-01-30 </td>
-                        <td><button type="submit" class="btn btn-mini">预览</button> <button type="submit" class="btn btn-mini btn-info">下载报告</button> <button type="submit" class="btn btn-mini">导出问题列表</button> </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr><tr>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>
-                            --
-                        </td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                </tbody>
-            </table>
-             <div class="pagination pagination-right pagination-small">
+            <div class="tab-content">
+                <div class="form-inline">
+                    <label style="padding-left: 20px;">
+                        计划年月：</label>
+                    <select name="select" class=" input-small">
+                        <option value="0" selected="selected">全部</option>
+                        <option value="4">2015年4月</option>
+                        <option value="5">2015年5月</option>
+                        <option value="5">2015年6月</option>
+                    </select><label>被审计单位：</label>
+                    <select name="select" class=" input-small">
+                        <option value="0" selected="selected">全部</option>
+                        <option value="4">北京航空公司</option>
+                        <option value="5">沈阳航空公司</option>
+                        <option value="5">山东航空公司</option>
+                    </select>
+                    <label style="padding-left: 20px;">
+                        报告生成日期：</label><input type="text" placeholder="yyyy-mm-dd" class="m-wrap input-small" />~<input
+                            type="text" placeholder="yyyy-mm-dd" class="m-wrap input-small" />
+                    <label class="checkbox" style="padding-left: 20px;">
+                        <input type="checkbox" value="" />
+                        有预防纠正
+                    </label>
+                    <label class="checkbox" style="padding-left: 20px;">
+                        <input type="checkbox" value="" />
+                        有产生危险源
+                    </label>
+                    <!--                <label style="float:right; padding-left:20px;" class="alert"><span>未生成报告(8)</span><span>已生成报告(12)</span></label>
+-->
+                </div>
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                计划年月 <span>&darr;</span>
+                            </th>
+                            <th>
+                                被审计单位
+                            </th>
+                            <th>
+                                审计组长
+                            </th>
+                            <th>
+                                审计专员
+                            </th>
+                            <th>
+                                是否有预防纠正
+                            </th>
+                            <th>
+                                是否产生危险源
+                            </th>
+                            <th>
+                                状态 <span>&darr;</span>
+                            </th>
+                            <th>
+                                报告生成日期
+                            </th>
+                            <th style="width: 200px;">
+                                操作
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                2015年5月
+                            </td>
+                            <td>
+                                深圳航空
+                            </td>
+                            <td>
+                                齐龙
+                            </td>
+                            <td title="刘静[飞行]，马峥[运控]，张玲[地服]，刘静[飞行]，马峥[运控]，张玲[地服]">
+                                刘静[飞行]，马峥[运控]，张玲[地服] ...
+                            </td>
+                            <td>
+                                是（16）
+                            </td>
+                            <td>
+                                否
+                            </td>
+                            <td>
+                                <span class="label label-important">未编写</span>
+                            </td>
+                            <td>
+                                2015-05-30
+                            </td>
+                            <td>
+                                <a href="au_sjbg_st.html" class="btn btn-mini">编写</a>
+                                <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal-3"
+                                    disabled>
+                                    上传报告</button>
+                                <button type="submit" class="btn btn-mini">
+                                        导出问题列表</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2015年4月
+                            </td>
+                            <td>
+                                深圳航空
+                            </td>
+                            <td>
+                                齐龙
+                            </td>
+                            <td title="刘静[飞行]，马峥[运控]，张玲[地服]，刘静[飞行]，马峥[运控]，张玲[地服]">
+                                刘静[飞行]，马峥[运控]，张玲[地服] ...
+                            </td>
+                            <td>
+                                是（16）
+                            </td>
+                            <td>
+                                是（2）
+                            </td>
+                            <td>
+                                <span class="label label-warning">未上传</span>
+                            </td>
+                            <td>
+                                2015-04-30
+                            </td>
+                            <td>
+                                <a href="au_sjbg_st.html" class="btn btn-mini">查看</a>
+                                <button type="button" class="btn btn-info btn-mini" data-toggle="modal" data-target="#myModal-3">
+                                    上传报告</button>
+                                <button type="submit" class="btn btn-mini">
+                                        导出问题列表</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2015年1月
+                            </td>
+                            <td>
+                                深圳航空
+                            </td>
+                            <td>
+                                齐龙
+                            </td>
+                            <td title="刘静[飞行]，马峥[运控]，张玲[地服]，刘静[飞行]，马峥[运控]，张玲[地服]">
+                                刘静[飞行]，马峥[运控]，张玲[地服] ...
+                            </td>
+                            <td>
+                                是（16）
+                            </td>
+                            <td>
+                                否
+                            </td>
+                            <td>
+                                <span class="label label-success">已完成</span>
+                            </td>
+                            <td>
+                                2015-01-30
+                            </td>
+                            <td>
+                                <button type="submit" class="btn btn-mini">
+                                    预览</button>
+                                <button type="submit" class="btn btn-mini btn-info">
+                                    下载报告</button>
+                                <button type="submit" class="btn btn-mini">
+                                    导出问题列表</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2015年1月
+                            </td>
+                            <td>
+                                深圳航空
+                            </td>
+                            <td>
+                                齐龙
+                            </td>
+                            <td title="刘静[飞行]，马峥[运控]，张玲[地服]，刘静[飞行]，马峥[运控]，张玲[地服]">
+                                刘静[飞行]，马峥[运控]，张玲[地服] ...
+                            </td>
+                            <td>
+                                否
+                            </td>
+                            <td>
+                                否
+                            </td>
+                            <td>
+                                <span class="label label-success">已完成</span>
+                            </td>
+                            <td>
+                                2015-01-30
+                            </td>
+                            <td>
+                                <button type="submit" class="btn btn-mini">
+                                    预览</button>
+                                <button type="submit" class="btn btn-mini btn-info">
+                                    下载报告</button>
+                                <button type="submit" class="btn btn-mini">
+                                    导出问题列表</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                            <td>
+                                --
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination pagination-right pagination-small">
                     <ul>
                         <li><a href="#"><<</a></li>
                         <li><a href="#">1</a></li>
@@ -263,8 +375,8 @@
                         <li><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
                         <li><a href="#">5</a></li>
-                        <li><a href="#">>></a></li> 
-                   </ul>
+                        <li><a href="#">>></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -272,83 +384,85 @@
 </body>
 </html>
 <!--弹出窗口-小 开始-->
-<div id="myModal-3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
+<div id="myModal-3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <!--窗口title-->
-            <h4 class="modal-title" id="myModalLabel">上传审计报告/启动预防纠正、风险管理</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="myModalLabel">
+                    上传审计报告/启动预防纠正、风险管理</h4>
             </div>
             <div class="modal-body">
                 <div class="yContentBox">
-                	<table class="table table-bordered">
-
-	<thead>
-        <tr>
-            <th class="form-inline" style="text-align:left !important;">
-            <label>
-             <input type="checkbox" value="" checked/> 上传审计报告
-       		</label>
-              <label class="sr-only" for="inputfile"></label>
-              <input type="file" id="inputfile">
-   
-            </th>
-        </tr>
-    </thead>
-    <thead>
-		 <tr>
-          <th class=" form-inline" style="text-align:left !important;">
-          	<label class="checkbox">
-            <input type="checkbox" value="" checked disabled/> 发送预防纠正整改通知单
-            </label>
-           
-          </th>
-		</tr>
-     </thead>
-     <tbody>
-          <td class=" form-inline">
-          <label>整改措施提交期限：</label>
-             <input type="text" placeholder="yyyy-mm-dd" class="m-wrap"/>
-          </td>
-        </tr>
-
-        <tr>
-          <td class=" form-inline">
-          
-          <label>预防纠正说明：</label>
-            <textarea class="medium m-wrap span5" rows="3">说明</textarea>
-           
-          </td>
-      	</tr>
-      </tbody>
-     <thead>
-        <tr>
-          <th class=" form-inline" style="text-align:left !important;">
-          	<label class="checkbox">
-            <input type="checkbox" value="" checked disabled/> 启动风险管理
-            </label>
-        </tr>
-     </thead>
-     <tbody>
-          <td class=" form-inline">
-          <label>风险管理说明：</label>
-            <textarea class="medium m-wrap span5" rows="3">请自行识别危险源，完善风险管理系统</textarea>
-          </td>
-        </tr>
-     </tbody>
-     
-
-</table>	
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="form-inline" style="text-align: left !important;">
+                                    <label>
+                                        <input type="checkbox" value="" checked />
+                                        上传审计报告
+                                    </label>
+                                    <label class="sr-only" for="inputfile">
+                                    </label>
+                                    <input type="file" id="inputfile">
+                                </th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                                <th class=" form-inline" style="text-align: left !important;">
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="" checked disabled />
+                                        发送预防纠正整改通知单
+                                    </label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td class=" form-inline">
+                                <label>
+                                    整改措施提交期限：</label>
+                                <input type="text" placeholder="yyyy-mm-dd" class="m-wrap" />
+                            </td>
+                            </tr>
+                            <tr>
+                                <td class=" form-inline">
+                                    <label>
+                                        预防纠正说明：</label>
+                                    <textarea class="medium m-wrap span5" rows="3">说明</textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th class=" form-inline" style="text-align: left !important;">
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="" checked disabled />
+                                        启动风险管理
+                                    </label>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td class=" form-inline">
+                                <label>
+                                    风险管理说明：</label>
+                                <textarea class="medium m-wrap span5" rows="3">请自行识别危险源，完善风险管理系统</textarea>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="modal-footer">
-            
-            <button type="submit" class="btn" data-dismiss="modal">提交</button>
-			<button type="button" class="btn" data-dismiss="modal">关闭</button>
+                <button type="submit" class="btn" data-dismiss="modal">
+                    提交</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
             </div>
         </div>
     </div>
 </div>
 <!--弹出窗口-小 结束-->
-             

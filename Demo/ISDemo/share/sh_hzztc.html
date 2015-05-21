@@ -27,7 +27,7 @@
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="tab_1_1">
-                        <a class=" btn" style="margin: 10px;">我要求助</a>
+                        <a class=" btn" style="margin: 10px;" data-toggle="modal" data-target="#myModal-1">我要求助</a>
                         <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -157,7 +157,7 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="tab_1_2">
-                        <a class=" btn" style="margin: 10px;">发布航站审计计划</a>
+                        <a class=" btn" style="margin: 10px;" data-toggle="modal" data-target="#myModal-2">发布航站审计计划</a>
                         <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -165,12 +165,15 @@
                                         计划审计日期<span>&darr;</span>
                                     </th>
                                     <th style="text-align: left;">
+                                        审计单位
+                                    </th>
+                                    <th style="text-align: left;">
                                         被审计航站
                                     </th>
                                     <th style="text-align: left;">
-                                        审计单位
+                                        说明
                                     </th>
-                                    <th style="text-align: left; width:200px;">
+                                    <th style="text-align: left; width: 200px;">
                                         操作
                                     </th>
                                 </tr>
@@ -181,10 +184,13 @@
                                         2015-05-16
                                     </td>
                                     <td>
+                                        深圳航空
+                                    </td>
+                                    <td>
                                         巴黎
                                     </td>
                                     <td>
-                                        深圳航空
+                                        无
                                     </td>
                                     <td>
                                         <a class="btn">修改</a>&nbsp;&nbsp; <a class="btn">删除</a>
@@ -195,10 +201,13 @@
                                         2015-05-16
                                     </td>
                                     <td>
+                                        深圳航空
+                                    </td>
+                                    <td>
                                         巴黎
                                     </td>
                                     <td>
-                                        深圳航空
+                                        无
                                     </td>
                                     <td>
                                         <a class="btn">修改</a>&nbsp;&nbsp; <a class="btn">删除</a>
@@ -209,10 +218,13 @@
                                         2015-05-16
                                     </td>
                                     <td>
+                                        深圳航空
+                                    </td>
+                                    <td>
                                         巴黎
                                     </td>
                                     <td>
-                                        深圳航空
+                                        无
                                     </td>
                                     <td>
                                         <a class="btn">修改</a>&nbsp;&nbsp; <a class="btn">删除</a>
@@ -223,10 +235,13 @@
                                         2015-05-16
                                     </td>
                                     <td>
+                                        深圳航空
+                                    </td>
+                                    <td>
                                         巴黎
                                     </td>
                                     <td>
-                                        深圳航空
+                                        无
                                     </td>
                                     <td>
                                         <a class="btn">修改</a>&nbsp;&nbsp; <a class="btn">删除</a>
@@ -237,10 +252,13 @@
                                         2015-05-16
                                     </td>
                                     <td>
+                                        深圳航空
+                                    </td>
+                                    <td>
                                         巴黎
                                     </td>
                                     <td>
-                                        深圳航空
+                                        无
                                     </td>
                                     <td>
                                         <a class="btn">修改</a>&nbsp;&nbsp; <a class="btn">删除</a>
@@ -251,10 +269,13 @@
                                         2015-05-16
                                     </td>
                                     <td>
+                                        深圳航空
+                                    </td>
+                                    <td>
                                         巴黎
                                     </td>
                                     <td>
-                                        深圳航空
+                                        无
                                     </td>
                                     <td>
                                         <a class="btn">修改</a>&nbsp;&nbsp; <a class="btn">删除</a>
@@ -265,10 +286,13 @@
                                         2015-05-16
                                     </td>
                                     <td>
+                                        深圳航空
+                                    </td>
+                                    <td>
                                         巴黎
                                     </td>
                                     <td>
-                                        深圳航空
+                                        无
                                     </td>
                                     <td>
                                         <a class="btn">修改</a>&nbsp;&nbsp; <a class="btn">删除</a>
@@ -279,10 +303,13 @@
                                         2015-05-16
                                     </td>
                                     <td>
+                                        深圳航空
+                                    </td>
+                                    <td>
                                         巴黎
                                     </td>
                                     <td>
-                                        深圳航空
+                                        无
                                     </td>
                                     <td>
                                         <a class="btn">修改</a>&nbsp;&nbsp; <a class="btn">删除</a>
@@ -308,3 +335,132 @@
     </div>
 </body>
 </html>
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="myModalLabel">
+                    我要求助</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                    <form class="form-inline">
+                    <table>
+                        <tr>
+                            <td>
+                                求助单位：
+                            </td>
+                            <td>
+                                <select>
+                                    <option>深圳航空 </option>
+                                    <option>北京航空 </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                求助人员：
+                            </td>
+                            <td>
+                                <input type="text" placeholder="输入人员姓名模糊搜索" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                求助信息：
+                            </td>
+                            <td>
+                                <input type="text" placeholder="输入求助信息" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                求助内容：
+                            </td>
+                            <td>
+                                <textarea placeholder="输入详细的求助内容"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal-2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H1">
+                    发布航站审计计划</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                    <form class="form-inline">
+                    <table>
+                        <tr>
+                            <td>
+                                计划审计日期：
+                            </td>
+                            <td>
+                                <input type="text" placeholder="选择日期" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                审计单位：
+                            </td>
+                            <td>
+                                <select>
+                                    <option>深圳航空</option>
+                                    <option>北京航空</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                被审计航站：
+                            </td>
+                            <td>
+                                <select>
+                                    <option>巴黎 </option>
+                                    <option>波士顿 </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                说明：
+                            </td>
+                            <td>
+                                <textarea placeholder="输入审计计划说明"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -21,7 +21,7 @@
 <!--以上是页面文件加载，直接拷贝使用，不要修改-->
 <script>
 $(document).ready(function() {
-	var winH = $(window).height() - 255;
+	var winH = $(window).height() - 100;
 	$("#accordion").css('height', winH + 'px');
 	$("#wenti").css('height', winH + 'px');
 	$("#a3").css('height', winH + 'px');
@@ -50,10 +50,10 @@ $(document).ready(function() {
                 <label><div class="alert">注释：<span class="label label-success">已完成</span>&nbsp;&nbsp;<span class="label label-warning">未完成</span></div></label>
           </div>
             <div class="tab-content">
-            <div style="overflow-y:scroll ; height:30px;">
+            <div style="overflow-y:scroll ; height:32px;">
                 <table class="table table-bordered">
                     <thead>
-                        <tr style="background-color:#f8f8f8; border:1px solid #e6e6e6;">
+                        <tr>
                             <th align="left" class="center" style="width:80px;">计划年月 <span>&darr;</span></th>
                             <th align="left" class="center" style="width:100px;">被审计单位</th>
                             <th align="left" class="center" style="width:60px;">审计组长</th>
@@ -67,7 +67,7 @@ $(document).ready(function() {
                     </thead>
                 </table>
              </div>
-             <div class="panel-group" id="a3" style="overflow-y:scroll; height:350px;">
+             <div  id="a3" style="overflow-y:scroll; height:350px;">
                 <table class="table table-hover table-bordered">
                     <tbody>
                         <tr>

@@ -18,7 +18,7 @@ var systemJson=[
 //菜单组数据
 var menuGroupJson=[
 				   //{"UUID":"B9","NAME":"首页","PID":"A0","SELECTED":true,"PAGEURL":"admin/index_temp.html"},
-				   {"UUID":"B1","NAME":"组织结构管理","PID":"A0","SELECTED":true,"PAGEURL":"admin/ad_zzjg.html"},
+				   {"UUID":"B1","NAME":"组织管理","PID":"A0","SELECTED":true,"PAGEURL":"admin/ad_zzjg.html"},
 				   {"UUID":"B1","NAME":"角色权限管理","PID":"A0","PAGEURL":"admin/ad_jsgl.html"},
 				   {"UUID":"B1","NAME":"人员管理","PID":"A0","PAGEURL":"admin/ad_rygl.html"},
 				   {"UUID":"B7","NAME":"资源共享","PID":"A0","PAGEURL":"share/sh_aqzygx.html"},

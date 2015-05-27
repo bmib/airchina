@@ -8,14 +8,23 @@
 
 //子系统数据
 var systemJson=[
+				{"UUID":"A0","NAME":"系统管理员"},
 				{"UUID":"A1","NAME":"审计管理员","SELECTED":true},
 				{"UUID":"A2","NAME":"公司审计组长"},
 				{"UUID":"A4","NAME":"公司审计专员"},
-				{"UUID":"A5","NAME":"投资企业领导"},
-				{"UUID":"A3","NAME":"投资企业检查专员"}
+				{"UUID":"A5","NAME":"被审计单位领导"},
+				{"UUID":"A3","NAME":"被审计单位迎审专员"}
 				];
 //菜单组数据
 var menuGroupJson=[
+				   {"UUID":"B9","NAME":"首页","PID":"A0","SELECTED":true,"PAGEURL":"admin/index_temp.html"},
+				   {"UUID":"B1","NAME":"组织结构管理","PID":"A0","PAGEURL":"admin/ad_zzjg.html"},
+				   {"UUID":"B1","NAME":"角色权限管理","PID":"A0","PAGEURL":"admin/ad_jsqx.html"},
+				   {"UUID":"B1","NAME":"人员管理","PID":"A0","PAGEURL":"admin/ad_rygl.html"},
+				   {"UUID":"B7","NAME":"资源共享","PID":"A0","PAGEURL":"share/sh_aqzygx.html"},
+				   {"UUID":"B8","NAME":"交流平台","PID":"A0","PAGEURL":"share/sh_aqjlpt.html"},
+				   {"UUID":"B9","NAME":"互助直通车","PID":"A0","PAGEURL":"share/sh_hzztc.html"},
+				   
 				   {"UUID":"B9","NAME":"首页","PID":"A1","SELECTED":true,"PAGEURL":"admin/index.html"},
 				   {"UUID":"B1","NAME":"审计单类型管理","PID":"A1","PAGEURL":"admin/ad_sjdlx.html"},
 				   {"UUID":"B1","NAME":"审计要素管理","PID":"A1","PAGEURL":"admin/ad_sjys.html"},
@@ -32,6 +41,7 @@ var menuGroupJson=[
 				   {"UUID":"B1","NAME":"审计单重要性","PID":"A2","PAGEURL":"admin/ad_sjdzyx.html"},
 				   {"UUID":"B3","NAME":"系统构型","PID":"A2","PAGEURL":"audit/au_xtgx.html"},
 				   {"UUID":"B3","NAME":"专项审计","PID":"A2","PAGEURL":"audit/au_zxsj.html"},
+				   {"UUID":"B3","NAME":"符合验证","PID":"A2","PAGEURL":"audit/au_fhyz.html"},
 				   {"UUID":"B3","NAME":"预审/审计","PID":"A2","PAGEURL":"audit/au_sjsj.html"},
 				   {"UUID":"B5","NAME":"分析评估","PID":"A2","PAGEURL":"audit/au_fxpg.html"},
 				   {"UUID":"B5","NAME":"审计报告","PID":"A2","PAGEURL":"audit/au_sjbg.html"},
@@ -44,6 +54,7 @@ var menuGroupJson=[
 				   {"UUID":"B1","NAME":"审计单重要性","PID":"A4","PAGEURL":"admin/ad_sjdzyx.html"},
 				   {"UUID":"B3","NAME":"系统构型","PID":"A4","PAGEURL":"audit/au_xtgx_b.html"},
 				   {"UUID":"B3","NAME":"专项审计","PID":"A4","PAGEURL":"audit/au_zxsj.html"},
+				   {"UUID":"B3","NAME":"符合验证","PID":"A4","PAGEURL":"audit/au_fhyz.html"},
 				   {"UUID":"B3","NAME":"预审/审计","PID":"A4","PAGEURL":"audit/au_sjsj.html"},
 				   {"UUID":"B5","NAME":"分析评估","PID":"A4","PAGEURL":"audit/au_fxpg.html"},
 				   {"UUID":"B5","NAME":"审计报告","PID":"A4","PAGEURL":"audit/au_sjbg.html"},

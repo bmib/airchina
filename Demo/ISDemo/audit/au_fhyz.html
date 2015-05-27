@@ -7,7 +7,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-    <title>专项审计</title>
+    <title>符合验证</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
@@ -37,23 +37,20 @@
                 <label>
                     状态：</label>
                 <label class="checkbox">
-                    <input type="checkbox" checked="checked" />构型中</label>
-                <label class="checkbox">
-                    <input type="checkbox" checked="checked" />审计中</label>
-                <label class="checkbox">
-                    <input type="checkbox" checked="checked" />评估中</label>
+                    <input type="checkbox" checked="checked" />
+                    未完成</label>
                 <label class="checkbox">
                     <input type="checkbox" />已完成</label>
                 <label>
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-1">
-                        新建专项审计</button></label>
+                        新建复核验证</button></label>
             </div>
             <div style="overflow-y: scroll;">
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
                             <th style="width: 70px;">
-                                计划年月
+                                计划年月日
                             </th>
                             <th style="width: 80px;">
                                 被审计单位
@@ -90,11 +87,9 @@
                             <td>
                                 马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
-                            <td style="width: 70px;">
-                                构型中
-                            </td>
+                            <td style="width: 70px;">未完成</td>
                             <td style="width: 50px;">
-                                <a class="btn btn-mini" href="au_zxsj_xtgx.html">查看</a>
+                                <a class="btn btn-mini" href="au_fhyz_sjsj.html">进入</a>
                             </td>
                         </tr>
                         <tr>
@@ -110,11 +105,9 @@
                             <td>
                                 马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
+                            <td><span style="width: 70px;">未完成</span></td>
                             <td>
-                                审计中
-                            </td>
-                            <td>
-                                <a class="btn btn-mini" href="au_zxsj_sjsj.html">查看</a>
+                                <a class="btn btn-mini" href="au_fhyz_sjsj.html">进入</a>
                             </td>
                         </tr>
                         <tr>
@@ -130,11 +123,9 @@
                             <td>
                                 马峥[飞行]，刘静[运控]，张玲[机务]
                             </td>
+                            <td><span style="width: 70px;">未完成</span></td>
                             <td>
-                                评估中
-                            </td>
-                            <td>
-                                <a class="btn btn-mini" href="au_zxsj_fxpg.html">查看</a>
+                                <a class="btn btn-mini" href="au_fhyz_sjsj.html">进入</a>
                             </td>
                         </tr>
                         <tr>
@@ -254,7 +245,7 @@
                     &times;</button>
                 <!--窗口title-->
                 <h4 class="modal-title" id="H6">
-                    新增专项审计</h4>
+                    新增复核验证</h4>
             </div>
             <div class="modal-body">
                 <form class="form-horizontal">
@@ -272,7 +263,7 @@
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="Text11">
-                        计划年月</label>
+                        计划年月日</label>
                     <div class="controls">
                         <input type="text" id="Text10" placeholder="" value="2015年4月28日" />
                     </div>

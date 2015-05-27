@@ -15,6 +15,19 @@
     <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../media/js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="../media/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    
+    function show1(){
+	$("#tr1").show();//显示,参数说明同上
+	$("#tr2").show();
+	$("#tr3").hide();
+	}
+	function show2(){
+	$("#tr1").hide();//显示,参数说明同上
+	$("#tr2").hide();
+	$("#tr3").show();
+	}
+</script>
 </head>
 <body>
     <div class="portlet box">
@@ -74,7 +87,7 @@
                             张三
                         </td>
                         <td class="center">
-                            未完成
+                            <span class="label label-warning">未完成</span>
                         </td>
                         <td class="center">
                             <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
@@ -97,7 +110,7 @@
                             张三
                         </td>
                         <td class="center">
-                            未完成
+                            <span class="label label-warning">未完成</span>
                         </td>
                         <td class="center">
                             <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
@@ -120,7 +133,7 @@
                             张三
                         </td>
                         <td class="center">
-                            未完成
+                            <span class="label label-warning">未完成</span>
                         </td>
                         <td class="center">
                             <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
@@ -143,10 +156,10 @@
                             张三
                         </td>
                         <td class="center">
-                            已完成 <span style="color:#F90;"> [已启动风险管理]</span>
+                            <span class="label label-success">已完成</span>[已启动风险管理]
                         </td>
                         <td class="center">
-                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-19">查看</a>
                         </td>
                     </tr>
                     <tr>
@@ -166,10 +179,10 @@
                             张三
                         </td>
                         <td class="center">
-                            未完成
+                            <span class="label label-success">已完成</span> 
                         </td>
                         <td class="center">
-                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-19">查看</a>
                         </td>
                     </tr>
                     <tr>
@@ -189,10 +202,10 @@
                             张三
                         </td>
                         <td class="center">
-                            未完成
+                            <span class="label label-success">已完成</span> 
                         </td>
                         <td class="center">
-                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-19">查看</a>
                         </td>
                     </tr>
                     <tr>
@@ -212,10 +225,10 @@
                             张三
                         </td>
                         <td class="center">
-                            未完成
+                            <span class="label label-success">已完成</span> 
                         </td>
                         <td class="center">
-                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-19">查看</a>
                         </td>
                     </tr>
                     <tr>
@@ -235,10 +248,10 @@
                             张三
                         </td>
                         <td class="center">
-                            未完成
+                            <span class="label label-success">已完成</span> 
                         </td>
                         <td class="center">
-                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-19">查看</a>
                         </td>
                     </tr>
                     <tr>
@@ -258,10 +271,10 @@
                             张三
                         </td>
                         <td class="center">
-                            未完成
+                            <span class="label label-success">已完成</span> 
                         </td>
                         <td class="center">
-                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-19">查看</a>
                         </td>
                     </tr>
                     <tr>
@@ -281,10 +294,10 @@
                             张三
                         </td>
                         <td class="center">
-                            未完成
+                            <span class="label label-success">已完成</span> 
                         </td>
                         <td class="center">
-                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">查看</a>
+                            <a class="btn btn-mini" data-toggle="modal" data-target="#myModal-19">查看</a>
                         </td>
                     </tr>
                 </tbody>
@@ -560,6 +573,16 @@
                                                 </label>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td class="right">
+                                                是否转为风险源：
+                                            </td>
+                                            <td>
+                                                <label class="checkbox line">
+                                                <input type="checkbox" value="" /> 是
+                                                </label>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -576,3 +599,211 @@
         </div>
     </div>
 </div>
+
+<div id="myModal-19" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none">
+    <div class="modal-dialog small">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="myModalLabel">
+                    后续行动整改信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="yContentBox">
+                    <div class="container-fluid">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" style="text-align: left !important;">
+                                                1.1.2 合格证持有人适当运行设备的程序要求每架飞机上至少配备一个应急斧？
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="right" style="width: 130px;">
+                                                回答结果：
+                                            </td>
+                                            <td>
+                                                不合格
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">
+                                                问题分类：
+                                            </td>
+                                            <td>
+                                                工具和设备
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">
+                                                回答结果：
+                                            </td>
+                                            <td>
+                                                不合格
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">
+                                                附件：
+                                            </td>
+                                            <td>&nbsp;
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" style="text-align: left !important;">
+                                                下发预防纠正整改通知说明
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="right" style="width: 130px;">
+                                                下发时间：
+                                            </td>
+                                            <td>
+                                                2015-06-30
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right" style="width: 130px;">
+                                                要求提交时间：
+                                            </td>
+                                            <td>
+                                                2015-06-30
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">
+                                                说明：
+                                            </td>
+                                            <td>
+                                                具体说明
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">
+                                                附件：
+                                            </td>
+                                            <td>
+                                                附件1
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" style="text-align: left !important;">
+                                                整改方案及整改计划
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="right" style="width: 130px;">
+                                                提交时间：
+                                            </td>
+                                            <td>
+                                                2015-06-30
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">
+                                                是否需要整改：
+                                            </td>
+                                            <td>
+                                                <label class="radio line" onClick="show1();">
+                                                    <input type="radio" name="optionsRadios2" value="option2" checked />
+                                                    整改
+                                                </label>  
+                                                <label class="radio line" onClick="show2();">
+                                                    <input type="radio" name="optionsRadios2" value="option2" />
+                                                    不整改
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <div>
+                                        <tr id="tr1" style="display:;">
+                                            <td class="right">
+                                                根原因分析：
+                                            </td>
+                                            <td>
+                                                <textarea class="medium m-wrap" rows="6">根原因分析</textarea>
+                                            </td>
+                                        </tr>
+                                        <tr id="tr2" style="display:;">
+                                            <td class="right">
+                                                整改方案说明：
+                                            </td>
+                                            <td>
+                                                <textarea class="medium m-wrap" rows="6">具体说明整改措施</textarea>
+                                            </td>
+                                        </tr>
+                                        </div>
+                                        <tr id="tr3" style="display: none;">
+                                            <td class="right">
+                                                 不整改原因：
+                                            </td>
+                                            <td>
+                                                <textarea class="medium m-wrap" rows="6">具体说明</textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">
+                                                整改方案附件：
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-mini">上传附件</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">
+                                                是否启动风险管理：
+                                            </td>
+                                            <td>
+                                                <label class="checkbox line">
+                                                <input type="checkbox" value="" /> 启动
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">
+                                                是否转为风险源：
+                                            </td>
+                                            <td>
+                                                <label class="checkbox line">
+                                                <input type="checkbox" value="" /> 是
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

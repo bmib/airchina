@@ -20,11 +20,13 @@
     function show1(){
 	$("#tr1").show();//显示,参数说明同上
 	$("#tr2").show();
+	$("#tr0").show();
 	$("#tr3").hide();
 	}
 	function show2(){
 	$("#tr1").hide();//显示,参数说明同上
 	$("#tr2").hide();
+	$("#tr0").hide();
 	$("#tr3").show();
 	}
 </script>
@@ -446,7 +448,7 @@
                                     <tbody>
                                         <tr>
                                             <td class="right" style="width: 130px;">
-                                                回答结果：
+                                                审计结果：
                                             </td>
                                             <td>
                                                 不合格
@@ -462,7 +464,7 @@
                                         </tr>
                                         <tr>
                                             <td class="right">
-                                                回答结果：
+                                                审计结果：
                                             </td>
                                             <td>
                                                 不合格
@@ -498,7 +500,7 @@
                                         </tr>
                                         <tr>
                                             <td class="right" style="width: 130px;">
-                                                要求提交时间：
+                                                整改措施提交期限：
                                             </td>
                                             <td>
                                                 2015-06-30
@@ -506,20 +508,13 @@
                                         </tr>
                                         <tr>
                                             <td class="right">
-                                                说明：
+                                                预防机制说明：
                                             </td>
                                             <td>
                                                 具体说明
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="right">
-                                                附件：
-                                            </td>
-                                            <td>
-                                                附件1
-                                            </td>
-                                        </tr>
+                                       
                                     </tbody>
                                 </table>
                                 <table class="table table-bordered">
@@ -537,6 +532,14 @@
                                             </td>
                                             <td>
                                                 2015-06-30
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right" style="width: 130px;">
+                                                计划完成时间：
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="YYYY-MM-DD" class="m-wrap medium"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -627,7 +630,7 @@
                                     <tbody>
                                         <tr>
                                             <td class="right" style="width: 130px;">
-                                                回答结果：
+                                                审计结果：
                                             </td>
                                             <td>
                                                 不合格
@@ -643,7 +646,7 @@
                                         </tr>
                                         <tr>
                                             <td class="right">
-                                                回答结果：
+                                                说明：
                                             </td>
                                             <td>
                                                 不合格
@@ -679,7 +682,7 @@
                                         </tr>
                                         <tr>
                                             <td class="right" style="width: 130px;">
-                                                要求提交时间：
+                                                整改措施提交期限：
                                             </td>
                                             <td>
                                                 2015-06-30
@@ -687,20 +690,13 @@
                                         </tr>
                                         <tr>
                                             <td class="right">
-                                                说明：
+                                                预防机制说明：
                                             </td>
                                             <td>
                                                 具体说明
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="right">
-                                                附件：
-                                            </td>
-                                            <td>
-                                                附件1
-                                            </td>
-                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                                 <table class="table table-bordered">
@@ -720,6 +716,7 @@
                                                 2015-06-30
                                             </td>
                                         </tr>
+                                        
                                         <tr>
                                             <td class="right">
                                                 是否需要整改：
@@ -736,6 +733,14 @@
                                             </td>
                                         </tr>
                                         <div>
+                                        <tr id="tr0" style="display:;">
+                                            <td class="right" style="width: 130px;">
+                                                计划完成时间：
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="YYYY-MM-DD" class="m-wrap medium"  />
+                                            </td>
+                                        </tr>
                                         <tr id="tr1" style="display:;">
                                             <td class="right">
                                                 根原因分析：

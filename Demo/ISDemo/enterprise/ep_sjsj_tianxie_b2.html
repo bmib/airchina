@@ -138,41 +138,26 @@
                         <table class=" table">
                             <thead>
                                 <tr>
-                                	<td align="left" class="left" style="line-height:30px; padding-left:10px;">
-                                    <div class="btn-group" data-toggle="buttons">
-                                       <label class="btn btn-primary active btn-mini">
-                                          <input type="radio" name="options" id="option1"> 显示全部
-                                       </label>
-                                       <label class="btn btn-primary btn-mini">
-                                          <input type="radio" name="options" id="option2"> 显示未回答问题
-                                       </label>
-                                       <label class="btn btn-primary btn-mini">
-                                          <input type="radio" name="options" id="option3"> 显示有说明的问题
-                                       </label>
-                                       <label class="btn btn-primary btn-mini">
-                                          <input type="radio" name="options" id="option3"> 显示不合格有说明的问题
-                                       </label>
-                                    </div>
-                                    
-                                    </td>
-                                    <td align="left" class="right form-inline" style="line-height:30px;">
-                                    <label class="radio line">
-                                    <input type="radio" name="optionsRads2" value="option1" checked/>
-                                    全部
-                                    </label>
-                                    <label class="radio line">
-                                    <input type="radio" name="optionsRads2" value="option2" />
-                                    已填写
-                                    </label>  
-                                    <label class="radio line">
-                                    <input type="radio" name="optionsRads2" value="option2" />
-                                    未填写
-                                    </label>
-                                    </td>
-                                    <td align="left" class="right" style="line-height:30px;">
-                                    	
-                                    <button type="submit" class="btn btn-mini">任务</button>
-                                    <button type="submit" class="btn btn-mini">目标</button>
+                                    <td align="left" class="right form-inline">
+                                        <div class="btn-group" data-toggle="buttons">
+                                           <label class="radio line">
+                                                <input type="radio" name="optiios2" value="option2" />
+                                                全部
+                                            </label>
+                                            <label class="radio line">
+                                                <input type="radio" name="optiios2" value="option2" />
+                                                已填写
+                                            </label>
+                                            <label class="radio line">
+                                                <input type="radio" name="optiios2" value="option2" />
+                                                未填写
+                                            </label>
+                                        </div>
+                                        <label style="padding-left: 20px;">
+                                            <button type="submit" class="btn btn-mini">
+                                                任务</button>
+                                            <button type="submit" class="btn btn-mini">
+                                                目标</button></label>
                                     </td>
                               </tr>
                             </thead>
@@ -488,7 +473,7 @@
 
 <!--弹出窗口-小 开始-->
 <div id="myModal-3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none">
-    <div class="modal-dialog big">
+    <div class="modal-dialog middle">
         <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -516,7 +501,7 @@
                                     <input type="radio" name="optionsRadios2" value="option1"  /> 合格
                                   </label>
                                   <label class="checkbox" style="padding-left:25px;" data-toggle="modal" data-target="#myModal-1">
-                                    <input type="radio" name="optionsRadios2" value="option2" onClick="adds();" /> <font style="color:#F00;">不合格</font>
+                                    <input type="radio" name="optionsRadios2" value="option2" /> <font style="color:#F00;">不合格</font>
                                   </label>
                                   <label class="checkbox" style="padding-left:25px;">
                                     <input type="radio" name="optionsRadios2" value="option2"  /> 无法观察
@@ -524,31 +509,26 @@
                                   <span style="float:right"><button type="submit" class="btn" data-toggle="modal" data-target="#myModal-y">规章依据</button>&nbsp;<button type="button" class="btn" data-toggle="modal" data-target="#myModal-y">任务指南</button></span>
                                 </td>
                             </tr>
+                            <thead>
+                            <tr>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>问题分类：1、人员（例如：人力资源不足、人员资质不符合，2、工具和设备</td>
+                            </tr>
+                        
                             <tr>
                               <td>
                               <div class="controls form-inline">
                               <label>说明：</label>
                                 <textarea class="medium m-wrap span5" rows="6"></textarea>
-                              
-                              	<span class="controls" style=" display: none;" id="xdd">
-                            	<label>行动：</label>
-                             	<textarea class="medium m-wrap span5" rows="6"></textarea>
-                                </span>
-                                </div>
-                             
+                              </div>
                               </td>
                             </tr>
                          </tbody>
-                         <thead>
-                            <tr>
-                                <th>问题分类：</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                              <td>1、人员（例如：人力资源不足、人员资质不符合，2、工具和设备</td>
-                            </tr>
-                        </tbody>
+                         
                         <thead>
                             <tr>
                                 <th><div class="form-group form-inline">

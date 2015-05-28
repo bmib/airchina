@@ -38,7 +38,7 @@ var menuGroupJson=[
 				   {"UUID":"B9","NAME":"互助直通车","PID":"A1","PAGEURL":"share/sh_hzztc.html"},
 				   {"UUID":"B9","NAME":"首页","PID":"A2","SELECTED":true,"PAGEURL":"audit/leader_index.html"},
 				   {"UUID":"B3","NAME":"审计计划","PID":"A2","PAGEURL":"audit/au_sjjh.html"},
-				   {"UUID":"B1","NAME":"审计单重要性","PID":"A2","PAGEURL":"admin/ad_sjdzyx.html"},
+				   {"UUID":"B1","NAME":"审计要素重要性","PID":"A2","PAGEURL":"admin/ad_sjdzyx.html"},
 				   {"UUID":"B3","NAME":"系统构型","PID":"A2","PAGEURL":"audit/au_xtgx.html"},
 				   {"UUID":"B3","NAME":"专项审计","PID":"A2","PAGEURL":"audit/au_zxsj.html"},
 				   {"UUID":"B3","NAME":"复核验证","PID":"A2","PAGEURL":"audit/au_fhyz.html"},

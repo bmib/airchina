@@ -1,0 +1,670 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE 8]</span>> <html lang="en" class="ie8"> <![endif]</span>-->
+<!--[if IE 9]</span>> <html lang="en" class="ie9"> <![endif]</span>-->
+<!--[if !IE]</span>><!--> <html lang="en"> <!--<![endif]</span>-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>国航被审计单位航空安全监管平台-系统构型</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css"/>
+    <link href="../media/css/style.css" rel="style" type="text/css"/>
+	<script src="../media/js/jquery-1.10.1.min.js" type="text/javascript"></script>   
+	<script src="../media/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+
+
+<!--以上是页面文件加载，直接拷贝使用，不要修改-->
+<script>
+$(document).ready(function() {
+	var winH = $(window).height() - 100;
+	$("#accordion").css('height', winH + 'px');
+	$("#wenti").css('height', winH + 'px');
+	$("#a3").css('height', winH + 'px');
+	$("#a4").css('height', winH + 'px');
+});
+</script>
+</head>
+<body>
+<div class="portlet box">
+    <div class="portlet-body">
+
+      <div class="tab-content">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="width:50%; padding:10px;" valign="top">
+                <div class="form-inline alert alert-info"><label>统计被评估单位本次与上次的评估得分</label>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div class="tab-content" style="border:1px solid #ddd;">
+                    <img src="../images/tj.png" height="60"><br><br>
+                    <div style="overflow: inherit; height:30px;">
+                    <table class="table">
+                        <thead>
+                              <tr>
+                                  <th class="center" style=" width:80px;">被评估单位</th>
+                                  <th class="center" style=" width:40px;">本次评估</th>
+                                  <th class="center" style=" width:180px;">得分为1的指标</th>
+                                  <th class="center" style=" width:40px;">上次评估</th>
+                                  <th class="center">得分为1的指标</th>
+                            </tr>
+                          </thead>
+                    </table>
+                    </div>
+                    <div style="overflow:auto; height:170px;">
+                  <table class="table table-hover">
+                      
+                          <tbody>
+                            <tr class="active">
+                                <td class="" style=" width:80px;">深圳航空</td>
+                                <td class="center" style=" width:40px;">3 分</td>
+                                <td class="" style=" width:180px;">
+                                	<dd>1.4 QAR典型超限事件万架次率</dd>
+                                    <dd>1.1 事故征候</dd>
+                                    <dd>2.2.3 重复问题解决</dd>
+                                </td>
+                                <td class="center" style=" width:40px;">4 分</td>
+                                <td class="">
+                                	<dd>1.4 QAR典型超限事件万架次率</dd>
+                                </td>
+                            </tr>
+                            <tr class="active">
+                                <td class="">山东航空</td>
+                                <td class="center">3 分</td>
+                                <td class="">
+                                    <dd>1.4 QAR典型超限事件万架次率</dd>
+                                    <dd>1.3 一般差错</dd>
+                                    <dd>2.2.3 重复问题解决</dd>
+                                </td>
+                                <td class="center">4 分</td>
+                                <td class=""><dd>1.3 一般差错</dd></td>
+                            </tr>
+                            <tr class="active">
+                                <td class="">大连航空</td>
+                                <td class="center">4 分</td>
+                                <td class=""><dd>1.3 一般差错</dd></td>
+                                <td class="center">3 分</td>
+                                <td class="">
+                                	<dd>1.4 QAR典型超限事件万架次率</dd>
+                                    <dd>1.1 事故征候</dd>
+                                </td>
+                            </tr>
+                            <tr class="active">
+                                <td class="">沈阳航空</td>
+                                <td class="center">2 分</td>
+                                <td class="">
+                                	<dd>1.4 QAR典型超限事件万架次率</dd>
+                                    <dd>1.1 事故征候</dd>
+                                    <dd>1.3 一般差错</dd>
+                                    <dd>2.2.3 重复问题解决</dd>
+                                </td>
+                                <td class="center">4 分</td>
+                                <td class=""><dd>1.3 一般差错</dd></td>
+                            </tr>
+                            <tr class="active">
+                                <td class="">内蒙古航空</td>
+                                <td class="center">1 分</td>
+                                <td class="">
+                                	<dd>1.4 QAR典型超限事件万架次率</dd>
+                                    <dd>1.1 事故征候</dd>
+                                    <dd>1.2 严重差错</dd>
+                                    <dd>1.3 一般差错</dd>
+                                    <dd>2.2.3 重复问题解决</dd>
+                                </td>
+                                <td class="center">4 分</td>
+                                <td class=""><dd>1.3 一般差错</dd></td>
+                            </tr>
+                            <tr class="active">
+                                <td class="">澳门航空</td>
+                                <td class="center">4 分</td>
+                                <td class=""><dd>1.3 一般差错</dd></td>
+                                <td class="center">3 分</td>
+                                <td class="">
+                                	<dd>1.4 QAR典型超限事件万架次率</dd>
+                                    <dd>1.3 一般差错</dd>
+                                    <dd>2.2.3 重复问题解决</dd>
+                                </td>
+                            </tr>
+                          </tbody>
+                 </table>
+                 </div>
+                </div>
+            </td>
+            <td style="width:50%; padding:10px;" valign="top">
+            <div class="form-inline alert alert-info"><label>按照指标得分统计对应单位</label>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio line">
+                <input type="radio" name="optionsRadios2" value="option1" />
+                1分
+                </label>
+                <label class="radio line">
+                <input type="radio" name="optionsRadios2" value="option2" checked />
+                2分
+                </label>  
+                <label class="radio line">
+                <input type="radio" name="optionsRadios2" value="option2" />
+                3分
+                </label>
+                <label class="radio line">
+                <input type="radio" name="optionsRadios2" value="option2" />
+                4分
+                </label>
+           </div>
+               <div class="tab-content" style="border:1px solid #ddd;">
+                 <img src="../images/bt.png" width="547" height="60"><br><br>
+                 <div style="overflow: inherit; height:30px;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                              <th class="center" style="width:190px;">指标名称</th>
+                                <th class="center">航空公司</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    </div>
+                    <div style="overflow:auto; height:170px;">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                              <td style="width:190px;">1.4 QAR典型超限事件万架次率</td>
+                              <td>深圳航空、山东航空、大连航空、沈阳航空、内蒙古航空、澳门航空</td>
+                            </tr>
+                            <tr>
+                              <td>1.1 事故征候</td>
+                              <td>深圳航空、山东航空、大连航空、内蒙古航空、澳门航空</td>
+                            </tr>
+                            <tr>
+                              <td>1.3 一般差错</td>
+                              <td>深圳航空、山东航空、大连航空、澳门航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.2.3 重复问题解决</td>
+                              <td>大连航空、沈阳航空、内蒙古航空、澳门航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.2.4.1 信息</td>
+                              <td>山东航空、大连航空、内蒙古航空、澳门航空</td>
+                            </tr>
+                            <tr>
+                              <td>1.2 严重差错</td>
+                              <td>深圳航空、沈阳航空、内蒙古航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.1 定期审计</td>
+                              <td>沈阳航空、内蒙古航空、澳门航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.2.2 干部状态</td>
+                              <td>深圳航空、内蒙古航空、澳门航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.2.4.2 调查</td>
+                              <td>深圳航空、沈阳航空、内蒙古航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.2.4.3 检查</td>
+                              <td>山东航空、大连航空、澳门航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.2.1 规模和速度</td>
+                              <td>沈阳航空、内蒙古航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.2.4.4 QAR</td>
+                              <td>内蒙古航空、大连航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.2.4.5 例会</td>
+                              <td>沈阳航空、大连航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.2.4.6 培训 </td>
+                              <td>山东航空、内蒙古航空</td>
+                            </tr>
+                            <tr>
+                              <td>2.2.4.7 风险</td>
+                              <td>沈阳航空、大连航空</td>
+                            </tr>
+                          <tr class="active">
+                            <td class="active">2.2.4.8 考核体系</td>
+                              <td>山东航空、沈阳航空</td>
+                            </tr>
+                        </tbody>
+               </table>
+                </div>
+                </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+	</div>
+</div>
+ </body>
+</html>
+
+<!--说明-->
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog middle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    安全绩效评估</h4>
+            </div>
+            <div class="form-inline alert alert-info"><strong>被评估单位:</strong>山东航空公司，&nbsp;&nbsp;&nbsp;&nbsp;被评估单位联系人：</strong>张三，&nbsp;&nbsp;&nbsp;&nbsp;<strong>评估人：</strong>王岩，&nbsp;&nbsp;&nbsp;&nbsp;<strong>评估日期：</strong>2015年6月10日</div>
+            <div class="modal-body" style="height:350px;">
+                <table class="table table-hover">
+                  <thead>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class="left" style=" text-align:left !important; padding-left:50px;">指标名称</th>
+                      <th class="center">得分</th>
+                      <th class="center"  style="width:200px;">评估说明</th>
+                    </tr>
+                    <tr class="oneb">
+                      <td class="left one"><span style="color:#999;">[一级]</span> 1 指标类</td>
+                      <td class="center">&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr class="towb">
+                      <td class="left tow"><span style="color:#999;">[二级]</span> 1.1 事故征候</td>
+                      <td class="center form-inline">
+                       <label class="radio line">
+                        <input type="radio" name="optionsRadios2" value="option1" />
+                        1分
+                        </label>
+                        <label class="radio line">
+                        <input type="radio" name="optionsRadios2" value="option2" />
+                        2分
+                        </label>  
+                        <label class="radio line">
+                        <input type="radio" name="optionsRadios2" value="option2" />
+                        3分
+                        </label> 
+                        <label class="radio line">
+                        <input type="radio" name="optionsRadios2" value="option2" />
+                        4分
+                        </label> 
+                       	<label><button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button></label>
+                        </td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr class="towb">
+                      <tdclass="left tow"><span style="color:#999;">[二级]</span> 1.2 严重差错</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="a2" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a2" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a2" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a2" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                      </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr class="towb">
+                      <tdclass="left tow"><span style="color:#999;">[二级]</span> 1.3 一般差错</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="o2" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="o2" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="o2" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="o2" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                      </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr class="towb">
+                      <tdclass="left tow"><span style="color:#999;">[二级]</span> 1.4 QAR典型超限事件万架次率</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="a3" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a3" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a3" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a3" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr class="oneb">
+                      <td class="left one"><span style="color:#999;">[一级]</span> 2 过程类</td>
+                      <td class="center">&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr class="towb">
+                      <tdclass="left tow" ><span style="color:#999;">[二级]</span> 2.1 定期审计</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="a4" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a4" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a4" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a4" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr class="towb">
+                      <tdclass="left tow" ><span style="color:#999;">[二级]</span> 2.2 日常监管</td>
+                      <td class="center">&nbsp;</td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr class="threeb">
+                      <tdclass="left three" ><span style="color:#999;">[三级]</span> 2.2.1 规模和速度</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="a5" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a5" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a5" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a5" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr class="threeb">
+                      <tdclass="left three" ><span style="color:#999;">[三级]</span> 2.2.2 干部状态</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="a6" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a6" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a6" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a6" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr class="threeb">
+                      <tdclass="left three" ><span style="color:#999;">[三级]</span> 2.2.3 重复问题解决</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="a7" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a7" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a7" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a7" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr class="threeb">
+                      <tdclass="left three" ><span style="color:#999;">[三级]</span> 2.2.4 安全管理体系</td>
+                      <td class="center">&nbsp;</td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr class="fourb">
+                      <tdclass="left four" ><span style="color:#999;">[四级]</span> 2.2.4.1 信息</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="a8" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a8" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a8" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a8" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr class="fourb">
+                      <tdclass="left four" ><span style="color:#999;">[四级]</span> 2.2.4.2 调查</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="a9" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a9" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a9" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="a9" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                      <tdclass="left four" ><span style="color:#999;">[四级]</span> 2.2.4.3 QAR</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="aa9" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="aa9" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="aa9" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="aa9" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                      <td class="left four"><span style="color:#999;">[四级]</span> 2.2.4.4 检查</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="aq9" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="aq9" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="aq9" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="aq9" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                      <td class="left four"><span style="color:#999;">[四级]</span> 2.2.4.5 例会</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="as9" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="as9" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="as9" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="as9" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                      <td class="left four"><span style="color:#999;">[四级]</span> 2.2.4.6 培训&nbsp; </td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="ad9" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="ad9" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="ad9" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="ad9" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                      <td class="left four"><span style="color:#999;">[四级]</span> 2.2.4.7 风险</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="o2" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="af9" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="af9" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="af9" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                      <td class="left four"><span style="color:#999;">[四级]</span> 2.2.4.8 考核体系</td>
+                      <td class="center form-inline"><label class="radio line">
+                        <input type="radio" name="ag9" value="option1" />
+                        1分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="ag9" value="option2" />
+                          2分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="ag9" value="option2" />
+                          3分 </label>
+                        <label class="radio line">
+                          <input type="radio" name="ag9" value="option2" />
+                          4分 </label>
+                        <label>
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">?</button>
+                        </label></td>
+                      <td><textarea class="large span3" rows="1"></textarea></td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+            </div>
+            <div class="modal-footer center">
+            <button type="button" class="btn">
+                    保存</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">
+                    提交</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!---->
+<div id="myModal-2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    指标说明</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                   <thead>
+                   		 <tr>
+                            <th class="right" style="width: 100px;">
+                                上级指标名称：
+                            </th>
+                            <th class="left" style="text-align:left !important;">
+                                指标类
+                            </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+						<tr>
+                            <td class="right" style="width: 100px;">
+                                指标名称：
+                            </td>
+                            <td>
+                                事故征候
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right" style="width: 100px;">
+                                评分标准：
+                            </td>
+                            <td>
+                                评分标准说明
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right" style="width: 100px;">
+                                备注：
+                            </td>
+                            <td>
+                                备注说明
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>

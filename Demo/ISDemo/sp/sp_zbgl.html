@@ -1,0 +1,878 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE 8]</span>> <html lang="en" class="ie8"> <![endif]</span>-->
+<!--[if IE 9]</span>> <html lang="en" class="ie9"> <![endif]</span>-->
+<!--[if !IE]</span>><!--> <html lang="en"> <!--<![endif]</span>-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8" />
+	<title>国航被审计单位航空安全监管平台-系统构型</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../media/css/mystyle.css" rel="stylesheet" type="text/css"/>
+    <link href="../media/css/style.css" rel="style" type="text/css"/>
+	<script src="../media/js/jquery-1.10.1.min.js" type="text/javascript"></script>   
+	<script src="../media/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+
+
+<!--以上是页面文件加载，直接拷贝使用，不要修改-->
+<script>
+$(document).ready(function() {
+	var winH = $(window).height() - 100;
+	$("#accordion").css('height', winH + 'px');
+	$("#wenti").css('height', winH + 'px');
+	$("#a3").css('height', winH + 'px');
+	$("#a4").css('height', winH + 'px');
+});
+</script>
+</head>
+<body>
+<div class="portlet box">
+    <div class="portlet-body">
+          <div class="alert alert-info" style="margin-bottom:5px;">航空公司安全运行能力评估指标及权重&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-mini btn-info" data-toggle="modal" data-target="#myModal-1">增加一级</button></div>
+          
+      <div class="tab-content">
+            <div style="overflow-y:scroll;  height:450px;">
+                <table class="table table-hover">
+                    <thead>
+
+                    <tbody>
+                        <tr>
+                          <th class="left" style=" text-align:left !important; padding-left:50px;">指标名称</th>
+                          <th class="left" style="width:300px; text-align:left !important; padding-left:50px;">操作</th>
+                          <th class="center" style="width:150px; text-align:left !important; padding-left:50px;">指标权重</th>
+                        </tr>
+                        <tr class="oneb">
+                            <td class="left one"><span style="color:#999;">[一级]</span> 1 指标类</td>
+                            <td class="left">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-1">修改</button>
+                              <button class="btn btn-mini">删除</button>
+                              <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">增加二级</button>
+                            </span></td>
+                            <td class="center">50%<span style=" padding-left:20px;">
+                              <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-a">设置权重</button>
+                            </span></td>
+                        </tr>
+                        <tr class="towb">
+                          <td class="left tow"><span style="color:#999;">[二级]</span> 1.1 事故征候</td>
+                          <td class="left">
+                          <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-2">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加三级</button>
+                          </span></td>
+                          <td class="center">40%<span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-b">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="towb">
+                          <td align="left"class="left tow"><span style="color:#999;">[二级]</span> 1.2 严重差错</td>
+                          <td align="left"class="left">
+                          <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加三级</button>
+                          </span></td>
+                          <td class="center">30%<span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-b">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="towb">
+                          <td align="left"class="left tow"><span style="color:#999;">[二级]</span> 1.3 一般差错</td>
+                          <td align="left"class="left">
+                          <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加三级</button>
+                          </span></td>
+                          <td class="center">20%<span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-b">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="towb">
+                          <td align="left"class="left tow"><span style="color:#999;">[二级]</span> 1.4 QAR典型超限事件万架次率</td>
+                          <td align="left"class="left">
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加三级</button>
+                          </span></td>
+                          <td class="center">10%<span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-b">设置权重</button>
+                          </span></td>
+                        </tr>
+                        
+                        <tr class="oneb">
+                          <td class="left one"><span style="color:#999;">[一级]</span> 2 过程类</td>
+                          <td class="left">
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加二级</button>
+                          </span></td>
+                          <td class="center">50%<span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-a">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="towb">
+                          <td align="left"class="left tow" ><span style="color:#999;">[二级]</span> 2.1 定期审计</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加三级</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-c">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="towb">
+                          <td align="left"class="left tow" ><span style="color:#999;">[二级]</span> 2.2 日常监管</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加三级</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-c">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="threeb">
+                          <td align="left"class="left three" ><span style="color:#999;">[三级]</span> 2.2.1 规模和速度</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加四级</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-d">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="threeb">
+                          <td align="left"class="left three" ><span style="color:#999;">[三级]</span> 2.2.2 干部状态</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加四级</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-d">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="threeb">
+                          <td align="left"class="left three" ><span style="color:#999;">[三级]</span> 2.2.3 重复问题解决</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加四级</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-d">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="threeb">
+                          <td align="left"class="left three" ><span style="color:#999;">[三级]</span> 2.2.4 安全管理体系</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                            <button class="btn btn-mini">增加四级</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-d">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="fourb">
+                          <td align="left"class="left four" ><span style="color:#999;">[四级]</span> 2.2.4.1 信息</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-e">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="fourb">
+                          <td align="left"class="left four" ><span style="color:#999;">[四级]</span> 2.2.4.2 调查</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-e">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td align="left"class="left four" ><span style="color:#999;">[四级]</span> 2.2.4.3 QAR</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-e">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="fourb">
+                          <td align="left"class="left four" ><span style="color:#999;">[四级]</span> 2.2.4.4 检查</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-e">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td align="left"class="left four" ><span style="color:#999;">[四级]</span> 2.2.4.5 例会</td>
+                          <td align="left"class="left" >
+                          <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-e">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="fourb">
+                          <td align="left"class="left four" ><span style="color:#999;">[四级]</span> 2.2.4.6 培训  </td>
+                          <td align="left"class="left" >
+                          <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                          </span>  </td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-e">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td align="left"class="left four" ><span style="color:#999;">[四级]</span> 2.2.4.7 风险</td>
+                          <td align="left"class="left" >
+                          <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-e">设置权重</button>
+                          </span></td>
+                        </tr>
+                        <tr class="fourb">
+                          <td align="left"class="left four" ><span style="color:#999;">[四级]</span> 2.2.4.8 考核体系</td>
+                          <td align="left"class="left" >
+                            <button class="btn btn-mini">修改</button>
+                            <button class="btn btn-mini">删除</button>
+                          </span></td>
+                          <td class="center" ><span style=" padding-left:20px;">
+                            <button class="btn btn-mini" data-toggle="modal" data-target="#myModal-e">设置权重</button>
+                          </span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+      </div>
+	</div>
+</div>
+ </body>
+</html>
+<div id="myModal-1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    添加一级指标</h4>
+            </div>
+            <div class="modal-body">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="right" style="width: 100px;">
+                                指标名称：
+                            </td>
+                            <td>
+                                <input type="text" placeholder="指标名称" class="m-wrap span2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right" style="width: 100px;">
+                                评分标准：
+                            </td>
+                            <td>
+                                <textarea class="medium m-wrap" rows="3">说明</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right" style="width: 100px;">
+                                备注：
+                            </td>
+                            <td>
+                                <textarea class="medium m-wrap" rows="3">备注</textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    确定</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal-2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    添加二级指标</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                   <thead>
+                   		 <tr>
+                            <th class="right" style="width: 100px;">
+                                上级指标名称：
+                            </th>
+                            <th class="left" style="text-align:left !important;">
+                                1 指标类
+                            </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                            <td class="right" style="width: 100px;">
+                                二级指标名称：
+                            </td>
+                            <td>
+                                <input type="text" placeholder="指标名称" class="m-wrap span2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right" style="width: 100px;">
+                                评分标准：
+                            </td>
+                            <td>
+                                <textarea class="medium m-wrap" rows="3">说明</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right" style="width: 100px;">
+                                备注：
+                            </td>
+                            <td>
+                                <textarea class="medium m-wrap" rows="3">备注</textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    确定</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal-a" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog small">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    一级指标－权重设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info form-inline" style="margin-bottom:1px;">一级指标权重<span style="padding-left:50px;float:right;"> <button class="btn btn-mini" title="查看输入标准"  data-toggle="modal" data-target="#myModal-txt">输入标准</button></span></div>
+                  <table class="table table-bordered">
+                      <thead>
+                      <tbody>
+                        <tr>
+                          <th class="center">指标名称</th>
+                          <th class="center"><span style="color:#999;">[一级]</span> 1 指标类</th>
+                          <th class="center"><span style="color:#999;">[一级]</span> 2 过程类</th>
+                          <th class="center">权重(%)</th>
+                          <th class="center">调整权重(%)</th>
+                        </tr>
+                        <tr>
+                          <td class="left th"><span style="color:#999;">[一级]</span> 1 指标类</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center">50</td>
+                          <td class="center"><input type="text" placeholder="" value="50" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr>
+                          <td class="left th"><span style="color:#999;">[一级]</span> 2 过程类</td>
+                          <td class="center">0.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center">50</td>
+                          <td class="center"><input type="text" placeholder="" value="50" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="warning">
+                          <td class="center"><strong>合计</strong></td>
+                          <td class="center">1.00</td>
+                          <td class="center">1.00</td>
+                          <td class="center">最大特征根＝2<br>一致性指标＝0</td>
+                          <td class="center">100<br>＊调整后必须为“100”</td>
+                        </tr>
+                      </tbody>
+                    </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal-b" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog middle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    二级指标－权重设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info form-inline" style="margin-bottom:1px;"><span style="color:#999;">[一级]</span>指标类：二级指标权重<span style="padding-left:50px;float:right;"> <button class="btn btn-mini" title="查看输入标准"  data-toggle="modal" data-target="#myModal-txt">输入标准</button></span></div>
+                <table class="table table-bordered">
+                    <thead>
+
+                    <tbody>
+                        <tr>
+                          <th class="center" style=" text-align:left !important; padding-left:20px;">指标名称</th>
+                          <th class="center" style=""><span style="color:#999;">[二级]</span> 1.1 事故征候</th>
+                          <th class="center" style=""><span style="color:#999;">[二级]</span> 1.2 严重差错</th>
+                          <th class="center" style=""><span style="color:#999;">[二级]</span> 1.3 一般差错</th>
+                          <th class="center" style=""><span style="color:#999;">[二级]</span> 1.4 QAR典型超限事件万架次率</span></th>
+                          <th class="center">权重(%)</th>
+                          <th class="center">调整权重(%)</th>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[二级]</span> 1.1 事故征候</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center td">25</td>
+                          <td class="center"><input type="text" placeholder="" value="25" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[二级]</span> 1.2 严重差错</td>
+                          <td class="center">0.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center td">25</td>
+                          <td class="center"><input type="text" placeholder="" value="25" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[二级]</span> 1.3 一般差错</td>
+                          <td class="center">0.00</td>
+                          <td class="center">0.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center td">25</td>
+                          <td class="center"><input type="text" placeholder="" value="25" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[二级]</span> 1.4 QAR典型超限事件万架次率</td>
+                          <td class="center">0.00</td>
+                          <td class="center">0.00</td>
+                          <td class="center">0.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">25</td>
+                          <td class="center"><input type="text" placeholder="" value="25" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="warning">
+                          <td class="center"><strong>合计</strong></td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center">最大特征根＝4<br>一致性指标＝0</td>
+                          <td class="center">100<br>* 调整后必须为“100”</td>
+                        </tr>
+                    </tbody>
+                </table>
+              
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal-c" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog middle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    二级指标－权重设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info form-inline" style="margin-bottom:1px;"><span style="color:#999;">[一级]</span>过程类：二级指标权重<span style="padding-left:50px;float:right;"> <button class="btn btn-mini" title="查看输入标准"  data-toggle="modal" data-target="#myModal-txt">输入标准</button></span></div>
+                  <table class="table table-bordered">
+                      <thead>
+                      <tbody>
+                        <tr>
+                          <th class="center">指标名称</th>
+                          <th class="center"><span style="color:#999;">[二级]</span> 2.1 定期审计</th>
+                          <th class="center"><span style="color:#999;">[二级]</span> 2.2 日常监管</th>
+                          <th class="center">权重(%)</th>
+                          <th class="center">调整权重(%)</th>
+                        </tr>
+                        <tr>
+                          <td class="left th"><span style="color:#999;">[二级]</span> 2.1 定期审计</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center">50</td>
+                          <td class="center"><input type="text" placeholder="" value="50" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr>
+                          <td class="left th"><span style="color:#999;">[二级]</span> 2.2 日常监管</td>
+                          <td class="center">0.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center">50</td>
+                          <td class="center"><input type="text" placeholder="" value="50" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="warning">
+                          <td class="center"><strong>合计</strong></td>
+                          <td class="center">1.00</td>
+                          <td class="center">1.00</td>
+                          <td class="center">最大特征根＝2<br>一致性指标＝0</td>
+                          <td class="center">100<br>* 调整后必须为“100”</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+              
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal-d" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog middle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    三级指标－权重设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info form-inline" style="margin-bottom:1px;"><span style="color:#999;">[一级]</span>过程类\<span style="color:#999;">[二级]</span>日常监管：三级级指标权重<span style="padding-left:50px;float:right;"> <button class="btn btn-mini" title="查看输入标准"  data-toggle="modal" data-target="#myModal-txt">输入标准</button></span></div>
+                <table class="table table-bordered">
+                    <thead>
+
+                    <tbody>
+                        <tr>
+                          <th class="center" style=" text-align:left !important; padding-left:20px;">指标名称</th>
+                          <th class="center" style=""><span style="color:#999;">[三级]</span> 2.2.1 规模和速度</th>
+                          <th class="center" style=""><span style="color:#999;">[三级]</span> 2.2.2 干部状态</th>
+                          <th class="center" style=""><span style="color:#999;">[三级]</span> 2.2.3 重复问题解决</th>
+                          <th class="center" style=""><span style="color:#999;">[三级]</span> 2.2.4 安全管理体系</span></th>
+                          <th class="center">权重(%)</th>
+                          <th class="center">调整权重(%)</th>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[三级]</span> 2.2.1 规模和速度</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center">25</td>
+                          <td class="center"><input type="text" placeholder="" value="25" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[三级]</span> 2.2.2干部状态</td>
+                          <td class="center">0.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center">25</td>
+                          <td class="center"><input type="text" placeholder="" value="25" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[三级]</span> 2.2.3 重复问题解决</td>
+                          <td class="center">0.00</td>
+                          <td class="center">0.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center">25</td>
+                          <td class="center"><input type="text" placeholder="" value="25" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[三级]</span> 2.2.4安全管理体系</td>
+                          <td class="center">0.00</td>
+                          <td class="center">0.00</td>
+                          <td class="center">0.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center">25</td>
+                          <td class="center"><input type="text" placeholder="" value="25" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="warning">
+                          <td class="center"><strong>合计</strong></td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center">最大特征根＝4<br>一致性指标＝0</td>
+                          <td class="center">100<br>* 调整后必须为“100”</td>
+                        </tr>
+                    </tbody>
+                </table>
+              
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="myModal-e" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog big">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    四级指标－权重设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info form-inline" style="margin-bottom:1px;"><span style="color:#999;">[一级]</span>过程类\<span style="color:#999;">[二级]</span>日常监管\<span style="color:#999;">[三级]</span>安全管理体系：四级级指标权重<span style="padding-left:50px; float:right;"> <button class="btn btn-mini" title="查看输入标准"  data-toggle="modal" data-target="#myModal-txt">输入标准</button></span></div>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                          <th class="center" style=" text-align:left !important; padding-left:20px;">指标名称</th>
+                          <th class="center" style=""><span style="color:#999;">[四级]</span> 2.2.4.1 信息</th>
+                          <th class="center" style=""><span style="color:#999;">[四级</span> 2.2.4.2 调查</th>
+                          <th class="center" style=""><span style="color:#999;">[四级]</span> 2.2.4.3 QAR</th>
+                          <th class="center" style=""><span style="color:#999;">[四级]</span> 2.2.4.4 检查</span></th>
+                          <th class="center" style=""><span style="color:#999;">[四级]</span> 2.2.4.5 例会</span></th>
+                          <th class="center" style=""><span style="color:#999;">[四级]</span> 2.2.4.6 培训</span></th>
+                          <th class="center" style=""><span style="color:#999;">[四级]</span> 2.2.4.7 风险</span></th>
+                          <th class="center" style=""><span style="color:#999;">[四级]</span> 2.2.4.8 考核体系</span></th>
+                          <th class="center">权重(%)</th>
+                          <th class="center">调整权重(%)</th>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[四级]</span> 2.2.4.1 信息</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center td">13</td>
+                          <td class="center"><input type="text" placeholder="" value="13" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[四级]</span> 2.2.4.2 调查</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center td">13</td>
+                          <td class="center"><input type="text" placeholder="" value="13" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[四级]</span> 2.2.4.3 QAR</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入“0.1-9”" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center td">13</td>
+                          <td class="center"><input type="text" placeholder="" value="13" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[四级]</span> 2.2.4.4 检查</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center td">13</td>
+                          <td class="center"><input type="text" placeholder="" value="13" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[四级]</span> 2.2.4.5 例会</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center td">12</td>
+                          <td class="center"><input type="text" placeholder="" value="12" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[四级]</span> 2.2.4.6 培训</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center td">12</td>
+                          <td class="center"><input type="text" placeholder="" value="12" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[四级]</span> 2.2.4.7 风险</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center td">1.00</td>
+                          <td class="center"><input type="text" placeholder="输入&ldquo;0.1-9&rdquo;" class="m-wrap input-mini"/></td>
+                          <td class="center td">12</td>
+                          <td class="center"><input type="text" placeholder="" value="12" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="">
+                          <td class="left th"><span style="color:#999;">[四级]</span> 2.2.4.8 考核体系</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center">&nbsp;</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">12</td>
+                          <td class="center"><input type="text" placeholder="" value="12" class="m-wrap input-mini"/></td>
+                        </tr>
+                        <tr class="warning">
+                          <td class="center"><strong>合计</strong></td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center td">1.00</td>
+                          <td class="center">最大特征根＝8<br>一致性指标＝0</td>
+                          <td class="center">100<br>* 调整后必须为“100”</td>
+                        </tr>
+                    </tbody>
+                </table>
+              
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    保存</button>
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--说明-->
+<div id="myModal-txt" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;</button>
+                <!--窗口title-->
+                <h4 class="modal-title" id="H4">
+                    1～9标度法</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                      <tr>
+                        <td >
+                          标度 </td>
+                        <td >含义</td>
+                      </tr>
+                      <tr>
+                        <td >1</td>
+                        <td >表示两个因素相比，具有相同重要性</td>
+                      </tr>
+                      <tr>
+                        <td >3</td>
+                        <td >表示两个因素相比，前者比后者稍重要</td>
+                      </tr>
+                      <tr>
+                        <td >5</td>
+                        <td >表示两个因素相比，前者比后者明显重要</td>
+                      </tr>
+                      <tr>
+                        <td >7</td>
+                        <td >表示两个因素相比，前者比后者强烈重要</td>
+                      </tr>
+                      <tr>
+                        <td >9</td>
+                        <td >表示两个因素相比，前者比后者极端重要</td>
+                      </tr>
+                      <tr>
+                        <td >2、4、6、8</td>
+                        <td >表示上述相邻判断的中间值</td>
+                      </tr>
+                    </table>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">
+                    关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!---->

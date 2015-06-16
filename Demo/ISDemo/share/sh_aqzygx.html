@@ -65,7 +65,7 @@
 						id: "sh_gzbzzl_modify",
 						content: 'url:share/sh_gzbzzl_modify.html',
 						width: 650,
-						height: 350,
+						height: 390,
 						title: '修改规章标准',
 						button: [{
 							name: '保存',
@@ -83,7 +83,7 @@
 						id: "ad_gz_add",
 						content: 'url:share/sh_gzbzzl_modify.html',
 						width: 650,
-						height: 350,
+						height: 390,
 						title: '新增规章标准',
 						button: [{
 							name: '保存',
@@ -213,12 +213,12 @@
 						id: "sh_scgz_modify",
 						content: 'url:share/sh_scgz_modify.html',
 						width: 390,
-						height: 200,
-						title: '修改手册规章',
+						height: 350,
+						title: '修改手册/程序',
 						button: [{
 							name: '保存',
 							callback: function() {
-								$.jBox.tip('手册规章修改成功！');
+								$.jBox.tip('手册/程序修改成功！');
 							},
 							focus: true
 						}, {
@@ -231,12 +231,12 @@
 						id: "ad_sc_add",
 						content: 'url:share/sh_scgz_modify.html',
 						width: 390,
-						height: 200,
-						title: '新增手册规章',
+						height: 350,
+						title: '新增手册/程序',
 						button: [{
 							name: '保存',
 							callback: function() {
-								$.jBox.tip('手册规章保存成功！');
+								$.jBox.tip('手册/程序保存成功！');
 							},
 							focus: true
 						}, {
@@ -324,7 +324,7 @@
             var id = $("input:checked");
             if(id.length == 0)
             {
-                $.jBox.tip("请选择要删除的手册规章！");
+                $.jBox.tip("请选择要删除的手册/程序！");
                 return;
             }
             else
@@ -342,15 +342,15 @@
                 <!--书签-->
                 <div class="tabbable tabbable-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab_1_1" data-toggle="tab">运行安全信息</a></li>
-                        <li><a href="#tab_1_2" data-toggle="tab">规章标准</a></li>
+                        <li class="active"><a href="#tab_1_2" data-toggle="tab">规章标准</a></li>
+                        <li><a href="#tab_1_6" data-toggle="tab">手册/程序</a></li>
+                        <li><a href="#tab_1_1" data-toggle="tab">运行安全信息</a></li>
                         <li><a href="#tab_1_3" data-toggle="tab">差错标准</a></li>
-                        <li><a href="#tab_1_4" data-toggle="tab">安全人员通讯录</a></li>
                         <li><a href="#tab_1_5" data-toggle="tab">安全培训</a></li>
-                        <li><a href="#tab_1_6" data-toggle="tab">手册规章</a></li>
+                        <li><a href="#tab_1_4" data-toggle="tab">安全人员通讯录</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane active" id="tab_1_1">
+                        <div class="tab-pane" id="tab_1_1">
                             <div class="form-inline">
                                 <label>运行安全信息类型：</label>
                                 <label>
@@ -370,6 +370,17 @@
                                 <label>
                                     <input class="textInput" style="width:140px"/>
                                 </label>
+                                <label>发布单位：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>航安部</option>
+                                            <option>深圳航空</option>
+                                            <option>北京航空</option>
+                                        </select>
+                                </label>
+                            </div>
+                            <div class="form-inline">
                                 <label>发布日期：</label>
                                 <label>
                                     <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
@@ -396,7 +407,7 @@
                         <th>标题</th>
                         <th>发布单位</th>
                         <th>发布人员</th>
-                        <th>发布日期</th>
+                        <th>发布时间</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -407,7 +418,7 @@
                         <td>运行安全信息1</td>
                         <td class="center">航安部</td>
                         <td class="center">李某</td>
-                        <td class="center">2015年05月11日</td>
+                        <td class="center">2015-05-11 10:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify">修改</a>
                         </td>
@@ -418,7 +429,7 @@
                         <td>运行安全信息2</td>
                         <td class="center">航安部</td>
                         <td class="center">钱某</td>
-                        <td class="center">2015年05月10日</td>
+                        <td class="center">2015-05-10 10:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify">修改</a>
                         </td>
@@ -429,7 +440,7 @@
                         <td>运行安全信息3</td>
                         <td class="center">航安部</td>
                         <td class="center">孙某</td>
-                        <td class="center">2015年05月09日</td>
+                        <td class="center">2015-05-09 10:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify">修改</a>
                         </td>
@@ -440,7 +451,7 @@
                         <td>运行安全信息4</td>
                         <td class="center">航安部</td>
                         <td class="center">赵某</td>
-                        <td class="center">2015年05月08日</td>
+                        <td class="center">2015-05-08 10:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify">修改</a>
                         </td>
@@ -451,7 +462,7 @@
                         <td>运行安全信息5</td>
                         <td class="center">航安部</td>
                         <td class="center">周某</td>
-                        <td class="center">2015年05月07日</td>
+                        <td class="center">2015-05-07 10:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify">修改</a>
                         </td>
@@ -462,7 +473,7 @@
                         <td>运行安全信息6</td>
                         <td class="center">航安部</td>
                         <td class="center">吴某</td>
-                        <td class="center">2015年05月06日</td>
+                        <td class="center">2015-05-06 10:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify">修改</a>
                         </td>
@@ -473,7 +484,7 @@
                         <td>运行安全信息7</td>
                         <td class="center">航安部</td>
                         <td class="center">郑某</td>
-                        <td class="center">2015年05月05日</td>
+                        <td class="center">2015-05-05 10:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify">修改</a>
                         </td>
@@ -484,15 +495,26 @@
                         <td>运行安全信息8</td>
                         <td class="center">航安部</td>
                         <td class="center">王某</td>
-                        <td class="center">2015年05月04日</td>
+                        <td class="center">2015-05-04 10:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify">修改</a>
                         </td>
                     </tr>
                 </tbody>
             </table></div></div>
+             <div class="pagination pagination-right pagination-small">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">末页</a></li> 
+                   </ul>
+                </div>
                         </div>
-                        <div class="tab-pane" id="tab_1_2">
+                        <div class="tab-pane active" id="tab_1_2">
                             <div class="form-inline">
                                 <label>规章标准类型：</label>
                                 <label>
@@ -510,6 +532,25 @@
                                 <label>
                                     <input class="textInput" style="width:140px"/>
                                 </label>
+                                <label>有效性：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>有效</option>
+                                            <option>失效</option>
+                                        </select>
+                                </label>
+                                <label>发布单位：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>航安部</option>
+                                            <option>深圳航空</option>
+                                            <option>北京航空</option>
+                                        </select>
+                                </label>
+                            </div>
+                            <div class="form-inline">
                                 <label>发布日期：</label>
                                 <label>
                                     <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
@@ -534,9 +575,10 @@
                         </th>
                         <th>规章标准类型</th>
                         <th>标题</th>
+                        <th>有效性</th>
                         <th>发布单位</th>
                         <th>发布人员</th>
-                        <th>发布日期</th>
+                        <th>发布时间</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -545,9 +587,10 @@
                         <td class="center"><input type="checkbox" id="gz_1"></td>
                         <td>法律法规</td>
                         <td>规章标准1</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">李某</td>
-                        <td class="center">2015年05月11日</td>
+                        <td class="center">2015-05-11 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify2">修改</a>
                         </td>
@@ -556,9 +599,10 @@
                         <td class="center"><input type="checkbox" id="gz_2"></td>
                         <td>安全条例</td>
                         <td>规章标准2</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">钱某</td>
-                        <td class="center">2015年05月10日</td>
+                        <td class="center">2015-05-10 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify2">修改</a>
                         </td>
@@ -567,9 +611,10 @@
                         <td class="center"><input type="checkbox" id="gz_3"></td>
                         <td>行业标准</td>
                         <td>规章标准3</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">孙某</td>
-                        <td class="center">2015年05月09日</td>
+                        <td class="center">2015-05-09 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify2">修改</a>
                         </td>
@@ -578,9 +623,10 @@
                         <td class="center"><input type="checkbox" id="gz_4"></td>
                         <td>CCAR规章</td>
                         <td>规章标准4</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">赵某</td>
-                        <td class="center">2015年05月08日</td>
+                        <td class="center">2015-05-08 10:31</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify2">修改</a>
                         </td>
@@ -589,9 +635,10 @@
                         <td class="center"><input type="checkbox" id="gz_5"></td>
                         <td>AC咨询通告</td>
                         <td>规章标准5</td>
+                        <td class="center">失效</td>
                         <td class="center">航安部</td>
                         <td class="center">周某</td>
-                        <td class="center">2015年05月07日</td>
+                        <td class="center">2015-05-07 11:07</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify2">修改</a>
                         </td>
@@ -600,15 +647,27 @@
                         <td class="center"><input type="checkbox" id="gz_6"></td>
                         <td>ICAO公约</td>
                         <td>规章标准6</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">吴某</td>
-                        <td class="center">2015年05月06日</td>
+                        <td class="center">2015-05-06 11:07</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify2">修改</a>
                         </td>
                     </tr>
                 </tbody>
             </table></div></div>
+             <div class="pagination pagination-right pagination-small">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">末页</a></li> 
+                   </ul>
+                </div>
                         </div>
                         <div class="tab-pane" id="tab_1_3">
                             <div class="form-inline">
@@ -627,6 +686,25 @@
                                 <label>
                                     <input class="textInput" style="width:140px"/>
                                 </label>
+                                <label>有效性：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>有效</option>
+                                            <option>失效</option>
+                                        </select>
+                                </label>
+                                <label>发布单位：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>航安部</option>
+                                            <option>深圳航空</option>
+                                            <option>北京航空</option>
+                                        </select>
+                                </label>
+                            </div>
+                            <div class="form-inline">
                                 <label>发布日期：</label>
                                 <label>
                                     <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
@@ -651,9 +729,11 @@
                         </th>
                         <th>差错标准类型</th>
                         <th>标题</th>
+                        <th>版本号</th>
+                        <th>有效性</th>
                         <th>发布单位</th>
                         <th>发布人员</th>
-                        <th>发布日期</th>
+                        <th>发布时间</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -662,9 +742,11 @@
                         <td class="center"><input type="checkbox" id="xc_1"></td>
                         <td>一般差错</td>
                         <td>差错标准1</td>
+                        <td class="center">1.0</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">李某</td>
-                        <td class="center">2015年05月11日</td>
+                        <td class="center">2015-05-11 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify3">修改</a>
                         </td>
@@ -673,9 +755,11 @@
                         <td class="center"><input type="checkbox" id="xc_2"></td>
                         <td>严重差错</td>
                         <td>差错标准2</td>
+                        <td class="center">2.0</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">钱某</td>
-                        <td class="center">2015年05月10日</td>
+                        <td class="center">2015-05-10 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify3">修改</a>
                         </td>
@@ -684,9 +768,11 @@
                         <td class="center"><input type="checkbox" id="xc_3"></td>
                         <td>航空器地面事故征候</td>
                         <td>差错标准3</td>
+                        <td class="center">1.1</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">孙某</td>
-                        <td class="center">2015年05月09日</td>
+                        <td class="center">2015-05-09 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify3">修改</a>
                         </td>
@@ -695,9 +781,11 @@
                         <td class="center"><input type="checkbox" id="xc_4"></td>
                         <td>运输航空一般事故征候</td>
                         <td>差错标准4</td>
+                        <td class="center">1.5</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">赵某</td>
-                        <td class="center">2015年05月08日</td>
+                        <td class="center">2015-05-08 10:31</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify3">修改</a>
                         </td>
@@ -706,19 +794,32 @@
                         <td class="center"><input type="checkbox" id="xc_5"></td>
                         <td>运输航空严重事故征候</td>
                         <td>差错标准5</td>
+                        <td class="center">1.0</td>
+                        <td class="center">失效</td>
                         <td class="center">航安部</td>
                         <td class="center">周某</td>
-                        <td class="center">2015年05月07日</td>
+                        <td class="center">2015-05-07 11:07</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify3">修改</a>
                         </td>
                     </tr>
                 </tbody>
             </table></div></div>
+             <div class="pagination pagination-right pagination-small">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">末页</a></li> 
+                   </ul>
+                </div>
                         </div>
                         <div class="tab-pane" id="tab_1_4">
                              <div class="form-inline">
-                                <label>部门：</label>
+                                <label>单位：</label>
                                 <label>
                                     <select class="inputTextS" style="width:180px">
                                             <option selected="selected">全部</option>
@@ -747,7 +848,7 @@
                         <th>
                             <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
                         </th>
-                        <th>部门</th>
+                        <th>单位</th>
                         <th>姓名</th>
                         <th>职务</th>
                         <th>办公电话</th>
@@ -819,6 +920,17 @@
                     </tr>
                 </tbody>
             </table></div></div>
+             <div class="pagination pagination-right pagination-small">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">末页</a></li> 
+                   </ul>
+                </div>
                         </div>
                         <div class="tab-pane" id="tab_1_5">
                             <div class="form-inline">
@@ -834,6 +946,17 @@
                                 <label>
                                     <input class="textInput" style="width:140px"/>
                                 </label>
+                                <label>发布单位：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>航安部</option>
+                                            <option>深圳航空</option>
+                                            <option>北京航空</option>
+                                        </select>
+                                </label>
+                            </div>
+                            <div class="form-inline">
                                 <label>发布日期：</label>
                                 <label>
                                     <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
@@ -860,7 +983,7 @@
                         <th>标题</th>
                         <th>发布单位</th>
                         <th>发布人员</th>
-                        <th>发布日期</th>
+                        <th>发布时间</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -871,7 +994,7 @@
                         <td>安全影视1</td>
                         <td class="center">航安部</td>
                         <td class="center">李某</td>
-                        <td class="center">2015年05月11日</td>
+                        <td class="center">2015-05-11 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify5">修改</a>
                         </td>
@@ -882,7 +1005,7 @@
                         <td>安全影视2</td>
                         <td class="center">航安部</td>
                         <td class="center">钱某</td>
-                        <td class="center">2015年05月10日</td>
+                        <td class="center">2015-05-10 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify5">修改</a>
                         </td>
@@ -893,7 +1016,7 @@
                         <td>安全影视3</td>
                         <td class="center">航安部</td>
                         <td class="center">孙某</td>
-                        <td class="center">2015年05月09日</td>
+                        <td class="center">2015-05-09 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify5">修改</a>
                         </td>
@@ -904,7 +1027,7 @@
                         <td>安全影视4</td>
                         <td class="center">航安部</td>
                         <td class="center">赵某</td>
-                        <td class="center">2015年05月08日</td>
+                        <td class="center">2015-05-08 10:31</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify5">修改</a>
                         </td>
@@ -915,13 +1038,24 @@
                         <td>安全影视5</td>
                         <td class="center">航安部</td>
                         <td class="center">周某</td>
-                        <td class="center">2015年05月07日</td>
+                        <td class="center">2015-05-07 11:07</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify5">修改</a>
                         </td>
                     </tr>
                 </tbody>
             </table></div></div>
+             <div class="pagination pagination-right pagination-small">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">末页</a></li> 
+                   </ul>
+                </div>
                         </div>
                         <div class="tab-pane" id="tab_1_6">
                             <div class="form-inline">
@@ -941,11 +1075,30 @@
                                 <label>
                                     <input class="textInput" style="width:140px"/>
                                 </label>
-                                <label>发布日期：</label>
+                                <label>生效日期：</label>
                                 <label>
-                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                                    <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})"/>
                             &nbsp;至&nbsp;
-                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+                          <input class="textInput" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})"/>
+                                </label>
+                            </div>
+                            <div class="form-inline">
+                                <label>有效性：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>有效</option>
+                                            <option>失效</option>
+                                        </select>
+                                </label>
+                                <label>发布单位：</label>
+                                <label>
+                                    <select class="inputTextS" style="width:180px">
+                                            <option selected="selected">全部</option>
+                                            <option>航安部</option>
+                                            <option>深圳航空</option>
+                                            <option>北京航空</option>
+                                        </select>
                                 </label>
                             <button type="button" class="btn btn-default"style="margin-left: 30px;">查询</button>
                             <button type="button" class="btn btn-default" id="ad_sc_add"
@@ -963,72 +1116,107 @@
                         <th>
                             <input type="checkbox" class="checkboxinlist" id="CHECKALL" name="CHECKALL"></input>
                         </th>
-                        <th>手册规章类型</th>
+                        <th>手册/程序类型</th>
                         <th>标题</th>
+                        <th>版本号</th>
+                        <th>修订号</th>
+                        <th>生效日期</th>
+                        <th>有效性</th>
                         <th>发布单位</th>
                         <th>发布人员</th>
-                        <th>发布日期</th>
+                        <th>发布时间</th>
                         <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="center"><input type="checkbox" id="sc_1"></td>
-                        <td>规章类型1</td>
-                        <td>手册规章1</td>
+                        <td>运行手册</td>
+                        <td>手册/程序1</td>
+                        <td class="center">2015年05月</td>
+                        <td class="center">02</td>
+                        <td class="center">2015年05月21日</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">李某</td>
-                        <td class="center">2015年05月11日</td>
+                        <td class="center">2015-05-11 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify6">修改</a>
                         </td>
                     </tr>
                     <tr>
                         <td class="center"><input type="checkbox" id="sc_2"></td>
-                        <td>规章类型2</td>
-                        <td>手册规章2</td>
+                        <td>工程手册</td>
+                        <td>手册/程序2</td>
+                        <td class="center">2015年04月</td>
+                        <td class="center">03</td>
+                        <td class="center">2015年05月12日</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">钱某</td>
-                        <td class="center">2015年05月10日</td>
+                        <td class="center">2015-05-10 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify6">修改</a>
                         </td>
                     </tr>
                     <tr>
                         <td class="center"><input type="checkbox" id="sc_3"></td>
-                        <td>规章类型3</td>
-                        <td>手册规章3</td>
+                        <td>航空安全管理手册</td>
+                        <td>手册/程序3</td>
+                        <td class="center">2015年03月</td>
+                        <td class="center">05</td>
+                        <td class="center">2015年05月01日</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">孙某</td>
-                        <td class="center">2015年05月09日</td>
+                        <td class="center">2015-05-09 11:21</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify6">修改</a>
                         </td>
                     </tr>
                     <tr>
                         <td class="center"><input type="checkbox" id="sc_4"></td>
-                        <td>规章类型4</td>
-                        <td>手册规章4</td>
+                        <td>站坪管理手册</td>
+                        <td>手册/程序4</td>
+                        <td class="center">2015年02月</td>
+                        <td class="center">01</td>
+                        <td class="center">2015年02月01日</td>
+                        <td class="center">失效</td>
                         <td class="center">航安部</td>
                         <td class="center">赵某</td>
-                        <td class="center">2015年05月08日</td>
+                        <td class="center">2015-05-08 10:31</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify6">修改</a>
                         </td>
                     </tr>
                     <tr>
                         <td class="center"><input type="checkbox" id="sc_5"></td>
-                        <td>规章类型5</td>
-                        <td>手册规章5</td>
+                        <td>乘务员管理手册</td>
+                        <td>手册/程序5</td>
+                        <td class="center">2015年01月</td>
+                        <td class="center">02</td>
+                        <td class="center">2015年03月01日</td>
+                        <td class="center">有效</td>
                         <td class="center">航安部</td>
                         <td class="center">周某</td>
-                        <td class="center">2015年05月07日</td>
+                        <td class="center">2015-05-07 11:07</td>
                         <td class="center">
                             <a  class="btn btn-mini" name="modify6">修改</a>
                         </td>
                     </tr>
                 </tbody>
             </table></div></div>
+             <div class="pagination pagination-right pagination-small">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">末页</a></li> 
+                   </ul>
+                </div>
                         </div>
                     </div>
                 </div>

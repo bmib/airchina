@@ -8,8 +8,9 @@
 
 //子系统数据
 var systemJson=[
-				{"UUID":"A0","NAME":"系统管理员"},
-				{"UUID":"A1","NAME":"审计管理员","SELECTED":true},
+				{"UUID":"A6","NAME":"安全绩效评估"},
+				{"UUID":"A0","NAME":"系统管理员","SELECTED":true},
+				{"UUID":"A1","NAME":"审计管理员"},
 				{"UUID":"A2","NAME":"公司审计组长"},
 				{"UUID":"A4","NAME":"公司审计专员"},
 				{"UUID":"A5","NAME":"被审计单位领导"},
@@ -17,7 +18,12 @@ var systemJson=[
 				];
 //菜单组数据
 var menuGroupJson=[
-				   //{"UUID":"B9","NAME":"首页","PID":"A0","SELECTED":true,"PAGEURL":"admin/index_temp.html"},
+				   {"UUID":"B1","NAME":"指标/权重管理","PID":"A6","PAGEURL":"sp/sp_zbgl.html"},
+				   //{"UUID":"B1","NAME":"权重管理","PID":"A6","PAGEURL":"sp/sp_qzgl.html"},
+				   //{"UUID":"B1","NAME":"评分标准","PID":"A6","PAGEURL":"sp/sp_pfbz.html"},
+				   {"UUID":"B1","NAME":"安全绩效评估","PID":"A6","PAGEURL":"sp/sp_aqjx.html"},
+				   {"UUID":"B1","NAME":"安全绩效统计","PID":"A6","SELECTED":true,"PAGEURL":"sp/sp_jxtj.html"},
+				   
 				   {"UUID":"B1","NAME":"组织管理","PID":"A0","SELECTED":true,"PAGEURL":"admin/ad_zzjg.html"},
 				   {"UUID":"B1","NAME":"角色权限管理","PID":"A0","PAGEURL":"admin/ad_jsgl.html"},
 				   {"UUID":"B1","NAME":"人员管理","PID":"A0","PAGEURL":"admin/ad_rygl.html"},
@@ -38,7 +44,7 @@ var menuGroupJson=[
 				   {"UUID":"B9","NAME":"互助直通车","PID":"A1","PAGEURL":"share/sh_hzztc.html"},
 				   {"UUID":"B9","NAME":"首页","PID":"A2","SELECTED":true,"PAGEURL":"audit/leader_index.html"},
 				   {"UUID":"B3","NAME":"审计计划","PID":"A2","PAGEURL":"audit/au_sjjh.html"},
-				   {"UUID":"B1","NAME":"审计单重要性","PID":"A2","PAGEURL":"admin/ad_sjdzyx.html"},
+				   {"UUID":"B1","NAME":"审计要素重要性","PID":"A2","PAGEURL":"admin/ad_sjdzyx.html"},
 				   {"UUID":"B3","NAME":"系统构型","PID":"A2","PAGEURL":"audit/au_xtgx.html"},
 				   {"UUID":"B3","NAME":"专项审计","PID":"A2","PAGEURL":"audit/au_zxsj.html"},
 				   {"UUID":"B3","NAME":"复核验证","PID":"A2","PAGEURL":"audit/au_fhyz.html"},

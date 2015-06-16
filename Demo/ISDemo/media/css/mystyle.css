@@ -265,6 +265,16 @@ background-color:#ff9900;
 .table-bordered{-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
 .red{color:#F00 !important; font-weight:bold;}
 
+.oneb{background-color: #d2ecff !important; }
+.towb{ background-color: #e2f3ff !important; }
+.threeb{ background-color:#f1f9ff !important;}
+.fourb{ background-color:#fff !important; }
 
-
-
+.one{padding-left:40px !important; text-align:left !important; }
+.tow{padding-left:80px !important; }
+.three{padding-left:120px !important;}
+.four{padding-left:160px !important;}
+.th{ background-color:#f8f8f8;}
+.td{ color:#999; background-color:#f8f8f8;}
+.input-mini{ width:60px !important; border:1px solid #FFF !important; font-size:12px !important; color:#000 !important;}
+e3f1fb f7fcff
